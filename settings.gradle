@@ -1,0 +1,2 @@
+rootProject.name='UCI_SOS'
+include ':app'
