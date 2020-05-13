@@ -1,0 +1,4 @@
+Tipos de camas:
+-UCI
+-Planta
+-Urgencias
