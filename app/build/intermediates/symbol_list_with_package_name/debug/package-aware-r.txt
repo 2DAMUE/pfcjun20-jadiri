@@ -651,6 +651,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable botones_login_registro
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -659,8 +660,11 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable campos_login_registro
+drawable fondo_login
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable logo_uci_sos
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -673,6 +677,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable recuadro_login_registro
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -741,6 +746,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btnLogin
 id buttonPanel
 id center_vertical
 id chains
@@ -778,8 +784,10 @@ id italic
 id left
 id line1
 id line3
+id linearLayout
 id listMode
 id list_item
+id logoLogin
 id message
 id middle
 id multiply
@@ -798,6 +806,7 @@ id percent
 id progress_circular
 id progress_horizontal
 id radio
+id recuadroLogin
 id right
 id right_icon
 id right_side
@@ -850,6 +859,8 @@ id titleDividerNoCustom
 id title_template
 id top
 id topPanel
+id txtEmailLogin
+id txtPwdLogin
 id unchecked
 id uniform
 id up
@@ -897,6 +908,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_login
 layout activity_main
 layout custom_dialog
 layout notification_action
@@ -939,8 +951,14 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
+string fondoLogin
+string login
+string logo
+string registrarse
 string search_menu_title
 string status_bar_notification_info_overflow
+string txtEmail
+string txtPwd
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -1291,6 +1309,10 @@ style Widget_AppCompat_Toolbar
 style Widget_AppCompat_Toolbar_Button_Navigation
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
+style botones_login_registro
+style campos_login_registro
+style gradiente_login_registro
+style recuadro_login_registro
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

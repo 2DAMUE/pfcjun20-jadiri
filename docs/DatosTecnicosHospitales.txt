@@ -2,3 +2,14 @@ Tipos de camas:
 -UCI
 -Planta
 -Urgencias
+
+Prioridades:
+1.- Login y registro
+2.- Configuración hospital
+3.- Mis camas, Estadísticas y manejar camas propias.
+4.- Derivar
+
+Activities:
+1.- Estadísticas
+2.- Mis camas
+3.- Gestión hospital
