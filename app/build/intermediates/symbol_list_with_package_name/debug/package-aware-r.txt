@@ -412,6 +412,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -662,6 +663,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable campos_login_registro
 drawable fondo_login
+drawable fondo_registro
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable logo_uci_sos
@@ -747,6 +749,7 @@ id beginning
 id blocking
 id bottom
 id btnLogin
+id btnRegistro
 id buttonPanel
 id center_vertical
 id chains
@@ -778,9 +781,11 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageView
 id info
 id invisible
 id italic
+id lblRegistro
 id left
 id line1
 id line3
@@ -830,6 +835,8 @@ id showCustom
 id showHome
 id showTitle
 id spacer
+id spinnerItem
+id spinnerRegistro
 id split_action_bar
 id spread
 id spread_inside
@@ -859,8 +866,12 @@ id titleDividerNoCustom
 id title_template
 id top
 id topPanel
+id txtApellido
+id txtConfirmPwd
 id txtEmailLogin
+id txtNombre
 id txtPwdLogin
+id txtPwdReg
 id unchecked
 id uniform
 id up
@@ -910,6 +921,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_login
 layout activity_main
+layout activity_registro
 layout custom_dialog
 layout notification_action
 layout notification_action_tombstone
@@ -920,8 +932,10 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout spinner_registro_item
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -952,12 +966,17 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
 string fondoLogin
+string fondoRegistro
 string login
 string logo
 string registrarse
+string registro
 string search_menu_title
 string status_bar_notification_info_overflow
+string txtApellidos
+string txtConfirmPwd
 string txtEmail
+string txtNombre
 string txtPwd
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -1311,7 +1330,8 @@ style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 style botones_login_registro
 style campos_login_registro
-style gradiente_login_registro
+style gradiente_login
+style gradiente_registro
 style recuadro_login_registro
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
