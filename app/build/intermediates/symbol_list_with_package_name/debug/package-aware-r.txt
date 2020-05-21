@@ -684,7 +684,6 @@ drawable recuadro_login_registro
 drawable recuadro_spinner
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
-drawable up_arrow
 id ALT
 id CTRL
 id FUNCTION

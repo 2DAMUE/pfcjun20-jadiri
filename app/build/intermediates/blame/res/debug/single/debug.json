@@ -124,10 +124,6 @@
         "source": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_up_arrow.png.flat",
-        "source": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\up_arrow.png"
-    },
-    {
         "merged": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
