@@ -68,7 +68,7 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnBuscar"
             style="@style/botones_login_registro"
             android:text="@string/login" />
 

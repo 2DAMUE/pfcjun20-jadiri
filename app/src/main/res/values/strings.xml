@@ -6,4 +6,5 @@
     <string name="txtPwd">Contraseña</string>
     <string name="login">Login</string>
     <string name="registrarse"><u>Regístrate aquí</u></string>
+    <string name="logout">Logout</string>
 </resources>

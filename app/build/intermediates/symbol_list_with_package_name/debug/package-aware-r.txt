@@ -656,6 +656,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable botones_login_registro
+drawable botones_reserva
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -666,6 +667,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable campos_login_registro
 drawable fondo_login
+drawable fondoreserva
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable logo_uci_sos
@@ -751,7 +753,8 @@ id barrier
 id beginning
 id blocking
 id bottom
-id btnLogin
+id btnBuscar
+id btnDerivar
 id buttonPanel
 id center_vertical
 id chains
@@ -785,9 +788,11 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageView
 id imageView3
 id info
 id invisible
+id itLogout
 id italic
 id left
 id line1
@@ -873,6 +878,7 @@ id unchecked
 id uniform
 id up
 id useLogo
+id view
 id withText
 id wrap
 id wrap_content
@@ -918,6 +924,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_login
 layout activity_main
+layout activity_reservar
 layout activity_splash
 layout custom_dialog
 layout notification_action
@@ -930,6 +937,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description
@@ -963,6 +971,7 @@ string app_name
 string fondoLogin
 string login
 string logo
+string logout
 string registrarse
 string search_menu_title
 string status_bar_notification_info_overflow
@@ -1319,8 +1328,10 @@ style Widget_AppCompat_Toolbar_Button_Navigation
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 style botones_login_registro
+style botones_reserva
 style campos_login_registro
 style gradiente_login_registro
+style gradiente_reserva
 style recuadro_login_registro
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
