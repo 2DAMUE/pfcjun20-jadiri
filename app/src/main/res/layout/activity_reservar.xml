@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView">
 
         <Button
-            android:id="@+id/btnBuscar"
+            android:id="@+id/btninicio"
             style="@style/botones_reserva"
             android:text="Buscar Cama" />
 

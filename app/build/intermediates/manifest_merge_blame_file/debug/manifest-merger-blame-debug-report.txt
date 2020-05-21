@@ -11,7 +11,7 @@
 9-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:5:5-24:19
+11-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:5:5-25:19
 12        android:allowBackup="true"
 12-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -28,9 +28,9 @@
 19        android:testOnly="true"
 20        android:theme="@style/AppTheme" >
 20-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:11:9-40
-21        <activity android:name="com.example.uci_sos.Reservar" >
+21        <activity android:name="com.example.uci_sos.ReservaRealizada" >
 21-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:12:9-18:20
-21-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:12:19-43
+21-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:12:19-51
 22            <intent-filter>
 22-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:13:13-17:29
 23                <action android:name="android.intent.action.MAIN" />
@@ -42,16 +42,19 @@
 25-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:16:27-74
 26            </intent-filter>
 27        </activity>
-28        <activity android:name="com.example.uci_sos.Splash" >
+28        <activity android:name="com.example.uci_sos.Reservar" >
 28-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:19:9-21:20
-28-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:19:19-41
+28-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:19:19-43
 29        </activity>
-30        <activity android:name="com.example.uci_sos.Login" />
-30-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:22:9-43
-30-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:22:19-40
-31        <activity android:name="com.example.uci_sos.MainActivity" />
-31-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:23:9-50
-31-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:23:19-47
-32    </application>
-33
-34</manifest>
+30        <activity android:name="com.example.uci_sos.Splash" />
+30-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:22:9-53
+30-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:22:19-41
+31        <activity android:name="com.example.uci_sos.Login" />
+31-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:23:9-43
+31-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:23:19-40
+32        <activity android:name="com.example.uci_sos.MainActivity" />
+32-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:24:9-50
+32-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:24:19-47
+33    </application>
+34
+35</manifest>
