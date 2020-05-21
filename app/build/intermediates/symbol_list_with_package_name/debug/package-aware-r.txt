@@ -657,6 +657,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable botones_login_registro
+drawable botones_reserva
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -669,10 +670,13 @@ drawable campos_login_registro
 drawable down_arrow
 drawable fondo_login
 drawable fondo_registro
+drawable fondo_reservas
+drawable hospital_icono_blanco
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable logo_uci_sos
 drawable logo_uem
+drawable miscamas_icono_blanco
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -687,6 +691,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable recuadro_login_registro
 drawable recuadro_spinner
+drawable reserva_icono_azul
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -755,7 +760,11 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btnBuscar
+id btnDerivar
+id btnHospitalReserva
 id btnLogin
+id btnMisCamasReserva
 id btnRegistro
 id buttonPanel
 id center_vertical
@@ -934,6 +943,7 @@ layout abc_tooltip
 layout activity_login
 layout activity_main
 layout activity_registro
+layout activity_reservar
 layout activity_splash
 layout custom_dialog
 layout notification_action
@@ -978,12 +988,18 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
+string buscar_cama
+string derivar
 string fondoLogin
 string fondoRegistro
+string fondoSplash
+string hospital
 string login
 string logo
+string misCamas
 string registrarse
 string registro
+string reserva
 string search_menu_title
 string status_bar_notification_info_overflow
 string txtApellidos
@@ -1342,9 +1358,11 @@ style Widget_AppCompat_Toolbar_Button_Navigation
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 style botones_login_registro
+style botones_reserva
 style campos_login_registro
 style gradiente_login
 style gradiente_registro
+style gradiente_reserva
 style recuadro_login_registro
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
