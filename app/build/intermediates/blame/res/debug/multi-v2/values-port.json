@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "outputFile": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Ricardo Bordería Pi\\.gradle\\caches\\transforms-2\\files-2.1\\8abe27935790490744d48cbaf6816c70\\appcompat-1.1.0\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\34621\\.gradle\\caches\\transforms-2\\files-2.1\\106a73d32b78cadd153ffdc8e7ca37a6\\appcompat-1.1.0\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
