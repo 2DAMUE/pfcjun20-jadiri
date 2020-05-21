@@ -416,6 +416,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -666,7 +667,9 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable campos_login_registro
+drawable down_arrow
 drawable fondo_login
+drawable fondo_registro
 drawable fondoreserva
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -685,6 +688,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable recuadro_login_registro
+drawable recuadro_spinner
 drawable reserva_icono_azul
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -755,6 +759,7 @@ id beginning
 id blocking
 id bottom
 id btnDerivar
+id btnRegistro
 id btninicio
 id buttonPanel
 id center_vertical
@@ -778,6 +783,7 @@ id end
 id europea
 id expand_activities_button
 id expanded_menu
+id flechaAbajo
 id fondo
 id forever
 id gone
@@ -796,6 +802,7 @@ id info
 id invisible
 id itLogout
 id italic
+id lblRegistro
 id left
 id line1
 id line3
@@ -845,6 +852,8 @@ id showCustom
 id showHome
 id showTitle
 id spacer
+id spinnerItem
+id spinnerRegistro
 id split_action_bar
 id spread
 id spread_inside
@@ -875,8 +884,12 @@ id title_template
 id top
 id topPanel
 id tv_reserva
+id txtApellido
+id txtConfirmPwd
 id txtEmailLogin
+id txtNombre
 id txtPwdLogin
+id txtPwdReg
 id unchecked
 id uniform
 id up
@@ -927,6 +940,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_login
 layout activity_main
+layout activity_registro
 layout activity_reserva_realizada
 layout activity_reservar
 layout activity_splash
@@ -940,9 +954,11 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout spinner_registro_item
 layout support_simple_spinner_dropdown_item
 menu menu
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -973,13 +989,18 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
 string fondoLogin
+string fondoRegistro
 string login
 string logo
 string logout
 string registrarse
+string registro
 string search_menu_title
 string status_bar_notification_info_overflow
+string txtApellidos
+string txtConfirmPwd
 string txtEmail
+string txtNombre
 string txtPwd
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -1334,7 +1355,8 @@ style Widget_Compat_NotificationActionText
 style botones_login_registro
 style botones_reserva
 style campos_login_registro
-style gradiente_login_registro
+style gradiente_login
+style gradiente_registro
 style gradiente_reserva
 style recuadro_login_registro
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle

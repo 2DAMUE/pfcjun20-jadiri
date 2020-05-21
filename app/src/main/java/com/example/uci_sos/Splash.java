@@ -13,36 +13,45 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Splash extends Activity {
+    private ImageView logosos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        ImageView logosos = findViewById(R.id.logoLogin);
+        logosos = findViewById(R.id.logoLogin);
         //ImageView logouem = findViewById(R.id.logouem);
         ImageView logo = findViewById(R.id.europea);
         //TextView colaboracion = findViewById(R.id.colabo);
         Animation zoomin = AnimationUtils.loadAnimation(this, R.anim.animacionlogo);
-        Animation pulso = AnimationUtils.loadAnimation(this, R.anim.latidos);
+
         Animation aparece = AnimationUtils.loadAnimation(this, R.anim.animacionlogouem);
         Animation facein = AnimationUtils.loadAnimation(this, R.anim.animaciontexto);
         logosos.startAnimation(zoomin);
-        logosos.startAnimation(pulso);
+        //logosos.startAnimation(pulso);
         //logouem.startAnimation(aparece);
         logo.startAnimation(facein);
         //colaboracion.startAnimation(facein);
         start();
     }
-    private void start(){
-        Handler han = new Handler();
-        han.postDelayed(new Runnable() {
+
+    private void start() {
+        final Animation pulso = AnimationUtils.loadAnimation(this, R.anim.latidos);
+        logosos.startAnimation(pulso);
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Splash.this, Login.class);
-                startActivityForResult(intent, 0);
-                finish();
+                logosos.startAnimation(pulso);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(Splash.this, Login.class);
+                        startActivityForResult(intent, 0);
+                        finish();
+                    }
+                }, 1000);
             }
-        }, 4000);
-
+        }, 1000);
     }
 }
+

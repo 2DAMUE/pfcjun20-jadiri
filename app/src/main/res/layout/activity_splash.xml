@@ -20,7 +20,7 @@
 
     <View
         android:id="@+id/fondo"
-        style="@style/gradiente_login_registro"
+        style="@style/gradiente_login"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
