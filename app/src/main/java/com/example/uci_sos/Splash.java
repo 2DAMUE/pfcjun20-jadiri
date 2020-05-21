@@ -35,7 +35,7 @@ public class Splash extends Activity {
     }
 
     /**
-     * Inicia la animación
+     * Inicia la animación y cuando finaliza te lleva al login
      */
     private void start() {
         Handler han = new Handler();
