@@ -62,9 +62,9 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-        android:id="@+id/txtNombre"
-        style="@style/campos_login_registro"
-        android:hint="@string/txtNombre" />
+            android:id="@+id/txtNombre"
+            style="@style/campos_login_registro"
+            android:hint="@string/txtNombre" />
 
         <EditText
             android:id="@+id/txtApellido"
@@ -83,9 +83,42 @@
             android:hint="@string/txtConfirmPwd"
             android:inputType="textPassword" />
 
-        <Spinner
-            android:id="@+id/spinnerRegistro"
-            style="@style/campos_login_registro" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/spinnerRegistro"
+                style="@style/campos_login_registro"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/recuadro_spinner"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <ImageView
+                    android:id="@+id/flechaAbajo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/down_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
             android:id="@+id/btnRegistro"
@@ -102,10 +135,10 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="84dp"
         android:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoLogin"
         app:layout_constraintVertical_bias="1.0" />
 
