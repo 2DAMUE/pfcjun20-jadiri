@@ -15,7 +15,7 @@
 12        android:allowBackup="true"
 12-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.1.0] C:\Users\Ricardo Bordería Pi\.gradle\caches\transforms-2\files-2.1\3afe8dfdda503a5d98b5e426f1898d5c\core-1.1.0\AndroidManifest.xml:24:18-86
+13-->[androidx.core:core:1.1.0] C:\Users\Ricardo Bordería Pi\.gradle\caches\transforms-2\files-2.1\da6133b338b8f3967cdcb8fbe89b5fa3\core-1.1.0\AndroidManifest.xml:24:18-86
 14        android:debuggable="true"
 15        android:icon="@mipmap/ic_launcher"
 15-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:7:9-43
@@ -31,23 +31,26 @@
 21        <activity android:name="com.example.uci_sos.Registro" />
 21-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:12:9-55
 21-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:12:19-43
-22        <activity android:name="com.example.uci_sos.Login" >
-22-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:13:9-19:20
+22        <activity android:name="com.example.uci_sos.Login" />
+22-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:13:9-43
 22-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:13:19-40
-23            <intent-filter>
-23-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:14:13-18:29
-24                <action android:name="android.intent.action.MAIN" />
-24-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:15:17-69
-24-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:15:25-66
-25
-26                <category android:name="android.intent.category.LAUNCHER" />
-26-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:17:17-77
-26-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:17:27-74
-27            </intent-filter>
-28        </activity>
-29        <activity android:name="com.example.uci_sos.MainActivity" />
-29-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:20:9-59
-29-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:20:19-47
-30    </application>
-31
-32</manifest>
+23        <activity android:name="com.example.uci_sos.Splash" >
+23-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:14:9-19:20
+23-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:14:19-41
+24            <intent-filter>
+24-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:15:13-18:29
+25                <action android:name="android.intent.action.MAIN" />
+25-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:16:17-69
+25-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:16:25-66
+26
+27                <category android:name="android.intent.category.LAUNCHER" />
+27-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:17:17-77
+27-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:17:27-74
+28            </intent-filter>
+29        </activity>
+30        <activity android:name="com.example.uci_sos.MainActivity" />
+30-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:20:9-59
+30-->D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:20:19-47
+31    </application>
+32
+33</manifest>

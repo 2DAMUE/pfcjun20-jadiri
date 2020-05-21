@@ -11,6 +11,9 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim animacionlogo
+anim animacionlogouem
+anim animaciontexto
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -23,6 +26,7 @@ anim btn_radio_to_off_mtrl_ring_outer_path_animation
 anim btn_radio_to_on_mtrl_dot_group_animation
 anim btn_radio_to_on_mtrl_ring_outer_animation
 anim btn_radio_to_on_mtrl_ring_outer_path_animation
+anim latidos
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -668,6 +672,7 @@ drawable fondo_registro
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable logo_uci_sos
+drawable logo_uem
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -771,9 +776,11 @@ id direct
 id disableHome
 id edit_query
 id end
+id europea
 id expand_activities_button
 id expanded_menu
 id flechaAbajo
+id fondo
 id forever
 id gone
 id group_divider
@@ -785,6 +792,7 @@ id icon_group
 id ifRoom
 id image
 id imageView
+id imageView3
 id info
 id invisible
 id italic
@@ -926,6 +934,7 @@ layout abc_tooltip
 layout activity_login
 layout activity_main
 layout activity_registro
+layout activity_splash
 layout custom_dialog
 layout notification_action
 layout notification_action_tombstone
