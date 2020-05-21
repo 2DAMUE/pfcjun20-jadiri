@@ -3,15 +3,9 @@ package com.example.uci_sos;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.RotateAnimation;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -22,8 +16,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Registro de la aplicación. En él creas tu usuario para l aaplicación
+ */
 public class Registro extends Activity {
 
+    /**
+     * Spinner con la lista de hospitales registrados en la aplicación
+     */
     private Spinner spinHospital;
 
     @Override
@@ -34,14 +34,25 @@ public class Registro extends Activity {
         cargarListeners();
     }
 
+    /**
+     * Carga los listeners de los elementos de la ventana
+     */
     private void cargarListeners() {
     }
 
+    /**
+     * Carga los elemento de la ventana
+     */
     private void cargarVista() {
         spinHospital = findViewById(R.id.spinnerRegistro);
         cargarAdapter();
     }
 
+    /**
+     * Crea y carga la lista de hospitales en el spinner
+     *
+     * @see Registro#spinHospital
+     */
     private void cargarAdapter() {
         String[] nombres = new String[]{"Selecciona un hospital", "Puerta de Hierro", "Gregorio Marañón", "Montepríncipe"};
         List<String> listaNombres = new ArrayList<>(Arrays.asList(nombres));
