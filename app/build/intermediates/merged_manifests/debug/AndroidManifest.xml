@@ -18,13 +18,15 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.uci_sos.MainActivity" >
+        <activity android:name="com.example.uci_sos.Splash" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.uci_sos.Login" />
+        <activity android:name="com.example.uci_sos.MainActivity" />
     </application>
 
 </manifest>

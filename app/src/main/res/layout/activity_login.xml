@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/fondoLogin"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        style="@style/gradiente_login_registro"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logoLogin"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/logo_uci_sos"
+        app:layout_constraintBottom_toTopOf="@id/recuadroLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/recuadroLogin"
+        app:layout_constraintEnd_toEndOf="@id/recuadroLogin"
+        app:layout_constraintStart_toStartOf="@id/recuadroLogin"
+        app:layout_constraintTop_toTopOf="@+id/recuadroLogin"
+        app:layout_constraintVertical_bias="0.455">
+
+        <EditText
+            android:id="@+id/txtEmailLogin"
+            style="@style/campos_login_registro"
+            android:hint="@string/txtEmail"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/txtPwdLogin"
+            style="@style/campos_login_registro"
+            android:hint="@string/txtPwd"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/botones_login_registro"
+            android:text="@string/login" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registrarse"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="16dp"
+        android:id="@+id/recuadroLogin"
+        style="@style/recuadro_login_registro"
+        android:layout_width="320dp"
+        android:layout_height="330dp"
+        android:layout_marginBottom="84dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoLogin"
+        app:layout_constraintVertical_bias="1.0"
+        android:elevation="0dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
