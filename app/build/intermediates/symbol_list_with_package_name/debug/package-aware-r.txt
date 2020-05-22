@@ -668,6 +668,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable campos_login_registro
 drawable down_arrow
+drawable fondo_config
 drawable fondo_login
 drawable fondo_registro
 drawable fondo_reservas
@@ -817,6 +818,7 @@ id linearLayout
 id listMode
 id list_item
 id logoLogin
+id menu_abajo_reservar
 id message
 id middle
 id multiply
@@ -1368,6 +1370,7 @@ style Widget_Compat_NotificationActionText
 style botones_login_registro
 style botones_reserva
 style campos_login_registro
+style fondo_menu_abajo
 style gradiente_login
 style gradiente_registro
 style gradiente_reserva

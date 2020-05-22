@@ -112,6 +112,10 @@
         "source": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\logo_uci_sos.png"
     },
     {
+        "merged": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_config.jpeg.flat",
+        "source": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_config.jpeg"
+    },
+    {
         "merged": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_miscamas_icono_blanco.png.flat",
         "source": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\miscamas_icono_blanco.png"
     },
