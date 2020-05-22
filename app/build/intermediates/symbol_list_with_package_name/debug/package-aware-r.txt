@@ -696,6 +696,18 @@ drawable recuadro_spinner
 drawable reserva_icono_azul
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font segoeui
+font segoeuib
+font segoeuii
+font segoeuil
+font segoeuisl
+font segoeuiz
+font seguibl
+font seguibli
+font seguili
+font seguisb
+font seguisbi
+font seguisli
 id ALT
 id CTRL
 id FUNCTION
@@ -818,6 +830,7 @@ id linearLayout
 id listMode
 id list_item
 id logoLogin
+id logoPlantas
 id menu_abajo_reservar
 id message
 id middle
@@ -837,6 +850,7 @@ id percent
 id progress_circular
 id progress_horizontal
 id radio
+id recuadroConfigPlantas
 id recuadroLogin
 id right
 id right_icon
@@ -947,6 +961,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_config_planta
 layout activity_login
 layout activity_main
 layout activity_registro
@@ -998,8 +1013,15 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
 string buscar_cama
+string camasPlantaLibres
+string camasPlantaOcupadas
+string camasUCIOcupadas
+string camasUrgenciasLibres
+string camasUrgenciasOcupadas
+string cero
 string derivar
 string fondoLogin
+string fondoPlantas
 string fondoRegistro
 string fondoSplash
 string hospital
@@ -1007,10 +1029,12 @@ string login
 string logo
 string logout
 string misCamas
+string numCamasUCILibres
 string registrarse
 string registro
 string reserva
 string search_menu_title
+string siguiente
 string status_bar_notification_info_overflow
 string txtApellidos
 string txtConfirmPwd
@@ -1374,6 +1398,7 @@ style fondo_menu_abajo
 style gradiente_login
 style gradiente_registro
 style gradiente_reserva
+style linea_menu_abajo
 style recuadro_login_registro
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity

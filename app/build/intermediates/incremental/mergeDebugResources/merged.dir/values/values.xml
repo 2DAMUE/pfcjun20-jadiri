@@ -151,7 +151,7 @@
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimary">#0B33FC</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
@@ -406,8 +406,15 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">UCI SOS</string>
     <string name="buscar_cama">Buscar Cama</string>
+    <string name="camasPlantaLibres">Camas de planta libres</string>
+    <string name="camasPlantaOcupadas">Camas de planta ocupadas</string>
+    <string name="camasUCIOcupadas">Camas de UCI ocupadas</string>
+    <string name="camasUrgenciasLibres">Camas de urgencias libres</string>
+    <string name="camasUrgenciasOcupadas">Camas de urgencias ocupadas</string>
+    <string name="cero">0</string>
     <string name="derivar">Derivar</string>
     <string name="fondoLogin">Fondo del login con una camilla</string>
+    <string name="fondoPlantas">Fondo del editor de plantas con un hospital</string>
     <string name="fondoRegistro">Fondo del registro con una camilla</string>
     <string name="fondoSplash">Fondo del splash con una camilla</string>
     <string name="hospital">Hospital</string>
@@ -415,10 +422,12 @@
     <string name="logo">Logo de UCI SOS</string>
     <string name="logout">Logout</string>
     <string name="misCamas">Mis Camas</string>
+    <string name="numCamasUCILibres">Camas de UCI libres</string>
     <string name="registrarse"><u>Regístrate aquí</u></string>
     <string name="registro">Registrar</string>
     <string name="reserva">Reservar</string>
     <string name="search_menu_title">Search</string>
+    <string name="siguiente">Siguiente</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="txtApellidos">Apellidos</string>
     <string name="txtConfirmPwd">Confirmar contraseña</string>
@@ -1950,6 +1959,8 @@
         <item name="android:background">@drawable/campos_login_registro</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textColorHint">@android:color/black</item>
+        <item name="android:fontFamily">@font/segoeui</item>
+        <item name="android:textSize">15dp</item>
     </style>
     <style name="fondo_menu_abajo">
         <item name="android:layout_width">match_parent</item>
@@ -1970,9 +1981,15 @@
         <item name="android:background">#3CD8FF</item>
         <item name="android:alpha">0.20</item>
     </style>
+    <style name="linea_menu_abajo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
     <style name="recuadro_login_registro">
         <item name="android:background">@drawable/recuadro_login_registro</item>
         <item name="android:alpha">0.85</item>
+        <item name="android:layout_width">320dp</item>
     </style>
     <declare-styleable name="ActionBar">
         

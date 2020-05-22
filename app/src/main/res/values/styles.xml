@@ -21,6 +21,7 @@
     <style name="recuadro_login_registro">
         <item name="android:background">@drawable/recuadro_login_registro</item>
         <item name="android:alpha">0.85</item>
+        <item name="android:layout_width">320dp</item>
     </style>
 
     <style name="campos_login_registro">
@@ -30,6 +31,8 @@
         <item name="android:background">@drawable/campos_login_registro</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textColorHint">@android:color/black</item>
+        <item name="android:fontFamily">@font/segoeui</item>
+        <item name="android:textSize">15dp</item>
     </style>
 
     <style name="botones_login_registro">
