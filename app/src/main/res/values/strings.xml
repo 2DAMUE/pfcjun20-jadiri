@@ -11,4 +11,11 @@
     <string name="txtApellidos">Apellidos</string>
     <string name="txtConfirmPwd">Confirmar contraseña</string>
     <string name="registro">Registrar</string>
+    <string name="fondoSplash">Fondo del splash con una camilla</string>
+    <string name="buscar_cama">Buscar Cama</string>
+    <string name="derivar">Derivar</string>
+    <string name="hospital">Hospital</string>
+    <string name="reserva">Reservar</string>
+    <string name="misCamas">Mis Camas</string>
+    <string name="logout">Logout</string>
 </resources>

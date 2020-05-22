@@ -163,7 +163,7 @@
     <color name="foreground_material_light">@android:color/black</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
-    <color name="ic_launcher_background">#69D6DC</color>
+    <color name="ic_launcher_background">#56CDCA</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -405,12 +405,19 @@
     <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">UCI SOS</string>
+    <string name="buscar_cama">Buscar Cama</string>
+    <string name="derivar">Derivar</string>
     <string name="fondoLogin">Fondo del login con una camilla</string>
     <string name="fondoRegistro">Fondo del registro con una camilla</string>
+    <string name="fondoSplash">Fondo del splash con una camilla</string>
+    <string name="hospital">Hospital</string>
     <string name="login">Login</string>
     <string name="logo">Logo de UCI SOS</string>
+    <string name="logout">Logout</string>
+    <string name="misCamas">Mis Camas</string>
     <string name="registrarse"><u>Regístrate aquí</u></string>
     <string name="registro">Registrar</string>
+    <string name="reserva">Reservar</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="txtApellidos">Apellidos</string>
@@ -1932,6 +1939,12 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="android:layout_marginTop">16dp</item>
     </style>
+    <style name="botones_reserva">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:background">@drawable/botones_reserva</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
     <style name="campos_login_registro">
         <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">45dp</item>
@@ -1940,6 +1953,13 @@
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textColorHint">@android:color/black</item>
     </style>
+    <style name="fondo_menu_abajo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
     <style name="gradiente_login">
         <item name="android:background">#C4DAEA</item>
         <item name="android:alpha">0.3</item>
@@ -1947,6 +1967,10 @@
     <style name="gradiente_registro">
         <item name="android:background">#C4DAEA</item>
         <item name="android:alpha">0.45</item>
+    </style>
+    <style name="gradiente_reserva">
+        <item name="android:background">#3CD8FF</item>
+        <item name="android:alpha">0.20</item>
     </style>
     <style name="recuadro_login_registro">
         <item name="android:background">@drawable/recuadro_login_registro</item>
