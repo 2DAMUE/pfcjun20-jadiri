@@ -1373,7 +1373,8 @@ int style fondo_menu_abajo 0x7f0e0161
 int style gradiente_login 0x7f0e0162
 int style gradiente_registro 0x7f0e0163
 int style gradiente_reserva 0x7f0e0164
-int style recuadro_login_registro 0x7f0e0165
+int style linea_menu_abajo 0x7f0e0165
+int style recuadro_login_registro 0x7f0e0166
 int[] styleable ActionBar { 0x7f020031, 0x7f020032, 0x7f020033, 0x7f02005e, 0x7f02005f, 0x7f020060, 0x7f020061, 0x7f020062, 0x7f020063, 0x7f020065, 0x7f02006a, 0x7f02006b, 0x7f02007e, 0x7f02008f, 0x7f020090, 0x7f020091, 0x7f020092, 0x7f020093, 0x7f020098, 0x7f02009b, 0x7f0200e0, 0x7f0200e8, 0x7f0200f3, 0x7f0200f6, 0x7f0200f7, 0x7f020111, 0x7f020114, 0x7f020130, 0x7f020139 }
 int styleable ActionBar_background 0
 int styleable ActionBar_backgroundSplit 1
