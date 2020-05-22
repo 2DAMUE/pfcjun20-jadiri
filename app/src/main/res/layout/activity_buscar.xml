@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Buscar">
+
+    <ImageView
+        android:id="@+id/fondo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo_reservas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <View
+        android:id="@+id/view3"
+        style="@style/gradiente_reserva"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/view4"
+        style="@style/linea_menu_abajo"
+        app:layout_constraintBottom_toTopOf="@+id/menu_abajo_reservar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/menu_abajo_reservar"
+        style="@style/fondo_menu_abajo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/btnHospitalReserva"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/hospital_icono_blanco" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hospital"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/reserva_icono_azul" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reserva"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnMisCamasReserva"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/miscamas_icono_blanco" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/misCamas"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/Reconmendado"
+        style="@style/texto_recomendados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="RECOMENDADOS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fondo" />
+
+    <View
+        android:id="@+id/recuadroLogin"
+        style="@style/recuadro_login_registro"
+        android:layout_width="334dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="84dp"
+        android:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Reconmendado"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <TextView
+        android:id="@+id/nombre"
+        style="@style/texto_recomendados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Hospital Universitario de León"
+        app:layout_constraintBottom_toTopOf="@+id/fotohospital"
+        app:layout_constraintEnd_toEndOf="@+id/recuadroLogin"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="@+id/recuadroLogin" />
+
+    <ImageView
+        android:id="@+id/fotohospital"
+        android:layout_width="88dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/fondconfig"
+        app:layout_constraintBottom_toBottomOf="@+id/recuadroLogin"
+        app:layout_constraintStart_toStartOf="@+id/recuadroLogin"
+        app:layout_constraintTop_toTopOf="@+id/recuadroLogin"
+        app:layout_constraintVertical_bias="0.764" />
+
+    <TextView
+        android:id="@+id/uci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginLeft="8dp"
+        android:text="Camas UCI: 6"
+        app:layout_constraintBottom_toBottomOf="@+id/recuadroLogin"
+        app:layout_constraintStart_toEndOf="@+id/fotohospital"
+        app:layout_constraintTop_toTopOf="@+id/recuadroLogin"
+        app:layout_constraintVertical_bias="0.417" />
+
+    <TextView
+        android:id="@+id/planta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Camas Planta: 7"
+        app:layout_constraintBottom_toBottomOf="@+id/recuadroLogin"
+        app:layout_constraintEnd_toEndOf="@+id/recuadroLogin"
+        app:layout_constraintTop_toTopOf="@+id/recuadroLogin"
+        app:layout_constraintVertical_bias="0.417" />
+
+    <TextView
+        android:id="@+id/capacidad"
+        style="@style/texto_recomendados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Capacidad: 1548"
+        app:layout_constraintBottom_toBottomOf="@+id/recuadroLogin"
+        app:layout_constraintEnd_toEndOf="@+id/recuadroLogin"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toEndOf="@+id/fotohospital" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

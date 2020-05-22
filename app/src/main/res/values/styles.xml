@@ -66,5 +66,16 @@
         <item name="android:layout_height">1dp</item>
         <item name="android:background">@android:color/black</item>
     </style>
+    <style name="texto_recomendados">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">#1c0d02 </item>
+
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="recuadro_datos">
+        <item name="android:background">#0FA4F9</item>
+        <item name="android:alpha">0.70</item>
+
+    </style>
 
 </resources>
