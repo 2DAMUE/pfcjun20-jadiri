@@ -2,10 +2,8 @@ package com.example.uci_sos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.widget.Toolbar;
 
 public class Reservar extends AppCompatActivity {
 
@@ -14,7 +12,6 @@ public class Reservar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reservar);
         setTitle("Reservar");
-
     }
 
     @Override

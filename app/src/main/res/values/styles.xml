@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#072FF8</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
@@ -41,16 +41,16 @@
         <item name="android:layout_marginTop">16dp</item>
     </style>
 
-    <style name="botones_reserva">
-        <item name="android:layout_width">250dp</item>
-        <item name="android:layout_height">45dp</item>
-        <item name="android:layout_marginBottom">32dp</item>
-        <item name="android:background">@drawable/botones_reserva</item>
-        <item name="android:textColor">@android:color/white</item>
-    </style>
     <style name="gradiente_reserva">
         <item name="android:background">#3CD8FF</item>
         <item name="android:alpha">0.20</item>
+    </style>
+
+    <style name="botones_reserva">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:background">@drawable/botones_reserva</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
     <style name="recuadro_datos">

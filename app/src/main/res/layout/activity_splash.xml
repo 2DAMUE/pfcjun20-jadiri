@@ -46,11 +46,12 @@
         android:id="@+id/europea"
         android:layout_width="70dp"
         android:layout_height="78dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/fondoSplash"
         android:src="@drawable/logo_uem"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.959"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent" />
 
 
