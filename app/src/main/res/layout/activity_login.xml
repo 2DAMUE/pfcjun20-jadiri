@@ -84,7 +84,6 @@
         android:layout_marginTop="16dp"
         android:id="@+id/recuadroLogin"
         style="@style/recuadro_login_registro"
-        android:layout_width="320dp"
         android:layout_height="330dp"
         android:layout_marginBottom="84dp"
         android:paddingTop="40dp"

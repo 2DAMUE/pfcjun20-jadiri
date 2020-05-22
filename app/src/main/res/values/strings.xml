@@ -18,4 +18,13 @@
     <string name="reserva">Reservar</string>
     <string name="misCamas">Mis Camas</string>
     <string name="logout">Logout</string>
+    <string name="fondoPlantas">Fondo del editor de plantas con un hospital</string>
+    <string name="numCamasUCILibres">Camas de UCI libres</string>
+    <string name="cero">0</string>
+    <string name="camasUCIOcupadas">Camas de UCI ocupadas</string>
+    <string name="camasPlantaLibres">Camas de planta libres</string>
+    <string name="camasPlantaOcupadas">Camas de planta ocupadas</string>
+    <string name="camasUrgenciasLibres">Camas de urgencias libres</string>
+    <string name="camasUrgenciasOcupadas">Camas de urgencias ocupadas</string>
+    <string name="siguiente">Siguiente</string>
 </resources>

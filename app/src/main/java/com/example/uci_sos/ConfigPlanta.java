@@ -1,0 +1,15 @@
+package com.example.uci_sos;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+public class ConfigPlanta extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_config_planta);
+        setTitle("Planta 1");
+    }
+}
