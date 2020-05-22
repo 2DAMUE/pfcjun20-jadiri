@@ -17,4 +17,5 @@
     <string name="hospital">Hospital</string>
     <string name="reserva">Reservar</string>
     <string name="misCamas">Mis Camas</string>
+    <string name="logout">Logout</string>
 </resources>
