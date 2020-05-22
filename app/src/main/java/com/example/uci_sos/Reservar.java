@@ -2,10 +2,11 @@ package com.example.uci_sos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 
-public class Reservar extends AppCompatActivity {
+public class Reservar extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
