@@ -1,4 +1,4 @@
-com.example.uci_sos
+com.example.ejemplorecyclerview
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -156,6 +156,11 @@ attr editTextStyle
 attr elevation
 attr emptyVisibility
 attr expandActivityOverflowButtonDrawable
+attr fastScrollEnabled
+attr fastScrollHorizontalThumbDrawable
+attr fastScrollHorizontalTrackDrawable
+attr fastScrollVerticalThumbDrawable
+attr fastScrollVerticalTrackDrawable
 attr firstBaselineToTopHeight
 attr font
 attr fontFamily
@@ -185,6 +190,7 @@ attr isLightTheme
 attr itemPadding
 attr lastBaselineToBottomHeight
 attr layout
+attr layoutManager
 attr layout_constrainedHeight
 attr layout_constrainedWidth
 attr layout_constraintBaseline_creator
@@ -281,6 +287,8 @@ attr radioButtonStyle
 attr ratingBarStyle
 attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
+attr recyclerViewStyle
+attr reverseLayout
 attr searchHintIcon
 attr searchIcon
 attr searchViewStyle
@@ -292,11 +300,13 @@ attr showDividers
 attr showText
 attr showTitle
 attr singleChoiceItemLayout
+attr spanCount
 attr spinBars
 attr spinnerDropDownItemStyle
 attr spinnerStyle
 attr splitTrack
 attr srcCompat
+attr stackFromEnd
 attr state_above_anchor
 attr subMenuArrow
 attr submitBackground
@@ -540,6 +550,9 @@ dimen compat_notification_large_icon_max_height
 dimen compat_notification_large_icon_max_width
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fastscroll_default_thickness
+dimen fastscroll_margin
+dimen fastscroll_minimum_range
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark
 dimen highlight_alpha_material_light
@@ -547,6 +560,9 @@ dimen hint_alpha_material_dark
 dimen hint_alpha_material_light
 dimen hint_pressed_alpha_material_dark
 dimen hint_pressed_alpha_material_light
+dimen item_touch_helper_max_drag_scroll_per_frame
+dimen item_touch_helper_swipe_escape_max_velocity
+dimen item_touch_helper_swipe_escape_velocity
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -674,6 +690,7 @@ drawable fondo_datos
 drawable fondo_login
 drawable fondo_registro
 drawable fondo_reservas
+drawable fondo_tarjeta
 drawable fondoreserva
 drawable hospital_icono_azul
 drawable hospital_icono_blanco
@@ -698,6 +715,7 @@ drawable recuadro_login_registro
 drawable recuadro_spinner
 drawable reserva_icono_azul
 drawable reserva_icono_blanco
+drawable selection_band_overlay
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font segoeui
@@ -827,9 +845,16 @@ id invisible
 id itConfig
 id itLogout
 id italic
+id item_touch_helper_previous_elevation
+id lblDisponible
+id lblHospital
 id lblHospitalReserva
+id lblPlanta
+id lblRecomendados
 id lblRegistro
 id lblReserva
+id lblUCI
+id lblurgencias
 id left
 id line1
 id line3
@@ -860,6 +885,7 @@ id radio
 id recuadroConfigPlantas
 id recuadroDatos
 id recuadroLogin
+id recyclerViewBuscar
 id right
 id right_icon
 id right_side
@@ -968,6 +994,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_adaptador
+layout activity_buscar
 layout activity_config_planta
 layout activity_datos
 layout activity_login
@@ -1050,6 +1078,7 @@ string logout
 string misCamas
 string nombrePlanta
 string numCamasUCILibres
+string recomendados
 string registrarse
 string registro
 string reserva
@@ -1457,6 +1486,7 @@ styleable MenuView android_windowAnimationStyle android_itemTextAppearance andro
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
+styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration

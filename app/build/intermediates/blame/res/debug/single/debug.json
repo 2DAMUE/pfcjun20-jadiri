@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_buscar.xml.flat",
+        "source": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_buscar.xml"
+    },
+    {
         "merged": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_animaciontexto.xml.flat",
         "source": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\anim\\animaciontexto.xml"
     },
@@ -140,6 +144,10 @@
         "source": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_reservar.xml"
     },
     {
+        "merged": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_tarjeta.xml.flat",
+        "source": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_tarjeta.xml"
+    },
+    {
         "merged": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_uci_sos.png.flat",
         "source": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\logo_uci_sos.png"
     },
@@ -158,6 +166,10 @@
     {
         "merged": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hospital_icono_blanco.png.flat",
         "source": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\hospital_icono_blanco.png"
+    },
+    {
+        "merged": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_adaptador.xml.flat",
+        "source": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_adaptador.xml"
     },
     {
         "merged": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuib.ttf.flat",
