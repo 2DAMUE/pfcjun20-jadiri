@@ -32,7 +32,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Registro de la aplicación. En él creas tu usuario para l aaplicación
+ * Registro de la aplicación. En él creas tu usuario para la aplicación
  */
 public class Registro extends Activity {
 
@@ -202,7 +202,7 @@ public class Registro extends Activity {
     }
 
     /**
-     * Intenta crear un usuario nuevo. Si lo crea con éxito envía al usuario a la ventana principal de la aplicación.
+     * Intenta crear un usuario nuevo. Si lo crea con éxito envía al usuario al login de la aplicación.
      * Si no, avisa al usuario
      */
     private void registro() {
@@ -214,7 +214,7 @@ public class Registro extends Activity {
                     FirebaseUser user = auth.getCurrentUser();
                     if (user != null) {
                         guardarUser(user);
-                        toHospital();
+                        toLogin();
                     } else
                         showToast("Error al crear el usuario");
                 } else {
@@ -244,9 +244,9 @@ public class Registro extends Activity {
     }
 
     /**
-     * LLeva a la ventana principal de la aplicación
+     * LLeva al Login de la aplicación
      */
-    private void toHospital() {
+    private void toLogin() {
         Intent inte = new Intent(this, Login.class);
         inte.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         finish();
