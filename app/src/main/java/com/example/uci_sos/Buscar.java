@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -82,5 +83,11 @@ public class Buscar extends AppCompatActivity {
         lblRecomendados = findViewById(R.id.lblRecomendados);
         //Cambio la tipografía a negrita
         lblRecomendados.setTypeface(lblRecomendados.getTypeface(), Typeface.BOLD);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 }
