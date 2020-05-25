@@ -1,7 +1,9 @@
-package com.example.uci_sos;
+package com.example.uci_sos.modelo.entidad;
 
 abstract class Camas {
+
     private String estado;
+
     private int id;
     private int planta;
     private boolean contagio;

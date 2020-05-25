@@ -1,4 +1,4 @@
-package com.example.uci_sos;
+package com.example.uci_sos.modelo.entidad;
 
 /**
  * Contiene los datos de un hospital

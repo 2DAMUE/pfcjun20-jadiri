@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TextView;
 
+import com.example.uci_sos.modelo.Adaptdor;
+import com.example.uci_sos.modelo.entidad.Hospital;
+
 import java.util.ArrayList;
 import java.util.List;
 

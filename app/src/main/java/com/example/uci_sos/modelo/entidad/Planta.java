@@ -1,4 +1,4 @@
-package com.example.uci_sos;
+package com.example.uci_sos.modelo.entidad;
 
 public class Planta extends Camas {
 

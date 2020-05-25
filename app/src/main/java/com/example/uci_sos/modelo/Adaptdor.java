@@ -1,4 +1,4 @@
-package com.example.uci_sos;
+package com.example.uci_sos.modelo;
 
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.uci_sos.modelo.entidad.Hospital;
+import com.example.uci_sos.R;
 
 import java.util.List;
 
