@@ -41,12 +41,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <View
+        android:id="@+id/recuadroLogin"
+        style="@style/recuadro_login_registro"
+        android:layout_height="500dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="84dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoLogin"
+        app:layout_constraintVertical_bias="1.0" />
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:elevation="1dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/recuadroLogin"
@@ -56,7 +68,7 @@
         app:layout_constraintVertical_bias="0.455">
 
         <EditText
-            android:id="@+id/txtEmailLogin"
+            android:id="@+id/txtEmailRegistro"
             style="@style/campos_login_registro"
             android:hint="@string/txtEmail"
             android:inputType="textEmailAddress" />
@@ -64,12 +76,14 @@
         <EditText
             android:id="@+id/txtNombre"
             style="@style/campos_login_registro"
-            android:hint="@string/txtNombre" />
+            android:hint="@string/txtNombre"
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/txtApellido"
             style="@style/campos_login_registro"
-            android:hint="@string/txtApellidos" />
+            android:hint="@string/txtApellidos"
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/txtPwdReg"
@@ -111,6 +125,7 @@
                     android:id="@+id/flechaAbajo"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:contentDescription="@string/flechaSpinner"
                     android:src="@drawable/down_arrow"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -126,20 +141,6 @@
             android:text="@string/registro" />
 
     </LinearLayout>
-
-    <View
-        android:id="@+id/recuadroLogin"
-        style="@style/recuadro_login_registro"
-        android:layout_height="500dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="84dp"
-        android:elevation="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoLogin"
-        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -451,6 +451,7 @@
     <string name="default_web_client_id" translatable="false">61585641192-iogjsa8f0mp4e08o7ckqe07icjnaftpp.apps.googleusercontent.com</string>
     <string name="derivar">Derivar</string>
     <string name="firebase_database_url" translatable="false">https://uci-sos.firebaseio.com</string>
+    <string name="flechaSpinner">flecha del spinner</string>
     <string name="fondoDerivar">fondo de la sección de derivar con una imagen difuminada de un doctor con una camilla</string>
     <string name="fondoHospital">fondo de la seccion hospital con un hospital borroso de fondo</string>
     <string name="fondoLogin">Fondo del login con una camilla</string>

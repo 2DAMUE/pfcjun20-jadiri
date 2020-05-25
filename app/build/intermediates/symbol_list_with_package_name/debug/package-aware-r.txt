@@ -987,6 +987,7 @@ id topPanel
 id txtApellido
 id txtConfirmPwd
 id txtEmailLogin
+id txtEmailRegistro
 id txtNombre
 id txtPwdLogin
 id txtPwdReg
@@ -1123,6 +1124,7 @@ string configurar_hospital
 string default_web_client_id
 string derivar
 string firebase_database_url
+string flechaSpinner
 string fondoDerivar
 string fondoHospital
 string fondoLogin
