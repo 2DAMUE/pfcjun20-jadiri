@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "applicationId": "com.example.uci_sos",
+  "applicationId": "com.example.ejemplorecyclerview",
   "variantType": "BASE_APK",
   "elements": [
     {
@@ -19,7 +19,7 @@
       },
       "path": "AndroidManifest.xml",
       "properties": {
-        "packageId": "com.example.uci_sos",
+        "packageId": "com.example.ejemplorecyclerview",
         "split": "",
         "minSdkVersion": "16"
       }
