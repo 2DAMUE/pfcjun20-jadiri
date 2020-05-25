@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Adaptador del RecyclerView. Se encarga de llenar el RecyclerView.
  */
-public class Adaptdor extends RecyclerView.Adapter<Adaptdor.MyHolder> {
+public class Adaptdor extends RecyclerView.Adapter<Adaptdor.MyHolder> implements View.OnClickListener{
 
     /**
      * Lista de elementos para cargar en el RecyclerView
@@ -25,6 +25,11 @@ public class Adaptdor extends RecyclerView.Adapter<Adaptdor.MyHolder> {
      * @see Hospital
      */
     private List<Hospital> hospitales;
+    private View.OnClickListener listener;
+    @Override
+    public void onClick(View v) {
+
+    }
 
     /**
      * ViewHolder del RecylerView. Se encarga de cargar el layout de cada tarjeta el RecyclerView. Contiene todos los elementos de cada tarjeta.
@@ -47,6 +52,7 @@ public class Adaptdor extends RecyclerView.Adapter<Adaptdor.MyHolder> {
             lblUrgencias = v.findViewById(R.id.lblurgencias);
             lblPlanta = v.findViewById(R.id.lblPlanta);
             lblDisponible = v.findViewById(R.id.lblDisponible);
+            v.setOnClickListener(this);
         }
     }
 
