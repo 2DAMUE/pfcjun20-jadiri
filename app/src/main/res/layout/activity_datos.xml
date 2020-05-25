@@ -97,7 +97,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
-            android:id="@+id/btnHospitalReserva"
+            android:id="@+id/btnHospitalDatos"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -118,6 +118,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/btnReservarDatos"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
@@ -140,7 +141,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/btnMisCamasReserva"
+            android:id="@+id/btnMisCamasDatos"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"

@@ -13,6 +13,7 @@
         <activity android:name=".Buscar" />
         <activity android:name=".Datos" />
         <activity android:name=".ReservaRealizada" />
+
         <activity android:name=".Registro" />
         <activity android:name=".ConfigPlanta" />
         <activity android:name=".Login" />
@@ -24,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <activity android:name=".MainActivity" />
     </application>

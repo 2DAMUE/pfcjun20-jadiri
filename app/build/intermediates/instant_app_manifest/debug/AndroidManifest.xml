@@ -19,8 +19,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.uci_sos.Buscar" >
-        </activity>
+        <activity android:name="com.example.uci_sos.Buscar" />
         <activity android:name="com.example.uci_sos.Datos" />
         <activity android:name="com.example.uci_sos.ReservaRealizada" />
         <activity android:name="com.example.uci_sos.Registro" />

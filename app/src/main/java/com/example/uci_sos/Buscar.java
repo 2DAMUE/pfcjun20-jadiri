@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.uci_sos.modelo.Adaptdor;
@@ -21,7 +23,7 @@ import java.util.List;
  * @see Hospital
  * @see Adaptdor
  */
-public class Buscar extends AppCompatActivity {
+public class Buscar extends AppCompatActivity implements View.OnClickListener {
 
     /**
      * RecyclerView con los datos de los hospitales
@@ -43,6 +45,7 @@ public class Buscar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscar);
         cargarVista();
+        cargarListeners();
     }
 
     /**
@@ -93,4 +96,28 @@ public class Buscar extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
+
+    private void cargarListeners() {
+        recyclerView.setOnClickListener(this);
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.recyclerViewBuscar:
+                toReservar();
+                break;
+
+        }
+    }
+
+
+    private void toReservar() {
+        Intent inte = new Intent(this.getApplicationContext(), ReservaRealizada.class);
+        startActivity(inte);
+    }
+
+
 }

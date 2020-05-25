@@ -1,11 +1,13 @@
 package com.example.uci_sos;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -19,12 +21,13 @@ import java.util.List;
 /**
  * Registro de la aplicación. En él creas tu usuario para l aaplicación
  */
-public class Registro extends Activity {
+public class Registro extends Activity implements View.OnClickListener{
 
     /**
      * Spinner con la lista de hospitales registrados en la aplicación
      */
     private Spinner spinHospital;
+    Button regis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,18 +35,23 @@ public class Registro extends Activity {
         setContentView(R.layout.activity_registro);
         cargarVista();
         cargarListeners();
+
     }
+
 
     /**
      * Carga los listeners de los elementos de la ventana
      */
     private void cargarListeners() {
+        regis.setOnClickListener(this);
+
     }
 
     /**
      * Carga los elemento de la ventana
      */
     private void cargarVista() {
+        regis = findViewById(R.id.btnRegistro);
         spinHospital = findViewById(R.id.spinnerRegistro);
         cargarAdapter();
     }
@@ -78,4 +86,24 @@ public class Registro extends Activity {
 
         spinHospital.setAdapter(adapter);
     }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.btnRegistro:
+                toLogin();
+                break;
+        }
+    }
+
+
+
+    private void toLogin() {
+        Intent inte = new Intent(this.getApplicationContext(), Login.class);
+        startActivity(inte);
+    }
+
+
+
 }

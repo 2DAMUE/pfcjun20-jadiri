@@ -84,6 +84,7 @@
             android:inputType="number" />
 
         <Button
+            android:id="@+id/btnsiguiente"
             style="@style/botones_reserva"
             android:text="@string/siguiente" />
 
