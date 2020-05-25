@@ -65,39 +65,39 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\34
 	android:theme
 		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:11:9-40
 activity#com.example.uci_sos.Datos
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:12:9-16:36
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:12:9-52
 	android:name
 		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:12:19-40
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:12:41-16:25
-action#android.intent.action.MAIN
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:13:13-65
-	android:name
-		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:13:21-62
-category#android.intent.category.LAUNCHER
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:15:13-73
-	android:name
-		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:15:23-70
 activity#com.example.uci_sos.ReservaRealizada
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:17:9-54
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:13:9-54
 	android:name
-		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:17:19-51
+		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:13:19-51
 activity#com.example.uci_sos.Registro
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:18:9-46
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:14:9-46
 	android:name
-		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:18:19-43
+		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:14:19-43
 activity#com.example.uci_sos.Login
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:19:9-52
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:15:9-52
 	android:name
-		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:19:19-40
+		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:15:19-40
 activity#com.example.uci_sos.Reservar
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:20:9-55
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:16:9-55
 	android:name
-		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:20:19-43
+		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:16:19-43
 activity#com.example.uci_sos.Splash
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:21:9-23:20
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:17:9-23:20
 	android:name
-		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:21:19-41
+		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:17:19-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:18:13-22:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:19:17-69
+	android:name
+		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:21:27-74
 activity#com.example.uci_sos.MainActivity
 ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:25:9-50
 	android:name

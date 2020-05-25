@@ -24,12 +24,12 @@
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registro.xml.flat",
-        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_registro.xml"
-    },
-    {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_reserva_icono_blanco.png.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\reserva_icono_blanco.png"
+    },
+    {
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registro.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_registro.xml"
     },
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_datos.xml.flat",
@@ -100,12 +100,12 @@
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_login.png.flat",
-        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_login.png"
-    },
-    {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondconfig.png.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondconfig.png"
+    },
+    {
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_login.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_login.png"
     },
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_datos.PNG.flat",
