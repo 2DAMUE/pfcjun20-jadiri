@@ -9,6 +9,7 @@
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/fondoDerivar"
         android:scaleType="centerCrop"
         android:src="@drawable/fondo_reservas"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,7 +30,6 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:elevation="1dp"
 
         android:gravity="center_horizontal"
         android:orientation="vertical"
@@ -74,13 +74,14 @@
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="35dp"
+                android:contentDescription="@string/iconoHospitalBlanco"
                 android:src="@drawable/hospital_icono_blanco" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hospital"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -95,13 +96,14 @@
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="35dp"
+                android:contentDescription="@string/iconoReservasAzul"
                 android:src="@drawable/reserva_icono_azul" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/reserva"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -115,13 +117,14 @@
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="35dp"
+                android:contentDescription="@string/iconoMisCamasBlanco"
                 android:src="@drawable/miscamas_icono_blanco" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/misCamas"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
     </LinearLayout>

@@ -19,5 +19,4 @@ public class Datos extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
-
-    }
+}

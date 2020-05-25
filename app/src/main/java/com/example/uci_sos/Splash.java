@@ -8,6 +8,11 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+/**
+ * Splash de la aplicación. Lleva al login
+ *
+ * @see Login
+ */
 public class Splash extends Activity {
     private ImageView logosos;
 
@@ -21,7 +26,6 @@ public class Splash extends Activity {
         //TextView colaboracion = findViewById(R.id.colabo);
         Animation zoomin = AnimationUtils.loadAnimation(this, R.anim.animacionlogo);
 
-        Animation aparece = AnimationUtils.loadAnimation(this, R.anim.animacionlogouem);
         Animation facein = AnimationUtils.loadAnimation(this, R.anim.animaciontexto);
         logosos.startAnimation(zoomin);
         //logosos.startAnimation(pulso);
@@ -31,6 +35,11 @@ public class Splash extends Activity {
         start();
     }
 
+    /**
+     * Inicia la animación del logo y, cuando finaliza, abre el login
+     *
+     * @see Login
+     */
     private void start() {
         final Animation pulso = AnimationUtils.loadAnimation(this, R.anim.latidos);
         logosos.startAnimation(pulso);

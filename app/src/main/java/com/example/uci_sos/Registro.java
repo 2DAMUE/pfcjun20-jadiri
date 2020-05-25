@@ -49,7 +49,7 @@ public class Registro extends Activity {
     }
 
     /**
-     * Crea y carga la lista de hospitales en el spinner
+     * Crea y carga la lista de hospitales en el spinner. Inhabilita el elemento de "Seleccionar hospital", el primero del spinner.
      *
      * @see Registro#spinHospital
      */

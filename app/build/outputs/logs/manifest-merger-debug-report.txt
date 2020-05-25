@@ -64,36 +64,44 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ri
 		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.uci_sos.Datos
+ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:12:9-43
+	android:name
+		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:12:19-40
 activity#com.example.uci_sos.ConfigPlanta
-ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:13:9-50
 	android:name
-		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:12:19-47
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:13:13-17:29
-action#android.intent.action.MAIN
-ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:14:17-69
+		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:13:19-47
+activity#com.example.uci_sos.ReservaRealizada
+ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:14:9-54
 	android:name
-		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:14:25-66
-category#android.intent.category.LAUNCHER
-ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:16:17-77
-	android:name
-		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:16:27-74
-activity#com.example.uci_sos.Reservar
-ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:19:9-46
-	android:name
-		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:19:19-43
+		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:14:19-51
 activity#com.example.uci_sos.Registro
-ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:20:9-46
+ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:15:9-46
 	android:name
-		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:20:19-43
+		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:15:19-43
 activity#com.example.uci_sos.Login
-ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:21:9-43
+ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:16:9-43
 	android:name
-		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:21:19-40
+		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:16:19-40
+activity#com.example.uci_sos.Reservar
+ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:17:9-46
+	android:name
+		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:17:19-43
 activity#com.example.uci_sos.Splash
-ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:22:9-24:20
+ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:18:9-24:20
 	android:name
-		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:22:19-41
+		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:18:19-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAIN
+ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:22:27-74
 activity#com.example.uci_sos.MainActivity
 ADDED from D:\Android Studio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:25:9-50
 	android:name

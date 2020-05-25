@@ -6,4 +6,9 @@
         android:title="@string/logout"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/itConfig"
+        android:title="@string/configurar_hospital"
+        app:showAsAction="never" />
+
 </menu>
