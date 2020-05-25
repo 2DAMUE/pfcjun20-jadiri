@@ -74,7 +74,7 @@ public class Login extends Activity implements View.OnClickListener {
     }
 
     private void toReservar() {
-        Intent inte = new Intent(this.getApplicationContext(), Reservar.class);
+        Intent inte = new Intent(this.getApplicationContext(), ConfigPlanta.class);
         finish();
         startActivity(inte);
     }

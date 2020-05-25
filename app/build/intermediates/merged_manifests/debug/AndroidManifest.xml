@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.uci_sos"
+    package="com.example.ejemplorecyclerview"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -18,9 +18,14 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.uci_sos.Reservar" />
+        <activity android:name="com.example.uci_sos.Buscar" >
+        </activity>
+        <activity android:name="com.example.uci_sos.Datos" />
+        <activity android:name="com.example.uci_sos.ReservaRealizada" />
         <activity android:name="com.example.uci_sos.Registro" />
+        <activity android:name="com.example.uci_sos.ConfigPlanta" />
         <activity android:name="com.example.uci_sos.Login" />
+        <activity android:name="com.example.uci_sos.Reservar" />
         <activity android:name="com.example.uci_sos.Splash" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
