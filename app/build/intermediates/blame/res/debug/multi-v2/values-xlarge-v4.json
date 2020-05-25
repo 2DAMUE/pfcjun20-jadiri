@@ -4,7 +4,7 @@
             "outputFile": "D:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Ricardo Bordería Pi\\.gradle\\caches\\transforms-2\\files-2.1\\106a73d32b78cadd153ffdc8e7ca37a6\\appcompat-1.1.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "C:\\Users\\Ricardo Bordería Pi\\.gradle\\caches\\transforms-2\\files-2.1\\4b574ef5a98e761c3e1f5d4e34d44040\\appcompat-1.1.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
