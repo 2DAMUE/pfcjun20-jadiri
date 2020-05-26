@@ -14,6 +14,7 @@
 
         </activity>
         <activity android:name=".Datos" />
+
         <activity android:name=".ReservaRealizada"
             android:parentActivityName=".Buscar">
         </activity>
@@ -32,6 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
 
         <activity android:name=".MainActivity" />
