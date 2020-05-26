@@ -1,4 +1,4 @@
-#Mon May 25 17:04:16 CEST 2020
+#Tue May 26 12:47:16 CEST 2020
 base.0=C\:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

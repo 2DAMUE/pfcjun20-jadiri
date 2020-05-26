@@ -4,6 +4,7 @@ import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -25,6 +26,13 @@ public class Adaptdor extends RecyclerView.Adapter<Adaptdor.MyHolder> implements
      * @see Hospital
      */
     private List<Hospital> hospitales;
+    private AdapterView.OnItemClickListener mListener;
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+    }
+    public void setOnClickListener(OnItemClickListener listener){
+
+    }
     private View.OnClickListener listener;
     @Override
     public void onClick(View v) {
@@ -52,7 +60,6 @@ public class Adaptdor extends RecyclerView.Adapter<Adaptdor.MyHolder> implements
             lblUrgencias = v.findViewById(R.id.lblurgencias);
             lblPlanta = v.findViewById(R.id.lblPlanta);
             lblDisponible = v.findViewById(R.id.lblDisponible);
-            v.setOnClickListener(this);
         }
     }
 

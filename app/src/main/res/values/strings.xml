@@ -41,4 +41,5 @@
     <string name="fondoHospital">fondo de la seccion hospital con un hospital borroso de fondo</string>
     <string name="configurar_hospital">Configurar hospital</string>
     <string name="recomendados">Recomendados</string>
+    <string name="flechaSpinner">flecha del spinner</string>
 </resources>
