@@ -154,6 +154,14 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="colorPrimary">#0B33FC</color>
     <color name="colorPrimaryDark">#3700B3</color>
+    <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
+    <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
+    <color name="common_google_signin_btn_text_dark_focused">@android:color/black</color>
+    <color name="common_google_signin_btn_text_dark_pressed">@android:color/white</color>
+    <color name="common_google_signin_btn_text_light_default">#90000000</color>
+    <color name="common_google_signin_btn_text_light_disabled">#1F000000</color>
+    <color name="common_google_signin_btn_text_light_focused">#90000000</color>
+    <color name="common_google_signin_btn_text_light_pressed">#DE000000</color>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
@@ -384,6 +392,7 @@
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="config_tooltipAnimTime">150</integer>
+    <integer name="google_play_services_version">12451000</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
@@ -420,14 +429,40 @@
     <string name="camasUrgenciasLibres">Camas de urgencias libres</string>
     <string name="camasUrgenciasOcupadas">Camas de urgencias ocupadas</string>
     <string name="cero">0</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Install</string>
+    <string name="common_google_play_services_install_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are missing from your device.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_unknown_issue"><ns1:g id="app_name">%1$s</ns1:g> is having trouble with Google Play services. Please try again.</string>
+    <string name="common_google_play_services_unsupported_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are not supported by your device.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Update</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run unless you update Google Play services.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_google_play_services_updating_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are currently updating.</string>
+    <string name="common_google_play_services_wear_update_text">New version of Google Play services needed. It will update itself shortly.</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="configurar_hospital">Configurar hospital</string>
+    <string name="default_web_client_id" translatable="false">61585641192-iogjsa8f0mp4e08o7ckqe07icjnaftpp.apps.googleusercontent.com</string>
     <string name="derivar">Derivar</string>
+    <string name="firebase_database_url" translatable="false">https://uci-sos.firebaseio.com</string>
+    <string name="flechaSpinner">flecha del spinner</string>
     <string name="fondoDerivar">fondo de la sección de derivar con una imagen difuminada de un doctor con una camilla</string>
     <string name="fondoHospital">fondo de la seccion hospital con un hospital borroso de fondo</string>
     <string name="fondoLogin">Fondo del login con una camilla</string>
     <string name="fondoPlantas">Fondo del editor de plantas con un hospital</string>
     <string name="fondoRegistro">Fondo del registro con una camilla</string>
     <string name="fondoSplash">Fondo del splash con una camilla</string>
+    <string name="gcm_defaultSenderId" translatable="false">61585641192</string>
+    <string name="google_api_key" translatable="false">AIzaSyBhyBaAg4huif1H6bbjdwMjDPYBwWuUKFI</string>
+    <string name="google_app_id" translatable="false">1:61585641192:android:3c27630380d2a2df53035d</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBhyBaAg4huif1H6bbjdwMjDPYBwWuUKFI</string>
+    <string name="google_storage_bucket" translatable="false">uci-sos.appspot.com</string>
     <string name="hospital">Hospital</string>
     <string name="hospital_universitario_de_algo">Hospital Universitario de algo</string>
     <string name="iconoHospitalAzul">icono del menú con un hospital azul</string>
@@ -443,6 +478,7 @@
     <string name="misCamas">Mis Camas</string>
     <string name="nombrePlanta">Nombre de la planta</string>
     <string name="numCamasUCILibres">Camas de UCI libres</string>
+    <string name="project_id" translatable="false">uci-sos</string>
     <string name="recomendados">Recomendados</string>
     <string name="registrarse"><u>Regístrate aquí</u></string>
     <string name="registro">Registrar</string>
@@ -2954,6 +2990,19 @@
         <!-- Amount of pixels by which the drop down should be offset horizontally. -->
         <attr name="android:dropDownHorizontalOffset"/>
     </declare-styleable>
+    <declare-styleable name="LoadingImageView"><attr name="imageAspectRatioAdjust">
+<enum name="none" value="0"/>
+
+<enum name="adjust_width" value="1"/>
+
+<enum name="adjust_height" value="2"/>
+
+</attr>
+
+<attr format="float" name="imageAspectRatio"/>
+
+<attr format="boolean" name="circleCrop"/>
+</declare-styleable>
     <declare-styleable name="MenuGroup">
 
         <!-- The ID of the group. -->
@@ -3220,6 +3269,25 @@
         <attr format="reference" name="submitBackground"/>
         <attr name="android:focusable"/>
     </declare-styleable>
+    <declare-styleable name="SignInButton"><attr format="reference" name="buttonSize">
+<enum name="standard" value="0"/>
+
+<enum name="wide" value="1"/>
+
+<enum name="icon_only" value="2"/>
+
+</attr>
+<attr format="reference" name="colorScheme">
+<enum name="dark" value="0"/>
+
+<enum name="light" value="1"/>
+
+<enum name="auto" value="2"/>
+
+</attr>
+
+<attr format="reference|string" name="scopeUris"/>
+</declare-styleable>
     <declare-styleable name="Spinner">
         <!-- The prompt to display when the spinner's dialog is shown. -->
         <attr name="android:prompt"/>
