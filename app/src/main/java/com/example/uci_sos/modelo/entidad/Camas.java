@@ -1,14 +1,18 @@
 package com.example.uci_sos.modelo.entidad;
 
-abstract class Camas {
+import java.io.Serializable;
+
+public abstract class Camas implements Serializable {
+
+    private static final long serialVersionUID = 2L;
 
     private String estado;
 
     private int id;
-    private int planta;
+    private String planta;
     private boolean contagio;
 
-    public Camas(String estado, int id, int planta, boolean contagio) {
+    public Camas(String estado, int id, String planta, boolean contagio) {
         this.estado = estado;
         this.id = id;
         this.planta = planta;
@@ -31,11 +35,11 @@ abstract class Camas {
         this.id = id;
     }
 
-    public int getPlanta() {
+    public String getPlanta() {
         return planta;
     }
 
-    public void setPlanta(int planta) {
+    public void setPlanta(String planta) {
         this.planta = planta;
     }
 
@@ -45,5 +49,15 @@ abstract class Camas {
 
     public void setContagio(boolean contagio) {
         this.contagio = contagio;
+    }
+
+    @Override
+    public String toString() {
+        return "Camas{" +
+                "estado='" + estado + '\'' +
+                ", id=" + id +
+                ", planta='" + planta + '\'' +
+                ", contagio=" + contagio +
+                '}';
     }
 }

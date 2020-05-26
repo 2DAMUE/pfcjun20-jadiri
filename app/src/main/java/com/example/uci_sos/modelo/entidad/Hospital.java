@@ -1,52 +1,66 @@
 package com.example.uci_sos.modelo.entidad;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Contiene los datos de un hospital
  */
-public class Hospital {
+public class Hospital implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * Lista de camas del hospital
+     *
+     * @see Camas
+     * @see UCI
+     * @see Planta
+     * @see Urgencias
+     */
+    private List<Camas> listaCamas;
 
     /**
      * Nombre del hospital
      */
-    String nombre;
+    private String nombre;
 
     /**
-     * Número de camas de UCI
+     * Código que identifica a cada hospital. Éste debe se único
      */
-    int camasUCI;
+    private int codHospital;
+
     /**
-     * Número de camas de planta
+     * Constructor vacío de la calse
      */
-    int camasPlanta;
-    /**
-     * Número de camas de urgencias
-     */
-    int camasUrgencias;
-    /**
-     * Número de camas disponibles para derivaciones de otros hospitales
-     */
-    int camasDisponibles;
+    public Hospital() {
+        listaCamas = new ArrayList<>();
+    }
 
     /**
      * Constructor de la clase
      *
-     * @param nombre           nombre del hospital
-     * @param camasUCI         número de camas de UCI
-     * @param camasPlanta      número de camas de planta
-     * @param camasUrgencias   número de camas de urgencias
-     * @param camasDisponibles número de camas disponibles para derivaciones de otros hospitales
+     * @param listaCamas  camas del hospital
+     * @param nombre      nombre del hospital
+     * @param codHospital código del hospital
+     * @see Hospital#listaCamas
      * @see Hospital#nombre
-     * @see Hospital#camasUCI
-     * @see Hospital#camasPlanta
-     * @see Hospital#camasUrgencias
-     * @see Hospital#camasDisponibles
+     * @see Hospital#codHospital
      */
-    public Hospital(String nombre, int camasUCI, int camasPlanta, int camasUrgencias, int camasDisponibles) {
+    public Hospital(List<Camas> listaCamas, String nombre, int codHospital) {
+        this.listaCamas = listaCamas;
         this.nombre = nombre;
-        this.camasUCI = camasUCI;
-        this.camasPlanta = camasPlanta;
-        this.camasUrgencias = camasUrgencias;
-        this.camasDisponibles = camasDisponibles;
+        this.codHospital = codHospital;
+    }
+
+    /**
+     * Añade una cama al hospital
+     *
+     * @param cama cama a añadir
+     */
+    public void addCama(Camas cama) {
+        this.listaCamas.add(cama);
     }
 
     /**
@@ -60,42 +74,61 @@ public class Hospital {
     }
 
     /**
-     * Getter del número de camas de UCI
+     * Almacena el nombr del hospital
      *
-     * @return número de camas de UCI
-     * @see Hospital#camasUCI
+     * @param nombre nombre del hospital
+     * @see Hospital#nombre
      */
-    public int getCamasUCI() {
-        return camasUCI;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     /**
-     * Getter del número de camas de planta
+     * Getter del List de camas
      *
-     * @return número de camas de planta
-     * @see Hospital#camasPlanta
+     * @return lista de camas del hospital
+     * @see Hospital#listaCamas
      */
-    public int getCamasPlanta() {
-        return camasPlanta;
+    public List<Camas> getListaCamas() {
+        return listaCamas;
     }
 
     /**
-     * Getter del número de camas de urgencias
+     * Almacena el List de camas del hospital
      *
-     * @return número de camas de urgencias
-     * @see Hospital#camasUrgencias
+     * @param listaCamas lista de las camas del hospital
+     * @see Hospital#listaCamas
      */
-    public int getCamasUrgencias() {
-        return camasUrgencias;
+    public void setListaCamas(List<Camas> listaCamas) {
+        this.listaCamas = listaCamas;
     }
 
     /**
-     * Geter del número de camas disponibles para derivaciones de otros hospitales
+     * Getter del código del hospital
      *
-     * @return número de camas disponibles para derivaciones de otros hospitales
-     * @see Hospital#camasDisponibles
+     * @return código único del hospital
+     * @see Hospital#codHospital
      */
-    public int getCamasDisponibles() {
-        return camasDisponibles;
+    public int getCodHospital() {
+        return codHospital;
+    }
+
+    /**
+     * Almacena el código del hospital
+     *
+     * @param codHospital código único del hospital
+     * @see Hospital#codHospital
+     */
+    public void setCodHospital(int codHospital) {
+        this.codHospital = codHospital;
+    }
+
+    @Override
+    public String toString() {
+        return "Hospital{" +
+                "listaCamas=" + listaCamas +
+                ", nombre='" + nombre + '\'' +
+                ", codHospital=" + codHospital +
+                '}';
     }
 }

@@ -59,28 +59,28 @@ public class Buscar extends AppCompatActivity {
         recyclerView.setLayoutManager(lm);
 
         //Creo los hospitales
-        Hospital h1 = new Hospital("Puerta de Hierro", 10, 200, 50, 3);
-        Hospital h2 = new Hospital("Hospital Univeritario de León", 1200, 30000, 700, 2);
-        Hospital h3 = new Hospital("Gregorio Marañón", 120, 523, 420, 1000);
-        Hospital h4 = new Hospital("Gran Hospital de Boadilla", 2, 5, 3, -1);
-        Hospital h5 = new Hospital("12 de Octubre", 12, 12, 12, 12);
+        //Hospital h1 = new Hospital("Puerta de Hierro", 10, 200, 50, 3);
+        //Hospital h2 = new Hospital("Hospital Univeritario de León", 1200, 30000, 700, 2);
+        //Hospital h3 = new Hospital("Gregorio Marañón", 120, 523, 420, 1000);
+        //Hospital h4 = new Hospital("Gran Hospital de Boadilla", 2, 5, 3, -1);
+        //Hospital h5 = new Hospital("12 de Octubre", 12, 12, 12, 12);
 
         //Creo la lista de hospitales
-        List<Hospital> listaHospitales = new ArrayList<>();
+        //List<Hospital> listaHospitales = new ArrayList<>();
         //Añado los hospitales a la lista
-        listaHospitales.add(h1);
-        listaHospitales.add(h2);
-        listaHospitales.add(h3);
-        listaHospitales.add(h4);
-        listaHospitales.add(h5);
-        listaHospitales.add(h5);
-        listaHospitales.add(h5);
-        listaHospitales.add(h5);
-        listaHospitales.add(h5);
+        //listaHospitales.add(h1);
+        //listaHospitales.add(h2);
+        //listaHospitales.add(h3);
+        //listaHospitales.add(h4);
+        //listaHospitales.add(h5);
+        //listaHospitales.add(h5);
+        //listaHospitales.add(h5);
+        //listaHospitales.add(h5);
+        //listaHospitales.add(h5);
 
         //Creo el adaptador y hago un set del adaptador en el RecyclerView
-        adapter = new Adaptdor(listaHospitales);
-        recyclerView.setAdapter(adapter);
+        //adapter = new Adaptdor(listaHospitales);
+        //recyclerView.setAdapter(adapter);
 
         //Inicializo el TextView
         lblRecomendados = findViewById(R.id.lblRecomendados);

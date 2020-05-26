@@ -34,10 +34,29 @@ public class Reservar extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 toLogin();
                 break;
+            case R.id.itConfig:
+                toConfig();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Lleva a la ventana de configuración del hospital
+     *
+     * @see Datos
+     */
+    private void toConfig() {
+        Intent inte = new Intent(this, Datos.class);
+        finish();
+        startActivity(inte);
+    }
+
+    /**
+     * Lleva al login
+     *
+     * @see Login
+     */
     private void toLogin() {
         Intent inte = new Intent(this, Login.class);
         inte.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

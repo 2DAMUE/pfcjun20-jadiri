@@ -121,7 +121,7 @@ public class Login extends Activity implements View.OnClickListener {
     }
 
     /**
-     * Almacena la información de los campos en sus variables correcpondientes.
+     * Almacena la información de los campos en sus variables correcpondientes
      *
      * @see Login#email
      * @see Login#pwd
