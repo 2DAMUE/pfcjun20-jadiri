@@ -7,8 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.View;
 import android.widget.TextView;
 
 import com.example.uci_sos.modelo.Adaptdor;
@@ -23,7 +21,7 @@ import java.util.List;
  * @see Hospital
  * @see Adaptdor
  */
-public class Buscar extends AppCompatActivity implements View.OnClickListener {
+public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom {
 
     /**
      * RecyclerView con los datos de los hospitales
@@ -40,12 +38,13 @@ public class Buscar extends AppCompatActivity implements View.OnClickListener {
      */
     private TextView lblRecomendados;
 
+    List<Hospital> listaHospitales;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscar);
         cargarVista();
-        cargarListeners();
     }
 
     /**
@@ -69,7 +68,7 @@ public class Buscar extends AppCompatActivity implements View.OnClickListener {
         Hospital h5 = new Hospital("12 de Octubre", 12, 12, 12, 12);
 
         //Creo la lista de hospitales
-        List<Hospital> listaHospitales = new ArrayList<>();
+        listaHospitales = new ArrayList<>();
         //Añado los hospitales a la lista
         listaHospitales.add(h1);
         listaHospitales.add(h2);
@@ -82,7 +81,7 @@ public class Buscar extends AppCompatActivity implements View.OnClickListener {
         listaHospitales.add(h5);
 
         //Creo el adaptador y hago un set del adaptador en el RecyclerView
-        adapter = new Adaptdor(listaHospitales);
+        adapter = new Adaptdor(listaHospitales, this);
         recyclerView.setAdapter(adapter);
 
         //Inicializo el TextView
@@ -92,32 +91,10 @@ public class Buscar extends AppCompatActivity implements View.OnClickListener {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
-
-    private void cargarListeners() {
-        recyclerView.setOnClickListener(this);
-    }
-
-
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
-        switch (id) {
-            case R.id.recyclerViewBuscar:
-                toReservar();
-                break;
-
-        }
-    }
-
-
-    private void toReservar() {
-        Intent inte = new Intent(this.getApplicationContext(), ReservaRealizada.class);
+    public void click(int position) {
+        Hospital h = listaHospitales.get(position);
+        Intent inte = new Intent(this, ReservaRealizada.class);
+        inte.putExtra("Nombre", h.getNombre());
         startActivity(inte);
     }
-
-
 }

@@ -8,16 +8,22 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class ReservaRealizada extends AppCompatActivity implements View.OnClickListener{
     Button inicio;
     LinearLayout mihospital;
     LinearLayout miscamas;
+    TextView nombreh;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserva_realizada);
         setTitle("Reservar");
+        String nombre = getIntent().getStringExtra("Nombre");
+        nombreh = findViewById(R.id.lblHospitalReserva);
+        nombreh.setText(nombre);
         cargarVista();
         cargarListeners();
     }
