@@ -32,6 +32,7 @@ public class Login extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_login);
         cargarVista();
         cargarListeners();
+        System.out.println("HOLA");
     }
 
     /**
