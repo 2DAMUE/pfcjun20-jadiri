@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
+<<<<<<< Updated upstream
 import android.view.Menu;
+=======
+>>>>>>> Stashed changes
 import android.widget.TextView;
 
 import com.example.uci_sos.modelo.Adaptdor;
@@ -21,7 +24,11 @@ import java.util.List;
  * @see Hospital
  * @see Adaptdor
  */
+<<<<<<< Updated upstream
 public class Buscar extends AppCompatActivity {
+=======
+public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom {
+>>>>>>> Stashed changes
 
     /**
      * RecyclerView con los datos de los hospitales
@@ -38,10 +45,12 @@ public class Buscar extends AppCompatActivity {
      */
     private TextView lblRecomendados;
 
+    List<Hospital> listaHospitales;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_buscar);
+        setContentView(R.layout.activity_main);
         cargarVista();
     }
 
@@ -66,7 +75,7 @@ public class Buscar extends AppCompatActivity {
         Hospital h5 = new Hospital("12 de Octubre", 12, 12, 12, 12);
 
         //Creo la lista de hospitales
-        List<Hospital> listaHospitales = new ArrayList<>();
+        listaHospitales = new ArrayList<>();
         //Añado los hospitales a la lista
         listaHospitales.add(h1);
         listaHospitales.add(h2);
@@ -79,7 +88,7 @@ public class Buscar extends AppCompatActivity {
         listaHospitales.add(h5);
 
         //Creo el adaptador y hago un set del adaptador en el RecyclerView
-        adapter = new Adaptdor(listaHospitales);
+        adapter = new Adaptdor(listaHospitales, this);
         recyclerView.setAdapter(adapter);
 
         //Inicializo el TextView
@@ -89,8 +98,16 @@ public class Buscar extends AppCompatActivity {
     }
 
     @Override
+<<<<<<< Updated upstream
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
+=======
+    public void click(int position) {
+        Hospital h = listaHospitales.get(position);
+        Intent inte = new Intent(this, ReservaRealizada.class);
+        inte.putExtra("nombre", h.getNombre());
+        startActivity(inte);
+>>>>>>> Stashed changes
     }
 }
