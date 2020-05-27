@@ -134,6 +134,7 @@ public class ConfigPlanta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config_planta);
         h = (Hospital) getIntent().getSerializableExtra("hospital");
+        Log.d("HOSPITAL_CONFIG", "Nombre: " + h.getNombre());
         index = 0;
         numPlantas = getIntent().getIntExtra("numPlantas", 1);
         db = FirebaseDatabase.getInstance();
@@ -344,7 +345,7 @@ public class ConfigPlanta extends AppCompatActivity {
                             Log.d("CREAR_HOSPITAL", "ÉXITO");
                             showToast("Hospital creado con éxito");
                         } else {
-                            Log.w("CREAR_USER", task.getException().toString());
+                            Log.w("CREAR_HOSPITAL", task.getException().toString());
                             showToast("Ha habido un error al crear el hospital\nCompruebe su conexión a Internet e inténtelo de nuevo más tarde");
                             toDatos();
                         }

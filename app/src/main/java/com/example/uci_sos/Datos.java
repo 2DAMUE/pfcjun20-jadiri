@@ -1,10 +1,13 @@
 package com.example.uci_sos;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,7 +16,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.uci_sos.modelo.entidad.Hospital;
+import com.example.uci_sos.modelo.entidad.Referencias;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.Iterator;
 
 /**
  * Crea un hospital nuevo, con un nombre y un ID único. Lleva a la ventana de configurar planta
@@ -110,9 +121,33 @@ public class Datos extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (comprobar())
-                    crearHospital();
+                    mostrarAdvertencia();
             }
         });
+    }
+
+    /**
+     * Advierte al usuario de que no se podrán realizar cambios una vez creado el hospital. Si acepta las
+     * condiciones creará el hospital y seguirá adelante con la creación de cada planta del hospital.
+     * Si no las acepta desaparece la advertencia.
+     */
+    private void mostrarAdvertencia() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Advertencia");
+        builder.setMessage("Una vez creado el hospital, no se podrán cambiar los datos. ¿Desea continuar?");
+        builder.setPositiveButton("Continuar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                crearHospital();
+            }
+        });
+        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.create().show();
     }
 
     /**
@@ -141,13 +176,35 @@ public class Datos extends AppCompatActivity {
     }
 
     /**
-     * Crea un hospital con su nombre y abre la ventana de configurar plantas
-     * pasándole el hospital y el número de plantas
+     * Crea un hospital con su nombre e ID único. Lleva a la ventana de configurar planta
+     *
+     * @see Hospital
+     * @see ConfigPlanta
      */
-    private void crearHospital() {
-        Hospital h = new Hospital();
-        h.setNombre(nombreHospital);
-        h.setCodHospital(1);
+    public void crearHospital() {
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        DatabaseReference hos = db.getReference(Referencias.HOSPITALES);
+        hos.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                int id = (int) dataSnapshot.getChildrenCount();
+                Log.d("CARGAR_ID", "ID: " + id);
+                Log.d("CARGAR_NOMBRE", "Nombre: " + nombreHospital);
+                Hospital h = new Hospital();
+                h.setCodHospital(id);
+                h.setNombre(nombreHospital);
+                toConfigPlanta(h);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w("CARGAR_ID", databaseError.toString());
+                showToast("Error al crear el hospital\nPor favor, compruebe su conexión a Internet e inténtelo de nuevo más tarde");
+            }
+        });
+    }
+
+    private void toConfigPlanta(Hospital h) {
         Intent intent = new Intent(this, ConfigPlanta.class);
         intent.putExtra("hospital", h);
         intent.putExtra("numPlantas", numPlantas);

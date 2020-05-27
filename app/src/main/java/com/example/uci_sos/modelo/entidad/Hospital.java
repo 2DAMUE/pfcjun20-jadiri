@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.uci_sos.Datos;
+
 /**
  * Contiene los datos de un hospital
  */

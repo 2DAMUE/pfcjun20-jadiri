@@ -36,7 +36,7 @@ public class Reservar extends AppCompatActivity {
         btnBuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getHospital();
+
             }
         });
         setTitle("Reservar");
@@ -83,28 +83,5 @@ public class Reservar extends AppCompatActivity {
         inte.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         finish();
         startActivity(inte);
-    }
-
-    private void getHospital() {
-        FirebaseDatabase db = FirebaseDatabase.getInstance();
-        DatabaseReference hos = db.getReference(Referencias.HOSPITALES);
-        hos.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Iterator<DataSnapshot> hijos = dataSnapshot.getChildren().iterator();
-                String nombres = "";
-                while (hijos.hasNext()) {
-                    DataSnapshot hijo = hijos.next();
-                    Hospital hos = hijo.getValue(Hospital.class);
-                    nombres += hos.getNombre() + "\n";
-                }
-                Toast.makeText(Reservar.this, nombres, Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.w("CARGAR_HOSPITAL", databaseError.toString());
-            }
-        });
     }
 }
