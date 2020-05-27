@@ -182,7 +182,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <View
+        style="@style/linea_menu_abajo"
+        app:layout_constraintBottom_toTopOf="@+id/menu_abajo_reservar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
     <LinearLayout
         android:id="@+id/menu_abajo_reservar"
         style="@style/fondo_menu_abajo"

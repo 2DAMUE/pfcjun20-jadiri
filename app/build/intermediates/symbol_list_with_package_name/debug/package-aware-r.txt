@@ -889,8 +889,11 @@ id checked
 id chronometer
 id collapseActionView
 id colorgrafico1
+id colorgrafico11
 id colorgrafico2
+id colorgrafico22
 id colorgrafico3
+id colorgrafico33
 id content
 id contentPanel
 id custom
@@ -947,6 +950,9 @@ id lbl_textoCamasUcis
 id lbl_textoCamasUrgencia
 id lbl_textoSituacionCamas
 id lblibres
+id lblldisponibles
+id lbllibres
+id lblocupadas
 id lblurgencias
 id lbocupadas
 id left
@@ -1034,7 +1040,6 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
-id textView4
 id textoCamasUci
 id textohospital
 id time
