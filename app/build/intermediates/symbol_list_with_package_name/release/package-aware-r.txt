@@ -843,6 +843,7 @@ id btnHospitalReserva
 id btnLogin
 id btnMisCamasReserva
 id btnRegistro
+id btnSiguiente
 id btnToConfigPlantas
 id btninicio
 id buttonPanel
@@ -989,6 +990,15 @@ id txtConfirmPwd
 id txtEmailLogin
 id txtEmailRegistro
 id txtNombre
+id txtNombreHospital
+id txtNombrePlanta
+id txtNumCamasPlantaLibres
+id txtNumCamasPlantaOcupadas
+id txtNumCamasUCILibres
+id txtNumCamasUCIOcupadas
+id txtNumCamasUrgenciasLibres
+id txtNumCamasUrgenciasOcupadas
+id txtNumPlantas
 id txtPwdLogin
 id txtPwdReg
 id unchecked
@@ -1150,7 +1160,9 @@ string logo
 string logout
 string misCamas
 string nombrePlanta
+string nombre_de_hospital
 string numCamasUCILibres
+string numero_de_plantas
 string project_id
 string recomendados
 string registrarse

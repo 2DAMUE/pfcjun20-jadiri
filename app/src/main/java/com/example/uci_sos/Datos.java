@@ -147,7 +147,7 @@ public class Datos extends AppCompatActivity {
     private void crearHospital() {
         Hospital h = new Hospital();
         h.setNombre(nombreHospital);
-        h.setCodHospital(0);
+        h.setCodHospital(1);
         Intent intent = new Intent(this, ConfigPlanta.class);
         intent.putExtra("hospital", h);
         intent.putExtra("numPlantas", numPlantas);

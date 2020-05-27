@@ -12,6 +12,10 @@ public abstract class Camas implements Serializable {
     private String planta;
     private boolean contagio;
 
+    public Camas() {
+
+    }
+
     public Camas(String estado, int id, String planta, boolean contagio) {
         this.estado = estado;
         this.id = id;

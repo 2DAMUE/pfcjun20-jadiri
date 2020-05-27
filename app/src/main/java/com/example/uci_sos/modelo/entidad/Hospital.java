@@ -12,14 +12,26 @@ public class Hospital implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * Lista de camas del hospital
+     * Lista de camas de UCI del hospital
      *
      * @see Camas
      * @see UCI
+     */
+    private List<UCI> listaCamasUCI;
+    /**
+     * Lista de camas de planta del hospital
+     *
+     * @see Camas
      * @see Planta
+     */
+    private List<Planta> listaCamasPlanta;
+    /**
+     * Lista de camas de urgencias del hospital
+     *
+     * @see Camas
      * @see Urgencias
      */
-    private List<Camas> listaCamas;
+    private List<Urgencias> listaCamasUrgencias;
 
     /**
      * Nombre del hospital
@@ -35,32 +47,57 @@ public class Hospital implements Serializable {
      * Constructor vacío de la calse
      */
     public Hospital() {
-        listaCamas = new ArrayList<>();
+        listaCamasUCI = new ArrayList<>();
+        listaCamasPlanta = new ArrayList<>();
+        listaCamasUrgencias = new ArrayList<>();
     }
 
     /**
      * Constructor de la clase
      *
-     * @param listaCamas  camas del hospital
-     * @param nombre      nombre del hospital
-     * @param codHospital código del hospital
-     * @see Hospital#listaCamas
+     * @param listaCamasUCI camas de UCI del hospital
+     * @param nombre        nombre del hospital
+     * @param codHospital   código del hospital
+     * @see Hospital#listaCamasUCI
      * @see Hospital#nombre
      * @see Hospital#codHospital
      */
-    public Hospital(List<Camas> listaCamas, String nombre, int codHospital) {
-        this.listaCamas = listaCamas;
+    public Hospital(List<UCI> listaCamasUCI, List<Planta> listaCamasPlanta, List<Urgencias> listaCamasUrgencias, String nombre, int codHospital) {
+        this.listaCamasUCI = listaCamasUCI;
+        this.listaCamasPlanta = listaCamasPlanta;
+        this.listaCamasUrgencias = listaCamasUrgencias;
         this.nombre = nombre;
         this.codHospital = codHospital;
     }
 
     /**
-     * Añade una cama al hospital
+     * Añade una cama de UCI al hospital
      *
-     * @param cama cama a añadir
+     * @param cama cama de UCI a añadir
+     * @see Hospital#listaCamasUCI
      */
-    public void addCama(Camas cama) {
-        this.listaCamas.add(cama);
+    public void addCamaUCI(UCI cama) {
+        this.listaCamasUCI.add(cama);
+    }
+
+    /**
+     * Añade una cama de planta al hospital
+     *
+     * @param cama cama de Planta a añadir
+     * @see Hospital#listaCamasPlanta
+     */
+    public void addCamaPlanta(Planta cama) {
+        this.listaCamasPlanta.add(cama);
+    }
+
+    /**
+     * Añade una cama de urgencias al hospital
+     *
+     * @param cama cama de Urgencias a añadir
+     * @see Hospital#listaCamasUrgencias
+     */
+    public void addCamaUrgencias(Urgencias cama) {
+        this.listaCamasUrgencias.add(cama);
     }
 
     /**
@@ -84,23 +121,23 @@ public class Hospital implements Serializable {
     }
 
     /**
-     * Getter del List de camas
+     * Getter del List de camas de UCI
      *
-     * @return lista de camas del hospital
-     * @see Hospital#listaCamas
+     * @return lista de camas de UCI del hospital
+     * @see Hospital#listaCamasUCI
      */
-    public List<Camas> getListaCamas() {
-        return listaCamas;
+    public List<UCI> getListaCamasUCI() {
+        return listaCamasUCI;
     }
 
     /**
      * Almacena el List de camas del hospital
      *
-     * @param listaCamas lista de las camas del hospital
-     * @see Hospital#listaCamas
+     * @param listaCamasUCI lista de las camas del hospital
+     * @see Hospital#listaCamasUCI
      */
-    public void setListaCamas(List<Camas> listaCamas) {
-        this.listaCamas = listaCamas;
+    public void setListaCamasUCI(List<UCI> listaCamasUCI) {
+        this.listaCamasUCI = listaCamasUCI;
     }
 
     /**
@@ -123,10 +160,50 @@ public class Hospital implements Serializable {
         this.codHospital = codHospital;
     }
 
+    /**
+     * Getter del Lista de camas de planta del hospital
+     *
+     * @return lista de camas de planta del hospital
+     * @see Hospital#listaCamasPlanta
+     */
+    public List<Planta> getListaCamasPlanta() {
+        return listaCamasPlanta;
+    }
+
+    /**
+     * Almacena las camas de planta del hospital
+     *
+     * @param listaCamasPlanta List de camas de Planta
+     * @see Hospital#listaCamasPlanta
+     */
+    public void setListaCamasPlanta(List<Planta> listaCamasPlanta) {
+        this.listaCamasPlanta = listaCamasPlanta;
+    }
+
+    /**
+     * Getter del List de camas de Urgencias del hospital
+     *
+     * @return lista de camas de urgencias del hospital
+     * @see Hospital#listaCamasUrgencias
+     */
+    public List<Urgencias> getListaCamasUrgencias() {
+        return listaCamasUrgencias;
+    }
+
+    /**
+     * Almacena el List de camas de Urgencias del hospital
+     *
+     * @param listaCamasUrgencias lista de camas de urgencias
+     * @see Hospital#listaCamasUrgencias
+     */
+    public void setListaCamasUrgencias(List<Urgencias> listaCamasUrgencias) {
+        this.listaCamasUrgencias = listaCamasUrgencias;
+    }
+
     @Override
     public String toString() {
         return "Hospital{" +
-                "listaCamas=" + listaCamas +
+                "listaCamas=" + listaCamasUCI +
                 ", nombre='" + nombre + '\'' +
                 ", codHospital=" + codHospital +
                 '}';

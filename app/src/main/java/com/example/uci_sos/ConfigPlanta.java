@@ -257,24 +257,24 @@ public class ConfigPlanta extends AppCompatActivity {
      */
     private void crearCamas() {
         for (int i = 0; i < numCamasUCILibres; i++) {
-            h.addCama(new UCI("libre", 0, nombrePLanta, false));
+            h.addCamaUCI(new UCI("libre", 0, nombrePLanta, false));
         }
         for (int i = 0; i < numCamasUCIOcupadas; i++) {
-            h.addCama(new UCI("ocupado", 0, nombrePLanta, false));
+            h.addCamaUCI(new UCI("ocupado", 0, nombrePLanta, false));
         }
 
         for (int i = 0; i < numCamasPlantaLibres; i++) {
-            h.addCama(new Planta("libre", 0, nombrePLanta, false));
+            h.addCamaPlanta(new Planta("libre", 0, nombrePLanta, false));
         }
         for (int i = 0; i < numCamasPlantaOcupadas; i++) {
-            h.addCama(new Planta("ocupado", 0, nombrePLanta, false));
+            h.addCamaPlanta(new Planta("ocupado", 0, nombrePLanta, false));
         }
 
         for (int i = 0; i < numCamasUrgenciasLibres; i++) {
-            h.addCama(new Urgencias("libre", 0, nombrePLanta, false));
+            h.addCamaUrgencias(new Urgencias("libre", 0, nombrePLanta, false));
         }
         for (int i = 0; i < numCamasUrgenciasOcupadas; i++) {
-            h.addCama(new Urgencias("ocupado", 0, nombrePLanta, false));
+            h.addCamaUrgencias(new Urgencias("ocupado", 0, nombrePLanta, false));
         }
     }
 
