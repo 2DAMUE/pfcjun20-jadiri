@@ -1964,6 +1964,10 @@
         <item name="android:background">#C4DAEA</item>
         <item name="android:alpha">0.3</item>
     </style>
+    <style name="gradiente_miscamas">
+        <item name="android:background">#504C4B</item>
+        <item name="android:alpha">0.4</item>
+    </style>
     <style name="gradiente_registro">
         <item name="android:background">#C4DAEA</item>
         <item name="android:alpha">0.45</item>
@@ -1971,6 +1975,11 @@
     <style name="gradiente_reserva">
         <item name="android:background">#3CD8FF</item>
         <item name="android:alpha">0.20</item>
+    </style>
+    <style name="linea_menu_abajo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@android:color/black</item>
     </style>
     <style name="recuadro_login_registro">
         <item name="android:background">@drawable/recuadro_login_registro</item>
