@@ -72,7 +72,7 @@ public class Login extends Activity implements View.OnClickListener {
         super.onStart();
         FirebaseUser user = auth.getCurrentUser();
         if (user != null)
-            toReservar();
+            toHospital();
     }
 
     @Override
@@ -111,7 +111,7 @@ public class Login extends Activity implements View.OnClickListener {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Log.d("LOGIN", "ÉXITO");
-                    toReservar();
+                    toHospital();
                 } else {
                     Log.w("LOGIN", task.getException().toString());
                     showToast("E-mail o contraseña incorrectas");
@@ -171,8 +171,8 @@ public class Login extends Activity implements View.OnClickListener {
         startActivity(inte);
     }
 
-    private void toReservar() {
-        Intent inte = new Intent(this.getApplicationContext(), Reservar.class);
+    private void toHospital() {
+        Intent inte = new Intent(this.getApplicationContext(), MiHospital.class);
         finish();
         startActivity(inte);
     }
