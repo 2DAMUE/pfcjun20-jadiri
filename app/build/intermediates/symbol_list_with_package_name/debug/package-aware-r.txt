@@ -960,6 +960,7 @@ id light
 id line1
 id line3
 id linearLayout
+id linearLayout2
 id linearLayoutt
 id listMode
 id list_item
@@ -985,9 +986,6 @@ id percent
 id progress_circular
 id progress_horizontal
 id radio
-id recuadro1
-id recuadro2
-id recuadro3
 id recuadroConfigPlantas
 id recuadroDatos
 id recuadroLogin
@@ -1060,6 +1058,7 @@ id uniform
 id up
 id useLogo
 id view
+id view2
 id view4
 id wide
 id withText
