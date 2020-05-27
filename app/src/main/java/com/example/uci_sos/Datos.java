@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.example.uci_sos.modelo.entidad.Hospital;
+
 public class Datos extends AppCompatActivity implements View.OnClickListener {
     LinearLayout reservar;
     LinearLayout miscamas;
@@ -54,7 +56,7 @@ public class Datos extends AppCompatActivity implements View.OnClickListener {
                 toPlanta();
                 break;
             case R.id.btnHospitalDatos:
-                toPlanta();
+                toHospital();
                 break;
         }
     }
@@ -65,8 +67,9 @@ public class Datos extends AppCompatActivity implements View.OnClickListener {
         startActivity(inte);
     }
 
+
     private void toCamas() {
-        Intent inte = new Intent(this.getApplicationContext(), Login.class);
+        Intent inte = new Intent(this.getApplicationContext(), MisCamas.class);
         finish();
         startActivity(inte);
     }
@@ -78,7 +81,7 @@ public class Datos extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void toHospital() {
-        Intent inte = new Intent(this.getApplicationContext(), Login.class);
+        Intent inte = new Intent(this.getApplicationContext(), MiHospital.class);
         finish();
         startActivity(inte);
     }

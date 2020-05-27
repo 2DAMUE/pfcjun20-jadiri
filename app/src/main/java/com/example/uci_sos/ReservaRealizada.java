@@ -51,7 +51,7 @@ public class ReservaRealizada extends AppCompatActivity implements View.OnClickL
         int id = v.getId();
         switch (id) {
             case R.id.btninicio:
-                toInicio();
+                toHospital();
                 break;
             case R.id.btnHospitalReserre:
                 toHospital();
@@ -63,19 +63,16 @@ public class ReservaRealizada extends AppCompatActivity implements View.OnClickL
     }
 
 
-    private void toInicio() {
-        Intent inte = new Intent(this.getApplicationContext(), Login.class);
-        startActivity(inte);
-    }
+
 
 
     private void toHospital() {
-        Intent inte = new Intent(this.getApplicationContext(), Login.class);
+        Intent inte = new Intent(this.getApplicationContext(), MiHospital.class);
         finish();
         startActivity(inte);
     }
     private void tomisCamas() {
-        Intent inte = new Intent(this.getApplicationContext(), Login.class);
+        Intent inte = new Intent(this.getApplicationContext(), MisCamas.class);
         finish();
         startActivity(inte);
     }

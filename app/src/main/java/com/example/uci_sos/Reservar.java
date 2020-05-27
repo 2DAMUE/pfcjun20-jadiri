@@ -90,22 +90,32 @@ public class Reservar extends AppCompatActivity implements View.OnClickListener 
         finish();
         startActivity(inte);
     }
+    private void toHospital() {
+        Intent inte = new Intent(this.getApplicationContext(), MiHospital.class);
+        finish();
+        startActivity(inte);
+    }
+    private void toMisCamas() {
+        Intent inte = new Intent(this.getApplicationContext(), MisCamas.class);
+        finish();
+        startActivity(inte);
+    }
 
     @Override
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
             case R.id.btnBuscar:
-                toBuscar();
+                toMisCamas();
                 break;
             case R.id.btnDerivar:
                 toBuscar();
                 break;
             case R.id.btnHospitalReserva:
-                toDerivar();
+                toHospital();
                 break;
             case R.id.btnMisCamasReserva:
-                toDerivar();
+                toMisCamas();
                 break;
         }
     }
