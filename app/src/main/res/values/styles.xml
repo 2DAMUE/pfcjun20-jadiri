@@ -73,5 +73,25 @@
         <item name="android:layout_height">1dp</item>
         <item name="android:background">@android:color/black</item>
     </style>
+    <style name="recuadro_miHospital">
+        <item name="android:background">@drawable/cuadradoventanahospital</item>
+        <item name="android:alpha">0.85</item>
+        <item name="android:layout_width">320dp</item>
+    </style>
+    <style name="colorgrafico">
+        <item name="android:background">@drawable/colorgrafico1</item>
+        <item name="android:alpha">0.85</item>
+        <item name="android:layout_width">320dp</item>
+    </style>
+    <style name="colorgrafico2">
+        <item name="android:background">@drawable/colorgrafico2</item>
+        <item name="android:alpha">0.85</item>
+        <item name="android:layout_width">320dp</item>
+    </style>
+    <style name="colorgrafico3">
+        <item name="android:background">@drawable/colorgrafico3</item>
+        <item name="android:alpha">0.85</item>
+        <item name="android:layout_width">320dp</item>
+    </style>
 
 </resources>

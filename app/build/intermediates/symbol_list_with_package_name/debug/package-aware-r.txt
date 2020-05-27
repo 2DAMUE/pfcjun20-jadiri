@@ -701,6 +701,9 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable campos_login_registro
+drawable colorgrafico1
+drawable colorgrafico2
+drawable colorgrafico3
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -885,6 +888,9 @@ id checkbox
 id checked
 id chronometer
 id collapseActionView
+id colorgrafico1
+id colorgrafico2
+id colorgrafico3
 id content
 id contentPanel
 id custom
@@ -923,6 +929,7 @@ id itConfig
 id itLogout
 id italic
 id item_touch_helper_previous_elevation
+id lbdisponible
 id lblDisponible
 id lblHospital
 id lblHospitalReserva
@@ -939,7 +946,9 @@ id lbl_textoCamasPlanta
 id lbl_textoCamasUcis
 id lbl_textoCamasUrgencia
 id lbl_textoSituacionCamas
+id lblibres
 id lblurgencias
+id lbocupadas
 id left
 id light
 id line1
@@ -970,6 +979,9 @@ id percent
 id progress_circular
 id progress_horizontal
 id radio
+id recuadro1
+id recuadro2
+id recuadro3
 id recuadroConfigPlantas
 id recuadroDatos
 id recuadroLogin
@@ -1022,6 +1034,7 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textView4
 id textoCamasUci
 id textohospital
 id time
@@ -1567,6 +1580,9 @@ style Widget_Compat_NotificationActionText
 style botones_login_registro
 style botones_reserva
 style campos_login_registro
+style colorgrafico
+style colorgrafico2
+style colorgrafico3
 style fondo_menu_abajo
 style gradiente_login
 style gradiente_miscamas
@@ -1574,6 +1590,7 @@ style gradiente_registro
 style gradiente_reserva
 style linea_menu_abajo
 style recuadro_login_registro
+style recuadro_miHospital
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

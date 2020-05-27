@@ -48,6 +48,10 @@
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguisli.ttf"
     },
     {
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_colorgrafico3.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\colorgrafico3.xml"
+    },
+    {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_down_arrow.png.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\down_arrow.png"
     },
@@ -122,6 +126,10 @@
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_latidos.xml.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\anim\\latidos.xml"
+    },
+    {
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_colorgrafico2.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\colorgrafico2.xml"
     },
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
@@ -310,6 +318,10 @@
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_adaptador.xml.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_adaptador.xml"
+    },
+    {
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_colorgrafico1.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\colorgrafico1.xml"
     },
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
