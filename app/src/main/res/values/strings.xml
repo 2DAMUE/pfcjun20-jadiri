@@ -42,4 +42,6 @@
     <string name="configurar_hospital">Configurar hospital</string>
     <string name="recomendados">Recomendados</string>
     <string name="flechaSpinner">flecha del spinner</string>
+    <string name="nombre_de_hospital">Nombre de Hospital</string>
+    <string name="numero_de_plantas">Numero de Plantas</string>
 </resources>

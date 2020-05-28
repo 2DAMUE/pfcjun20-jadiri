@@ -45,46 +45,53 @@
         app:layout_constraintTop_toTopOf="@+id/recuadroConfigPlantas">
 
         <EditText
+            android:id="@+id/txtNombrePlanta"
             style="@style/campos_login_registro"
             android:layout_marginBottom="32dp"
             android:hint="@string/nombrePlanta"
             android:inputType="text" />
 
         <EditText
+            android:id="@+id/txtNumCamasUCILibres"
             style="@style/campos_login_registro"
             android:hint="@string/numCamasUCILibres"
             android:inputType="number" />
 
         <EditText
+            android:id="@+id/txtNumCamasUCIOcupadas"
             style="@style/campos_login_registro"
             android:layout_marginBottom="32dp"
             android:hint="@string/camasUCIOcupadas"
             android:inputType="number" />
 
         <EditText
+            android:id="@+id/txtNumCamasPlantaLibres"
             style="@style/campos_login_registro"
             android:hint="@string/camasPlantaLibres"
             android:inputType="number" />
 
         <EditText
+            android:id="@+id/txtNumCamasPlantaOcupadas"
             style="@style/campos_login_registro"
             android:layout_marginBottom="32dp"
             android:hint="@string/camasPlantaOcupadas"
             android:inputType="number" />
 
         <EditText
+            android:id="@+id/txtNumCamasUrgenciasLibres"
             style="@style/campos_login_registro"
             android:hint="@string/camasUrgenciasLibres"
             android:inputType="number" />
 
         <EditText
+            android:id="@+id/txtNumCamasUrgenciasOcupadas"
             style="@style/campos_login_registro"
             android:layout_marginBottom="32dp"
             android:hint="@string/camasUrgenciasOcupadas"
             android:inputType="number" />
 
         <Button
-            android:id="@+id/btnsiguiente"
+            android:id="@+id/btnSiguiente"
             style="@style/botones_reserva"
             android:text="@string/siguiente" />
 

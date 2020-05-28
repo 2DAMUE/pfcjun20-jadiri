@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.TextView;
 
 import com.example.uci_sos.modelo.Adaptdor;
@@ -21,7 +21,7 @@ import java.util.List;
  * @see Hospital
  * @see Adaptdor
  */
-public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom {
+public class Buscar extends AppCompatActivity {
 
     /**
      * RecyclerView con los datos de los hospitales
@@ -37,8 +37,6 @@ public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom 
      * TextView con la palabra Recomendados
      */
     private TextView lblRecomendados;
-
-    List<Hospital> listaHospitales;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,28 +59,28 @@ public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom 
         recyclerView.setLayoutManager(lm);
 
         //Creo los hospitales
-        Hospital h1 = new Hospital("Puerta de Hierro", 10, 200, 50, 3);
-        Hospital h2 = new Hospital("Hospital Univeritario de León", 1200, 30000, 700, 2);
-        Hospital h3 = new Hospital("Gregorio Marañón", 120, 523, 420, 1000);
-        Hospital h4 = new Hospital("Gran Hospital de Boadilla", 2, 5, 3, -1);
-        Hospital h5 = new Hospital("12 de Octubre", 12, 12, 12, 12);
+        //Hospital h1 = new Hospital("Puerta de Hierro", 10, 200, 50, 3);
+        //Hospital h2 = new Hospital("Hospital Univeritario de León", 1200, 30000, 700, 2);
+        //Hospital h3 = new Hospital("Gregorio Marañón", 120, 523, 420, 1000);
+        //Hospital h4 = new Hospital("Gran Hospital de Boadilla", 2, 5, 3, -1);
+        //Hospital h5 = new Hospital("12 de Octubre", 12, 12, 12, 12);
 
         //Creo la lista de hospitales
-        listaHospitales = new ArrayList<>();
+        //List<Hospital> listaHospitales = new ArrayList<>();
         //Añado los hospitales a la lista
-        listaHospitales.add(h1);
-        listaHospitales.add(h2);
-        listaHospitales.add(h3);
-        listaHospitales.add(h4);
-        listaHospitales.add(h5);
-        listaHospitales.add(h5);
-        listaHospitales.add(h5);
-        listaHospitales.add(h5);
-        listaHospitales.add(h5);
+        //listaHospitales.add(h1);
+        //listaHospitales.add(h2);
+        //listaHospitales.add(h3);
+        //listaHospitales.add(h4);
+        //listaHospitales.add(h5);
+        //listaHospitales.add(h5);
+        //listaHospitales.add(h5);
+        //listaHospitales.add(h5);
+        //listaHospitales.add(h5);
 
         //Creo el adaptador y hago un set del adaptador en el RecyclerView
-        adapter = new Adaptdor(listaHospitales, this);
-        recyclerView.setAdapter(adapter);
+        //adapter = new Adaptdor(listaHospitales);
+        //recyclerView.setAdapter(adapter);
 
         //Inicializo el TextView
         lblRecomendados = findViewById(R.id.lblRecomendados);
@@ -91,10 +89,8 @@ public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom 
     }
 
     @Override
-    public void click(int position) {
-        Hospital h = listaHospitales.get(position);
-        Intent inte = new Intent(this, ReservaRealizada.class);
-        inte.putExtra("Nombre", h.getNombre());
-        startActivity(inte);
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 }

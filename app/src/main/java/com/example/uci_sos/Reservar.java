@@ -12,13 +12,13 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class Reservar extends AppCompatActivity implements View.OnClickListener {
     LinearLayout btnhosp;
     Button derivar;
     Button buscar;
     LinearLayout btncamas;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,16 +43,35 @@ public class Reservar extends AppCompatActivity implements View.OnClickListener 
                 FirebaseAuth.getInstance().signOut();
                 toLogin();
                 break;
+            case R.id.itConfig:
+                toConfig();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Lleva a la ventana de configuración del hospital
+     *
+     * @see Datos
+     */
+    private void toConfig() {
+        Intent inte = new Intent(this, Datos.class);
+        startActivity(inte);
+    }
+
+    /**
+     * Lleva al login
+     *
+     * @see Login
+     */
     private void toLogin() {
         Intent inte = new Intent(this, Login.class);
         inte.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         finish();
         startActivity(inte);
     }
+
     /**
      * Carga los listeners de los elementos de la ventana
      */
@@ -68,8 +87,8 @@ public class Reservar extends AppCompatActivity implements View.OnClickListener 
      */
     private void cargarVista() {
         btncamas = findViewById(R.id.btnMisCamasReserva);
-        derivar=findViewById(R.id.btnDerivar);
-        buscar=findViewById(R.id.btnBuscar);
+        derivar = findViewById(R.id.btnDerivar);
+        buscar = findViewById(R.id.btnBuscar);
         btnhosp = findViewById(R.id.btnHospitalReserva);
 
 
@@ -90,11 +109,13 @@ public class Reservar extends AppCompatActivity implements View.OnClickListener 
         finish();
         startActivity(inte);
     }
+
     private void toHospital() {
         Intent inte = new Intent(this.getApplicationContext(), MiHospital.class);
         finish();
         startActivity(inte);
     }
+
     private void toMisCamas() {
         Intent inte = new Intent(this.getApplicationContext(), MisCamas.class);
         finish();
@@ -119,5 +140,5 @@ public class Reservar extends AppCompatActivity implements View.OnClickListener 
                 break;
         }
     }
-    }
+}
 
