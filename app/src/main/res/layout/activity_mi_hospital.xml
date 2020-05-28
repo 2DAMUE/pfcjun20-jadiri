@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".MiHospital">
 
     <LinearLayout
@@ -116,6 +117,17 @@
 
         </LinearLayout>
     </LinearLayout>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/grafico_circulo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/colorgrafico22"
+        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintStart_toEndOf="@+id/logoventanaHospital" />
+
 
     <ImageView
         android:id="@+id/logoventanaHospital"

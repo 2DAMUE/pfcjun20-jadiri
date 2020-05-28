@@ -44,4 +44,5 @@
     <string name="flechaSpinner">flecha del spinner</string>
     <string name="nombre_de_hospital">Nombre de Hospital</string>
     <string name="numero_de_plantas">Numero de Plantas</string>
+    <string name="disponibilidad_general_de_hospitales"><U>DISPONIBILIDAD GENERAL DE HOSPITALES</U></string>
 </resources>

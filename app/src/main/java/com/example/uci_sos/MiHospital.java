@@ -12,7 +12,14 @@ import android.widget.LinearLayout;
 
 import com.example.uci_sos.modelo.entidad.Hospital;
 
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Muestra los datos del Hospital en el que está registrado el usuario
@@ -37,9 +44,10 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mi_hospital);
+        setContentView(R.layout.activityhospital);
         cargarVista();
         cargarListeners();
+        setupPieChart();
     }
 
     @Override
@@ -75,6 +83,28 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Carga los datos de los hospitales en el gráfico
+     *
+     * @see Hospital
+     */
+    private void setupPieChart() {
+        String[] estados = {"Libres", "Ocupadas", "No disponibles"};
+        int[] numeros = {250, 102, 50};
+        List<PieEntry> pieEntries = new ArrayList<>();
+        for (int i = 0; i < estados.length; i++) {
+            pieEntries.add(new PieEntry(numeros[i], estados[i]));
+        }
+        PieDataSet dataSet = new PieDataSet(pieEntries, "Estado??");
+        PieData data = new PieData(dataSet);
+        dataSet.setColors(getResources().getColor(R.color.colorLibres), getResources().getColor(R.color.colorOcupadas), getResources().getColor(R.color.colorNoDisponible));
+
+        PieChart chart = (PieChart) findViewById(R.id.grafico_circulo);
+        chart.setData(data);
+        chart.invalidate();
+        chart.animateXY(1000, 1000);
     }
 
     /**
