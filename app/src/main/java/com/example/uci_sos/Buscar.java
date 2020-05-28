@@ -4,12 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-<<<<<<< Updated upstream
 import android.view.Menu;
-=======
->>>>>>> Stashed changes
 import android.widget.TextView;
 
 import com.example.uci_sos.modelo.Adaptdor;
@@ -24,11 +22,9 @@ import java.util.List;
  * @see Hospital
  * @see Adaptdor
  */
-<<<<<<< Updated upstream
-public class Buscar extends AppCompatActivity {
-=======
+
 public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom {
->>>>>>> Stashed changes
+
 
     /**
      * RecyclerView con los datos de los hospitales
@@ -98,16 +94,16 @@ public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom 
     }
 
     @Override
-<<<<<<< Updated upstream
+
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
-=======
+    }
     public void click(int position) {
         Hospital h = listaHospitales.get(position);
         Intent inte = new Intent(this, ReservaRealizada.class);
         inte.putExtra("nombre", h.getNombre());
         startActivity(inte);
->>>>>>> Stashed changes
+
     }
 }

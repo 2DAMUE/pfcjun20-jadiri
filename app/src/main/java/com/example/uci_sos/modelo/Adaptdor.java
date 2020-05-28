@@ -25,11 +25,10 @@ public class Adaptdor extends RecyclerView.Adapter<Adaptdor.MyHolder> {
      * @see Hospital
      */
     private List<Hospital> hospitales;
-<<<<<<< Updated upstream
-=======
+
 
     private OnClickCustom onClickCustom;
->>>>>>> Stashed changes
+
 
     /**
      * ViewHolder del RecylerView. Se encarga de cargar el layout de cada tarjeta el RecyclerView. Contiene todos los elementos de cada tarjeta.
