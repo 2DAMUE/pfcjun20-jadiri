@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MiHospital"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
+    tools:context=".MiHospital">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -118,15 +118,15 @@
         </LinearLayout>
     </LinearLayout>
 
-<com.github.mikephil.charting.charts.PieChart
-    android:id="@+id/grafico_circulo"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_marginBottom="128dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toStartOf="@+id/colorgrafico22"
-    app:layout_constraintHorizontal_bias="0.63"
-    app:layout_constraintStart_toEndOf="@+id/logoventanaHospital" />
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/grafico_circulo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/colorgrafico22"
+        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintStart_toEndOf="@+id/logoventanaHospital" />
 
 
     <ImageView
