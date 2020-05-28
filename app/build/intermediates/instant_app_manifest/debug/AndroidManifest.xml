@@ -6,7 +6,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="16"
+        android:minSdkVersion="19"
         android:targetSdkVersion="29" />
 
     <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
@@ -27,7 +27,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.uci_sos.Buscar" />
+        <activity
+            android:name="com.example.uci_sos.Buscar"
+            android:parentActivityName="com.example.uci_sos.Reservar" />
         <activity android:name="com.example.uci_sos.Datos" />
         <activity android:name="com.example.uci_sos.ReservaRealizada" />
         <activity android:name="com.example.uci_sos.Registro" />

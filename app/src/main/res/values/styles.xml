@@ -38,7 +38,7 @@
     <style name="botones_login_registro">
         <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">45dp</item>
-        <item name="android:layout_marginBottom">32dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
         <item name="android:background">@drawable/botones_login_registro</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:layout_marginTop">16dp</item>
@@ -92,6 +92,13 @@
         <item name="android:background">@drawable/colorgrafico3</item>
         <item name="android:alpha">0.85</item>
         <item name="android:layout_width">320dp</item>
+    </style>
+
+    <style name="opacity_pane">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:alpha">0.4</item>
+        <item name="android:background">@android:color/black</item>
     </style>
 
 </resources>

@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -81,6 +82,11 @@ public class Registro extends Activity {
      */
     private Button btnRegistrar;
 
+    /**
+     * Lista de hospitales registrados en la aplicación
+     *
+     * @see Hospital
+     */
     private List<Hospital> lista;
 
     /**
@@ -293,6 +299,12 @@ public class Registro extends Activity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinHospital.setAdapter(adapter);
+
+        View opacityPane = findViewById(R.id.opRegistro);
+        ProgressBar pb = findViewById(R.id.pbRegistro);
+
+        opacityPane.setVisibility(View.GONE);
+        pb.setVisibility(View.GONE);
     }
 
     /**

@@ -31,7 +31,6 @@
         android:id="@+id/logoLogin"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="8dp"
         android:contentDescription="@string/logo"
         android:src="@drawable/logo_uci_sos"
         app:layout_constraintBottom_toTopOf="@id/recuadroLogin"
@@ -44,9 +43,8 @@
     <View
         android:id="@+id/recuadroLogin"
         style="@style/recuadro_login_registro"
-        android:layout_height="500dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="84dp"
+        android:layout_height="466dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -58,18 +56,17 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/recuadroLogin"
         app:layout_constraintEnd_toEndOf="@id/recuadroLogin"
         app:layout_constraintStart_toStartOf="@id/recuadroLogin"
-        app:layout_constraintTop_toTopOf="@+id/recuadroLogin"
-        app:layout_constraintVertical_bias="0.455">
+        app:layout_constraintTop_toTopOf="@+id/recuadroLogin">
 
         <EditText
             android:id="@+id/txtEmailRegistro"
             style="@style/campos_login_registro"
+            android:layout_marginTop="8dp"
             android:hint="@string/txtEmail"
             android:inputType="textEmailAddress" />
 
@@ -142,5 +139,21 @@
 
     </LinearLayout>
 
+    <View
+        android:id="@+id/opRegistro"
+        style="@style/opacity_pane"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pbRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

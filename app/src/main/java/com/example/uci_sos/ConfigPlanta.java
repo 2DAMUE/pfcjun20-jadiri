@@ -336,6 +336,13 @@ public class ConfigPlanta extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Intenta guardar el hospital en la base de datos. Si lo consigue, lleva al usuarioa la ventana principal
+     * y se lo notifica al usuario. Si no, avisa al usuario y le lleva a la ventana de Datos.
+     *
+     * @see ConfigPlanta#toHospital()
+     * @see ConfigPlanta#toDatos()
+     */
     private void guardarHospital() {
         hospitales.child(String.valueOf(h.getCodHospital())).setValue(h)
                 .addOnCompleteListener(this, new OnCompleteListener<Void>() {
@@ -344,6 +351,7 @@ public class ConfigPlanta extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Log.d("CREAR_HOSPITAL", "ÉXITO");
                             showToast("Hospital creado con éxito");
+                            toHospital();
                         } else {
                             Log.w("CREAR_HOSPITAL", task.getException().toString());
                             showToast("Ha habido un error al crear el hospital\nCompruebe su conexión a Internet e inténtelo de nuevo más tarde");
@@ -351,6 +359,18 @@ public class ConfigPlanta extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    /**
+     * Lleva a la ventana de Mi Hospital
+     *
+     * @see MiHospital
+     */
+    private void toHospital() {
+        Intent intent = new Intent(this, MiHospital.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        finish();
+        startActivity(intent);
     }
 
     /**

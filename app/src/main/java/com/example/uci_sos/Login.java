@@ -96,8 +96,10 @@ public class Login extends Activity implements View.OnClickListener {
      * @return true si todos los campos están rellenos. false en caso contrario
      */
     private boolean comprobar() {
-        if (email.equals("") || pwd.equals(""))
+        if (email.equals("") || pwd.equals("")) {
+            showToast("Por favor, rellene todos los campos");
             return false;
+        }
         return true;
     }
 
@@ -171,6 +173,11 @@ public class Login extends Activity implements View.OnClickListener {
         startActivity(inte);
     }
 
+    /**
+     * Lleva a la ventana de Mi Hospital
+     *
+     * @see MiHospital
+     */
     private void toHospital() {
         Intent inte = new Intent(this.getApplicationContext(), MiHospital.class);
         finish();

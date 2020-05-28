@@ -13,11 +13,43 @@ import android.widget.LinearLayout;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+/**
+ * Ventana en la que se elige si se desea reservar una cama de su propio hospital o si se desea derivar a un paciente a otro hospital
+ * registrado en la aplicación. Si se desea reservar una cama de su propio hospital, llevará a la ventana de Mis Camas.
+ * Si se desea derivar a un paciente a otro hospital, llevará a la ventana de Buscar
+ *
+ * @see Buscar
+ * @see MisCamas
+ */
 public class Reservar extends AppCompatActivity implements View.OnClickListener {
-    LinearLayout btnhosp;
-    Button derivar;
-    Button buscar;
-    LinearLayout btncamas;
+
+    /**
+     * Botón para derivar a un paciente. Lleva a la ventana de Buscar
+     *
+     * @see Buscar
+     */
+    Button btnDerivar;
+    /**
+     * Botón para reservar una cama de su propio hospital. Lleva a la ventana de MisCamas
+     *
+     * @see MisCamas
+     * @see Reservar#toMisCamasBuscar()
+     */
+    Button btnBuscar;
+
+    /**
+     * Botón que lleva a la ventana de Mi Hospital
+     *
+     * @see MiHospital
+     */
+    LinearLayout btnHosp;
+    /**
+     * Botón que lleva a la ventana de Mis Camas
+     *
+     * @see MisCamas
+     * @see Reservar#toMisCamas()
+     */
+    LinearLayout btnCamas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,49 +108,61 @@ public class Reservar extends AppCompatActivity implements View.OnClickListener 
      * Carga los listeners de los elementos de la ventana
      */
     private void cargarListeners() {
-        btncamas.setOnClickListener(this);
-        derivar.setOnClickListener(this);
-        buscar.setOnClickListener(this);
-        btnhosp.setOnClickListener(this);
+        btnCamas.setOnClickListener(this);
+        btnDerivar.setOnClickListener(this);
+        btnBuscar.setOnClickListener(this);
+        btnHosp.setOnClickListener(this);
     }
 
     /**
      * Carga los elemento de la ventana
      */
     private void cargarVista() {
-        btncamas = findViewById(R.id.btnMisCamasReserva);
-        derivar = findViewById(R.id.btnDerivar);
-        buscar = findViewById(R.id.btnBuscar);
-        btnhosp = findViewById(R.id.btnHospitalReserva);
-
-
+        btnCamas = findViewById(R.id.btnMisCamasReserva);
+        btnDerivar = findViewById(R.id.btnDerivar);
+        btnBuscar = findViewById(R.id.btnBuscar);
+        btnHosp = findViewById(R.id.btnHospitalReserva);
     }
 
     /**
-     * Lleva al registro
+     * Lleva a la ventana de Buscar
      *
-     * @see Registro
+     * @see Buscar
      */
     private void toBuscar() {
         Intent inte = new Intent(this.getApplicationContext(), Buscar.class);
         startActivity(inte);
     }
 
-    private void toDerivar() {
-        Intent inte = new Intent(this.getApplicationContext(), Splash.class);
-        finish();
-        startActivity(inte);
-    }
-
+    /**
+     * Lleva a la ventana de Mis Hospital
+     *
+     * @see MiHospital
+     */
     private void toHospital() {
         Intent inte = new Intent(this.getApplicationContext(), MiHospital.class);
         finish();
         startActivity(inte);
     }
 
+    /**
+     * Lleva a la ventana de Mis Camas eliminando el Stack de Activities
+     *
+     * @see MisCamas
+     */
     private void toMisCamas() {
         Intent inte = new Intent(this.getApplicationContext(), MisCamas.class);
         finish();
+        startActivity(inte);
+    }
+
+    /**
+     * Lleva a la ventana de Mis Camas sin eliminar el Stack de activities ya que ha sido pulsado por el botón de buscar
+     *
+     * @see MisCamas
+     */
+    private void toMisCamasBuscar() {
+        Intent inte = new Intent(this.getApplicationContext(), MisCamas.class);
         startActivity(inte);
     }
 
@@ -127,6 +171,9 @@ public class Reservar extends AppCompatActivity implements View.OnClickListener 
         int id = v.getId();
         switch (id) {
             case R.id.btnBuscar:
+                toMisCamasBuscar();
+                break;
+            case R.id.btnMisCamasReserva:
                 toMisCamas();
                 break;
             case R.id.btnDerivar:
@@ -134,9 +181,6 @@ public class Reservar extends AppCompatActivity implements View.OnClickListener 
                 break;
             case R.id.btnHospitalReserva:
                 toHospital();
-                break;
-            case R.id.btnMisCamasReserva:
-                toMisCamas();
                 break;
         }
     }

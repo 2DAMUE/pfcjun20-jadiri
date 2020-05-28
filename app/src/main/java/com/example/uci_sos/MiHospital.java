@@ -1,57 +1,51 @@
 package com.example.uci_sos;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
-/*import com.anychart.AnyChart;
-import com.anychart.AnyChartView;
-import com.anychart.chart.common.dataentry.DataEntry;
-import com.anychart.chart.common.dataentry.ValueDataEntry;
-import com.anychart.charts.Pie;*/
+import com.example.uci_sos.modelo.entidad.Hospital;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.google.firebase.auth.FirebaseAuth;
 
-public class MiHospital extends AppCompatActivity implements View.OnClickListener{
+/**
+ * Muestra los datos del Hospital en el que está registrado el usuario
+ *
+ * @see Hospital
+ */
+public class MiHospital extends AppCompatActivity implements View.OnClickListener {
+
+    /**
+     * Botón que lleva a la ventana de Reservar
+     *
+     * @see Reservar
+     */
     LinearLayout reservar;
+    /**
+     * Botón que lleva a la ventana de MisCamas
+     *
+     * @see MisCamas
+     */
     LinearLayout miscamas;
-    LinearLayout mihospital;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mi_hospital);
         cargarVista();
         cargarListeners();
-        /*Pie pie = AnyChart.pie();
-
-        List<DataEntry> data = new ArrayList<>();
-        data.add(new ValueDataEntry("John", 10000));
-        data.add(new ValueDataEntry("Jake", 12000));
-        data.add(new ValueDataEntry("Peter", 18000));
-
-        pie.data(data);
-
-        AnyChartView anyChartView = (AnyChartView) findViewById(R.id.any_chart_view);
-        anyChartView.setChart(pie);*/
     }
 
-    private void cargarListeners() {
-        reservar.setOnClickListener(this);
-        miscamas.setOnClickListener(this);
-        mihospital.setOnClickListener(this);
-
-    }
-
-
-    private void cargarVista() {
-        reservar = findViewById(R.id.btnReservarHospital);
-        miscamas = findViewById(R.id.btnMisCamasHospital);
-        mihospital = findViewById(R.id.btnHospitalHospital);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 
     @Override
@@ -68,34 +62,78 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
         }
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.itLogout:
+                FirebaseAuth.getInstance().signOut();
+                toLogin();
+                break;
+            case R.id.itConfig:
+                toConfig();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
-    private void toReservar() {
-        Intent inte = new Intent(this.getApplicationContext(), Reservar.class);
+    /**
+     * Lleva a la ventana de configuración del hospital
+     *
+     * @see Datos
+     */
+    private void toConfig() {
+        Intent inte = new Intent(this, Datos.class);
         startActivity(inte);
     }
 
+    /**
+     * Lleva al login
+     *
+     * @see Login
+     */
+    private void toLogin() {
+        Intent inte = new Intent(this, Login.class);
+        inte.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        finish();
+        startActivity(inte);
+    }
+
+    /**
+     * Lleva a la ventana de Reservar
+     *
+     * @see Reservar
+     */
+    private void toReservar() {
+        Intent inte = new Intent(this.getApplicationContext(), Reservar.class);
+        finish();
+        startActivity(inte);
+    }
+
+    /**
+     * Lleva a la ventana de MisCamas
+     *
+     * @see MisCamas
+     */
     private void toCamas() {
         Intent inte = new Intent(this.getApplicationContext(), MisCamas.class);
         finish();
         startActivity(inte);
     }
 
-    private void toPlanta() {
-        Intent inte = new Intent(this.getApplicationContext(), ConfigPlanta.class);
-        finish();
-        startActivity(inte);
+    /**
+     * Carga los listeners de los elementos de la ventana
+     */
+    private void cargarListeners() {
+        reservar.setOnClickListener(this);
+        miscamas.setOnClickListener(this);
     }
 
-    private void toHospital() {
-        Intent inte = new Intent(this.getApplicationContext(), Login.class);
-        finish();
-        startActivity(inte);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
+    /**
+     * Carga los elementos de la ventana
+     */
+    private void cargarVista() {
+        reservar = findViewById(R.id.btnReservarHospital);
+        miscamas = findViewById(R.id.btnMisCamasHospital);
     }
 }
