@@ -73,7 +73,7 @@ public class Login extends Activity implements View.OnClickListener {
         super.onStart();
         FirebaseUser user = auth.getCurrentUser();
         if (user != null)
-            toReservar();
+            toHospital();
     }
 
     @Override
@@ -97,8 +97,10 @@ public class Login extends Activity implements View.OnClickListener {
      * @return true si todos los campos están rellenos. false en caso contrario
      */
     private boolean comprobar() {
-        if (email.equals("") || pwd.equals(""))
+        if (email.equals("") || pwd.equals("")) {
+            showToast("Por favor, rellene todos los campos");
             return false;
+        }
         return true;
     }
 
@@ -112,7 +114,7 @@ public class Login extends Activity implements View.OnClickListener {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Log.d("LOGIN", "ÉXITO");
-                    toReservar();
+                    toHospital();
                 } else {
                     Log.w("LOGIN", task.getException().toString());
                     showToast("E-mail o contraseña incorrectas");
@@ -122,7 +124,7 @@ public class Login extends Activity implements View.OnClickListener {
     }
 
     /**
-     * Almacena la información de los campos en sus variables correcpondientes.
+     * Almacena la información de los campos en sus variables correcpondientes
      *
      * @see Login#email
      * @see Login#pwd
@@ -172,8 +174,13 @@ public class Login extends Activity implements View.OnClickListener {
         startActivity(inte);
     }
 
-    private void toReservar() {
-        Intent inte = new Intent(this.getApplicationContext(), Reservar.class);
+    /**
+     * Lleva a la ventana de Mi Hospital
+     *
+     * @see MiHospital
+     */
+    private void toHospital() {
+        Intent inte = new Intent(this.getApplicationContext(), MiHospital.class);
         finish();
         startActivity(inte);
     }

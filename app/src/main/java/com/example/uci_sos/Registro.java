@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.uci_sos.modelo.entidad.Hospital;
 import com.example.uci_sos.modelo.entidad.Referencias;
 import com.example.uci_sos.modelo.entidad.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,11 +26,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -77,6 +83,13 @@ public class Registro extends Activity {
     private Button btnRegistrar;
 
     /**
+     * Lista de hospitales registrados en la aplicación
+     *
+     * @see Hospital
+     */
+    private List<Hospital> lista;
+
+    /**
      * E-mail con el que se registra el usuario. Debe ser único
      */
     private String email;
@@ -108,6 +121,7 @@ public class Registro extends Activity {
         auth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance();
         users = db.getReference(Referencias.USERS);
+        getHopitales();
         cargarVista();
         cargarListeners();
     }
@@ -259,8 +273,11 @@ public class Registro extends Activity {
      * @see Registro#spinHospital
      */
     private void cargarAdapter() {
-        String[] nombres = new String[]{"Selecciona un hospital", "Puerta de Hierro", "Gregorio Marañón", "Montepríncipe"};
-        List<String> listaNombres = new ArrayList<>(Arrays.asList(nombres));
+        List<String> listaNombres = new ArrayList<>();
+        listaNombres.add("Selecciona un hospital");
+        for (Hospital h : lista) {
+            listaNombres.add(h.getNombre());
+        }
         ArrayAdapter<String> adapter = new ArrayAdapter(this, R.layout.spinner_registro_item, listaNombres) {
             @Override
             public boolean isEnabled(int position) {
@@ -282,6 +299,42 @@ public class Registro extends Activity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinHospital.setAdapter(adapter);
+
+        View opacityPane = findViewById(R.id.opRegistro);
+        ProgressBar pb = findViewById(R.id.pbRegistro);
+
+        opacityPane.setVisibility(View.GONE);
+        pb.setVisibility(View.GONE);
+    }
+
+    /**
+     * Carga los hospitales de la base de datos para obtener sus nombres y enviarlos al spinner del registro
+     *
+     * @return List de Hospital
+     * @see Hospital
+     * @see Registro#cargarAdapter()
+     */
+    private void getHopitales() {
+        DatabaseReference hospitales = FirebaseDatabase.getInstance().getReference(Referencias.HOSPITALES);
+        hospitales.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Log.d("HOSPITALES_SPINNER", "ÉXITO");
+                lista = new ArrayList<>();
+                Iterator<DataSnapshot> hospitales = dataSnapshot.getChildren().iterator();
+                while (hospitales.hasNext()) {
+                    lista.add(hospitales.next().getValue(Hospital.class));
+                }
+                cargarAdapter();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w("HOSPITALES_SPINNER", databaseError.toString());
+                showToast("Ha habido un error al cargar los hospitales\nCompruebe su conexión a Internet e inténtelo de nuevo más tarde");
+                toLogin();
+            }
+        });
     }
 
     /**
@@ -313,7 +366,6 @@ public class Registro extends Activity {
      */
     private void cargarVista() {
         spinHospital = findViewById(R.id.spinnerRegistro);
-        cargarAdapter();
 
         txtEmail = findViewById(R.id.txtEmailRegistro);
         txtNombre = findViewById(R.id.txtNombre);

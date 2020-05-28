@@ -21,7 +21,7 @@
       "properties": {
         "packageId": "com.example.uci_sos",
         "split": "",
-        "minSdkVersion": "16"
+        "minSdkVersion": "19"
       }
     }
   ]

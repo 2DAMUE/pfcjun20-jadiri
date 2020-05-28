@@ -38,7 +38,7 @@
     <style name="botones_login_registro">
         <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">45dp</item>
-        <item name="android:layout_marginBottom">32dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
         <item name="android:background">@drawable/botones_login_registro</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:layout_marginTop">16dp</item>
@@ -49,6 +49,10 @@
         <item name="android:alpha">0.20</item>
     </style>
 
+    <style name="gradiente_miscamas">
+        <item name="android:background">#504C4B</item>
+        <item name="android:alpha">0.4</item>
+    </style>
     <style name="botones_reserva">
         <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">45dp</item>
@@ -67,6 +71,33 @@
     <style name="linea_menu_abajo">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
+    <style name="recuadro_miHospital">
+        <item name="android:background">@drawable/cuadradoventanahospital</item>
+        <item name="android:alpha">0.85</item>
+        <item name="android:layout_width">320dp</item>
+    </style>
+    <style name="colorgrafico">
+        <item name="android:background">@drawable/colorgrafico1</item>
+        <item name="android:alpha">0.85</item>
+        <item name="android:layout_width">320dp</item>
+    </style>
+    <style name="colorgrafico2">
+        <item name="android:background">@drawable/colorgrafico2</item>
+        <item name="android:alpha">0.85</item>
+        <item name="android:layout_width">320dp</item>
+    </style>
+    <style name="colorgrafico3">
+        <item name="android:background">@drawable/colorgrafico3</item>
+        <item name="android:alpha">0.85</item>
+        <item name="android:layout_width">320dp</item>
+    </style>
+
+    <style name="opacity_pane">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:alpha">0.4</item>
         <item name="android:background">@android:color/black</item>
     </style>
 

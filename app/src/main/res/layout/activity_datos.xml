@@ -68,19 +68,21 @@
         app:layout_constraintVertical_bias="0.455">
 
         <EditText
-            android:id="@+id/txtEmailLogin"
+            android:id="@+id/txtNombreHospital"
             style="@style/campos_login_registro"
-            android:hint="Nombre de Hospital" />
+            android:hint="@string/nombre_de_hospital"
+            android:inputType="text" />
 
         <EditText
-            android:id="@+id/txtPwdLogin"
+            android:id="@+id/txtNumPlantas"
             style="@style/campos_login_registro"
-            android:hint="Numero de Plantas" />
+            android:hint="@string/numero_de_plantas"
+            android:inputType="number" />
 
         <Button
             android:id="@+id/btnToConfigPlantas"
             style="@style/botones_reserva"
-            android:text="Siguiente" />
+            android:text="@string/siguiente" />
     </LinearLayout>
 
     <View
@@ -97,7 +99,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
-            android:id="@+id/btnHospitalReserva"
+            android:id="@+id/btnHospitalDatos"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -118,6 +120,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/btnReservarDatos"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
@@ -140,7 +143,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/btnMisCamasReserva"
+            android:id="@+id/btnMisCamasDatos"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"

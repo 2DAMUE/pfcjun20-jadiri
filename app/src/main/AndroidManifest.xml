@@ -10,13 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".Buscar" />
+        <activity
+            android:name=".Buscar"
+            android:parentActivityName=".Reservar" />
         <activity android:name=".Datos" />
         <activity android:name=".ReservaRealizada" />
         <activity android:name=".Registro" />
         <activity android:name=".ConfigPlanta" />
         <activity android:name=".Login" />
         <activity android:name=".Reservar" />
+        <activity android:name=".MiHospital" />
+
+        <activity android:name=".MisCamas" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <activity android:name=".MainActivity" />
     </application>

@@ -26,9 +26,7 @@ public class Adaptdor extends RecyclerView.Adapter<Adaptdor.MyHolder> {
      */
     private List<Hospital> hospitales;
 
-
     private OnClickCustom onClickCustom;
-
 
     /**
      * ViewHolder del RecylerView. Se encarga de cargar el layout de cada tarjeta el RecyclerView. Contiene todos los elementos de cada tarjeta.
@@ -80,7 +78,7 @@ public class Adaptdor extends RecyclerView.Adapter<Adaptdor.MyHolder> {
     @NonNull
     @Override
     public Adaptdor.MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_buscar, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_adaptador, parent, false);
         return new MyHolder(v, onClickCustom);
     }
 
@@ -99,10 +97,10 @@ public class Adaptdor extends RecyclerView.Adapter<Adaptdor.MyHolder> {
         holder.lblHospital.setText(h.getNombre());
         holder.lblHospital.setTypeface(holder.lblHospital.getTypeface(), Typeface.BOLD);
 
-        holder.lblUCI.setText("Camas UCI: " + String.valueOf(h.getCamasUCI()));
-        holder.lblUrgencias.setText("Camas Urgencias: " + String.valueOf(h.getCamasUrgencias()));
-        holder.lblPlanta.setText("Camas Planta: " + String.valueOf(h.getCamasPlanta()));
-        holder.lblDisponible.setText("Disponibles: " + String.valueOf(h.getCamasDisponibles()));
+        //holder.lblUCI.setText("Camas UCI: " + String.valueOf(h.getCamasUCI()));
+        //holder.lblUrgencias.setText("Camas Urgencias: " + String.valueOf(h.getCamasUrgencias()));
+        //holder.lblPlanta.setText("Camas Planta: " + String.valueOf(h.getCamasPlanta()));
+        //holder.lblDisponible.setText("Disponibles: " + String.valueOf(h.getCamasDisponibles()));
 
         holder.lblDisponible.setTypeface(holder.lblDisponible.getTypeface(), Typeface.BOLD);
     }
@@ -113,7 +111,6 @@ public class Adaptdor extends RecyclerView.Adapter<Adaptdor.MyHolder> {
      * @return size del List de hospitales
      * @see Adaptdor#hospitales
      */
-
     @Override
     public int getItemCount() {
         return hospitales.size();
