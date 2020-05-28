@@ -42,4 +42,5 @@
     <string name="configurar_hospital">Configurar hospital</string>
     <string name="recomendados">Recomendados</string>
     <string name="flechaSpinner">flecha del spinner</string>
+    <string name="disponibilidad_general_de_hospitales"><u>DISPONIBILIDAD GENERAL DE HOSPITALES</u></string>
 </resources>
