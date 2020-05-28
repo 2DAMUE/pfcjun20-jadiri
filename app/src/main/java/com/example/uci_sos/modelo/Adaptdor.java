@@ -97,11 +97,12 @@ public class Adaptdor extends RecyclerView.Adapter<Adaptdor.MyHolder> {
         holder.lblHospital.setText(h.getNombre());
         holder.lblHospital.setTypeface(holder.lblHospital.getTypeface(), Typeface.BOLD);
 
-        //holder.lblUCI.setText("Camas UCI: " + String.valueOf(h.getCamasUCI()));
-        //holder.lblUrgencias.setText("Camas Urgencias: " + String.valueOf(h.getCamasUrgencias()));
-        //holder.lblPlanta.setText("Camas Planta: " + String.valueOf(h.getCamasPlanta()));
-        //holder.lblDisponible.setText("Disponibles: " + String.valueOf(h.getCamasDisponibles()));
+        holder.lblUCI.setText("Camas UCI: " + String.valueOf(h.getCamasUciLibres()));
+        holder.lblPlanta.setText("Camas PLanta: " + String.valueOf(h.getCamasPlantaLibres()));
+        holder.lblUrgencias.setText("Camas Urgencias: " + String.valueOf(h.getCamasUrgenciasLibres()));
 
+        holder.lblDisponible.setText("Disponibles: " + (String.valueOf(h.getCamasUciLibres() +
+                h.getCamasPlantaLibres() + h.getCamasUrgenciasLibres())));
         holder.lblDisponible.setTypeface(holder.lblDisponible.getTypeface(), Typeface.BOLD);
     }
 
@@ -115,6 +116,7 @@ public class Adaptdor extends RecyclerView.Adapter<Adaptdor.MyHolder> {
     public int getItemCount() {
         return hospitales.size();
     }
+
 
     public interface OnClickCustom {
         void click(int position);

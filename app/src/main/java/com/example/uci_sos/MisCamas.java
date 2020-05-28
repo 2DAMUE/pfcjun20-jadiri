@@ -10,9 +10,24 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.example.uci_sos.modelo.entidad.Hospital;
 import com.google.firebase.auth.FirebaseAuth;
 
+import com.example.uci_sos.modelo.entidad.Hospital;
+
+import com.example.uci_sos.modelo.entidad.Camas;
+import com.example.uci_sos.modelo.entidad.UCI;
+import com.example.uci_sos.modelo.entidad.Planta;
+import com.example.uci_sos.modelo.entidad.Urgencias;
+
+/**
+ * Muestra de forma visual el estado actual de las camas del hospital
+ *
+ * @see Hospital
+ * @see Camas
+ * @see UCI
+ * @see Planta
+ * @see Urgencias
+ */
 public class MisCamas extends AppCompatActivity implements View.OnClickListener {
 
     /**

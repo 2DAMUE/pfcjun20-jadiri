@@ -202,6 +202,54 @@ public class Hospital implements Serializable {
         this.listaCamasUrgencias = listaCamasUrgencias;
     }
 
+    /**
+     * Devuelve el número de camas de UCI libres
+     *
+     * @return número de camas de UCI libres
+     * @see Camas
+     * @see UCI
+     */
+    public int getCamasUciLibres() {
+        int camasLibres = 0;
+        for (UCI cama : this.listaCamasUCI) {
+            if (cama.getEstado().equals("libre"))
+                camasLibres++;
+        }
+        return camasLibres;
+    }
+
+    /**
+     * Devuelve el número de camas de Planta libres
+     *
+     * @return número de camas de Planta libres
+     * @see Camas
+     * @see Planta
+     */
+    public int getCamasPlantaLibres() {
+        int camasLibres = 0;
+        for (Planta cama : this.listaCamasPlanta) {
+            if (cama.getEstado().equals("libre"))
+                camasLibres++;
+        }
+        return camasLibres;
+    }
+
+    /**
+     * Devuelve el número de camas de Urgencias libres
+     *
+     * @return número de camas de Urgencias libres
+     * @see Camas
+     * @see Urgencias
+     */
+    public int getCamasUrgenciasLibres() {
+        int camasLibres = 0;
+        for (Urgencias cama : this.listaCamasUrgencias) {
+            if (cama.getEstado().equals("libre"))
+                camasLibres++;
+        }
+        return camasLibres;
+    }
+
     @Override
     public String toString() {
         return "Hospital{" +

@@ -101,7 +101,7 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
         PieData data = new PieData(dataSet);
         dataSet.setColors(getResources().getColor(R.color.colorLibres), getResources().getColor(R.color.colorOcupadas), getResources().getColor(R.color.colorNoDisponible));
 
-        PieChart chart = (PieChart) findViewById(R.id.grafico_circulo);
+        PieChart chart = findViewById(R.id.grafico_circulo);
         chart.setData(data);
         chart.invalidate();
         chart.animateXY(1000, 1000);
