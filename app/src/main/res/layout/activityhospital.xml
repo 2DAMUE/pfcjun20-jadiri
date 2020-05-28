@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MiHospital"
+    android:background="@android:color/white">
+    <View
+        style="@style/gradiente_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="413dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="557dp"
+        android:gravity="center_horizontal"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            style="@style/recuadro_miHospital"
+            android:layout_width="110dp"
+            android:layout_height="73dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/lbl_textoCamasUrgencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Camas Urgencia"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_numCamasUrgencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="500"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_textoCamasUrgencia" />
+
+        </LinearLayout>
+
+        <!--  <com.anychart.AnyChartView
+        android:id="@+id/any_chart_view"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="172dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+        <LinearLayout
+            style="@style/recuadro_miHospital"
+            android:layout_width="110dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lbl_textoCamasUcis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Camas UCIS"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_numCamasUcis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="2dp"
+                android:text="200"></TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/recuadro_miHospital"
+            android:layout_width="110dp"
+            android:layout_height="73dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lbl_textoCamasPlanta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Camas de Planta"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/lbl_numCamasPlanta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="700"
+                app:layout_constraintStart_toEndOf="@+id/lbl_numCamasUcis"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_textoCamasPlanta" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/grafico_circulo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
+
+    <View
+        android:id="@+id/view2"
+        style="@style/linea_menu_abajo"
+        app:layout_constraintBottom_toTopOf="@+id/menu_abajo_reservar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_disponibilidadHospitales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+
+        android:text="@string/disponibilidad_general_de_hospitales"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:id="@+id/menu_abajo_reservar"
+        style="@style/fondo_menu_abajo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/btnHospitalHospital"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/healthblue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hospital"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnReservarHospital"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/patient" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reserva"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnMisCamasHospital"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/miscamas_icono_blanco" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/misCamas"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblibres"
+        android:layout_width="45dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="20dp"
+
+        android:text="Libres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
+
+    <View
+        android:id="@+id/colorgrafico1"
+        style="@style/colorgrafico"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="20dp"
+
+        android:elevation="0dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/lblibres"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
+
+    <View
+        android:id="@+id/colorgrafico2"
+        style="@style/colorgrafico2"
+        android:layout_width="17dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="20dp"
+        android:elevation="0dp"
+
+        android:paddingTop="40dp"
+        android:paddingBottom="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/lbocupadas"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
+
+    <View
+        android:id="@+id/colorgrafico3"
+        style="@style/colorgrafico3"
+        android:layout_width="17dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        android:elevation="0dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/lbdisponible"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
+
+    <TextView
+        android:id="@+id/lbocupadas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ocupadas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
+
+    <TextView
+        android:id="@+id/lbdisponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="No disponibles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

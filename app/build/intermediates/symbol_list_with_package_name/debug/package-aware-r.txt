@@ -420,6 +420,9 @@ color bright_foreground_material_light
 color button_material_dark
 color button_material_light
 color colorAccent
+color colorLibres
+color colorNoDisponible
+color colorOcupadas
 color colorPrimary
 color colorPrimaryDark
 color common_google_signin_btn_text_dark
@@ -914,6 +917,7 @@ id flechaAbajo
 id fondo
 id forever
 id gone
+id grafico_circulo
 id group_divider
 id groups
 id home
@@ -1073,6 +1077,7 @@ id useLogo
 id view
 id view2
 id view4
+id web_view
 id wide
 id withText
 id wrap
@@ -1130,6 +1135,7 @@ layout activity_registro
 layout activity_reserva_realizada
 layout activity_reservar
 layout activity_splash
+layout activityhospital
 layout custom_dialog
 layout notification_action
 layout notification_action_tombstone
@@ -1142,6 +1148,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout spinner_registro_item
 layout support_simple_spinner_dropdown_item
+layout view_anychart
 menu menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground
@@ -1202,6 +1209,7 @@ string common_signin_button_text_long
 string configurar_hospital
 string default_web_client_id
 string derivar
+string disponibilidad_general_de_hospitales
 string firebase_database_url
 string flechaSpinner
 string fondoDerivar
