@@ -1,4 +1,4 @@
-#Wed May 27 18:43:00 CEST 2020
-base.0=C\:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Wed May 27 19:01:15 CEST 2020
+base.0=D\:\\Android Studio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

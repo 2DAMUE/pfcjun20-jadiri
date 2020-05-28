@@ -34,7 +34,6 @@
         <activity android:name="com.example.uci_sos.Login" />
         <activity android:name="com.example.uci_sos.Reservar" />
         <activity android:name="com.example.uci_sos.MiHospital" />
- >
         <activity android:name="com.example.uci_sos.MisCamas" />
         <activity android:name="com.example.uci_sos.Splash" >
             <intent-filter>
