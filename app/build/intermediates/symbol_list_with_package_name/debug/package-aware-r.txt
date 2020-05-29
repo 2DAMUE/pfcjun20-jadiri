@@ -1205,6 +1205,7 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string configurar_hospital
+string crear_hospital
 string default_web_client_id
 string derivar
 string disponibilidad_general_de_hospitales
