@@ -7,5 +7,4 @@
     <string name="google_app_id" translatable="false">1:61585641192:android:3c27630380d2a2df53035d</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBhyBaAg4huif1H6bbjdwMjDPYBwWuUKFI</string>
     <string name="google_storage_bucket" translatable="false">uci-sos.appspot.com</string>
-    <string name="project_id" translatable="false">uci-sos</string>
 </resources>

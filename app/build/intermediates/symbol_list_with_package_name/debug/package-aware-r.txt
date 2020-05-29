@@ -918,6 +918,7 @@ id fondo
 id forever
 id gone
 id grafico_circulo
+id graficobarras
 id group_divider
 id groups
 id home
@@ -1064,7 +1065,7 @@ id useLogo
 id view
 id view2
 id view4
-id web_view
+id view5
 id wide
 id withText
 id wrap
@@ -1117,12 +1118,14 @@ layout activity_datos
 layout activity_login
 layout activity_main
 layout activity_mi_hospital
+layout activity_mi_hospitall
 layout activity_mis_camas
 layout activity_registro
 layout activity_reserva_realizada
 layout activity_reservar
 layout activity_splash
 layout activityhospital
+layout activityhospitalbarras
 layout custom_dialog
 layout notification_action
 layout notification_action_tombstone
@@ -1135,7 +1138,6 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout spinner_registro_item
 layout support_simple_spinner_dropdown_item
-layout view_anychart
 menu menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground
@@ -1225,7 +1227,6 @@ string logout
 string misCamas
 string nombrePlanta
 string numCamasUCILibres
-string project_id
 string recomendados
 string registrarse
 string registro
