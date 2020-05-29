@@ -451,6 +451,7 @@
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="configurar_hospital">Configurar hospital</string>
+    <string name="crear_hospital">Crear Hospital</string>
     <string name="default_web_client_id" translatable="false">61585641192-iogjsa8f0mp4e08o7ckqe07icjnaftpp.apps.googleusercontent.com</string>
     <string name="derivar">Derivar</string>
     <string name="disponibilidad_general_de_hospitales"><U>DISPONIBILIDAD GENERAL DE HOSPITALES</U></string>

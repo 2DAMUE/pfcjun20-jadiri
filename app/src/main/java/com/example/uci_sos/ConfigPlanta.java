@@ -26,6 +26,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Objects;
+
 /**
  * Añade las camas de un hospital planta a planta.
  *
@@ -38,7 +40,6 @@ import com.google.firebase.database.FirebaseDatabase;
  */
 public class ConfigPlanta extends AppCompatActivity {
 
-    private FirebaseDatabase db;
     /**
      * Referencia al child de hospitales
      */
@@ -134,10 +135,11 @@ public class ConfigPlanta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config_planta);
         h = (Hospital) getIntent().getSerializableExtra("hospital");
+        assert h != null;
         Log.d("HOSPITAL_CONFIG", "Nombre: " + h.getNombre());
         index = 0;
         numPlantas = getIntent().getIntExtra("numPlantas", 1);
-        db = FirebaseDatabase.getInstance();
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
         hospitales = db.getReference(Referencias.HOSPITALES);
         cargarVista();
         cargarListeners();
@@ -227,7 +229,7 @@ public class ConfigPlanta extends AppCompatActivity {
             clear();
             setTitle(index + "/" + numPlantas);
             if (index == numPlantas)
-                btnSiguiente.setText("Crear Hospital");
+                btnSiguiente.setText(R.string.crear_hospital);
         }
     }
 
@@ -353,7 +355,7 @@ public class ConfigPlanta extends AppCompatActivity {
                             showToast("Hospital creado con éxito");
                             toHospital();
                         } else {
-                            Log.w("CREAR_HOSPITAL", task.getException().toString());
+                            Log.w("CREAR_HOSPITAL", Objects.requireNonNull(task.getException()).toString());
                             showToast("Ha habido un error al crear el hospital\nCompruebe su conexión a Internet e inténtelo de nuevo más tarde");
                             toDatos();
                         }

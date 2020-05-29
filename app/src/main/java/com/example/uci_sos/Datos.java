@@ -24,8 +24,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.Iterator;
-
 /**
  * Crea un hospital nuevo, con un nombre y un ID único. Lleva a la ventana de configurar planta
  *
