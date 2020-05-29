@@ -1065,6 +1065,7 @@ id useLogo
 id view
 id view2
 id view4
+id view5
 id web_view
 id wide
 id withText
@@ -1120,6 +1121,7 @@ layout activity_main
 layout activity_mi_hospital
 layout activity_mi_hospitall
 layout activity_mis_camas
+layout activity_prueba
 layout activity_registro
 layout activity_reserva_realizada
 layout activity_reservar

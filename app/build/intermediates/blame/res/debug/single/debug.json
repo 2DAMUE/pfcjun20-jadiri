@@ -228,6 +228,10 @@
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activityhospitalbarras.xml"
     },
     {
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_prueba.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_prueba.xml"
+    },
+    {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_mi_hospital.xml.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_mi_hospital.xml"
     },

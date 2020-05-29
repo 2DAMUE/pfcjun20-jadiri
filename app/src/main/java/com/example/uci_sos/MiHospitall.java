@@ -44,31 +44,50 @@ public class MiHospitall extends AppCompatActivity implements View.OnClickListen
         barChart.setMaxVisibleValueCount(50);
         barChart.setPinchZoom(false);
         barChart.setDrawGridBackground(true);
+
         String[] listas = {"UCI", "PLANTA", "URGENCIAS"};
         ArrayList<BarEntry> barEntries1 = new ArrayList<>();
-        barEntries1.add(new BarEntry(1, 40f));
-        barEntries1.add(new BarEntry(2, 43f));
-        barEntries1.add(new BarEntry(3, 32f));
         ArrayList<BarEntry> barEntries2 = new ArrayList<>();
-        barEntries2.add(new BarEntry(1, 12f));
-        barEntries2.add(new BarEntry(2, 16f));
-        barEntries2.add(new BarEntry(3, 13f));
         ArrayList<BarEntry> barEntries3 = new ArrayList<>();
-        barEntries3.add(new BarEntry(1, 4f));
-        barEntries3.add(new BarEntry(2, 6f));
-        barEntries3.add(new BarEntry(3, 2f));
+        ArrayList<BarEntry> barEntries4 = new ArrayList<>();
+        ArrayList<BarEntry> barEntries5 = new ArrayList<>();
+        ArrayList<BarEntry> barEntries6 = new ArrayList<>();
+        ArrayList<BarEntry> barEntries7 = new ArrayList<>();
+        ArrayList<BarEntry> barEntries8 = new ArrayList<>();
+        ArrayList<BarEntry> barEntries9 = new ArrayList<>();
+        barEntries1.add(new BarEntry(1, 40f));
+        barEntries2.add(new BarEntry(2, 43f));
+        barEntries3.add(new BarEntry(3, 32f));
+        barEntries4.add(new BarEntry(2, 12f));
+        barEntries5.add(new BarEntry(1, 16f));
+        barEntries6.add(new BarEntry(3, 13f));
+        barEntries7.add(new BarEntry(3, 4f));
+        barEntries8.add(new BarEntry(2, 6f));
+        barEntries9.add(new BarEntry(2, 2f));
 
 
         BarDataSet barDataSet1 = new BarDataSet(barEntries1, "");
-        barDataSet1.setColors(colores);
+        barDataSet1.setColors(getResources().getColor(R.color.colorOcupadas));
         BarDataSet barDataSet2 = new BarDataSet(barEntries2, "");
-        barDataSet2.setColors(colores);
+        barDataSet2.setColors(getResources().getColor(R.color.colorLibres));
         BarDataSet barDataSet3 = new BarDataSet(barEntries3, "");
-        barDataSet3.setColors(colores);
+        barDataSet3.setColors(getResources().getColor(R.color.colorNoDisponible));
+        BarDataSet barDataSet4 = new BarDataSet(barEntries4, "");
+        barDataSet4.setColors(getResources().getColor(R.color.colorOcupadas));
+        BarDataSet barDataSet5 = new BarDataSet(barEntries5, "");
+        barDataSet5.setColors(getResources().getColor(R.color.colorLibres));
+        BarDataSet barDataSet6 = new BarDataSet(barEntries6, "");
+        barDataSet6.setColors(getResources().getColor(R.color.colorNoDisponible));
+        BarDataSet barDataSet7 = new BarDataSet(barEntries7, "");
+        barDataSet7.setColors(getResources().getColor(R.color.colorOcupadas));
+        BarDataSet barDataSet8 = new BarDataSet(barEntries8, "");
+        barDataSet8.setColors(getResources().getColor(R.color.colorLibres));
+        BarDataSet barDataSet9 = new BarDataSet(barEntries9, "");
+        barDataSet9.setColors(getResources().getColor(R.color.colorNoDisponible));
         Description description = new Description();
         description.setText("");
         barChart.setDescription(description);
-        BarData data = new BarData(barDataSet1, barDataSet2, barDataSet3);
+        BarData data = new BarData(barDataSet1, barDataSet2, barDataSet3, barDataSet4, barDataSet5 , barDataSet6, barDataSet7, barDataSet7, barDataSet8, barDataSet9);
 
         float groupSpace = 0.1f;
         float barSpace = 0.02f;
@@ -78,17 +97,18 @@ public class MiHospitall extends AppCompatActivity implements View.OnClickListen
 
         data.setBarWidth(barWidth);
         barChart.groupBars(1, groupSpace, barSpace);
+
         data.setDrawValues(false);
         String[] camillas = new String[]{"", "Planta", "Urgencias", "UCI"};
         XAxis xAxis = barChart.getXAxis();
         xAxis.setValueFormatter(new IndexAxisValueFormatter(camillas));
-        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setPosition(XAxis.XAxisPosition.TOP);
         xAxis.setDrawAxisLine(true);
         xAxis.setDrawGridLines(false);
         xAxis.setGranularity(1f);
-        xAxis.setCenterAxisLabels(false);
+        xAxis.setCenterAxisLabels(true);
         xAxis.setAxisMinimum(1);
-        //xAxis.setLabelRotationAngle(270);
+        xAxis.setLabelRotationAngle(20);
         barChart.animateY(1000);
         barChart.invalidate();
         xAxis.setLabelCount(camillas.length);

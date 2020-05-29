@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.uci_sos.modelo.entidad.Hospital;
 
@@ -48,6 +49,7 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
         cargarVista();
         cargarListeners();
         setupPieChart();
+
     }
 
     @Override
@@ -106,6 +108,7 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
         chart.setData(data);
         chart.invalidate();
         chart.animateXY(1000, 1000);
+
     }
 
     /**
