@@ -1064,7 +1064,7 @@ int id useLogo 0x7f080117
 int id view 0x7f080118
 int id view2 0x7f080119
 int id view4 0x7f08011a
-int id view5 0x7f08011b
+int id web_view 0x7f08011b
 int id wide 0x7f08011c
 int id withText 0x7f08011d
 int id wrap 0x7f08011e
@@ -1137,6 +1137,7 @@ int layout select_dialog_multichoice_material 0x7f0b0033
 int layout select_dialog_singlechoice_material 0x7f0b0034
 int layout spinner_registro_item 0x7f0b0035
 int layout support_simple_spinner_dropdown_item 0x7f0b0036
+int layout view_anychart 0x7f0b0037
 int menu menu 0x7f0c0000
 int mipmap ic_launcher 0x7f0d0000
 int mipmap ic_launcher_foreground 0x7f0d0001

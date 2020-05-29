@@ -29,7 +29,7 @@
 17-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\a60fb9e443b0c0029323cc5fe7264e86\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:26:22-107
 18
 19    <application
-19-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:5:5-32:19
+19-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:5:5-30:19
 20        android:name="androidx.multidex.MultiDexApplication"
 21        android:allowBackup="true"
 21-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:6:9-35
@@ -83,17 +83,17 @@
 43-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:25:9-46
 43-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:25:19-43
 44        <activity android:name="com.example.uci_sos.MiHospital" />
-44-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:26:9-47
+44-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:26:9-48
 44-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:26:19-45
 45        <activity android:name="com.example.uci_sos.MisCamas" />
-45-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:28:9-46
-45-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:28:19-43
+45-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:27:9-46
+45-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:27:19-43
 46        <activity android:name="com.example.uci_sos.Splash" />
-46-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:29:9-43
-46-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:29:19-41
+46-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:28:9-44
+46-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:28:19-41
 47        <activity android:name="com.example.uci_sos.MainActivity" />
-47-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:31:9-50
-47-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:31:19-47
+47-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:29:9-50
+47-->C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:29:19-47
 48        <activity
 48-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\46867c94e9b8c1d1d2e67029b9030b3c\jetified-firebase-auth-19.3.1\AndroidManifest.xml:24:9-31:50
 49            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"

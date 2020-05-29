@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Prueba"></activity>
         <activity android:name=".MiHospitall">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,11 +24,9 @@
         <activity android:name=".ConfigPlanta" />
         <activity android:name=".Login" />
         <activity android:name=".Reservar" />
-        <activity android:name=".MiHospital"/>
-
+        <activity android:name=".MiHospital" />
         <activity android:name=".MisCamas" />
-        <activity android:name=".Splash"/>
-
+        <activity android:name=".Splash" />
         <activity android:name=".MainActivity" />
     </application>
 

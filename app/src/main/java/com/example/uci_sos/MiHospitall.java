@@ -83,7 +83,7 @@ public class MiHospitall extends AppCompatActivity implements View.OnClickListen
         XAxis xAxis = barChart.getXAxis();
         xAxis.setValueFormatter(new IndexAxisValueFormatter(camillas));
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-        xAxis.setDrawAxisLine(false);
+        xAxis.setDrawAxisLine(true);
         xAxis.setDrawGridLines(false);
         xAxis.setGranularity(1f);
         xAxis.setCenterAxisLabels(false);

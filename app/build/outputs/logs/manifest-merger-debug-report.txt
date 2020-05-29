@@ -1,11 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-32:12
 MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\06e741604dca01166137c02ac0bf57f9\jetified-firebase-core-9.0.0\AndroidManifest.xml:2:1-6:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\7ac08cc148b601a4ad1a5316a71d3575\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.AnyChart:AnyChart-Android:1.1.2] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\954261ea1afb2a3ca2b5a88b780b2073\jetified-AnyChart-Android-1.1.2\AndroidManifest.xml:2:1-17:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\a1a37d3e692457153ef9b4644ad7ba30\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\bbe12c45a9b7a8756ce4f2eb08892609\jetified-MPAndroidChart-v3.1.0\AndroidManifest.xml:2:1-20:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\f4e0117bba305d7b34b46eb12ff12f86\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
@@ -57,27 +58,29 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\34621\.gradle\caches\transform
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\3336a9bdbddb933bcb1ea321ff9d7f9a\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\d14b693d9b64add1367331b41d1e5e33\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\66f277ef729a1656bec6ff4791d7cddd\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-32:12
 	package
 		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-32:12
 		INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:1-32:12
 		INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:5:5-32:19
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:5:5-30:19
 MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\06e741604dca01166137c02ac0bf57f9\jetified-firebase-core-9.0.0\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\06e741604dca01166137c02ac0bf57f9\jetified-firebase-core-9.0.0\AndroidManifest.xml:5:5-20
+MERGED from [com.github.AnyChart:AnyChart-Android:1.1.2] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\954261ea1afb2a3ca2b5a88b780b2073\jetified-AnyChart-Android-1.1.2\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.AnyChart:AnyChart-Android:1.1.2] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\954261ea1afb2a3ca2b5a88b780b2073\jetified-AnyChart-Android-1.1.2\AndroidManifest.xml:11:5-15:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\f4e0117bba305d7b34b46eb12ff12f86\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\f4e0117bba305d7b34b46eb12ff12f86\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-analytics:17.4.2] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\f6eedab965fc121ad07dfb9bfb5c15d2\jetified-firebase-analytics-17.4.2\AndroidManifest.xml:7:5-20
@@ -179,21 +182,21 @@ ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidMan
 	android:name
 		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:25:19-43
 activity#com.example.uci_sos.MiHospital
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:26:9-47
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:26:9-48
 	android:name
 		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:26:19-45
 activity#com.example.uci_sos.MisCamas
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:28:9-46
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:27:9-46
 	android:name
-		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:28:19-43
+		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:27:19-43
 activity#com.example.uci_sos.Splash
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:29:9-43
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:28:9-44
 	android:name
-		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:29:19-41
+		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:28:19-41
 activity#com.example.uci_sos.MainActivity
-ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:31:9-50
+ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:29:9-50
 	android:name
-		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:31:19-47
+		ADDED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:29:19-47
 uses-sdk
 INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\34621\StudioProjects\pfcjun20-jadiri\app\src\main\AndroidManifest.xml
@@ -202,6 +205,8 @@ MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\34621\.gradle\cac
 MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\06e741604dca01166137c02ac0bf57f9\jetified-firebase-core-9.0.0\AndroidManifest.xml:4:5-42
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\7ac08cc148b601a4ad1a5316a71d3575\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\7ac08cc148b601a4ad1a5316a71d3575\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.github.AnyChart:AnyChart-Android:1.1.2] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\954261ea1afb2a3ca2b5a88b780b2073\jetified-AnyChart-Android-1.1.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.AnyChart:AnyChart-Android:1.1.2] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\954261ea1afb2a3ca2b5a88b780b2073\jetified-AnyChart-Android-1.1.2\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\a1a37d3e692457153ef9b4644ad7ba30\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\a1a37d3e692457153ef9b4644ad7ba30\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\34621\.gradle\caches\transforms-2\files-2.1\bbe12c45a9b7a8756ce4f2eb08892609\jetified-MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
