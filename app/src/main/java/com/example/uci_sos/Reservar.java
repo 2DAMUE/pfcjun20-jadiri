@@ -140,7 +140,7 @@ public class Reservar extends AppCompatActivity implements View.OnClickListener 
      * @see MiHospital
      */
     private void toHospital() {
-        Intent inte = new Intent(this.getApplicationContext(), MiHospital.class);
+        Intent inte = new Intent(this.getApplicationContext(), MiHospitall.class);
         finish();
         startActivity(inte);
     }

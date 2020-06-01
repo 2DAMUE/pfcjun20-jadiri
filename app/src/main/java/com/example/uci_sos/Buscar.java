@@ -80,7 +80,7 @@ public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom 
      * @see MiHospital
      */
     private void toHospital() {
-        Intent intent = new Intent(this.getApplicationContext(), MiHospital.class);
+        Intent intent = new Intent(this.getApplicationContext(), MiHospitall.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         finish();
         startActivity(intent);

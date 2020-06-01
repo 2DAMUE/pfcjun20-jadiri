@@ -21,14 +21,15 @@
         <activity android:name=".Reservar" />
         <activity android:name=".MiHospital" />
         <activity android:name=".MisCamas" />
-        <activity android:name=".Splash"/>
-        <activity android:name=".MiHospitall" >
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MiHospitall"/>
+
         <activity android:name=".MainActivity" />
     </application>
 </manifest>

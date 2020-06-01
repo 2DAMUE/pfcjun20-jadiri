@@ -79,6 +79,7 @@ public class MiHospitall extends AppCompatActivity implements View.OnClickListen
                 Log.e("NOMBRe", ""+h.getNombre());
                 Log.e("PLANTA LIBRE: ", String.valueOf(plantalibres));
                 Log.e("PLANTA LIBRE: ", String.valueOf(ucilibres));
+                setTitle(h.getNombre());
                 barChart.setDrawBarShadow(false);
                 barChart.setDrawValueAboveBar(true);
                 barChart.setMaxVisibleValueCount(50);
