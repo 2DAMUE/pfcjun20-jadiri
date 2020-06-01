@@ -52,7 +52,7 @@ public class MiHospitall extends AppCompatActivity implements View.OnClickListen
     private DatabaseReference mDataBase;
     ArrayList<String> estados;
     float[] numeros = {250, 102, 50, 230, 30, 2, 56, 43, 0};
-    ArrayList<BarEntry> barEntryArrayList;
+    ArrayList<BarEntry> barxEntryArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

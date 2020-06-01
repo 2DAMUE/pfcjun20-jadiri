@@ -369,7 +369,7 @@ public class ConfigPlanta extends AppCompatActivity {
      * @see MiHospital
      */
     private void toHospital() {
-        Intent intent = new Intent(this, MiHospital.class);
+        Intent intent = new Intent(this, MiHospitall.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         finish();
         startActivity(intent);
