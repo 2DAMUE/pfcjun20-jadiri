@@ -51,8 +51,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="500"
-
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lbl_textoCamasUrgencia" />
 
@@ -90,8 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:layout_marginTop="2dp"
-                android:text="200"></TextView>
+                android:layout_marginTop="2dp"></TextView>
 
 
         </LinearLayout>
@@ -118,7 +115,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="700"
                 app:layout_constraintStart_toEndOf="@+id/lbl_numCamasUcis"
                 app:layout_constraintTop_toBottomOf="@+id/lbl_textoCamasPlanta" />
 
@@ -131,9 +127,9 @@
         android:id="@+id/graficobarras"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="68dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
 
@@ -306,5 +302,16 @@
         app:layout_constraintHorizontal_bias="0.933"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
+
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="164dp"
+        app:layout_constraintBottom_toTopOf="@+id/graficobarras"
+        app:layout_constraintEnd_toEndOf="@+id/lbdisponible"
+        app:layout_constraintTop_toTopOf="@+id/lbl_disponibilidadHospitales"
+        app:layout_constraintVertical_bias="0.057" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
