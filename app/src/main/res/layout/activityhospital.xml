@@ -127,8 +127,8 @@
     </LinearLayout>
 
 
-    <com.github.mikephil.charting.charts.PieChart
-        android:id="@+id/grafico_circulo"
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/graficobarras"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginTop="64dp"
