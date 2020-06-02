@@ -2,14 +2,27 @@ package com.example.uci_sos;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.uci_sos.modelo.entidad.Referencias;
 import com.google.firebase.auth.FirebaseAuth;
 
 import com.example.uci_sos.modelo.entidad.Hospital;
@@ -18,6 +31,13 @@ import com.example.uci_sos.modelo.entidad.Camas;
 import com.example.uci_sos.modelo.entidad.UCI;
 import com.example.uci_sos.modelo.entidad.Planta;
 import com.example.uci_sos.modelo.entidad.Urgencias;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.List;
 
 /**
  * Muestra de forma visual el estado actual de las camas del hospital
@@ -35,13 +55,48 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      *
      * @see Reservar
      */
-    LinearLayout reservar;
+    private LinearLayout reservar;
     /**
      * Botón que lleva a la ventana de Mi Hospital
      *
      * @see MiHospital
      */
-    LinearLayout mihospital;
+    private LinearLayout mihospital;
+
+    /**
+     * Elemento raiz en el que se añaden las distintas camas de UCI del hospital
+     *
+     * @see Camas
+     * @see UCI
+     * @see Hospital
+     */
+    private LinearLayout rootUCI;
+    /**
+     * Elemento raiz en el que se añaden las distintas camas de Urgencias del hospital
+     *
+     * @see Camas
+     * @see Urgencias
+     * @see Hospital
+     */
+    private LinearLayout rootUrgencias;
+    /**
+     * Elemento raiz en el que se añaden las distintas camas de Planta del hospital
+     *
+     * @see Camas
+     * @see Planta
+     * @see Hospital
+     */
+    private LinearLayout rootPlanta;
+
+    /**
+     * OpacityPane que se muestra para indicar al usuario que la ventana se está cargando
+     */
+    private View opacityPane;
+
+    /**
+     * ProgressBar que se muestra para indicar al usuario que la ventana se está cargando
+     */
+    private ProgressBar proggresBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,11 +149,207 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
     }
 
     /**
-     * Carga los elementos de la vista
+     * Carga los elementos de la vista y pide el hospital a la base de datos
      */
     private void cargarVista() {
         reservar = findViewById(R.id.btnReservarCamas);
         mihospital = findViewById(R.id.btnHospitalCamas);
+
+        rootUCI = findViewById(R.id.rootUCI);
+        rootUrgencias = findViewById(R.id.rootUrgencias);
+        rootPlanta = findViewById(R.id.rootPlanta);
+
+        opacityPane = findViewById(R.id.opacityPaneMisCamas);
+
+        proggresBar = findViewById(R.id.pbMisCamas);
+
+        getHospital();
+    }
+
+    /**
+     * Recoge el hospital en el que trabaja el usuario para cargar sus datos en la vista
+     *
+     * @see Hospital
+     */
+    private void getHospital() {
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        DatabaseReference hospitales = db.getReference(Referencias.HOSPITALES);
+        hospitales.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Hospital h = dataSnapshot.child("17").getValue(Hospital.class);
+                Log.d("HOSPITAL", h.toString());
+                cargarCamas(h);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w("HOSPITAL", databaseError.toString());
+                showToast("Error al cargar el hospital");
+            }
+        });
+    }
+
+    /**
+     * Carga las distintas secciones de la vista con los datos del hospital en el
+     * que trabaja el usuario y oculta el OpacityPane y la ProgressBar
+     *
+     * @param h Hospital en el que trabaja el usuario
+     * @see Hospital
+     * @see Camas
+     * @see MisCamas#opacityPane
+     * @see MisCamas#proggresBar
+     */
+    private void cargarCamas(Hospital h) {
+        cargarSeccionUCI(h.getListaCamasUCI());
+        cargarSeccionUrgencias(h.getListaCamasUrgencias());
+        cargarSeccionPlanta(h.getListaCamasPlanta());
+
+        opacityPane.setVisibility(View.GONE);
+
+        proggresBar.setVisibility(View.GONE);
+    }
+
+    /**
+     * Carga la sección de las camas de UCI del hospital en el que trabaja el usuario
+     *
+     * @param camas camas de UCI del hospital en el que trabaja el usuario
+     * @see Hospital
+     * @see Camas
+     * @see UCI
+     */
+    private void cargarSeccionUCI(List<UCI> camas) {
+        int totalCamas = camas.size();
+        Log.d("TOTAL CAMAS", String.valueOf(totalCamas));
+        int numFilas = (totalCamas / 7) + 1;
+        Log.d("TOTAL FILAS", String.valueOf(numFilas));
+        int index = 0;
+
+        for (int i = 0; i < numFilas; i++) {
+            Log.d("BUCLE FUERA: ", String.valueOf(i));
+            LinearLayout lhor = new LinearLayout(this);
+            lhor.setOrientation(LinearLayout.HORIZONTAL);
+            lhor.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            for (int j = 0; j < 7 && index < totalCamas; j++) {
+                View img = new View(this);
+                UCI cama = camas.get(index);
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(100, 100);
+                switch (cama.getEstado()) {
+                    case "libre":
+                        img.setBackgroundColor(Color.GREEN);
+                        break;
+                    case "ocupado":
+                        img.setBackgroundColor(Color.RED);
+                        break;
+                    case "noDisponible":
+                        img.setBackgroundColor(Color.YELLOW);
+                        break;
+                }
+                if (j != 6)
+                    params.setMargins(0, 0, 32, 32);
+                img.setLayoutParams(params);
+                lhor.addView(img);
+                index++;
+            }
+            rootUCI.addView(lhor);
+            rootUCI.invalidate();
+        }
+    }
+
+    /**
+     * Carga la sección de las camas de Urgencias del hospital en el que trabaja el usuario
+     *
+     * @param camas camas de Urgencias del hospital en el que trabaja el usuario
+     * @see Hospital
+     * @see Camas
+     * @see Urgencias
+     */
+    private void cargarSeccionUrgencias(List<Urgencias> camas) {
+        int totalCamas = camas.size();
+        Log.d("TOTAL CAMAS", String.valueOf(totalCamas));
+        int numFilas = (totalCamas / 7) + 1;
+        Log.d("TOTAL FILAS", String.valueOf(numFilas));
+        int index = 0;
+
+        for (int i = 0; i < numFilas; i++) {
+            Log.d("BUCLE FUERA: ", String.valueOf(i));
+            LinearLayout lhor = new LinearLayout(this);
+            lhor.setOrientation(LinearLayout.HORIZONTAL);
+            lhor.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            for (int j = 0; j < 7 && index < totalCamas; j++) {
+                View img = new View(this);
+                Urgencias cama = camas.get(index);
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(100, 100);
+                switch (cama.getEstado()) {
+                    case "libre":
+                        img.setBackgroundColor(Color.GREEN);
+                        break;
+                    case "ocupado":
+                        img.setBackgroundColor(Color.RED);
+                        break;
+                    case "noDisponible":
+                        img.setBackgroundColor(Color.YELLOW);
+                        break;
+                }
+                if (j != 6)
+                    params.setMargins(0, 0, 32, 32);
+                img.setLayoutParams(params);
+                lhor.addView(img);
+                index++;
+            }
+            rootUrgencias.addView(lhor);
+            rootUrgencias.invalidate();
+        }
+    }
+
+    /**
+     * Carga la sección de las camas de Planta del hospital en el que trabaja el usuario
+     *
+     * @param camas camas de Planta del hospital en el que trabaja el usuario
+     * @see Hospital
+     * @see Camas
+     * @see Planta
+     */
+    private void cargarSeccionPlanta(List<Planta> camas) {
+        int totalCamas = camas.size();
+        Log.d("TOTAL CAMAS", String.valueOf(totalCamas));
+        int numFilas = (totalCamas / 7) + 1;
+        Log.d("TOTAL FILAS", String.valueOf(numFilas));
+        int index = 0;
+
+        for (int i = 0; i < numFilas; i++) {
+            Log.d("BUCLE FUERA: ", String.valueOf(i));
+            LinearLayout lhor = new LinearLayout(this);
+            lhor.setOrientation(LinearLayout.HORIZONTAL);
+            lhor.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            for (int j = 0; j < 7 && index < totalCamas; j++) {
+                View img = new View(this);
+                Planta cama = camas.get(index);
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(100, 100);
+                switch (cama.getEstado()) {
+                    case "libre":
+                        img.setBackgroundColor(Color.GREEN);
+                        break;
+                    case "ocupado":
+                        img.setBackgroundColor(Color.RED);
+                        break;
+                    case "noDisponible":
+                        img.setBackgroundColor(Color.YELLOW);
+                        break;
+                }
+                if (j != 6)
+                    params.setMargins(0, 0, 32, 32);
+                img.setLayoutParams(params);
+                lhor.addView(img);
+                index++;
+            }
+            rootPlanta.addView(lhor);
+            rootPlanta.invalidate();
+        }
+    }
+
+    private void showToast(String mensaje) {
+        Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -109,6 +360,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
     private void toReservar() {
         Intent inte = new Intent(this.getApplicationContext(), Reservar.class);
         finish();
+        inte.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(inte);
     }
 
@@ -117,6 +369,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      */
     private void toHospital() {
         Intent inte = new Intent(this.getApplicationContext(), MiHospital.class);
+        inte.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         finish();
         startActivity(inte);
     }

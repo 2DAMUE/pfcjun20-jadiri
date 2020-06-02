@@ -733,6 +733,7 @@ drawable fondconfig
 drawable fondo_config
 drawable fondo_datos
 drawable fondo_login
+drawable fondo_mis_camas
 drawable fondo_registro
 drawable fondo_reservas
 drawable fondo_tarjeta
@@ -871,20 +872,6 @@ id btnSiguiente
 id btnToConfigPlantas
 id btninicio
 id buttonPanel
-id cama1
-id cama11
-id cama12
-id cama13
-id cama14
-id cama15
-id cama16
-id cama17
-id cama2
-id cama3
-id cama4
-id cama5
-id cama6
-id cama7
 id center_vertical
 id chains
 id checkbox
@@ -929,7 +916,6 @@ id ifRoom
 id image
 id imageView
 id imageView3
-id imageView7
 id info
 id invisible
 id itConfig
@@ -937,6 +923,9 @@ id itLogout
 id italic
 id item_touch_helper_previous_elevation
 id lbdisponible
+id lblCamasPlanta
+id lblCamasUci
+id lblCamasUrgencias
 id lblDisponible
 id lblHospital
 id lblHospitalReserva
@@ -971,6 +960,7 @@ id list_item
 id logo
 id logoLogin
 id logoventanaHospital
+id menu_abajo_mis_camas
 id menu_abajo_reservar
 id message
 id middle
@@ -985,10 +975,12 @@ id off
 id on
 id opBuscar
 id opRegistro
+id opacityPaneMisCamas
 id packed
 id parent
 id parentPanel
 id pbBuscar
+id pbMisCamas
 id pbRegistro
 id percent
 id progress_circular
@@ -1001,6 +993,9 @@ id recyclerViewBuscar
 id right
 id right_icon
 id right_side
+id rootPlanta
+id rootUCI
+id rootUrgencias
 id screen
 id scrollIndicatorDown
 id scrollIndicatorUp
@@ -1046,8 +1041,6 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
-id textoCamasUci
-id textohospital
 id time
 id title
 id titleDividerNoCustom
@@ -1076,7 +1069,6 @@ id up
 id useLogo
 id view
 id view2
-id view4
 id wide
 id withText
 id wrap
@@ -1183,8 +1175,11 @@ string buscar_cama
 string camasPlantaLibres
 string camasPlantaOcupadas
 string camasUCIOcupadas
+string camasUci
 string camasUrgenciasLibres
 string camasUrgenciasOcupadas
+string camas_planta
+string camas_urgencias
 string cero
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
@@ -1214,6 +1209,7 @@ string flechaSpinner
 string fondoDerivar
 string fondoHospital
 string fondoLogin
+string fondoMisCamas
 string fondoPlantas
 string fondoRegistro
 string fondoSplash
@@ -1609,6 +1605,7 @@ style campos_login_registro
 style colorgrafico
 style colorgrafico2
 style colorgrafico3
+style cuadrosMisCamas
 style fondo_menu_abajo
 style gradiente_login
 style gradiente_miscamas
@@ -1618,6 +1615,7 @@ style linea_menu_abajo
 style opacity_pane
 style recuadro_login_registro
 style recuadro_miHospital
+style titulosMisCamas
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

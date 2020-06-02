@@ -20,7 +20,9 @@
         <activity android:name=".Login" />
         <activity android:name=".Reservar" />
         <activity android:name=".MiHospital" />
-        <activity android:name=".MisCamas" />
+        <activity android:name=".MisCamas">
+
+        </activity>
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -102,6 +102,7 @@ public class Hospital implements Serializable {
         this.listaCamasUrgencias.add(cama);
     }
 
+
     /**
      * Getter del nombre del hospital
      *

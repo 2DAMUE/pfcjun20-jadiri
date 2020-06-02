@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.uci_sos.modelo.entidad.Hospital;
@@ -47,6 +48,26 @@ public class Datos extends AppCompatActivity {
      * @see ConfigPlanta
      */
     private Button btnSiguiente;
+
+    /**
+     * Botón que lleva a la ventana de Mi Hospital
+     *
+     * @see MiHospital
+     */
+    LinearLayout btnHosp;
+    /**
+     * Botón que lleva a la ventana de Mis Camas
+     *
+     * @see MisCamas
+     */
+    LinearLayout btnCamas;
+
+    /**
+     * Botón que lleva a la ventana de Reservar
+     *
+     * @see Reservar
+     */
+    LinearLayout btnReserva;
 
     /**
      * Nombre del hospital
@@ -122,6 +143,63 @@ public class Datos extends AppCompatActivity {
                     mostrarAdvertencia();
             }
         });
+
+        btnReserva.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toReserva();
+            }
+        });
+
+        btnCamas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toMisCamas();
+            }
+        });
+
+        btnHosp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toHospital();
+            }
+        });
+    }
+
+    /**
+     * Lleva a la ventana de Reserva
+     *
+     * @see Reservar
+     */
+    private void toReserva() {
+        Intent intent = new Intent(this, Reservar.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
+        startActivity(intent);
+    }
+
+    /**
+     * Lleva a la ventana de Mi Hospital
+     *
+     * @see MiHospital
+     */
+    private void toHospital() {
+        Intent intent = new Intent(this, MiHospital.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
+        startActivity(intent);
+    }
+
+    /**
+     * Lleva a la ventana de Mis Camas
+     *
+     * @see MisCamas
+     */
+    private void toMisCamas() {
+        Intent intent = new Intent(this, MisCamas.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
+        startActivity(intent);
     }
 
     /**
@@ -227,5 +305,9 @@ public class Datos extends AppCompatActivity {
         txtNumPlantas = findViewById(R.id.txtNumPlantas);
 
         btnSiguiente = findViewById(R.id.btnToConfigPlantas);
+
+        btnHosp = findViewById(R.id.btnHospitalDatos);
+        btnCamas = findViewById(R.id.btnMisCamasDatos);
+        btnReserva = findViewById(R.id.btnReservarDatos);
     }
 }

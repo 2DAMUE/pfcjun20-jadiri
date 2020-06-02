@@ -46,4 +46,8 @@
     <string name="numero_de_plantas">Numero de Plantas</string>
     <string name="disponibilidad_general_de_hospitales"><U>DISPONIBILIDAD GENERAL DE HOSPITALES</U></string>
     <string name="crear_hospital">Crear Hospital</string>
+    <string name="fondoMisCamas">fondo de la sección de Mis Camas con una camilla de fondo</string>
+    <string name="camasUci"><u>CAMAS UCI</u></string>
+    <string name="camas_urgencias"><u>CAMAS URGENCIAS</u></string>
+    <string name="camas_planta"><u>CAMAS PLANTA</u></string>
 </resources>

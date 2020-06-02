@@ -41,6 +41,7 @@ public class Reservar extends AppCompatActivity implements View.OnClickListener 
      * Botón que lleva a la ventana de Mi Hospital
      *
      * @see MiHospital
+     * @see Reservar#toHospital()
      */
     LinearLayout btnHosp;
     /**
@@ -141,6 +142,7 @@ public class Reservar extends AppCompatActivity implements View.OnClickListener 
      */
     private void toHospital() {
         Intent inte = new Intent(this.getApplicationContext(), MiHospital.class);
+        inte.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         finish();
         startActivity(inte);
     }
@@ -152,6 +154,7 @@ public class Reservar extends AppCompatActivity implements View.OnClickListener 
      */
     private void toMisCamas() {
         Intent inte = new Intent(this.getApplicationContext(), MisCamas.class);
+        inte.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         finish();
         startActivity(inte);
     }
