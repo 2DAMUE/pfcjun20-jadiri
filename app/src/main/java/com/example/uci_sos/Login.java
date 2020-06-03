@@ -65,6 +65,7 @@ public class Login extends Activity implements View.OnClickListener {
         auth = FirebaseAuth.getInstance();
         cargarVista();
         cargarListeners();
+        System.out.println("HOLA");
     }
 
     @Override

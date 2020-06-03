@@ -20,8 +20,10 @@
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
@@ -35,7 +37,6 @@
         <activity android:name="com.example.uci_sos.ConfigPlanta" />
         <activity android:name="com.example.uci_sos.Login" />
         <activity android:name="com.example.uci_sos.Reservar" />
-        <activity android:name="com.example.uci_sos.MiHospital" />
         <activity android:name="com.example.uci_sos.MisCamas" />
         <activity android:name="com.example.uci_sos.Splash" >
             <intent-filter>
@@ -44,7 +45,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.uci_sos.MainActivity" />
+        <activity android:name="com.example.uci_sos.MiHospital" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

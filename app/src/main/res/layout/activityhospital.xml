@@ -51,8 +51,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="500"
-
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lbl_textoCamasUrgencia" />
 
@@ -81,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Camas UCIS"
+                android:text="@string/camas_uci"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,9 +87,7 @@
                 android:id="@+id/lbl_numCamasUcis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-                android:layout_marginTop="2dp"
-                android:text="200"></TextView>
+                android:layout_marginTop="2dp" />
 
 
         </LinearLayout>
@@ -108,7 +104,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Camas de Planta"
+                android:text="@string/camas_de_planta"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -117,23 +113,19 @@
                 android:id="@+id/lbl_numCamasPlanta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-                android:text="700"
                 app:layout_constraintStart_toEndOf="@+id/lbl_numCamasUcis"
                 app:layout_constraintTop_toBottomOf="@+id/lbl_textoCamasPlanta" />
-
-
         </LinearLayout>
     </LinearLayout>
 
 
-    <com.github.mikephil.charting.charts.PieChart
-        android:id="@+id/grafico_circulo"
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/graficobarras"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="68dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
 
@@ -149,10 +141,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-
-
         android:text="@string/disponibilidad_general_de_hospitales"
-        android:textSize="17dp"
+        android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -181,7 +171,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hospital"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -203,7 +193,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/reserva"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -223,7 +213,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/misCamas"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
     </LinearLayout>
@@ -234,7 +224,7 @@
         android:layout_height="17dp"
         android:layout_marginTop="20dp"
 
-        android:text="Libres"
+        android:text="@string/libres"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
@@ -246,7 +236,6 @@
         android:layout_width="17dp"
         android:layout_height="17dp"
         android:layout_marginTop="20dp"
-
         android:elevation="0dp"
         android:paddingTop="40dp"
         android:paddingBottom="32dp"
@@ -262,7 +251,6 @@
         android:layout_height="19dp"
         android:layout_marginTop="20dp"
         android:elevation="0dp"
-
         android:paddingTop="40dp"
         android:paddingBottom="32dp"
         app:layout_constraintEnd_toStartOf="@+id/lbocupadas"
@@ -301,10 +289,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="No disponibles"
+        android:text="@string/no_disponibles"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.933"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
+
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="164dp"
+        app:layout_constraintBottom_toTopOf="@+id/graficobarras"
+        app:layout_constraintEnd_toEndOf="@+id/lbdisponible"
+        app:layout_constraintTop_toTopOf="@+id/lbl_disponibilidadHospitales"
+        app:layout_constraintVertical_bias="0.057" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

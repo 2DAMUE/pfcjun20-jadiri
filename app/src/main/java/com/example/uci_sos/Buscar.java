@@ -70,7 +70,7 @@ public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom 
     @Override
     public void click(int position) {
         Hospital h = listaHospitales.get(position);
-        showToast("Paciente derivado al hospital: " + h.getNombre());
+        showToast("Paciente derivado al hospital:\n" + h.getNombre());
         toHospital();
     }
 
