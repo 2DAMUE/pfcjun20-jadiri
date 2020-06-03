@@ -117,6 +117,11 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      */
     private TextView lblPlanta;
 
+    /**
+     * Hospital en el que trabaja el usuario
+     */
+    private Hospital h;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -201,9 +206,9 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
         hospitales.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Hospital h = dataSnapshot.child("17").getValue(Hospital.class);
+                h = dataSnapshot.child("0").getValue(Hospital.class);
                 Log.d("HOSPITAL", h.toString());
-                cargarCamas(h);
+                cargarCamas();
             }
 
             @Override
@@ -256,13 +261,12 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      * Carga las distintas secciones de la vista con los datos del hospital en el
      * que trabaja el usuario y oculta el OpacityPane y la ProgressBar
      *
-     * @param h Hospital en el que trabaja el usuario
      * @see Hospital
      * @see Camas
      * @see MisCamas#opacityPane
      * @see MisCamas#proggresBar
      */
-    private void cargarCamas(Hospital h) {
+    private void cargarCamas() {
         cargarSeccionUCI(h.getListaCamasUCI());
         cargarSeccionUrgencias(h.getListaCamasUrgencias());
         cargarSeccionPlanta(h.getListaCamasPlanta());
@@ -330,7 +334,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void cargarVentanaCama(Camas cama) {
-        new DialogCama(this, cama).show();
+        new DialogCama(this, cama, h.getListaPlantas()).show();
     }
 
     /**

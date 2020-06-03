@@ -368,11 +368,11 @@
         "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cuadro_dialog_mis_camas.xml.flat",
         "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\cuadro_dialog_mis_camas.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     }
 ]

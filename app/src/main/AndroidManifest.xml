@@ -18,14 +18,16 @@
         <activity android:name=".Registro" />
         <activity android:name=".ConfigPlanta" />
         <activity android:name=".Login" />
-        <activity android:name=".Reservar" />
-        <activity android:name=".MiHospital" />
-        <activity android:name=".MisCamas">
+        <activity android:name=".Reservar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MiHospital" />
+        <activity android:name=".MisCamas">
+
         </activity>
         <activity android:name=".Splash">
 
