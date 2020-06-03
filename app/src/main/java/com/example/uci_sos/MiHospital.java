@@ -44,7 +44,6 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
     LinearLayout miscamas;
     LinearLayout mihospital;
     BarChart barChart;
-    TextView name;
     float plantalibres;
     float ucilibres;
     float emerglibres;
@@ -65,7 +64,6 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.activityhospital);
         int colores[] = new int[]{getResources().getColor(R.color.colorOcupadas), getResources().getColor(R.color.colorNoDisponible), getResources().getColor(R.color.colorLibres)};
         barChart = (BarChart) findViewById(R.id.graficobarras);
-        name = findViewById(R.id.nombre);
         FirebaseDatabase mDataBase = FirebaseDatabase.getInstance();
         final DatabaseReference hospital = mDataBase.getReference(Referencias.HOSPITALES);
         hospital.addValueEventListener(new ValueEventListener() {
@@ -150,16 +148,16 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
                 barChart.groupBars(1, groupSpace, barSpace);
 
                 data.setDrawValues(false);
-                String[] camillas = new String[]{"", "Planta", "Urgencias", "UCI"};
+                String[] camillas = new String[]{"", "Planta", "UCI", "Urgencias"};
                 XAxis xAxis = barChart.getXAxis();
                 xAxis.setValueFormatter(new IndexAxisValueFormatter(camillas));
-                xAxis.setPosition(XAxis.XAxisPosition.TOP);
+                xAxis.setPosition(XAxis.XAxisPosition.BOTTOM_INSIDE);
                 xAxis.setDrawAxisLine(true);
                 xAxis.setDrawGridLines(false);
                 xAxis.setGranularity(1f);
                 xAxis.setCenterAxisLabels(true);
                 xAxis.setAxisMinimum(1);
-                xAxis.setLabelRotationAngle(20);
+                xAxis.setLabelRotationAngle(0);
                 barChart.animateY(1000);
                 barChart.invalidate();
                 xAxis.setLabelCount(camillas.length);
