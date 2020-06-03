@@ -248,12 +248,20 @@
         "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\anim\\latidos.xml"
     },
     {
+        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cama_verde.png.flat",
+        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\cama_verde.png"
+    },
+    {
         "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_uci_sos.png.flat",
         "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\logo_uci_sos.png"
     },
     {
         "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_reservas.png.flat",
         "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_reservas.png"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cama_roja.png.flat",
+        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\cama_roja.png"
     },
     {
         "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondoreserva.PNG.flat",
@@ -306,6 +314,10 @@
     {
         "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
         "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cama_amarilla.png.flat",
+        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\cama_amarilla.png"
     },
     {
         "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_animacionlogo.xml.flat",

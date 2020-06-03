@@ -1,12 +1,17 @@
 package com.example.uci_sos;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.net.ConnectivityManagerCompat;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
@@ -98,6 +103,19 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      */
     private ProgressBar proggresBar;
 
+    /**
+     * TextView con el texto CAMAS UCI
+     */
+    private TextView lblUCI;
+    /**
+     * TextView con el texto CAMAS URGENCIAS
+     */
+    private TextView lblUrgencias;
+    /**
+     * TextView con el texto CAMAS PLANTA
+     */
+    private TextView lblPlanta;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -163,11 +181,16 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
 
         proggresBar = findViewById(R.id.pbMisCamas);
 
+        lblPlanta = findViewById(R.id.lblCamasPlanta);
+        lblUCI = findViewById(R.id.lblCamasUci);
+        lblUrgencias = findViewById(R.id.lblCamasUrgencias);
+
         getHospital();
     }
 
     /**
-     * Recoge el hospital en el que trabaja el usuario para cargar sus datos en la vista
+     * Intenta recoger el hospital en el que trabaja el usuario para cargar sus datos en la vista
+     * Si lo consiguie carga los datos en la vista. Si no, informa al usuario mediante un AlertDialog
      *
      * @see Hospital
      */
@@ -185,9 +208,47 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Log.w("HOSPITAL", databaseError.toString());
-                showToast("Error al cargar el hospital");
+                showAlert();
             }
         });
+    }
+
+    /**
+     * Muestra un AlertDialog en indicando al usuario que ha habido un error y
+     * le pide que lo vuelva a intentar o que salga de la aplicación
+     *
+     * @see MisCamas#salir()
+     */
+    private void showAlert() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Error el cargar los datos.\nCompruebe su conexión a Internet e inténtelo de nuevo más tarde");
+        builder.setPositiveButton("Reintentar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                getHospital();
+            }
+        });
+        builder.setNegativeButton("Salir", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                salir();
+            }
+        });
+        builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                salir();
+            }
+        });
+        builder.create().show();
+    }
+
+    /**
+     * Hace logout y lleva al login
+     */
+    private void salir() {
+        FirebaseAuth.getInstance().signOut();
+        toLogin();
     }
 
     /**
@@ -208,6 +269,10 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
         opacityPane.setVisibility(View.GONE);
 
         proggresBar.setVisibility(View.GONE);
+
+        lblUCI.setVisibility(View.VISIBLE);
+        lblUrgencias.setVisibility(View.VISIBLE);
+        lblPlanta.setVisibility(View.VISIBLE);
     }
 
     /**
@@ -231,18 +296,18 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
             lhor.setOrientation(LinearLayout.HORIZONTAL);
             lhor.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             for (int j = 0; j < 7 && index < totalCamas; j++) {
-                View img = new View(this);
+                ImageView img = new ImageView(this);
                 UCI cama = camas.get(index);
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(100, 100);
                 switch (cama.getEstado()) {
                     case "libre":
-                        img.setBackgroundColor(Color.GREEN);
+                        img.setImageResource(R.drawable.cama_verde);
                         break;
                     case "ocupado":
-                        img.setBackgroundColor(Color.RED);
+                        img.setImageResource(R.drawable.cama_roja);
                         break;
                     case "noDisponible":
-                        img.setBackgroundColor(Color.YELLOW);
+                        img.setImageResource(R.drawable.cama_amarilla);
                         break;
                 }
                 if (j != 6)
@@ -277,18 +342,18 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
             lhor.setOrientation(LinearLayout.HORIZONTAL);
             lhor.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             for (int j = 0; j < 7 && index < totalCamas; j++) {
-                View img = new View(this);
+                ImageView img = new ImageView(this);
                 Urgencias cama = camas.get(index);
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(100, 100);
                 switch (cama.getEstado()) {
                     case "libre":
-                        img.setBackgroundColor(Color.GREEN);
+                        img.setImageResource(R.drawable.cama_verde);
                         break;
                     case "ocupado":
-                        img.setBackgroundColor(Color.RED);
+                        img.setImageResource(R.drawable.cama_roja);
                         break;
                     case "noDisponible":
-                        img.setBackgroundColor(Color.YELLOW);
+                        img.setImageResource(R.drawable.cama_amarilla);
                         break;
                 }
                 if (j != 6)
@@ -323,18 +388,18 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
             lhor.setOrientation(LinearLayout.HORIZONTAL);
             lhor.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             for (int j = 0; j < 7 && index < totalCamas; j++) {
-                View img = new View(this);
+                ImageView img = new ImageView(this);
                 Planta cama = camas.get(index);
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(100, 100);
                 switch (cama.getEstado()) {
                     case "libre":
-                        img.setBackgroundColor(Color.GREEN);
+                        img.setImageResource(R.drawable.cama_verde);
                         break;
                     case "ocupado":
-                        img.setBackgroundColor(Color.RED);
+                        img.setImageResource(R.drawable.cama_roja);
                         break;
                     case "noDisponible":
-                        img.setBackgroundColor(Color.YELLOW);
+                        img.setImageResource(R.drawable.cama_amarilla);
                         break;
                 }
                 if (j != 6)
@@ -346,10 +411,6 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
             rootPlanta.addView(lhor);
             rootPlanta.invalidate();
         }
-    }
-
-    private void showToast(String mensaje) {
-        Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
     }
 
     /**
