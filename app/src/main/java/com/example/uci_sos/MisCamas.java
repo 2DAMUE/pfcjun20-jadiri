@@ -116,7 +116,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      * Lleva a la ventana de Mi Hospital
      */
     private void toHospital() {
-        Intent inte = new Intent(this.getApplicationContext(), MiHospital.class);
+        Intent inte = new Intent(this.getApplicationContext(), MiHospitall.class);
         finish();
         startActivity(inte);
     }
