@@ -432,7 +432,9 @@
     <string name="camasUci"><u>CAMAS UCI</u></string>
     <string name="camasUrgenciasLibres">Camas de urgencias libres</string>
     <string name="camasUrgenciasOcupadas">Camas de urgencias ocupadas</string>
+    <string name="camas_de_planta">Camas de Planta</string>
     <string name="camas_planta"><u>CAMAS PLANTA</u></string>
+    <string name="camas_uci">Camas UCI</string>
     <string name="camas_urgencias"><u>CAMAS URGENCIAS</u></string>
     <string name="cero">0</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
@@ -457,7 +459,7 @@
     <string name="crear_hospital">Crear Hospital</string>
     <string name="default_web_client_id" translatable="false">61585641192-iogjsa8f0mp4e08o7ckqe07icjnaftpp.apps.googleusercontent.com</string>
     <string name="derivar">Derivar</string>
-    <string name="disponibilidad_general_de_hospitales"><U>DISPONIBILIDAD GENERAL DE HOSPITALES</U></string>
+    <string name="disponibilidad_general_de_hospitales"><u>DISPONIBILIDAD GENERAL DEL HOSPITAL</u></string>
     <string name="firebase_database_url" translatable="false">https://uci-sos.firebaseio.com</string>
     <string name="flechaSpinner">flecha del spinner</string>
     <string name="fondoDerivar">fondo de la sección de derivar con una imagen difuminada de un doctor con una camilla</string>
@@ -481,10 +483,12 @@
     <string name="iconoReservasAzul">"icono del menú con una camilla azul"</string>
     <string name="iconoReservasBlanco">"icono del menú con una camilla blanca"</string>
     <string name="inicio">Inicio</string>
+    <string name="libres">Libres</string>
     <string name="login">Login</string>
     <string name="logo">Logo de UCI SOS</string>
     <string name="logout">Logout</string>
     <string name="misCamas">Mis Camas</string>
+    <string name="no_disponibles">No disponibles</string>
     <string name="nombrePlanta">Nombre de la planta</string>
     <string name="nombre_de_hospital">Nombre de Hospital</string>
     <string name="numCamasUCILibres">Camas de UCI libres</string>
