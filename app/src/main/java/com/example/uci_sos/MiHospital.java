@@ -72,7 +72,7 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
                 numeroplanta = findViewById(R.id.lbl_numCamasPlanta);
                 numerouci = findViewById(R.id.lbl_numCamasUcis);
                 numerourgen = findViewById(R.id.lbl_numCamasUrgencia);
-                Hospital h = dataSnapshot.child("17").getValue(Hospital.class);
+                Hospital h = dataSnapshot.child("0").getValue(Hospital.class);
                 plantalibres = h.getCamasPlantaLibres();
                 ucilibres = h.getCamasUciLibres();
                 emerglibres = h.getCamasUrgenciasLibres();
