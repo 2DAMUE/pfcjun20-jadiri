@@ -16,16 +16,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="413dp"
-        android:layout_height="89dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="557dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
 
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -56,15 +55,6 @@
 
         </LinearLayout>
 
-        <!--  <com.anychart.AnyChartView
-        android:id="@+id/any_chart_view"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginLeft="132dp"
-        android:layout_marginTop="172dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />-->
         <LinearLayout
             style="@style/recuadro_miHospital"
             android:layout_width="110dp"
@@ -119,27 +109,11 @@
     </LinearLayout>
 
 
-    <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/graficobarras"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="68dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
-
-    <View
-        android:id="@+id/view2"
-        style="@style/linea_menu_abajo"
-        app:layout_constraintBottom_toTopOf="@+id/menu_abajo_reservar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/lbl_disponibilidadHospitales"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/disponibilidad_general_de_hospitales"
         android:textSize="17sp"
@@ -149,161 +123,172 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <LinearLayout
-        android:id="@+id/menu_abajo_reservar"
-        style="@style/fondo_menu_abajo"
+        android:id="@+id/linearInfoLibre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales">
+
+        <LinearLayout
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/colorgrafico1"
+                style="@style/colorgrafico"
+                android:layout_width="17dp"
+                android:layout_height="17dp" />
+
+            <TextView
+                android:id="@+id/lblibres"
+                android:layout_width="45dp"
+                android:layout_height="17dp"
+                android:text="@string/libres" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/colorgrafico2"
+                style="@style/colorgrafico2"
+                android:layout_width="17dp"
+                android:layout_height="19dp" />
+
+            <TextView
+                android:id="@+id/lbocupadas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ocupadas" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/colorgrafico3"
+                style="@style/colorgrafico3"
+                android:layout_width="17dp"
+                android:layout_height="17dp" />
+
+            <TextView
+                android:id="@+id/lbdisponible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_disponibles" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/graficobarras"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="160dp"
+        android:paddingTop="16dp"
+        android:layout_marginBottom="101dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearMenuAbajo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearInfoLibre" />
+
+    <LinearLayout
+        android:id="@+id/linearMenuAbajo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <LinearLayout
-            android:id="@+id/btnHospitalHospital"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/healthblue" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hospital"
-                android:textSize="15sp" />
-
-        </LinearLayout>
+        <View
+            android:id="@+id/view2"
+            style="@style/linea_menu_abajo"
+            app:layout_constraintBottom_toTopOf="@+id/menu_abajo_reservar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <LinearLayout
-            android:id="@+id/btnReservarHospital"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:id="@+id/menu_abajo_reservar"
+            style="@style/fondo_menu_abajo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/patient" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/btnHospitalHospital"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:text="@string/reserva"
-                android:textSize="15sp" />
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/healthblue" />
 
-        <LinearLayout
-            android:id="@+id/btnMisCamasHospital"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hospital"
+                    android:textSize="15sp" />
 
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/miscamas_icono_blanco" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/btnReservarHospital"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:text="@string/misCamas"
-                android:textSize="15sp" />
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/patient" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reserva"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnMisCamasHospital"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/miscamas_icono_blanco" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/misCamas"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/lblibres"
-        android:layout_width="45dp"
-        android:layout_height="17dp"
-        android:layout_marginTop="20dp"
-
-        android:text="@string/libres"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.161"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
-
-    <View
-        android:id="@+id/colorgrafico1"
-        style="@style/colorgrafico"
-        android:layout_width="17dp"
-        android:layout_height="17dp"
-        android:layout_marginTop="20dp"
-        android:elevation="0dp"
-        android:paddingTop="40dp"
-        android:paddingBottom="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/lblibres"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
-
-    <View
-        android:id="@+id/colorgrafico2"
-        style="@style/colorgrafico2"
-        android:layout_width="17dp"
-        android:layout_height="19dp"
-        android:layout_marginTop="20dp"
-        android:elevation="0dp"
-        android:paddingTop="40dp"
-        android:paddingBottom="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/lbocupadas"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
-
-    <View
-        android:id="@+id/colorgrafico3"
-        style="@style/colorgrafico3"
-        android:layout_width="17dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="1dp"
-        android:elevation="0dp"
-        android:paddingTop="40dp"
-        android:paddingBottom="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/lbdisponible"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
-
-    <TextView
-        android:id="@+id/lbocupadas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Ocupadas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
-
-    <TextView
-        android:id="@+id/lbdisponible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/no_disponibles"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.933"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales" />
-
-    <TextView
-        android:id="@+id/nombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="164dp"
-        app:layout_constraintBottom_toTopOf="@+id/graficobarras"
-        app:layout_constraintEnd_toEndOf="@+id/lbdisponible"
-        app:layout_constraintTop_toTopOf="@+id/lbl_disponibilidadHospitales"
-        app:layout_constraintVertical_bias="0.057" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -96,7 +96,6 @@
     <style name="colorgrafico3">
         <item name="android:background">@drawable/colorgrafico3</item>
         <item name="android:alpha">0.85</item>
-        <item name="android:layout_width">320dp</item>
     </style>
 
     <style name="opacity_pane">

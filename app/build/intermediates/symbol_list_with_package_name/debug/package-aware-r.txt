@@ -956,9 +956,11 @@ id left
 id light
 id line1
 id line3
+id linearInfoLibre
 id linearLayout
 id linearLayout2
 id linearLayoutt
+id linearMenuAbajo
 id listMode
 id list_item
 id logo
@@ -970,7 +972,6 @@ id message
 id middle
 id multiply
 id never
-id nombre
 id none
 id normal
 id notification_background
@@ -1124,7 +1125,6 @@ layout activity_buscar
 layout activity_config_planta
 layout activity_datos
 layout activity_login
-layout activity_main
 layout activity_mi_hospital
 layout activity_mis_camas
 layout activity_registro
@@ -1183,7 +1183,9 @@ string camasUCIOcupadas
 string camasUci
 string camasUrgenciasLibres
 string camasUrgenciasOcupadas
+string camas_de_planta
 string camas_planta
+string camas_uci
 string camas_urgencias
 string cero
 string common_google_play_services_enable_button
@@ -1232,10 +1234,12 @@ string iconoMisCamasBlanco
 string iconoReservasAzul
 string iconoReservasBlanco
 string inicio
+string libres
 string login
 string logo
 string logout
 string misCamas
+string no_disponibles
 string nombrePlanta
 string nombre_de_hospital
 string numCamasUCILibres

@@ -212,10 +212,6 @@
         "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registro.xml.flat",
         "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_registro.xml"
     },
