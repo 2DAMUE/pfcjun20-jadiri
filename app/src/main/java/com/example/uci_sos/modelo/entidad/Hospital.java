@@ -36,6 +36,11 @@ public class Hospital implements Serializable {
     private List<Urgencias> listaCamasUrgencias;
 
     /**
+     * Lista con los nombres de las plantas del hospital
+     */
+    private List<String> listaPlantas;
+
+    /**
      * Nombre del hospital
      */
     private String nombre;
@@ -101,7 +106,6 @@ public class Hospital implements Serializable {
     public void addCamaUrgencias(Urgencias cama) {
         this.listaCamasUrgencias.add(cama);
     }
-
 
     /**
      * Getter del nombre del hospital

@@ -19,6 +19,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -297,7 +298,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
             lhor.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             for (int j = 0; j < 7 && index < totalCamas; j++) {
                 ImageView img = new ImageView(this);
-                UCI cama = camas.get(index);
+                final UCI cama = camas.get(index);
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(100, 100);
                 switch (cama.getEstado()) {
                     case "libre":
@@ -313,12 +314,23 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                 if (j != 6)
                     params.setMargins(0, 0, 32, 32);
                 img.setLayoutParams(params);
+                img.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        cargarVentanaCama(cama);
+                        return false;
+                    }
+                });
                 lhor.addView(img);
                 index++;
             }
             rootUCI.addView(lhor);
             rootUCI.invalidate();
         }
+    }
+
+    private void cargarVentanaCama(Camas cama) {
+        new DialogCama(this, cama).show();
     }
 
     /**
