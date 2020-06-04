@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="estados">
+        <item>Libre</item>
+        <item>Ocupada</item>
+        <item>No Disponible</item>
+    </string-array>
     <attr format="boolean" name="barrierAllowsGoneWidgets"/>
     <attr format="enum" name="barrierDirection">
         <enum name="left" value="0"/>
@@ -426,6 +431,7 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">UCI SOS</string>
     <string name="buscar_cama">Buscar Cama</string>
+    <string name="cama_contagiosa">Cama contagiosa</string>
     <string name="camasPlantaLibres">Camas de planta libres</string>
     <string name="camasPlantaOcupadas">Camas de planta ocupadas</string>
     <string name="camasUCIOcupadas">Camas de UCI ocupadas</string>
@@ -436,6 +442,7 @@
     <string name="camas_planta"><u>CAMAS PLANTA</u></string>
     <string name="camas_uci">Camas UCI</string>
     <string name="camas_urgencias"><u>CAMAS URGENCIAS</u></string>
+    <string name="cancelar">Cancelar</string>
     <string name="cero">0</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
@@ -460,6 +467,7 @@
     <string name="default_web_client_id" translatable="false">61585641192-iogjsa8f0mp4e08o7ckqe07icjnaftpp.apps.googleusercontent.com</string>
     <string name="derivar">Derivar</string>
     <string name="disponibilidad_general_de_hospitales"><u>DISPONIBILIDAD GENERAL DEL HOSPITAL</u></string>
+    <string name="estado">Estado</string>
     <string name="firebase_database_url" translatable="false">https://uci-sos.firebaseio.com</string>
     <string name="flechaSpinner">flecha del spinner</string>
     <string name="fondoDerivar">fondo de la sección de derivar con una imagen difuminada de un doctor con una camilla</string>
@@ -474,6 +482,7 @@
     <string name="google_app_id" translatable="false">1:61585641192:android:3c27630380d2a2df53035d</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBhyBaAg4huif1H6bbjdwMjDPYBwWuUKFI</string>
     <string name="google_storage_bucket" translatable="false">uci-sos.appspot.com</string>
+    <string name="guardar">Guardar</string>
     <string name="hospital">Hospital</string>
     <string name="hospital_universitario_de_algo">Hospital Universitario de algo</string>
     <string name="iconoHospitalAzul">icono del menú con un hospital azul</string>
@@ -482,6 +491,7 @@
     <string name="iconoMisCamasBlanco">"icono del menú con una agenda blanca</string>
     <string name="iconoReservasAzul">"icono del menú con una camilla azul"</string>
     <string name="iconoReservasBlanco">"icono del menú con una camilla blanca"</string>
+    <string name="id">ID</string>
     <string name="inicio">Inicio</string>
     <string name="libres">Libres</string>
     <string name="login">Login</string>
@@ -2013,6 +2023,12 @@
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
     <style name="Widget.Compat.NotificationActionContainer" parent=""/>
     <style name="Widget.Compat.NotificationActionText" parent=""/>
+    <style name="botonCancelar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:background">@drawable/boton_cancelar</item>
+        <item name="android:textColor">#4A78F8</item>
+    </style>
     <style name="botones_login_registro">
         <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">45dp</item>
@@ -2051,10 +2067,21 @@
         <item name="android:background">@drawable/colorgrafico3</item>
         <item name="android:alpha">0.85</item>
     </style>
+    <style name="cuadro_dialog_mis_camas">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/cuadro_dialog_mis_camas</item>
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
     <style name="cuadrosMisCamas">
-        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">8dp</item>
+        <item name="layout_constraintHorizontal_bias">0.5</item>
         <item name="android:orientation">vertical</item>
     </style>
     <style name="fondo_menu_abajo">
@@ -2079,6 +2106,12 @@
     <style name="gradiente_reserva">
         <item name="android:background">#3CD8FF</item>
         <item name="android:alpha">0.20</item>
+    </style>
+    <style name="labelConfigCamas">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textSize">20sp</item>
     </style>
     <style name="linea_menu_abajo">
         <item name="android:layout_width">match_parent</item>

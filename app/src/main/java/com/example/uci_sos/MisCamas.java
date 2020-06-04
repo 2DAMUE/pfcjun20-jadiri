@@ -313,9 +313,9 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      */
     private void cargarSeccionUCI(List<UCI> camas) {
         int totalCamas = camas.size();
-        Log.d("TOTAL CAMAS", String.valueOf(totalCamas));
+        Log.d("TOTAL CAMAS UCI", String.valueOf(totalCamas));
         int numFilas = (totalCamas / 7) + 1;
-        Log.d("TOTAL FILAS", String.valueOf(numFilas));
+        Log.d("TOTAL FILAS UCI", String.valueOf(numFilas));
         int index = 0;
 
         for (int i = 0; i < numFilas; i++) {
@@ -350,8 +350,8 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                 lhor.addView(img);
                 index++;
             }
-            rootUCI.addView(lhor);
-            rootUCI.invalidate();
+            rootPlanta.addView(lhor);
+            rootPlanta.invalidate();
         }
     }
 
@@ -365,9 +365,9 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      */
     private void cargarSeccionUrgencias(List<Urgencias> camas) {
         int totalCamas = camas.size();
-        Log.d("TOTAL CAMAS", String.valueOf(totalCamas));
+        Log.d("TOTAL CAMAS URGENCIAS", String.valueOf(totalCamas));
         int numFilas = (totalCamas / 7) + 1;
-        Log.d("TOTAL FILAS", String.valueOf(numFilas));
+        Log.d("TOTAL FILAS URGENCIAS", String.valueOf(numFilas));
         int index = 0;
 
         for (int i = 0; i < numFilas; i++) {
@@ -417,9 +417,9 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      */
     private void cargarSeccionPlanta(List<Planta> camas) {
         int totalCamas = camas.size();
-        Log.d("TOTAL CAMAS", String.valueOf(totalCamas));
+        Log.d("TOTAL CAMAS PLANTA", String.valueOf(totalCamas));
         int numFilas = (totalCamas / 7) + 1;
-        Log.d("TOTAL FILAS", String.valueOf(numFilas));
+        Log.d("TOTAL FILAS PLANTA", String.valueOf(numFilas));
         int index = 0;
 
         for (int i = 0; i < numFilas; i++) {
@@ -454,8 +454,8 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                 lhor.addView(img);
                 index++;
             }
-            rootPlanta.addView(lhor);
-            rootPlanta.invalidate();
+            rootUCI.addView(lhor);
+            rootUCI.invalidate();
         }
     }
 
