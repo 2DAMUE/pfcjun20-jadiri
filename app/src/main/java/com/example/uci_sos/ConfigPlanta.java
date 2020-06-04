@@ -279,6 +279,8 @@ public class ConfigPlanta extends AppCompatActivity {
         for (int i = 0; i < numCamasUrgenciasOcupadas; i++) {
             h.addCamaUrgencias(new Urgencias("ocupado", 0, nombrePLanta, false));
         }
+        Log.d("NOMBRE_PLANTA", nombrePLanta);
+        h.addPlanta(nombrePLanta);
     }
 
     /**

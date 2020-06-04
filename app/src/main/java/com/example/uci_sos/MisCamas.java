@@ -3,18 +3,31 @@ package com.example.uci_sos;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.net.ConnectivityManagerCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.uci_sos.modelo.entidad.Referencias;
 import com.google.firebase.auth.FirebaseAuth;
@@ -105,12 +118,23 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      */
     private TextView lblPlanta;
 
+    /**
+     * SwipeRefreshLayout que actualiza la ventana
+     *
+     * @see MisCamas
+     */
+    private SwipeRefreshLayout swipeRefreshLayout;
+
+    /**
+     * Hospital en el que trabaja el usuario
+     */
+    private Hospital h;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mis_camas);
         cargarVista();
-        cargarListeners();
     }
 
     @Override
@@ -153,6 +177,16 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
     private void cargarListeners() {
         reservar.setOnClickListener(this);
         mihospital.setOnClickListener(this);
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                Intent intent = new Intent(MisCamas.this, MisCamas.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                finish();
+                startActivity(intent);
+            }
+        });
     }
 
     /**
@@ -174,6 +208,10 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
         lblUCI = findViewById(R.id.lblCamasUci);
         lblUrgencias = findViewById(R.id.lblCamasUrgencias);
 
+        swipeRefreshLayout = findViewById(R.id.swipeMisCamas);
+
+        cargarListeners();
+
         getHospital();
     }
 
@@ -189,9 +227,9 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
         hospitales.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Hospital h = dataSnapshot.child("0").getValue(Hospital.class);
+                h = dataSnapshot.child("0").getValue(Hospital.class);
                 Log.d("HOSPITAL", h.toString());
-                cargarCamas(h);
+                cargarCamas();
             }
 
             @Override
@@ -244,13 +282,12 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      * Carga las distintas secciones de la vista con los datos del hospital en el
      * que trabaja el usuario y oculta el OpacityPane y la ProgressBar
      *
-     * @param h Hospital en el que trabaja el usuario
      * @see Hospital
      * @see Camas
      * @see MisCamas#opacityPane
      * @see MisCamas#proggresBar
      */
-    private void cargarCamas(Hospital h) {
+    private void cargarCamas() {
         cargarSeccionUCI(h.getListaCamasUCI());
         cargarSeccionUrgencias(h.getListaCamasUrgencias());
         cargarSeccionPlanta(h.getListaCamasPlanta());
@@ -262,6 +299,8 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
         lblUCI.setVisibility(View.VISIBLE);
         lblUrgencias.setVisibility(View.VISIBLE);
         lblPlanta.setVisibility(View.VISIBLE);
+
+        swipeRefreshLayout.setRefreshing(false);
     }
 
     /**
@@ -286,7 +325,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
             lhor.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             for (int j = 0; j < 7 && index < totalCamas; j++) {
                 ImageView img = new ImageView(this);
-                UCI cama = camas.get(index);
+                final UCI cama = camas.get(index);
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(100, 100);
                 switch (cama.getEstado()) {
                     case "libre":
@@ -302,6 +341,12 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                 if (j != 6)
                     params.setMargins(0, 0, 32, 32);
                 img.setLayoutParams(params);
+                img.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        cargarVentanaCama(cama);
+                    }
+                });
                 lhor.addView(img);
                 index++;
             }
@@ -332,7 +377,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
             lhor.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             for (int j = 0; j < 7 && index < totalCamas; j++) {
                 ImageView img = new ImageView(this);
-                Urgencias cama = camas.get(index);
+                final Urgencias cama = camas.get(index);
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(100, 100);
                 switch (cama.getEstado()) {
                     case "libre":
@@ -348,6 +393,12 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                 if (j != 6)
                     params.setMargins(0, 0, 32, 32);
                 img.setLayoutParams(params);
+                img.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        cargarVentanaCama(cama);
+                    }
+                });
                 lhor.addView(img);
                 index++;
             }
@@ -378,7 +429,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
             lhor.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             for (int j = 0; j < 7 && index < totalCamas; j++) {
                 ImageView img = new ImageView(this);
-                Planta cama = camas.get(index);
+                final Planta cama = camas.get(index);
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(100, 100);
                 switch (cama.getEstado()) {
                     case "libre":
@@ -394,12 +445,30 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                 if (j != 6)
                     params.setMargins(0, 0, 32, 32);
                 img.setLayoutParams(params);
+                img.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        cargarVentanaCama(cama);
+                    }
+                });
                 lhor.addView(img);
                 index++;
             }
             rootPlanta.addView(lhor);
             rootPlanta.invalidate();
         }
+    }
+
+    /**
+     * Abre el Dialog para editar las camas
+     *
+     * @param cama cama a editar
+     * @see Camas
+     * @see Hospital
+     * @see DialogCama
+     */
+    private void cargarVentanaCama(Camas cama) {
+        new DialogCama(this, cama, h).show();
     }
 
     /**

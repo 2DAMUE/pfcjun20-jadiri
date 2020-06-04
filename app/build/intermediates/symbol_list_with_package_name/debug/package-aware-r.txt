@@ -27,6 +27,7 @@ anim btn_radio_to_on_mtrl_dot_group_animation
 anim btn_radio_to_on_mtrl_ring_outer_animation
 anim btn_radio_to_on_mtrl_ring_outer_path_animation
 anim latidos
+array estados
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -693,6 +694,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable bed
+drawable boton_cancelar
 drawable botones_login_registro
 drawable botones_reserva
 drawable btn_checkbox_checked_mtrl
@@ -731,6 +733,7 @@ drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable contactblue
 drawable cuadradoventanahospital
+drawable cuadro_dialog_mis_camas
 drawable down_arrow
 drawable fondconfig
 drawable fondo_config
@@ -856,7 +859,9 @@ id beginning
 id blocking
 id bottom
 id btnBuscar
+id btnCancelarCama
 id btnDerivar
+id btnGuardarCama
 id btnHospitalCamas
 id btnHospitalDatos
 id btnHospitalHospital
@@ -876,6 +881,7 @@ id btnToConfigPlantas
 id btninicio
 id buttonPanel
 id center_vertical
+id chContagio
 id chains
 id checkbox
 id checked
@@ -1021,6 +1027,8 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id spEstado
+id spPlanta
 id spacer
 id spinnerItem
 id spinnerRegistro
@@ -1034,6 +1042,7 @@ id standard
 id start
 id submenuarrow
 id submit_area
+id swipeMisCamas
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -1057,6 +1066,7 @@ id txtApellido
 id txtConfirmPwd
 id txtEmailLogin
 id txtEmailRegistro
+id txtIdCama
 id txtNombre
 id txtNombreHospital
 id txtNombrePlanta
@@ -1133,6 +1143,7 @@ layout activity_reservar
 layout activity_splash
 layout activityhospital
 layout custom_dialog
+layout layout_dialog_mis_camas
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -1177,6 +1188,7 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
 string buscar_cama
+string cama_contagiosa
 string camasPlantaLibres
 string camasPlantaOcupadas
 string camasUCIOcupadas
@@ -1187,6 +1199,7 @@ string camas_de_planta
 string camas_planta
 string camas_uci
 string camas_urgencias
+string cancelar
 string cero
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
@@ -1211,6 +1224,7 @@ string crear_hospital
 string default_web_client_id
 string derivar
 string disponibilidad_general_de_hospitales
+string estado
 string firebase_database_url
 string flechaSpinner
 string fondoDerivar
@@ -1225,6 +1239,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string guardar
 string hospital
 string hospital_universitario_de_algo
 string iconoHospitalAzul
@@ -1233,6 +1248,7 @@ string iconoMisCamasAzul
 string iconoMisCamasBlanco
 string iconoReservasAzul
 string iconoReservasBlanco
+string id
 string inicio
 string libres
 string login
@@ -1608,18 +1624,21 @@ style Widget_AppCompat_Toolbar
 style Widget_AppCompat_Toolbar_Button_Navigation
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
+style botonCancelar
 style botones_login_registro
 style botones_reserva
 style campos_login_registro
 style colorgrafico
 style colorgrafico2
 style colorgrafico3
+style cuadro_dialog_mis_camas
 style cuadrosMisCamas
 style fondo_menu_abajo
 style gradiente_login
 style gradiente_miscamas
 style gradiente_registro
 style gradiente_reserva
+style labelConfigCamas
 style linea_menu_abajo
 style opacity_pane
 style recuadro_login_registro

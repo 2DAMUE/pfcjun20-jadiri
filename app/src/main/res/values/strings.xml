@@ -54,4 +54,14 @@
     <string name="camas_de_planta">Camas de Planta</string>
     <string name="libres">Libres</string>
     <string name="no_disponibles">No disponibles</string>
+    <string name="estado">Estado</string>
+    <string name="id">ID</string>
+    <string name="cama_contagiosa">Cama contagiosa</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string-array name="estados">
+        <item>Libre</item>
+        <item>Ocupada</item>
+        <item>No Disponible</item>
+    </string-array>
 </resources>
