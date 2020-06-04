@@ -694,6 +694,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable bed
+drawable boton_cancelar
 drawable botones_login_registro
 drawable botones_reserva
 drawable btn_checkbox_checked_mtrl
@@ -1038,6 +1039,7 @@ id standard
 id start
 id submenuarrow
 id submit_area
+id swipeMisCamas
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -1616,12 +1618,14 @@ style Widget_AppCompat_Toolbar
 style Widget_AppCompat_Toolbar_Button_Navigation
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
+style botonCancelar
 style botones_login_registro
 style botones_reserva
 style campos_login_registro
 style colorgrafico
 style colorgrafico2
 style colorgrafico3
+style cuadro_dialog_mis_camas
 style cuadrosMisCamas
 style fondo_menu_abajo
 style gradiente_login

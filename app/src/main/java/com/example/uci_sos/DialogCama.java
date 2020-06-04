@@ -2,6 +2,7 @@ package com.example.uci_sos;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,15 +15,18 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.uci_sos.modelo.entidad.Camas;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import com.example.uci_sos.modelo.entidad.Hospital;
+import com.example.uci_sos.modelo.entidad.Referencias;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * Cuadro de diálogo que permite al usuario edital la cama seleccionada
@@ -67,25 +71,28 @@ public class DialogCama extends Dialog implements View.OnClickListener {
 
     /**
      * Cama a editar
+     *
+     * @see Camas
      */
     private Camas cama;
 
     /**
-     * Losta con el nombre de las plantas del hospital
+     * Hospital al que pertenece la cama
+     *
+     * @see Hospital
      */
-    private List<String> listaPlantas;
+    private Hospital h;
 
 
-    public DialogCama(Activity activity, Camas cama, List<String> listaPlantas) {
+    public DialogCama(Activity activity, Camas cama, Hospital h) {
         super(activity);
 
         this.activity = activity;
         this.cama = cama;
         Log.d("CAMA", cama.toString());
-        this.listaPlantas = listaPlantas;
-        Log.d("ListaPlantas", listaPlantas.toString());
-        if (this.listaPlantas.get(0) == null)
-            this.listaPlantas.remove(0);
+        this.h = h;
+        if (this.h.getListaPlantas().get(0) == null)
+            this.h.getListaPlantas().remove(0);
     }
 
     @Override
@@ -101,16 +108,73 @@ public class DialogCama extends Dialog implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnGuardarCama:
-
+                actualizarCama();
                 break;
             case R.id.btnCancelarCama:
-                salir();
+                dismiss();
                 break;
         }
     }
 
-    private void salir() {
-        dismiss();
+    /**
+     * Actualiza la cama con los cambios producidos por el usuario
+     *
+     * @see Camas
+     * @see Hospital
+     */
+    private void actualizarCama() {
+        switch ((String) spEstado.getSelectedItem()) {
+            case "Libre":
+                cama.setEstado("libre");
+                break;
+            case "Ocupada":
+                cama.setEstado("ocupado");
+                break;
+            case "No Disponible":
+                cama.setEstado("noDisponible");
+                break;
+        }
+        cama.setPlanta((String) spPlanta.getSelectedItem());
+        cama.setContagio(chContagio.isChecked());
+        cama.setId(Integer.parseInt(txtId.getText().toString()));
+
+        guardar();
+    }
+
+    /**
+     * Almacena el hospital en la base de datos y cierra el Dialog
+     *
+     * @see Hospital
+     */
+    private void guardar() {
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        DatabaseReference hospitales = db.getReference(Referencias.HOSPITALES);
+        hospitales.child(String.valueOf(h.getCodHospital())).setValue(h).addOnCompleteListener(activity, new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Log.d("ACTUALIZAR_HOSPITAL", "ÉXITO");
+                    showToast("Cambios guardados");
+                    Intent intent = new Intent(activity.getApplicationContext(), MisCamas.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    activity.finish();
+                    activity.startActivity(intent);
+                    dismiss();
+                } else {
+                    Log.w("ACTUALIZAR_HOSPITAL", task.getException().toString());
+                    showToast("Error al guardar los cambios\nComptuebe su conexión a Internet e inténtelo de nuevo más tarde");
+                }
+            }
+        });
+    }
+
+    /**
+     * Muestra un mensaje el usuario mediante un Toast
+     *
+     * @param mensaje mensaje a mostrar
+     */
+    private void showToast(String mensaje) {
+        Toast.makeText(activity.getApplicationContext(), mensaje, Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -159,7 +223,7 @@ public class DialogCama extends Dialog implements View.OnClickListener {
      * @see DialogCama#spPlanta
      */
     private void cargarSpinnerPlanta() {
-        ArrayAdapter<String> adapter = new ArrayAdapter(DialogCama.this.getContext(), R.layout.spinner_registro_item, listaPlantas) {
+        ArrayAdapter<String> adapter = new ArrayAdapter(DialogCama.this.getContext(), R.layout.spinner_registro_item, h.getListaPlantas()) {
             @Override
             public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
                 View v = super.getDropDownView(position, convertView, parent);
@@ -171,7 +235,7 @@ public class DialogCama extends Dialog implements View.OnClickListener {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spPlanta.setAdapter(adapter);
 
-        int index = listaPlantas.indexOf(cama.getPlanta());
+        int index = h.getListaPlantas().indexOf(cama.getPlanta());
         spPlanta.setSelection(index);
     }
 
