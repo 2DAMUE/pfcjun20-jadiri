@@ -72,10 +72,6 @@
         "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_mi_hospital.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_mi_hospital.xml"
-    },
-    {
         "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_registro_item.xml.flat",
         "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\spinner_registro_item.xml"
     },

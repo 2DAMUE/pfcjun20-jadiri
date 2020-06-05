@@ -56,6 +56,13 @@ public class LoginTest {
     }
 
     @Test
+    public void sinCampos() {
+        onView(withId(R.id.btnLogin)).perform(click());
+        onView(withText("Por favor, rellene todos los campos"))
+                .inRoot(withDecorView(not(is(login.getWindow().getDecorView())))).check(matches(isDisplayed()));
+    }
+
+    @Test
     public void emailErroneo() {
         onView(withId(R.id.txtEmailLogin)).perform(typeText("maildepruebamail.com"), ViewActions.closeSoftKeyboard());
         onView(withId(R.id.txtPwdLogin)).perform(typeText("123456"), ViewActions.closeSoftKeyboard());
@@ -87,6 +94,12 @@ public class LoginTest {
         onView(withId(R.id.txtEmailLogin)).perform(typeText("maildeprueba@mail.com"), ViewActions.closeSoftKeyboard());
         onView(withId(R.id.txtPwdLogin)).perform(typeText("123456"), ViewActions.closeSoftKeyboard());
         onView(withId(R.id.btnLogin)).perform(click());
-        onView(withId(R.id.lbl_textoCamasUrgencia)).check(matches(isDisplayed()));
+        onView(withId(R.id.lbl_textoCamasUrgencia)).check(matches(withText(R.string.camas_urgencia)));
+    }
+
+    @Test
+    public void toRegistro() {
+        onView(withId(R.id.lblRegistro)).perform(click());
+        onView(withId(R.id.txtPwdReg)).check(matches(isDisplayed()));
     }
 }

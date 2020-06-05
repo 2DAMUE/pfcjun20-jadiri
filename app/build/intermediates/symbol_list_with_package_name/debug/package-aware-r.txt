@@ -891,11 +891,8 @@ id checked
 id chronometer
 id collapseActionView
 id colorgrafico1
-id colorgrafico11
 id colorgrafico2
-id colorgrafico22
 id colorgrafico3
-id colorgrafico33
 id content
 id contentPanel
 id custom
@@ -916,7 +913,6 @@ id flechaAbajo
 id fondo
 id forever
 id gone
-id grafico_circulo
 id graficobarras
 id group_divider
 id groups
@@ -954,11 +950,7 @@ id lbl_numCamasUrgencia
 id lbl_textoCamasPlanta
 id lbl_textoCamasUcis
 id lbl_textoCamasUrgencia
-id lbl_textoSituacionCamas
 id lblibres
-id lblldisponibles
-id lbllibres
-id lblocupadas
 id lblurgencias
 id lbocupadas
 id left
@@ -974,7 +966,6 @@ id listMode
 id list_item
 id logo
 id logoLogin
-id logoventanaHospital
 id menu_abajo_mis_camas
 id menu_abajo_reservar
 id message
@@ -1140,7 +1131,6 @@ layout activity_buscar
 layout activity_config_planta
 layout activity_datos
 layout activity_login
-layout activity_mi_hospital
 layout activity_mis_camas
 layout activity_registro
 layout activity_reserva_realizada
@@ -1204,6 +1194,7 @@ string camasUrgenciasOcupadas
 string camas_de_planta
 string camas_planta
 string camas_uci
+string camas_urgencia
 string camas_urgencias
 string cancelar
 string cero
