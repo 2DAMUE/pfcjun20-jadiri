@@ -159,10 +159,6 @@ public class DialogCama extends Dialog implements View.OnClickListener {
                 if (task.isSuccessful()) {
                     Log.d("ACTUALIZAR_HOSPITAL", "ÉXITO");
                     showToast("Cambios guardados");
-//                    Intent intent = new Intent(activity.getApplicationContext(), MisCamas.class);
-//                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-//                    activity.finish();
-//                    activity.startActivity(intent);
                     misCamas.cargarVista();
                     dismiss();
                 } else {
