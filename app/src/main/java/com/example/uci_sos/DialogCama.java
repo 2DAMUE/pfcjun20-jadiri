@@ -2,7 +2,6 @@ package com.example.uci_sos;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,6 +26,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Objects;
 
 /**
  * Cuadro de diálogo que permite al usuario edital la cama seleccionada
@@ -83,10 +84,13 @@ public class DialogCama extends Dialog implements View.OnClickListener {
      */
     private Hospital h;
 
+    private MisCamas misCamas;
 
-    public DialogCama(Activity activity, Camas cama, Hospital h) {
+
+    public DialogCama(MisCamas misCamas, Activity activity, Camas cama, Hospital h) {
         super(activity);
 
+        this.misCamas = misCamas;
         this.activity = activity;
         this.cama = cama;
         Log.d("CAMA", cama.toString());
@@ -155,13 +159,14 @@ public class DialogCama extends Dialog implements View.OnClickListener {
                 if (task.isSuccessful()) {
                     Log.d("ACTUALIZAR_HOSPITAL", "ÉXITO");
                     showToast("Cambios guardados");
-                    Intent intent = new Intent(activity.getApplicationContext(), MisCamas.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    activity.finish();
-                    activity.startActivity(intent);
+//                    Intent intent = new Intent(activity.getApplicationContext(), MisCamas.class);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    activity.finish();
+//                    activity.startActivity(intent);
+                    misCamas.cargarVista();
                     dismiss();
                 } else {
-                    Log.w("ACTUALIZAR_HOSPITAL", task.getException().toString());
+                    Log.w("ACTUALIZAR_HOSPITAL", Objects.requireNonNull(task.getException()).toString());
                     showToast("Error al guardar los cambios\nComptuebe su conexión a Internet e inténtelo de nuevo más tarde");
                 }
             }
@@ -223,7 +228,7 @@ public class DialogCama extends Dialog implements View.OnClickListener {
      * @see DialogCama#spPlanta
      */
     private void cargarSpinnerPlanta() {
-        ArrayAdapter<String> adapter = new ArrayAdapter(DialogCama.this.getContext(), R.layout.spinner_registro_item, h.getListaPlantas()) {
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(DialogCama.this.getContext(), R.layout.spinner_registro_item, h.getListaPlantas()) {
             @Override
             public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
                 View v = super.getDropDownView(position, convertView, parent);
@@ -246,7 +251,7 @@ public class DialogCama extends Dialog implements View.OnClickListener {
      * @see DialogCama#spEstado
      */
     private void cargarSpinnerEstado() {
-        ArrayAdapter<String> adapter = new ArrayAdapter(DialogCama.this.getContext(), R.layout.spinner_registro_item,
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(DialogCama.this.getContext(), R.layout.spinner_registro_item,
                 activity.getResources().getStringArray(R.array.estados)) {
             @Override
             public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

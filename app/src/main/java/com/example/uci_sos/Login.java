@@ -180,7 +180,7 @@ public class Login extends Activity implements View.OnClickListener {
      * @see MiHospital
      */
     private void toHospital() {
-        Intent inte = new Intent(this.getApplicationContext(), Reservar.class);
+        Intent inte = new Intent(this.getApplicationContext(), MiHospital.class);
         finish();
         startActivity(inte);
     }

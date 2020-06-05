@@ -39,7 +39,7 @@
     <string name="inicio">Inicio</string>
     <string name="hospital_universitario_de_algo">Hospital Universitario de algo</string>
     <string name="fondoHospital">fondo de la seccion hospital con un hospital borroso de fondo</string>
-    <string name="configurar_hospital">Configurar hospital</string>
+    <string name="configurar_hospital">Crear hospital</string>
     <string name="recomendados">Recomendados</string>
     <string name="flechaSpinner">flecha del spinner</string>
     <string name="nombre_de_hospital">Nombre de Hospital</string>
@@ -47,9 +47,9 @@
     <string name="disponibilidad_general_de_hospitales"><u>DISPONIBILIDAD GENERAL DEL HOSPITAL</u></string>
     <string name="crear_hospital">Crear Hospital</string>
     <string name="fondoMisCamas">fondo de la sección de Mis Camas con una camilla de fondo</string>
-    <string name="camasUci"><u>CAMAS UCI</u></string>
-    <string name="camas_urgencias"><u>CAMAS URGENCIAS</u></string>
-    <string name="camas_planta"><u>CAMAS PLANTA</u></string>
+    <string name="camasUci">CAMAS UCI</string>
+    <string name="camas_urgencias">CAMAS URGENCIAS</string>
+    <string name="camas_planta">CAMAS PLANTA</string>
     <string name="camas_uci">Camas UCI</string>
     <string name="camas_de_planta">Camas de Planta</string>
     <string name="libres">Libres</string>
@@ -59,9 +59,15 @@
     <string name="cama_contagiosa">Cama contagiosa</string>
     <string name="guardar">Guardar</string>
     <string name="cancelar">Cancelar</string>
+    <string name="spinnerMisCamas">Spinner MisCamas</string>
     <string-array name="estados">
         <item>Libre</item>
         <item>Ocupada</item>
         <item>No Disponible</item>
+    </string-array>
+    <string-array name="camas">
+        <item>Planta</item>
+        <item>Urgencias</item>
+        <item>UCI</item>
     </string-array>
 </resources>

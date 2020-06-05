@@ -291,6 +291,102 @@ public class Hospital implements Serializable {
         return camasLibres;
     }
 
+    /**
+     * Devuelve el número de camas de UCI ocupadas
+     *
+     * @return número de camas de UCI ocupadas
+     * @see Camas
+     * @see UCI
+     */
+    public int getCamasUCIOcupadas() {
+        int camasOcupadas = 0;
+        for (UCI cama : this.listaCamasUCI) {
+            if (cama.getEstado().equals("ocupado"))
+                camasOcupadas++;
+        }
+        return camasOcupadas;
+    }
+
+    /**
+     * Devuelve el número de camas de Planta ocupadas
+     *
+     * @return número de camas de Planta ocupadas
+     * @see Camas
+     * @see Planta
+     */
+    public int getCamasPlantaOcupadas() {
+        int camasOcupadas = 0;
+        for (Planta cama : this.listaCamasPlanta) {
+            if (cama.getEstado().equals("ocupado"))
+                camasOcupadas++;
+        }
+        return camasOcupadas;
+    }
+
+    /**
+     * Devuelve el número de camas de Urgencias ocupadas
+     *
+     * @return número de camas de Urgencias ocupadas
+     * @see Camas
+     * @see Urgencias
+     */
+    public int getCamasUrgenciasOcupadas() {
+        int camasOcupadas = 0;
+        for (Urgencias cama : this.listaCamasUrgencias) {
+            if (cama.getEstado().equals("ocupado"))
+                camasOcupadas++;
+        }
+        return camasOcupadas;
+    }
+
+    /**
+     * Devuelve el número de camas de UCI no disponibles
+     *
+     * @return número de camas de UCI no disponibles
+     * @see Camas
+     * @see UCI
+     */
+    public int getCamasUCINoDisponibles() {
+        int camasNoDisponibles = 0;
+        for (UCI cama : this.listaCamasUCI) {
+            if (cama.getEstado().equals("noDisponible"))
+                camasNoDisponibles++;
+        }
+        return camasNoDisponibles;
+    }
+
+    /**
+     * Devuelve el número de camas de Planta no disponibles
+     *
+     * @return número de camas de Planta no disponibles
+     * @see Camas
+     * @see Planta
+     */
+    public int getCamasPlantaNoDisponibles() {
+        int camasNoDisponibles = 0;
+        for (Planta cama : this.listaCamasPlanta) {
+            if (cama.getEstado().equals("noDisponible"))
+                camasNoDisponibles++;
+        }
+        return camasNoDisponibles;
+    }
+
+    /**
+     * Devuelve el número de camas de Urgencias no disponibles
+     *
+     * @return número de camas de Urgencias no disponibles
+     * @see Camas
+     * @see Urgencias
+     */
+    public int getCamasUrgenciasNoDisponibles() {
+        int camasNoDisponibles = 0;
+        for (Urgencias cama : this.listaCamasUrgencias) {
+            if (cama.getEstado().equals("noDisponible"))
+                camasNoDisponibles++;
+        }
+        return camasNoDisponibles;
+    }
+
     @Override
     public String toString() {
         return "Hospital{" +

@@ -3,31 +3,20 @@ package com.example.uci_sos;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.net.ConnectivityManagerCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Typeface;
-import android.net.ConnectivityManager;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.text.style.UnderlineSpan;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.uci_sos.modelo.entidad.Referencias;
 import com.google.firebase.auth.FirebaseAuth;
@@ -133,14 +122,13 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mis_camas);
         cargarVista();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -181,10 +169,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                Intent intent = new Intent(MisCamas.this, MisCamas.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                finish();
-                startActivity(intent);
+                cargarVista();
             }
         });
     }
@@ -192,7 +177,9 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
     /**
      * Carga los elementos de la vista y pide el hospital a la base de datos
      */
-    private void cargarVista() {
+    public void cargarVista() {
+        setContentView(R.layout.activity_mis_camas);
+
         reservar = findViewById(R.id.btnReservarCamas);
         mihospital = findViewById(R.id.btnHospitalCamas);
 
@@ -228,7 +215,9 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 h = dataSnapshot.child("0").getValue(Hospital.class);
+                assert h != null;
                 Log.d("HOSPITAL", h.toString());
+                setTitle(h.getNombre());
                 cargarCamas();
             }
 
@@ -318,7 +307,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
         Log.d("TOTAL FILAS UCI", String.valueOf(numFilas));
         int index = 0;
 
-        for (int i = 0; i < numFilas; i++) {
+        for (int i = 0; i <= numFilas && index < totalCamas; i++) {
             Log.d("BUCLE FUERA: ", String.valueOf(i));
             LinearLayout lhor = new LinearLayout(this);
             lhor.setOrientation(LinearLayout.HORIZONTAL);
@@ -350,8 +339,8 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                 lhor.addView(img);
                 index++;
             }
-            rootPlanta.addView(lhor);
-            rootPlanta.invalidate();
+            rootUCI.addView(lhor);
+            rootUCI.invalidate();
         }
     }
 
@@ -370,7 +359,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
         Log.d("TOTAL FILAS URGENCIAS", String.valueOf(numFilas));
         int index = 0;
 
-        for (int i = 0; i < numFilas; i++) {
+        for (int i = 0; i <= numFilas && index < totalCamas; i++) {
             Log.d("BUCLE FUERA: ", String.valueOf(i));
             LinearLayout lhor = new LinearLayout(this);
             lhor.setOrientation(LinearLayout.HORIZONTAL);
@@ -402,6 +391,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                 lhor.addView(img);
                 index++;
             }
+            System.out.println("INDECE: " + index);
             rootUrgencias.addView(lhor);
             rootUrgencias.invalidate();
         }
@@ -422,7 +412,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
         Log.d("TOTAL FILAS PLANTA", String.valueOf(numFilas));
         int index = 0;
 
-        for (int i = 0; i < numFilas; i++) {
+        for (int i = 0; i <= numFilas && index < totalCamas; i++) {
             Log.d("BUCLE FUERA: ", String.valueOf(i));
             LinearLayout lhor = new LinearLayout(this);
             lhor.setOrientation(LinearLayout.HORIZONTAL);
@@ -451,11 +441,13 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                         cargarVentanaCama(cama);
                     }
                 });
+                if (cama.isContagio())
+                    img.setBackground(getResources().getDrawable(R.drawable.fondo_contagio));
                 lhor.addView(img);
                 index++;
             }
-            rootUCI.addView(lhor);
-            rootUCI.invalidate();
+            rootPlanta.addView(lhor);
+            rootPlanta.invalidate();
         }
     }
 
@@ -468,7 +460,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      * @see DialogCama
      */
     private void cargarVentanaCama(Camas cama) {
-        new DialogCama(this, cama, h).show();
+        new DialogCama(this, this, cama, h).show();
     }
 
     /**

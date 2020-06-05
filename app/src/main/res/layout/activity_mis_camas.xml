@@ -51,9 +51,9 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/lblCamasUci"
+                    android:id="@+id/lblCamasPlanta"
                     style="@style/titulosMisCamas"
-                    android:text="@string/camasUci"
+                    android:text="@string/camas_planta"
                     android:visibility="invisible"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -62,12 +62,12 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <LinearLayout
-                    android:id="@+id/rootUCI"
+                    android:id="@+id/rootPlanta"
                     style="@style/cuadrosMisCamas"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lblCamasUci" />
+                    app:layout_constraintTop_toBottomOf="@+id/lblCamasPlanta" />
 
                 <TextView
                     android:id="@+id/lblCamasUrgencias"
@@ -77,7 +77,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/rootUCI"
+                    app:layout_constraintTop_toBottomOf="@+id/rootPlanta"
                     app:layout_constraintVertical_bias="0.0" />
 
                 <LinearLayout
@@ -89,9 +89,9 @@
                     app:layout_constraintTop_toBottomOf="@+id/lblCamasUrgencias" />
 
                 <TextView
-                    android:id="@+id/lblCamasPlanta"
+                    android:id="@+id/lblCamasUci"
                     style="@style/titulosMisCamas"
-                    android:text="@string/camas_planta"
+                    android:text="@string/camasUci"
                     android:visibility="invisible"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -100,12 +100,11 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <LinearLayout
-                    android:id="@+id/rootPlanta"
+                    android:id="@+id/rootUCI"
                     style="@style/cuadrosMisCamas"
-                    android:layout_height="100dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lblCamasPlanta" />
+                    app:layout_constraintTop_toBottomOf="@+id/lblCamasUci" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -218,5 +217,26 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <!--<androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMisCamas"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/AppTheme.NoActionBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@android:color/white"
+        app:subtitleTextColor="@android:color/white">
+
+        <Spinner
+            android:id="@+id/spMisCamas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </androidx.appcompat.widget.Toolbar>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

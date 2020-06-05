@@ -4,28 +4,23 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.uci_sos.modelo.entidad.Hospital;
 import com.example.uci_sos.modelo.entidad.Referencias;
 import com.github.mikephil.charting.charts.BarChart;
-import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
-import com.github.mikephil.charting.formatter.ValueFormatter;
-import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -44,12 +39,12 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
     LinearLayout miscamas;
     LinearLayout mihospital;
     BarChart barChart;
-    float plantalibres;
-    float ucilibres;
-    float emerglibres;
-    float plantaocupadas;
-    float uciocupadas;
-    float emergocupadas;
+    float plantaLibres;
+    float uciLibres;
+    float emergLibres;
+    float plantaOcupadas;
+    float uciOcupadas;
+    float emergOcupadas;
     TextView numeroplanta;
     TextView numerouci;
     TextView numerourgen;
@@ -62,6 +57,8 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activityhospital);
+        final ProgressBar pb = findViewById(R.id.pbMiHospital);
+        final View opacityPane = findViewById(R.id.opacityPaneMiHospital);
         int colores[] = new int[]{getResources().getColor(R.color.colorOcupadas), getResources().getColor(R.color.colorNoDisponible), getResources().getColor(R.color.colorLibres)};
         barChart = (BarChart) findViewById(R.id.graficobarras);
         FirebaseDatabase mDataBase = FirebaseDatabase.getInstance();
@@ -73,15 +70,18 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
                 numerouci = findViewById(R.id.lbl_numCamasUcis);
                 numerourgen = findViewById(R.id.lbl_numCamasUrgencia);
                 Hospital h = dataSnapshot.child("0").getValue(Hospital.class);
-                plantalibres = h.getCamasPlantaLibres();
-                ucilibres = h.getCamasUciLibres();
-                emerglibres = h.getCamasUrgenciasLibres();
-                plantaocupadas = h.getListaCamasPlanta().size() - plantalibres;
-                uciocupadas = h.getListaCamasUCI().size() - ucilibres;
-                emergocupadas = h.getListaCamasPlanta().size() - emerglibres;
+                plantaLibres = h.getCamasPlantaLibres();
+                uciLibres = h.getCamasUciLibres();
+                emergLibres = h.getCamasUrgenciasLibres();
+                plantaOcupadas = h.getCamasPlantaOcupadas();
+                uciOcupadas = h.getCamasUCIOcupadas();
+                emergOcupadas = h.getCamasUrgenciasOcupadas();
+                int plantaNoDisponibles = h.getCamasPlantaNoDisponibles();
+                int uciNoDisponibles = h.getCamasUCINoDisponibles();
+                int emerNoDisponibles = h.getCamasUrgenciasNoDisponibles();
                 Log.e("NOMBRe", "" + h.getNombre());
-                Log.e("PLANTA LIBRE: ", String.valueOf(plantalibres));
-                Log.e("PLANTA LIBRE: ", String.valueOf(ucilibres));
+                Log.e("PLANTA LIBRE: ", String.valueOf(plantaLibres));
+                Log.e("PLANTA LIBRE: ", String.valueOf(uciLibres));
                 setTitle(h.getNombre());
                 barChart.setDrawBarShadow(false);
                 barChart.setDrawValueAboveBar(true);
@@ -99,17 +99,17 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
                 ArrayList<BarEntry> barEntries7 = new ArrayList<>();
                 ArrayList<BarEntry> barEntries8 = new ArrayList<>();
                 ArrayList<BarEntry> barEntries9 = new ArrayList<>();
-                barEntries1.add(new BarEntry(1, plantalibres));
-                Log.e("KK", String.valueOf(plantalibres));
-                barEntries2.add(new BarEntry(2, plantaocupadas));
-                barEntries3.add(new BarEntry(3, 0));
-                barEntries4.add(new BarEntry(2, ucilibres));
-                Log.e("KK", String.valueOf(ucilibres));
-                barEntries5.add(new BarEntry(1, uciocupadas));
-                barEntries6.add(new BarEntry(3, 0));
-                barEntries7.add(new BarEntry(3, emerglibres));
-                barEntries8.add(new BarEntry(2, emergocupadas));
-                barEntries9.add(new BarEntry(2, 0));
+                barEntries1.add(new BarEntry(1, plantaLibres));
+                Log.e("KK", String.valueOf(plantaLibres));
+                barEntries2.add(new BarEntry(2, plantaOcupadas));
+                barEntries3.add(new BarEntry(3, plantaNoDisponibles));
+                barEntries4.add(new BarEntry(1, uciLibres));
+                Log.e("KK", String.valueOf(uciLibres));
+                barEntries5.add(new BarEntry(2, uciOcupadas));
+                barEntries6.add(new BarEntry(3, uciNoDisponibles));
+                barEntries7.add(new BarEntry(1, emergLibres));
+                barEntries8.add(new BarEntry(2, emergOcupadas));
+                barEntries9.add(new BarEntry(3, emerNoDisponibles));
 
 
                 BarDataSet plantalibre = new BarDataSet(barEntries1, "");
@@ -161,6 +161,9 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
                 barChart.animateY(1000);
                 barChart.invalidate();
                 xAxis.setLabelCount(camillas.length);
+
+                pb.setVisibility(View.GONE);
+                opacityPane.setVisibility(View.GONE);
 
                 cargarVista();
                 cargarListeners();
