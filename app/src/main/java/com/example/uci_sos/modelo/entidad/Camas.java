@@ -53,14 +53,4 @@ public abstract class Camas implements Serializable {
     public void setContagio(boolean contagio) {
         this.contagio = contagio;
     }
-
-    @Override
-    public String toString() {
-        return "Camas{" +
-                "estado='" + estado + '\'' +
-                ", id=" + id +
-                ", planta='" + planta + '\'' +
-                ", contagio=" + contagio +
-                '}';
-    }
 }

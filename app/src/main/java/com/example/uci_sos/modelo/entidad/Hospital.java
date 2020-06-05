@@ -386,16 +386,4 @@ public class Hospital implements Serializable {
         }
         return camasNoDisponibles;
     }
-
-    @Override
-    public String toString() {
-        return "Hospital{" +
-                "listaCamasUCI=" + listaCamasUCI +
-                ", listaCamasPlanta=" + listaCamasPlanta +
-                ", listaCamasUrgencias=" + listaCamasUrgencias +
-                ", listaPlantas=" + listaPlantas +
-                ", nombre='" + nombre + '\'' +
-                ", codHospital=" + codHospital +
-                '}';
-    }
 }

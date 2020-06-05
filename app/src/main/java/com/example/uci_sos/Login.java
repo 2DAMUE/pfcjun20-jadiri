@@ -18,6 +18,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Objects;
+
 /**
  * Login de la aplicación. Desde él puedes navegar al registro y a la página principal de la aplicación haciendo login
  * correctamente.
@@ -65,7 +67,6 @@ public class Login extends Activity implements View.OnClickListener {
         auth = FirebaseAuth.getInstance();
         cargarVista();
         cargarListeners();
-        System.out.println("HOLA");
     }
 
     @Override
@@ -116,7 +117,7 @@ public class Login extends Activity implements View.OnClickListener {
                     Log.d("LOGIN", "ÉXITO");
                     toHospital();
                 } else {
-                    Log.w("LOGIN", task.getException().toString());
+                    Log.w("LOGIN", Objects.requireNonNull(task.getException()).toString());
                     showToast("E-mail o contraseña incorrectas");
                 }
             }

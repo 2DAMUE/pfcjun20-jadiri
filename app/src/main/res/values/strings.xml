@@ -60,6 +60,7 @@
     <string name="guardar">Guardar</string>
     <string name="cancelar">Cancelar</string>
     <string name="spinnerMisCamas">Spinner MisCamas</string>
+    <string name="camas_urgencia">Camas Urgencia</string>
     <string-array name="estados">
         <item>Libre</item>
         <item>Ocupada</item>

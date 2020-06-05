@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -21,6 +22,7 @@ import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -174,7 +176,19 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
 
             }
         });
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.itLogout:
+                logout();
+                break;
+            case R.id.itConfig:
+                toDatos();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void cargarListeners() {
@@ -212,24 +226,28 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
 
     private void toReservar() {
         Intent inte = new Intent(this.getApplicationContext(), Reservar.class);
+        inte.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
         startActivity(inte);
     }
 
     private void toCamas() {
         Intent inte = new Intent(this.getApplicationContext(), MisCamas.class);
+        inte.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         finish();
         startActivity(inte);
     }
 
-    private void toPlanta() {
-        Intent inte = new Intent(this.getApplicationContext(), ConfigPlanta.class);
-        finish();
-        startActivity(inte);
-    }
-
-    private void toHospital() {
+    private void logout() {
+        FirebaseAuth.getInstance().signOut();
         Intent inte = new Intent(this.getApplicationContext(), Login.class);
+        inte.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         finish();
+        startActivity(inte);
+    }
+
+    private void toDatos() {
+        Intent inte = new Intent(this.getApplicationContext(), Datos.class);
         startActivity(inte);
     }
 
