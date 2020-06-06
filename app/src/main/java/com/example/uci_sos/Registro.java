@@ -33,9 +33,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Registro de la aplicación. En él creas tu usuario para la aplicación
@@ -45,7 +44,6 @@ public class Registro extends Activity {
 
     private FirebaseAuth auth;
 
-    private FirebaseDatabase db;
     /**
      * Referencia al child de users
      */
@@ -119,7 +117,7 @@ public class Registro extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
         auth = FirebaseAuth.getInstance();
-        db = FirebaseDatabase.getInstance();
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
         users = db.getReference(Referencias.USERS);
         getHopitales();
         cargarVista();
@@ -152,9 +150,7 @@ public class Registro extends Activity {
      * @see Registro#todoLleno()
      */
     private boolean comprobar() {
-        if (todoLleno() && comprobarPWD() && comprobarEmail())
-            return true;
-        return false;
+        return todoLleno() && comprobarPWD() && comprobarEmail();
     }
 
     /**
@@ -186,11 +182,11 @@ public class Registro extends Activity {
      */
     private boolean todoLleno() {
         if (email.equals("") || nombre.equals("") || apellido.equals("") || pwd.equals("") || confPwd.equals("")) {
-            showToast("Por favor rellene todos los campos");
+            showToast("Por favor, rellene todos los campos");
             return false;
         }
         if (spinHospital.getSelectedItemPosition() == 0) {
-            showToast("Por favor seleccione un hospital");
+            showToast("Por favor, seleccione un hospital");
             return false;
         }
         return true;
@@ -232,7 +228,7 @@ public class Registro extends Activity {
                     } else
                         showToast("Error al crear el usuario");
                 } else {
-                    Log.w("CREAR USER", task.getException().toString());
+                    Log.w("CREAR USER", Objects.requireNonNull(task.getException()).toString());
                     showToast("Error a crear el usuario");
                 }
             }
@@ -252,7 +248,7 @@ public class Registro extends Activity {
                 if (task.isSuccessful())
                     Log.d("GUARDAR_USER", "ÉXITO");
                 else
-                    Log.w("GUARDAR_USER", task.getException().toString());
+                    Log.w("GUARDAR_USER", Objects.requireNonNull(task.getException()).toString());
             }
         });
     }
@@ -278,12 +274,10 @@ public class Registro extends Activity {
         for (Hospital h : lista) {
             listaNombres.add(h.getNombre());
         }
-        ArrayAdapter<String> adapter = new ArrayAdapter(this, R.layout.spinner_registro_item, listaNombres) {
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_registro_item, listaNombres) {
             @Override
             public boolean isEnabled(int position) {
-                if (position == 0)
-                    return false;
-                return true;
+                return position != 0;
             }
 
             @Override
@@ -310,7 +304,6 @@ public class Registro extends Activity {
     /**
      * Carga los hospitales de la base de datos para obtener sus nombres y enviarlos al spinner del registro
      *
-     * @return List de Hospital
      * @see Hospital
      * @see Registro#cargarAdapter()
      */
@@ -321,9 +314,8 @@ public class Registro extends Activity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Log.d("HOSPITALES_SPINNER", "ÉXITO");
                 lista = new ArrayList<>();
-                Iterator<DataSnapshot> hospitales = dataSnapshot.getChildren().iterator();
-                while (hospitales.hasNext()) {
-                    lista.add(hospitales.next().getValue(Hospital.class));
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    lista.add(snapshot.getValue(Hospital.class));
                 }
                 cargarAdapter();
             }
