@@ -21,7 +21,7 @@ public class ConfigPlantaTest {
     private ConfigPlanta configPlanta;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         configPlanta = configPlantaTest.getActivity();
     }
 
@@ -31,7 +31,7 @@ public class ConfigPlantaTest {
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         configPlanta = null;
     }
 }

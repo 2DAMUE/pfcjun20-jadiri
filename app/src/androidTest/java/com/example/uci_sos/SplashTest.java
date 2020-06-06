@@ -22,12 +22,12 @@ public class SplashTest {
     private Splash splash;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         splash = splashTestRule.getActivity();
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         splash = null;
     }
 

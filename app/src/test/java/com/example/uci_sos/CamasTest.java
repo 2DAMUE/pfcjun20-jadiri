@@ -49,13 +49,12 @@ public class CamasTest {
 
     @Test
     public void contagio() {
-        boolean input = true;
         boolean output;
 
         Camas cama = new UCI();
-        cama.setContagio(input);
+        cama.setContagio(true);
         output = cama.isContagio();
 
-        assertEquals(true, output);
+        assertTrue(output);
     }
 }
