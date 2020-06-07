@@ -122,7 +122,7 @@ public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 listaHospitales = new ArrayList<>();
-                Hospital h = dataSnapshot.child("6").getValue(Hospital.class);
+                Hospital h = dataSnapshot.child("0").getValue(Hospital.class);
                 Log.d("NOMBRE", h.getNombre());
                 Iterator<DataSnapshot> hospitales = dataSnapshot.getChildren().iterator();
                 while (hospitales.hasNext()) {

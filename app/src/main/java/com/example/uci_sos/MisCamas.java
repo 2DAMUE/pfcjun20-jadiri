@@ -189,7 +189,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
         hospitales.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Hospital h = dataSnapshot.child("17").getValue(Hospital.class);
+                Hospital h = dataSnapshot.child("0").getValue(Hospital.class);
                 Log.d("HOSPITAL", h.toString());
                 cargarCamas(h);
             }
