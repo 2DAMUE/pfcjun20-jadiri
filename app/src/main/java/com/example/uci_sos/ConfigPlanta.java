@@ -143,7 +143,7 @@ public class ConfigPlanta extends AppCompatActivity {
         hospitales = db.getReference(Referencias.HOSPITALES);
         cargarVista();
         cargarListeners();
-        actualizarVista();
+        actualizarVista(true);
     }
 
     @Override
@@ -207,7 +207,7 @@ public class ConfigPlanta extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (comprobar())
-                    actualizarVista();
+                    actualizarVista(false);
             }
         });
     }
@@ -216,16 +216,18 @@ public class ConfigPlanta extends AppCompatActivity {
      * Actualiza la vista mostrando que planta se está configurando, vaciando los campos en cada iteración,
      * actializando el título de la ventana y creando las camas indicadas. Y, cuando sea la última planta, se guarda el hospital
      *
+     * @param nuevo si es la primera vez que se crea la ventana
      * @see ConfigPlanta#crearCamas()
      * @see ConfigPlanta#clear()
      */
-    private void actualizarVista() {
+    private void actualizarVista(boolean nuevo) {
         index++;
         if (btnSiguiente.getText().equals("Crear Hospital")) {
             crearCamas();
             guardarHospital();
         } else {
-            crearCamas();
+            if (!nuevo)
+                crearCamas();
             clear();
             setTitle(index + "/" + numPlantas);
             if (index == numPlantas)
@@ -279,6 +281,8 @@ public class ConfigPlanta extends AppCompatActivity {
         for (int i = 0; i < numCamasUrgenciasOcupadas; i++) {
             h.addCamaUrgencias(new Urgencias("ocupado", 0, nombrePLanta, false));
         }
+        Log.d("NOMBRE_PLANTA", nombrePLanta);
+        h.addPlanta(nombrePLanta);
     }
 
     /**

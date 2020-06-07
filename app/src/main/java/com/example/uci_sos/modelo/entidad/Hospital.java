@@ -36,6 +36,11 @@ public class Hospital implements Serializable {
     private List<Urgencias> listaCamasUrgencias;
 
     /**
+     * Lista con los nombres de las plantas del hospital
+     */
+    private List<String> listaPlantas;
+
+    /**
      * Nombre del hospital
      */
     private String nombre;
@@ -52,24 +57,33 @@ public class Hospital implements Serializable {
         listaCamasUCI = new ArrayList<>();
         listaCamasPlanta = new ArrayList<>();
         listaCamasUrgencias = new ArrayList<>();
+        listaPlantas = new ArrayList<>();
     }
 
     /**
      * Constructor de la clase
      *
-     * @param listaCamasUCI camas de UCI del hospital
-     * @param nombre        nombre del hospital
-     * @param codHospital   código del hospital
+     * @param listaCamasUCI       List de objeto UCI
+     * @param listaCamasPlanta    List de objetos Planta
+     * @param listaCamasUrgencias List de objetos Urgencias
+     * @param listaPlantas        List de String con el nombre de las plantas de los hospitales
+     * @param nombre              Nombre del hospital
+     * @param codHospital         código únido del hospital
      * @see Hospital#listaCamasUCI
+     * @see Hospital#listaCamasPlanta
+     * @see Hospital#listaCamasUrgencias
+     * @see Hospital#listaPlantas
      * @see Hospital#nombre
      * @see Hospital#codHospital
      */
-    public Hospital(List<UCI> listaCamasUCI, List<Planta> listaCamasPlanta, List<Urgencias> listaCamasUrgencias, String nombre, int codHospital) {
+    public Hospital(List<UCI> listaCamasUCI, List<Planta> listaCamasPlanta, List<Urgencias> listaCamasUrgencias,
+                    List<String> listaPlantas, String nombre, int codHospital) {
         this.listaCamasUCI = listaCamasUCI;
         this.listaCamasPlanta = listaCamasPlanta;
         this.listaCamasUrgencias = listaCamasUrgencias;
         this.nombre = nombre;
         this.codHospital = codHospital;
+        this.listaPlantas = listaPlantas;
     }
 
     /**
@@ -102,6 +116,14 @@ public class Hospital implements Serializable {
         this.listaCamasUrgencias.add(cama);
     }
 
+    /**
+     * Añade el nombre de una planta del hospital
+     *
+     * @param planta nombre de la planta del hospital
+     */
+    public void addPlanta(String planta) {
+        this.listaPlantas.add(planta);
+    }
 
     /**
      * Getter del nombre del hospital
@@ -141,6 +163,24 @@ public class Hospital implements Serializable {
      */
     public void setListaCamasUCI(List<UCI> listaCamasUCI) {
         this.listaCamasUCI = listaCamasUCI;
+    }
+
+    /**
+     * Devuelve el nombre de las plantas del hospital
+     *
+     * @return List de String con el nombre de las plantas del hospital
+     */
+    public List<String> getListaPlantas() {
+        return listaPlantas;
+    }
+
+    /**
+     * Almacena los nombres de las plantas del hospital
+     *
+     * @param listaPlantas List de String con los nombres de las plantas
+     */
+    public void setListaPlantas(List<String> listaPlantas) {
+        this.listaPlantas = listaPlantas;
     }
 
     /**
@@ -251,10 +291,109 @@ public class Hospital implements Serializable {
         return camasLibres;
     }
 
+    /**
+     * Devuelve el número de camas de UCI ocupadas
+     *
+     * @return número de camas de UCI ocupadas
+     * @see Camas
+     * @see UCI
+     */
+    public int getCamasUCIOcupadas() {
+        int camasOcupadas = 0;
+        for (UCI cama : this.listaCamasUCI) {
+            if (cama.getEstado().equals("ocupado"))
+                camasOcupadas++;
+        }
+        return camasOcupadas;
+    }
+
+    /**
+     * Devuelve el número de camas de Planta ocupadas
+     *
+     * @return número de camas de Planta ocupadas
+     * @see Camas
+     * @see Planta
+     */
+    public int getCamasPlantaOcupadas() {
+        int camasOcupadas = 0;
+        for (Planta cama : this.listaCamasPlanta) {
+            if (cama.getEstado().equals("ocupado"))
+                camasOcupadas++;
+        }
+        return camasOcupadas;
+    }
+
+    /**
+     * Devuelve el número de camas de Urgencias ocupadas
+     *
+     * @return número de camas de Urgencias ocupadas
+     * @see Camas
+     * @see Urgencias
+     */
+    public int getCamasUrgenciasOcupadas() {
+        int camasOcupadas = 0;
+        for (Urgencias cama : this.listaCamasUrgencias) {
+            if (cama.getEstado().equals("ocupado"))
+                camasOcupadas++;
+        }
+        return camasOcupadas;
+    }
+
+    /**
+     * Devuelve el número de camas de UCI no disponibles
+     *
+     * @return número de camas de UCI no disponibles
+     * @see Camas
+     * @see UCI
+     */
+    public int getCamasUCINoDisponibles() {
+        int camasNoDisponibles = 0;
+        for (UCI cama : this.listaCamasUCI) {
+            if (cama.getEstado().equals("noDisponible"))
+                camasNoDisponibles++;
+        }
+        return camasNoDisponibles;
+    }
+
+    /**
+     * Devuelve el número de camas de Planta no disponibles
+     *
+     * @return número de camas de Planta no disponibles
+     * @see Camas
+     * @see Planta
+     */
+    public int getCamasPlantaNoDisponibles() {
+        int camasNoDisponibles = 0;
+        for (Planta cama : this.listaCamasPlanta) {
+            if (cama.getEstado().equals("noDisponible"))
+                camasNoDisponibles++;
+        }
+        return camasNoDisponibles;
+    }
+
+    /**
+     * Devuelve el número de camas de Urgencias no disponibles
+     *
+     * @return número de camas de Urgencias no disponibles
+     * @see Camas
+     * @see Urgencias
+     */
+    public int getCamasUrgenciasNoDisponibles() {
+        int camasNoDisponibles = 0;
+        for (Urgencias cama : this.listaCamasUrgencias) {
+            if (cama.getEstado().equals("noDisponible"))
+                camasNoDisponibles++;
+        }
+        return camasNoDisponibles;
+    }
+
     @Override
     public String toString() {
         return "Hospital{" +
-                "listaCamas=" + listaCamasUCI +
+                "listaCamasUCI=" + listaCamasUCI +
+                ", listaCamasPlanta=" + listaCamasPlanta +
+                ", listaCamasUrgencias=" + listaCamasUrgencias +
+                ", listaPlantas=" + listaPlantas +
                 ", nombre='" + nombre + '\'' +
                 ", codHospital=" + codHospital +
                 '}';
