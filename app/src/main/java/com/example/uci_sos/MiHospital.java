@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -224,33 +225,69 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
         }
     }
 
-
+    /**
+     * Lleva a la ventana de Reservar
+     *
+     * @see Reservar
+     */
     private void toReservar() {
         Intent inte = new Intent(this.getApplicationContext(), Reservar.class);
+        inte.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
         startActivity(inte);
     }
 
+    /**
+     * Lleva a la ventana de MisCamas
+     *
+     * @see MisCamas
+     */
     private void toCamas() {
         Intent inte = new Intent(this.getApplicationContext(), MisCamas.class);
+        inte.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         finish();
         startActivity(inte);
     }
 
-    private void toPlanta() {
-        Intent inte = new Intent(this.getApplicationContext(), ConfigPlanta.class);
+    /**
+     * Lleva a la ventana de Login
+     *
+     * @see Login
+     */
+    private void toLogin() {
+        Intent intent = new Intent(this, Login.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         finish();
-        startActivity(inte);
+        startActivity(intent);
     }
 
-    private void toHospital() {
-        Intent inte = new Intent(this.getApplicationContext(), Login.class);
-        finish();
-        startActivity(inte);
+    /**
+     * Lleva a la ventana de Datos
+     *
+     * @see Datos
+     */
+    private void toDatos() {
+        Intent intent = new Intent(this, Datos.class);
+        startActivity(intent);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.itLogout:
+                FirebaseAuth.getInstance().signOut();
+                toLogin();
+                break;
+            case R.id.itConfig:
+                toDatos();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
