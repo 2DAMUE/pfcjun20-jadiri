@@ -335,12 +335,15 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                 switch (cama.getEstado()) {
                     case "libre":
                         img.setImageResource(R.drawable.cama_verde);
+                        img.setTag(R.drawable.cama_verde);
                         break;
                     case "ocupado":
                         img.setImageResource(R.drawable.cama_roja);
+                        img.setTag(R.drawable.cama_roja);
                         break;
                     case "noDisponible":
                         img.setImageResource(R.drawable.cama_amarilla);
+                        img.setTag(R.drawable.cama_amarilla);
                         break;
                 }
                 if (j != 6)
@@ -387,12 +390,15 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                 switch (cama.getEstado()) {
                     case "libre":
                         img.setImageResource(R.drawable.cama_verde);
+                        img.setTag(R.drawable.cama_verde);
                         break;
                     case "ocupado":
                         img.setImageResource(R.drawable.cama_roja);
+                        img.setTag(R.drawable.cama_roja);
                         break;
                     case "noDisponible":
                         img.setImageResource(R.drawable.cama_amarilla);
+                        img.setTag(R.drawable.cama_amarilla);
                         break;
                 }
                 if (j != 6)
@@ -440,12 +446,15 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                 switch (cama.getEstado()) {
                     case "libre":
                         img.setImageResource(R.drawable.cama_verde);
+                        img.setTag(R.drawable.cama_verde);
                         break;
                     case "ocupado":
                         img.setImageResource(R.drawable.cama_roja);
+                        img.setTag(R.drawable.cama_roja);
                         break;
                     case "noDisponible":
                         img.setImageResource(R.drawable.cama_amarilla);
+                        img.setTag(R.drawable.cama_amarilla);
                         break;
                 }
                 if (j != 6)

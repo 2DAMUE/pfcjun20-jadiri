@@ -257,7 +257,7 @@ public class Datos extends AppCompatActivity {
      * @see Hospital
      * @see ConfigPlanta
      */
-    public void crearHospital() {
+    private void crearHospital() {
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         DatabaseReference hos = db.getReference(Referencias.HOSPITALES);
         hos.addValueEventListener(new ValueEventListener() {
