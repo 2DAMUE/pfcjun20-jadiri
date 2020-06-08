@@ -30,22 +30,41 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.uci_sos.Buscar"
-            android:parentActivityName="com.example.uci_sos.Reservar" />
-        <activity android:name="com.example.uci_sos.Datos" />
-        <activity android:name="com.example.uci_sos.ReservaRealizada" />
-        <activity android:name="com.example.uci_sos.Registro" />
-        <activity android:name="com.example.uci_sos.ConfigPlanta" />
-        <activity android:name="com.example.uci_sos.Login" />
-        <activity android:name="com.example.uci_sos.Reservar" />
-        <activity android:name="com.example.uci_sos.MisCamas" />
-        <activity android:name="com.example.uci_sos.Splash" >
+            android:parentActivityName="com.example.uci_sos.Reservar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.uci_sos.Datos"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.uci_sos.ReservaRealizada"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.uci_sos.Registro"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.uci_sos.ConfigPlanta"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.uci_sos.Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.uci_sos.Reservar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.uci_sos.MisCamas"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.uci_sos.Splash"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.uci_sos.MiHospital" />
+        <activity
+            android:name="com.example.uci_sos.MiHospital"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"
