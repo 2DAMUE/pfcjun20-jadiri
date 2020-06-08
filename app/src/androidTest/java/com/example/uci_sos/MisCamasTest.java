@@ -54,7 +54,7 @@ public class MisCamasTest {
                 if (!(item.getParent() instanceof ViewGroup))
                     return parentMatcher.matches(item.getParent());
                 ViewGroup parent = (ViewGroup) item.getParent();
-                return null;
+                return parentMatcher.matches(parent) && parent.getChildAt(index).equals(item);
             }
 
             @Override
