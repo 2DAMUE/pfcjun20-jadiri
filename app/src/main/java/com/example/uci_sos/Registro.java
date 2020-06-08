@@ -246,7 +246,7 @@ public class Registro extends Activity {
      */
     private void guardarUser(FirebaseUser user) {
         String Uid = user.getUid();
-        users.child(Uid).setValue(new Usuario(nombre, apellido)).addOnCompleteListener(this, new OnCompleteListener<Void>() {
+        users.child(Uid).setValue(new Usuario(nombre, apellido, lista.get(spinHospital.getSelectedItemPosition() - 1).getCodHospital())).addOnCompleteListener(this, new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful())
