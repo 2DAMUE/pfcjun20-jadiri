@@ -3,12 +3,14 @@ package com.example.uci_sos;
 
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.rule.ActivityTestRule;
 
 import org.hamcrest.Description;
+import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 import org.junit.Rule;
 import org.junit.Test;
@@ -41,6 +43,23 @@ public class MisCamasTest {
             @Override
             public void describeTo(Description description) {
                 description.appendText("hasImage");
+            }
+        };
+    }
+
+    public static Matcher<View> childOf(final Matcher<View> parentMatcher, final int index) {
+        return new TypeSafeMatcher<View>() {
+            @Override
+            protected boolean matchesSafely(View item) {
+                if (!(item.getParent() instanceof ViewGroup))
+                    return parentMatcher.matches(item.getParent());
+                ViewGroup parent = (ViewGroup) item.getParent();
+                return null;
+            }
+
+            @Override
+            public void describeTo(Description description) {
+                description.appendText("childOf");
             }
         };
     }
