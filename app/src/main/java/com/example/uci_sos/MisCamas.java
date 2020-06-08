@@ -7,7 +7,6 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -19,6 +18,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.uci_sos.modelo.entidad.Referencias;
+import com.example.uci_sos.modelo.entidad.Usuario;
 import com.google.firebase.auth.FirebaseAuth;
 
 import com.example.uci_sos.modelo.entidad.Hospital;
@@ -27,6 +27,7 @@ import com.example.uci_sos.modelo.entidad.Camas;
 import com.example.uci_sos.modelo.entidad.UCI;
 import com.example.uci_sos.modelo.entidad.Planta;
 import com.example.uci_sos.modelo.entidad.Urgencias;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -209,22 +210,37 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      * @see Hospital
      */
     private void getHospital() {
-        FirebaseDatabase db = FirebaseDatabase.getInstance();
-        DatabaseReference hospitales = db.getReference(Referencias.HOSPITALES);
-        hospitales.addValueEventListener(new ValueEventListener() {
+        final FirebaseDatabase db = FirebaseDatabase.getInstance();
+        DatabaseReference userReference = db.getReference(Referencias.USERS);
+        userReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                h = dataSnapshot.child("0").getValue(Hospital.class);
-                assert h != null;
-                Log.d("HOSPITAL", h.toString());
-                setTitle(h.getNombre());
-                cargarCamas();
+                FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+                assert currentUser != null;
+                final Usuario usuario = dataSnapshot.child(currentUser.getUid()).getValue(Usuario.class);
+                DatabaseReference hospitales = db.getReference(Referencias.HOSPITALES);
+                hospitales.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        assert usuario != null;
+                        h = dataSnapshot.child(String.valueOf(usuario.getCodHospital())).getValue(Hospital.class);
+                        assert h != null;
+                        Log.d("HOSPITAL", h.toString());
+                        setTitle(h.getNombre());
+                        cargarCamas();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        Log.w("HOSPITAL", databaseError.toString());
+                        showAlert();
+                    }
+                });
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.w("HOSPITAL", databaseError.toString());
-                showAlert();
+
             }
         });
     }
