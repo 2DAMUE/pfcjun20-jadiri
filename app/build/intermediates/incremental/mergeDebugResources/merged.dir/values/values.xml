@@ -448,7 +448,7 @@
     <string name="camas_de_urgencias">Camas de Urgencias</string>
     <string name="camas_planta">CAMAS PLANTA</string>
     <string name="camas_uci">Camas UCI</string>
-    <string name="camas_urgencia">Camas Urgencia</string>
+    <string name="camas_urgencia">Camas Urgencias</string>
     <string name="camas_urgencias">CAMAS URGENCIAS</string>
     <string name="cancelar">Cancelar</string>
     <string name="cero">0</string>
@@ -533,7 +533,7 @@
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
     <style name="Animation.AppCompat.Tooltip" parent="Base.Animation.AppCompat.Tooltip"/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

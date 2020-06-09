@@ -83,7 +83,7 @@ public class Datos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_datos);
-        setTitle("Datos");
+        setTitle("Crear Hospital");
         cargarVista();
         cargarListeners();
     }
