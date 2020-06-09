@@ -39,6 +39,8 @@ public class DialogCama extends Dialog implements View.OnClickListener {
 
     /**
      * Activity de MisCamas
+     *
+     * @see MisCamas
      */
     private Activity activity;
 
@@ -84,6 +86,12 @@ public class DialogCama extends Dialog implements View.OnClickListener {
      */
     private Hospital h;
 
+    /**
+     * Objeto de MisCamas para poder acceder al método cargarVista
+     *
+     * @see MisCamas
+     * @see MisCamas#cargarVista()
+     */
     private MisCamas misCamas;
 
 
@@ -163,7 +171,7 @@ public class DialogCama extends Dialog implements View.OnClickListener {
                     dismiss();
                 } else {
                     Log.w("ACTUALIZAR_HOSPITAL", Objects.requireNonNull(task.getException()).toString());
-                    showToast("Error al guardar los cambios\nComptuebe su conexión a Internet e inténtelo de nuevo más tarde");
+                    showToast("Error al guardar los cambios\nCompruebe su conexión a Internet e inténtelo de nuevo más tarde");
                 }
             }
         });

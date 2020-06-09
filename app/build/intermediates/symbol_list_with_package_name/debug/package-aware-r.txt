@@ -697,6 +697,7 @@ drawable abc_vector_test
 drawable bed
 drawable bioriesgo
 drawable boton_cancelar
+drawable boton_disabled
 drawable botones_login_registro
 drawable botones_reserva
 drawable btn_checkbox_checked_mtrl
@@ -862,8 +863,12 @@ id beginning
 id blocking
 id bottom
 id btnBuscar
+id btnCancelarBuscar
 id btnCancelarCama
 id btnDerivar
+id btnDerivarPlanta
+id btnDerivarUCi
+id btnDerivarUrgencias
 id btnGuardarCama
 id btnHospitalCamas
 id btnHospitalDatos
@@ -1138,6 +1143,7 @@ layout activity_reservar
 layout activity_splash
 layout activityhospital
 layout custom_dialog
+layout layout_dialog_buscar
 layout layout_dialog_mis_camas
 layout notification_action
 layout notification_action_tombstone
@@ -1192,6 +1198,8 @@ string camasUci
 string camasUrgenciasLibres
 string camasUrgenciasOcupadas
 string camas_de_planta
+string camas_de_uci
+string camas_de_urgencias
 string camas_planta
 string camas_uci
 string camas_urgencia
@@ -1264,6 +1272,7 @@ string registro
 string reserva
 string se_realizo_reserva
 string search_menu_title
+string seleccione_cama
 string siguiente
 string spinnerMisCamas
 string status_bar_notification_info_overflow
@@ -1278,7 +1287,6 @@ style Animation_AppCompat_Dialog
 style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style AppTheme
-style AppTheme_NoActionBar
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
@@ -1624,6 +1632,8 @@ style Widget_AppCompat_Toolbar_Button_Navigation
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 style botonCancelar
+style botones_dialog
+style botones_dialog_buscar
 style botones_login_registro
 style botones_reserva
 style campos_login_registro

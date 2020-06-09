@@ -56,15 +56,13 @@
 
             <Button
                 android:id="@+id/btnGuardarCama"
-                style="@style/botones_reserva"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                style="@style/botones_dialog"
                 android:text="@string/guardar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <Button
                 android:id="@+id/btnCancelarCama"
