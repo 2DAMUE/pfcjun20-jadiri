@@ -16,16 +16,16 @@
         "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_animacionlogouem.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\anim\\animacionlogouem.xml"
+        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuisl.ttf.flat",
+        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuisl.ttf"
     },
     {
         "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu.xml.flat",
         "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\menu\\menu.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuisl.ttf.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuisl.ttf"
+        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_animacionlogouem.xml.flat",
+        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\anim\\animacionlogouem.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_config.png.flat",
@@ -70,6 +70,10 @@
     {
         "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_dialog_buscar.xml.flat",
+        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\layout_dialog_buscar.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_mi_hospital.xml.flat",
@@ -134,6 +138,10 @@
     {
         "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_reservas.png.flat",
         "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_reservas.png"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_boton_disabled.xml.flat",
+        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\boton_disabled.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",

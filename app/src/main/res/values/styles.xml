@@ -154,10 +154,13 @@
     </style>
 
     <style name="botones_dialog" parent="botones_reserva">
-        <item name="android:layout_width">160dp</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">30dp</item>
-        <item name="android:layout_marginTop">8dp</item>
         <item name="fontFamily">@font/segoeui</item>
     </style>
 
+    <style name="botones_dialog_buscar" parent="botones_dialog">
+        <item name="android:layout_width">160dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
 </resources>
