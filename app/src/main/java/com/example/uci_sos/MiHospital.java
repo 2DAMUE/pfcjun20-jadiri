@@ -57,6 +57,8 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
     float[] numeros = {250, 102, 50, 230, 30, 2, 56, 43, 0};
     ArrayList<BarEntry> barxEntryArrayList;
 
+    private Hospital h;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,7 +81,7 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
                         numeroplanta = findViewById(R.id.lbl_numCamasPlanta);
                         numerouci = findViewById(R.id.lbl_numCamasUcis);
                         numerourgen = findViewById(R.id.lbl_numCamasUrgencia);
-                        Hospital h = dataSnapshot.child(String.valueOf(usuario.getCodHospital())).getValue(Hospital.class);
+                        h = dataSnapshot.child(String.valueOf(usuario.getCodHospital())).getValue(Hospital.class);
                         plantaLibres = h.getCamasPlantaLibres();
                         uciLibres = h.getCamasUciLibres();
                         emergLibres = h.getCamasUrgenciasLibres();
@@ -289,5 +291,15 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Devuelve el hospital del que se muestra la información
+     *
+     * @return hospital actual
+     * @see Hospital
+     */
+    public Hospital getHospital() {
+        return this.h;
     }
 }
