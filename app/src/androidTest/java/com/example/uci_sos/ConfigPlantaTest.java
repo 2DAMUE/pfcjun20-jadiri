@@ -29,9 +29,4 @@ public class ConfigPlantaTest {
     public void comprobar() {
 
     }
-
-    @After
-    public void tearDown() {
-        configPlanta = null;
-    }
 }

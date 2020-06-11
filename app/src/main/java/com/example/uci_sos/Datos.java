@@ -54,20 +54,20 @@ public class Datos extends AppCompatActivity {
      *
      * @see MiHospital
      */
-    LinearLayout btnHosp;
+    private LinearLayout btnHosp;
     /**
      * Botón que lleva a la ventana de Mis Camas
      *
      * @see MisCamas
      */
-    LinearLayout btnCamas;
+    private LinearLayout btnCamas;
 
     /**
      * Botón que lleva a la ventana de Reservar
      *
      * @see Reservar
      */
-    LinearLayout btnReserva;
+    private LinearLayout btnReserva;
 
     /**
      * Nombre del hospital

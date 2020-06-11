@@ -117,8 +117,17 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
 
     /**
      * Hospital en el que trabaja el usuario
+     *
+     * @see Hospital
      */
     private Hospital h;
+
+    /**
+     * Cama seleccionada por el usuario
+     *
+     * @see Camas
+     */
+    private Camas camaSeleccionada;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -485,6 +494,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      * @see DialogCama
      */
     private void cargarVentanaCama(Camas cama) {
+        this.camaSeleccionada = cama;
         new DialogCama(this, this, cama, h).show();
     }
 
@@ -530,5 +540,15 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
         inte.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         finish();
         startActivity(inte);
+    }
+
+    /**
+     * Devuelve la cama seleccionada por el usuario
+     *
+     * @return cama seleccionada
+     * @see Camas
+     */
+    public Camas getCamaSeleccionada() {
+        return this.camaSeleccionada;
     }
 }

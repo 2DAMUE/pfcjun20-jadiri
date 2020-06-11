@@ -11,9 +11,12 @@ import androidx.test.espresso.ViewAction;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.rule.ActivityTestRule;
 
+import com.example.uci_sos.modelo.entidad.Camas;
+
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,9 +26,11 @@ import static androidx.test.espresso.action.ViewActions.clearText;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static androidx.test.espresso.action.ViewActions.swipeDown;
+import static androidx.test.espresso.action.ViewActions.swipeUp;
 import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.assertion.ViewAssertions.doesNotExist;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.isChecked;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayingAtLeast;
 import static androidx.test.espresso.matcher.ViewMatchers.isNotChecked;
@@ -38,6 +43,13 @@ public class MisCamasTest {
 
     @Rule
     public ActivityTestRule<MisCamas> misCamasRule = new ActivityTestRule<>(MisCamas.class);
+
+    private MisCamas misCamas;
+
+    @Before
+    public void setUp() {
+        misCamas = misCamasRule.getActivity();
+    }
 
     public static TypeSafeMatcher<View> hasImage(final int id) {
         return new TypeSafeMatcher<View>() {
@@ -93,19 +105,26 @@ public class MisCamasTest {
         };
     }
 
+    private Camas getCama() {
+        return misCamas.getCamaSeleccionada();
+    }
+
     @Test
     public void cargaCamasPlanta() {
-        onView(childOf(childOf(withId(R.id.rootPlanta), 0), 0)).check(matches(hasImage(R.drawable.cama_roja)));
+//        onView(childOf(childOf(withId(R.id.rootPlanta), 0), 0)).check(matches(hasImage(R.drawable.cama_roja)));
+        onView(withId(R.id.rootPlanta)).check(matches(isDisplayed()));
     }
 
     @Test
     public void cargaCamasUCI() {
-        onView(childOf(childOf(withId(R.id.rootUCI), 0), 0)).check(matches(hasImage(R.drawable.cama_verde)));
+//        onView(childOf(childOf(withId(R.id.rootUCI), 0), 0)).check(matches(hasImage(R.drawable.cama_verde)));
+        onView(withId(R.id.rootUCI)).check(matches(isDisplayed()));
     }
 
     @Test
-    public void cargarCamasUrgencias() {
-        onView(childOf(childOf(withId(R.id.rootUrgencias), 0), 0)).check(matches(hasImage(R.drawable.cama_amarilla)));
+    public void cargaCamasUrgencias() {
+//        onView(childOf(childOf(withId(R.id.rootUrgencias), 0), 0)).check(matches(hasImage(R.drawable.cama_amarilla)));
+        onView(withId(R.id.rootUrgencias)).check(matches(isDisplayed()));
     }
 
     @Test
@@ -117,25 +136,43 @@ public class MisCamasTest {
     @Test
     public void cargarDatosCama() {
         onView(childOf(childOf(withId(R.id.rootPlanta), 0), 0)).perform(click());
-        onView(withId(R.id.spEstado)).check(matches(withSpinnerText("Ocupada")));
-        onView(withId(R.id.spPlanta)).check(matches(withSpinnerText("Planta de psiquiatría")));
-        onView(withId(R.id.txtIdCama)).check(matches(withText("0")));
-        onView(withId(R.id.chContagio)).check(matches(isNotChecked()));
+        Camas cama = getCama();
+        switch (cama.getEstado()) {
+            case "libre":
+                onView(withId(R.id.spEstado)).check(matches(withSpinnerText("Libre")));
+                break;
+            case "ocupado":
+                onView(withId(R.id.spEstado)).check(matches(withSpinnerText("Ocupada")));
+                break;
+            case "noDisponible":
+                onView(withId(R.id.spEstado)).check(matches(withSpinnerText("No Disponible")));
+                break;
+        }
+        onView(withId(R.id.spPlanta)).check(matches(withSpinnerText(cama.getPlanta())));
+        onView(withId(R.id.txtIdCama)).check(matches(withText(String.valueOf(cama.getId()))));
+        if (cama.isContagio())
+            onView(withId(R.id.chContagio)).check(matches(isChecked()));
+        else
+            onView(withId(R.id.chContagio)).check(matches(isNotChecked()));
     }
 
     @Test
     public void cancelar() {
         onView(childOf(childOf(withId(R.id.rootPlanta), 0), 0)).perform(click());
+        Camas cama = getCama();
+        onView(withId(R.id.txtIdCama)).perform(clearText(), typeText("15"), closeSoftKeyboard());
         onView(withId(R.id.btnCancelarCama)).perform(click());
         onView(withId(R.id.btnCancelarCama)).check(doesNotExist());
+        onView(childOf(childOf(withId(R.id.rootPlanta), 0), 0)).perform(click());
+        onView(withId(R.id.txtIdCama)).check(matches(withText(String.valueOf(cama.getId()))));
     }
 
     @Test
     public void guardarCama() {
-        onView(childOf(childOf(withId(R.id.rootPlanta), 2), 0)).perform(click());
+        onView(childOf(childOf(withId(R.id.rootPlanta), 0), 0)).perform(click());
         onView(withId(R.id.txtIdCama)).perform(clearText(), typeText("2"), closeSoftKeyboard());
         onView(withId(R.id.btnGuardarCama)).perform(click());
-        onView(childOf(childOf(withId(R.id.rootPlanta), 2), 0)).perform(click());
+        onView(childOf(childOf(withId(R.id.rootPlanta), 0), 0)).perform(click());
         onView(withId(R.id.txtIdCama)).check(matches(withText("2")));
     }
 
