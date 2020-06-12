@@ -210,8 +210,6 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
             Hospital h = this.listaHospitales.get(i);
             if (h.getCamasPlantaLibres() + h.getCamasUrgenciasLibres() + h.getCamasUciLibres() == 0) {
                 this.adapter.remove(i);
-                this.listaHospitales.remove(i);
-                i--;
             }
         }
         this.recyclerView.setAdapter(this.adapter);

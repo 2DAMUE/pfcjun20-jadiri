@@ -58,12 +58,16 @@ public class MetodosPersonalizados {
             protected boolean matchesSafely(View item) {
                 if (!(item.getParent() instanceof ViewGroup))
                     return parentMatcher.matches(item.getParent());
-                if (item.getParent() instanceof RecyclerView) {
-                    RecyclerView recycler = (RecyclerView) item.getParent();
+                if (item instanceof RecyclerView) {
+                    RecyclerView recycler = (RecyclerView) item;
                     return parentMatcher.matches(recycler.getChildAt(index));
                 }
-                ViewGroup parent = (ViewGroup) item.getParent();
-                return parentMatcher.matches(parent) && parent.getChildAt(index).equals(item);
+                try {
+                    ViewGroup parent = (ViewGroup) item.getParent();
+                    return parentMatcher.matches(parent) && parent.getChildAt(index).equals(item);
+                } catch (NullPointerException e) {
+                    return parentMatcher.matches(item);
+                }
             }
 
             @Override
@@ -72,6 +76,4 @@ public class MetodosPersonalizados {
             }
         };
     }
-
-
 }
