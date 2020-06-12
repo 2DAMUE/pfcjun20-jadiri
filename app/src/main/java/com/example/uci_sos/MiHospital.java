@@ -99,6 +99,7 @@ public class MiHospital extends AppCompatActivity implements View.OnClickListene
                 ArrayList<BarEntry> barEntries7 = new ArrayList<>();
                 ArrayList<BarEntry> barEntries8 = new ArrayList<>();
                 ArrayList<BarEntry> barEntries9 = new ArrayList<>();
+
                 barEntries1.add(new BarEntry(1, plantaLibres));
                 Log.e("KK", String.valueOf(plantaLibres));
                 barEntries2.add(new BarEntry(2, plantaOcupadas));
