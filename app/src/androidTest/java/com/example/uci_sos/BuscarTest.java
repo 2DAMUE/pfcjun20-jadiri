@@ -13,14 +13,17 @@ import org.junit.runner.RunWith;
 import java.util.List;
 
 import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.isEnabled;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withParent;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static com.example.uci_sos.MetodosPersonalizados.childOf;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.endsWith;
+import static org.hamcrest.Matchers.not;
 
 @RunWith(AndroidJUnit4.class)
 public class BuscarTest {
@@ -68,5 +71,27 @@ public class BuscarTest {
         }
     }
 
+    @Test
+    public void dialogDerivar() {
+        onView(childOf(withId(R.id.recyclerViewBuscar), 0)).perform(click());
+        onView(withId(R.id.btnDerivarUCI)).check(matches(isDisplayed()));
+    }
 
+    @Test
+    public void sinCamasUCI() {
+        onView(childOf(withId(R.id.recyclerViewBuscar), 3)).perform(click());
+        onView(withId(R.id.btnDerivarUCI)).check(matches(not(isEnabled())));
+    }
+
+    @Test
+    public void sinCamasPlanta() {
+        onView(childOf(withId(R.id.recyclerViewBuscar), 3)).perform(click());
+        onView(withId(R.id.btnDerivarPlanta)).check(matches(not(isEnabled())));
+    }
+
+    @Test
+    public void sinCamasUrgencias() {
+        onView(childOf(withId(R.id.recyclerViewBuscar), 3)).perform(click());
+        onView(withId(R.id.btnDerivarUrgencias)).check(matches(not(isEnabled())));
+    }
 }

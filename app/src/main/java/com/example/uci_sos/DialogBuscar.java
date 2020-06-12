@@ -92,7 +92,7 @@ public class DialogBuscar extends Dialog implements View.OnClickListener {
     private void cargarVista() {
         btnPlanta = findViewById(R.id.btnDerivarPlanta);
         btnUrgencias = findViewById(R.id.btnDerivarUrgencias);
-        btnUCI = findViewById(R.id.btnDerivarUCi);
+        btnUCI = findViewById(R.id.btnDerivarUCI);
 
         btnCancelar = findViewById(R.id.btnCancelarBuscar);
 
@@ -134,7 +134,7 @@ public class DialogBuscar extends Dialog implements View.OnClickListener {
             case R.id.btnDerivarUrgencias:
                 reservarCama(1);
                 break;
-            case R.id.btnDerivarUCi:
+            case R.id.btnDerivarUCI:
                 reservarCama(2);
                 break;
             case R.id.btnCancelarBuscar:

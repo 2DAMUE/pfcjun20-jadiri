@@ -868,7 +868,7 @@ int id btnCancelarBuscar 0x7f090046
 int id btnCancelarCama 0x7f090047
 int id btnDerivar 0x7f090048
 int id btnDerivarPlanta 0x7f090049
-int id btnDerivarUCi 0x7f09004a
+int id btnDerivarUCI 0x7f09004a
 int id btnDerivarUrgencias 0x7f09004b
 int id btnGuardarCama 0x7f09004c
 int id btnHospitalCamas 0x7f09004d

@@ -58,8 +58,8 @@ public class MetodosPersonalizados {
             protected boolean matchesSafely(View item) {
                 if (!(item.getParent() instanceof ViewGroup))
                     return parentMatcher.matches(item.getParent());
-                if (item instanceof RecyclerView) {
-                    RecyclerView recycler = (RecyclerView) item;
+                if (item.getParent() instanceof RecyclerView) {
+                    RecyclerView recycler = (RecyclerView) item.getParent();
                     return parentMatcher.matches(recycler.getChildAt(index));
                 }
                 ViewGroup parent = (ViewGroup) item.getParent();
