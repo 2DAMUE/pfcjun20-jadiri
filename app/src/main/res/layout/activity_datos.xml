@@ -81,7 +81,7 @@
 
         <Button
             android:id="@+id/btnToConfigPlantas"
-            style="@style/botones_reserva"
+            style="@style/botones_crearHospital"
             android:text="@string/siguiente" />
     </LinearLayout>
 
@@ -115,6 +115,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hospital"
+
                 android:textSize="15sp" />
 
         </LinearLayout>
