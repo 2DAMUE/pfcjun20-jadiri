@@ -28,7 +28,13 @@
         <activity
             android:name="com.example.uci_sos.Buscar"
             android:parentActivityName="com.example.uci_sos.Reservar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.example.uci_sos.Datos"
             android:screenOrientation="portrait" />
@@ -53,11 +59,6 @@
         <activity
             android:name="com.example.uci_sos.Splash"
             android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.example.uci_sos.MiHospital"

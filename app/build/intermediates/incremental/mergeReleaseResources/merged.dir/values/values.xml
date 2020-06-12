@@ -444,6 +444,8 @@
     <string name="camasUrgenciasLibres">Camas de urgencias libres</string>
     <string name="camasUrgenciasOcupadas">Camas de urgencias ocupadas</string>
     <string name="camas_de_planta">Camas de Planta</string>
+    <string name="camas_de_uci">Camas de UCI</string>
+    <string name="camas_de_urgencias">Camas de Urgencias</string>
     <string name="camas_planta">CAMAS PLANTA</string>
     <string name="camas_uci">Camas UCI</string>
     <string name="camas_urgencias">CAMAS URGENCIAS</string>
@@ -515,6 +517,7 @@
     <string name="reserva">Reservar</string>
     <string name="se_realizo_reserva">Se realizó reserva</string>
     <string name="search_menu_title">Search</string>
+    <string name="seleccione_cama">Seleccione el tipo de cama a la que desea derivar al paciente</string>
     <string name="siguiente">Siguiente</string>
     <string name="spinnerMisCamas">Spinner MisCamas</string>
     <string name="status_bar_notification_info_overflow">999+</string>
@@ -533,11 +536,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-    </style>
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:actionMenuTextColor">@android:color/white</item>
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -2039,6 +2037,16 @@
         <item name="android:layout_height">30dp</item>
         <item name="android:background">@drawable/boton_cancelar</item>
         <item name="android:textColor">#4A78F8</item>
+        <item name="fontFamily">@font/segoeui</item>
+    </style>
+    <style name="botones_dialog" parent="botones_reserva">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="fontFamily">@font/segoeui</item>
+    </style>
+    <style name="botones_dialog_buscar" parent="botones_dialog">
+        <item name="android:layout_width">160dp</item>
+        <item name="android:layout_marginTop">8dp</item>
     </style>
     <style name="botones_login_registro">
         <item name="android:layout_width">250dp</item>
@@ -2047,12 +2055,14 @@
         <item name="android:background">@drawable/botones_login_registro</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:layout_marginTop">16dp</item>
+        <item name="fontFamily">@font/segoeui</item>
     </style>
     <style name="botones_reserva">
         <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">45dp</item>
         <item name="android:background">@drawable/botones_reserva</item>
         <item name="android:textColor">@android:color/white</item>
+        <item name="fontFamily">@font/segoeui</item>
     </style>
     <style name="campos_login_registro">
         <item name="android:layout_width">250dp</item>
@@ -2123,6 +2133,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/segoeui</item>
     </style>
     <style name="linea_menu_abajo">
         <item name="android:layout_width">match_parent</item>
@@ -2153,6 +2164,7 @@
         <item name="android:layout_marginBottom">16dp</item>
         <item name="android:textSize">25sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/segoeui</item>
     </style>
     <declare-styleable name="ActionBar">
         <!-- The type of navigation to use. -->
