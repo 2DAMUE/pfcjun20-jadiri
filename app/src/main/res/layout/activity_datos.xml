@@ -64,40 +64,38 @@
         app:layout_constraintBottom_toBottomOf="@+id/recuadroDatos"
         app:layout_constraintEnd_toEndOf="@id/recuadroDatos"
         app:layout_constraintStart_toStartOf="@id/recuadroDatos"
-        app:layout_constraintTop_toTopOf="@+id/recuadroDatos"
-        app:layout_constraintVertical_bias="0.455">
+        app:layout_constraintTop_toTopOf="@+id/recuadroDatos">
+
         <com.google.android.material.textfield.TextInputLayout
             style="@style/campos_login_registro"
-            android:textColorHint="@color/blanco"
             android:layout_height="wrap_content"
-            android:theme="@style/inputss"
-            >
+            android:textColorHint="@color/blanco"
+            android:theme="@style/inputss">
 
             <!--El ID del elemento va en la etiqueta de dentro-->
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_height="wrap_content"
                 android:id="@+id/txtNombreHospital"
                 android:layout_width="match_parent"
-                android:textColorHint="@color/gris"
-                android:hint="@string/nombre_de_hospital" />
+                android:layout_height="wrap_content"
+                android:hint="@string/nombre_de_hospital"
+                android:textColorHint="@color/gris" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/campos_login_registro"
-            android:textColorHint="@color/blanco"
             android:layout_height="wrap_content"
-            android:theme="@style/inputss"
-            >
+            android:textColorHint="@color/blanco"
+            android:theme="@style/inputss">
 
             <!--El ID del elemento va en la etiqueta de dentro-->
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_height="wrap_content"
                 android:id="@+id/txtNumPlantas"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
+                android:hint="@string/numero_de_plantas"
                 android:inputType="number"
-                android:textColorHint="@color/gris"
-                android:hint="@string/numero_de_plantas" />
+                android:textColorHint="@color/gris" />
         </com.google.android.material.textfield.TextInputLayout>
 
 

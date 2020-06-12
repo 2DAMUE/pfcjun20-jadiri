@@ -1420,6 +1420,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable healthblue
 drawable hospital_bed
+drawable hospital_clarito
 drawable hospital_icono_azul
 drawable hospital_icono_blanco
 drawable ic_calendar_black_24dp
@@ -1438,6 +1439,7 @@ drawable ic_mtrl_chip_close_circle
 drawable imputss
 drawable logo_uci_sos
 drawable logo_uem
+drawable miscamas_clarito
 drawable miscamas_icono_blanco
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
@@ -1462,6 +1464,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable patient
+drawable patient_clarito
 drawable patientblanco
 drawable patientbluepordentro
 drawable recuadro_login_registro
@@ -1473,6 +1476,7 @@ drawable spinerazo
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable uemlogopng
 font segoeui
 font segoeuib
 font segoeuii
@@ -2891,6 +2895,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_Support_CoordinatorLayout
 style botonCancelar
+style botones_crearHospital
 style botones_dialog
 style botones_dialog_buscar
 style botones_login_registro

@@ -22,11 +22,11 @@
     <string name="fondoPlantas">Fondo del editor de plantas con un hospital</string>
     <string name="numCamasUCILibres">Camas de UCI Libres</string>
     <string name="cero">0</string>
-    <string name="camasUCIOcupadas">Camas de UCI ocupadas</string>
-    <string name="camasPlantaLibres">Camas de planta libres</string>
-    <string name="camasPlantaOcupadas">Camas de planta ocupadas</string>
-    <string name="camasUrgenciasLibres">Camas de urgencias libres</string>
-    <string name="camasUrgenciasOcupadas">Camas de urgencias ocupadas</string>
+    <string name="camasUCIOcupadas">Camas de UCI Ocupadas</string>
+    <string name="camasPlantaLibres">Camas de Planta Libres</string>
+    <string name="camasPlantaOcupadas">Camas de Planta Ocupadas</string>
+    <string name="camasUrgenciasLibres">Camas de Urgencias Libres</string>
+    <string name="camasUrgenciasOcupadas">Camas de Urgencias Ocupadas</string>
     <string name="siguiente">Siguiente</string>
     <string name="nombrePlanta">Nombre de la planta</string>
     <string name="fondoDerivar">fondo de la sección de derivar con una imagen difuminada de un doctor con una camilla</string>
