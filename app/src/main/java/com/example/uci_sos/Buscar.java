@@ -178,6 +178,7 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
                         Log.d("CARGAR_HOSPITAL_BUSCAR", "ÉXITO");
                         assert usuario != null;
                         Hospital h = dataSnapshot.child(String.valueOf(usuario.getCodHospital())).getValue(Hospital.class);
+                        assert h != null;
                         listaHospitales.remove(h.getCodHospital());
                         Log.d("ELIMINADO", h.getNombre());
                         filtrarHospital();
@@ -210,8 +211,6 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
             Hospital h = this.listaHospitales.get(i);
             if (h.getCamasPlantaLibres() + h.getCamasUrgenciasLibres() + h.getCamasUciLibres() == 0) {
                 this.adapter.remove(i);
-                this.listaHospitales.remove(i);
-                i--;
             }
         }
         this.recyclerView.setAdapter(this.adapter);
