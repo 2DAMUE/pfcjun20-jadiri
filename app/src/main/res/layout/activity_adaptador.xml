@@ -32,7 +32,7 @@
 
             <ImageView
                 android:layout_width="72dp"
-                android:layout_height="54dp"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/fondconfig" />

@@ -16,16 +16,20 @@
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\spinner_mis_camas.xml"
     },
     {
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_imputss.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\imputss.xml"
+    },
+    {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bed.png.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\bed.png"
     },
     {
-        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuib.ttf.flat",
-        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuib.ttf"
-    },
-    {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguisb.ttf.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguisb.ttf"
+    },
+    {
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuib.ttf.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuib.ttf"
     },
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
@@ -34,6 +38,10 @@
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu.xml.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_spinerazo.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\spinerazo.xml"
     },
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_latidos.xml.flat",
@@ -180,12 +188,12 @@
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_registro.xml"
     },
     {
-        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguisli.ttf.flat",
-        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguisli.ttf"
-    },
-    {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_colorgrafico3.xml.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\colorgrafico3.xml"
+    },
+    {
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguisli.ttf.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguisli.ttf"
     },
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_animacionlogo.xml.flat",
@@ -220,20 +228,20 @@
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\layout_dialog_mis_camas.xml"
     },
     {
-        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_reserva_realizada.xml.flat",
-        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_reserva_realizada.xml"
-    },
-    {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondoreserva.PNG.flat",
-        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondoreserva.PNG"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_reserva_realizada.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_reserva_realizada.xml"
     },
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuiz.ttf.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuiz.ttf"
+    },
+    {
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondoreserva.PNG.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondoreserva.PNG"
     },
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguibli.ttf.flat",
@@ -248,24 +256,24 @@
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_animaciontexto.xml.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\anim\\animaciontexto.xml"
+    },
+    {
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_uem.PNG.flat",
-        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\logo_uem.PNG"
-    },
-    {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_boton_disabled.xml.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\boton_disabled.xml"
+    },
+    {
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_uem.PNG.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\logo_uem.PNG"
     },
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cama_verde.png.flat",
@@ -348,12 +356,12 @@
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bioriesgo.png.flat",
-        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\bioriesgo.png"
-    },
-    {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bioriesgo.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\bioriesgo.png"
     },
     {
         "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_botones_reserva.xml.flat",

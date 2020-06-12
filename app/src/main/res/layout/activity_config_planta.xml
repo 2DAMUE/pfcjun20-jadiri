@@ -43,52 +43,127 @@
         app:layout_constraintEnd_toEndOf="@+id/recuadroConfigPlantas"
         app:layout_constraintStart_toStartOf="@+id/recuadroConfigPlantas"
         app:layout_constraintTop_toTopOf="@+id/recuadroConfigPlantas">
-
-        <EditText
-            android:id="@+id/txtNombrePlanta"
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/campos_login_registro"
-            android:layout_marginBottom="32dp"
-            android:hint="@string/nombrePlanta"
-            android:inputType="text" />
+            android:textColorHint="@color/blanco"
+            android:theme="@style/inputss"
+            android:layout_height="wrap_content"
+            >
 
-        <EditText
+            <!--El ID del elemento va en la etiqueta de dentro-->
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/txtNombrePlanta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="@string/nameplan" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+        style="@style/campos_login_registro"
+        android:textColorHint="@color/blanco"
+        android:theme="@style/inputss"
+        android:layout_height="wrap_content"
+        >
+
+        <!--El ID del elemento va en la etiqueta de dentro-->
+        <com.google.android.material.textfield.TextInputEditText
+
             android:id="@+id/txtNumCamasUCILibres"
-            style="@style/campos_login_registro"
-            android:hint="@string/numCamasUCILibres"
-            android:inputType="number" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/numCamasUCILibres" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/txtNumCamasUCIOcupadas"
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/campos_login_registro"
-            android:layout_marginBottom="32dp"
-            android:hint="@string/camasUCIOcupadas"
-            android:inputType="number" />
+            android:textColorHint="@color/blanco"
+            android:theme="@style/inputss"
+            android:layout_height="wrap_content"
+            >
 
-        <EditText
-            android:id="@+id/txtNumCamasPlantaLibres"
+            <!--El ID del elemento va en la etiqueta de dentro-->
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/txtNumCamasUCIOcupadas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Camas de UCI Ocupadas" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/campos_login_registro"
-            android:hint="@string/camasPlantaLibres"
-            android:inputType="number" />
+            android:textColorHint="@color/blanco"
+            android:theme="@style/inputss"
+            android:layout_height="wrap_content"
+            >
 
-        <EditText
-            android:id="@+id/txtNumCamasPlantaOcupadas"
+            <!--El ID del elemento va en la etiqueta de dentro-->
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/txtNumCamasPlantaLibres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Camas de Planta Libres" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/campos_login_registro"
-            android:layout_marginBottom="32dp"
-            android:hint="@string/camasPlantaOcupadas"
-            android:inputType="number" />
+            android:textColorHint="@color/blanco"
+            android:theme="@style/inputss"
+            android:layout_height="wrap_content"
+            >
 
-        <EditText
+            <!--El ID del elemento va en la etiqueta de dentro-->
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/txtNumCamasPlantaOcupadas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/camasPlantaOcupadas" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+        style="@style/campos_login_registro"
+        android:textColorHint="@color/blanco"
+        android:theme="@style/inputss"
+        android:layout_height="wrap_content"
+        >
+
+        <!--El ID del elemento va en la etiqueta de dentro-->
+        <com.google.android.material.textfield.TextInputEditText
+
             android:id="@+id/txtNumCamasUrgenciasLibres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/camasUrgenciasLibres" />
+    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/campos_login_registro"
-            android:hint="@string/camasUrgenciasLibres"
-            android:inputType="number" />
 
-        <EditText
-            android:id="@+id/txtNumCamasUrgenciasOcupadas"
-            style="@style/campos_login_registro"
-            android:layout_marginBottom="32dp"
-            android:hint="@string/camasUrgenciasOcupadas"
-            android:inputType="number" />
+            android:textColorHint="@color/blanco"
+            android:theme="@style/inputss"
+            android:layout_height="wrap_content"
+            >
+
+            <!--El ID del elemento va en la etiqueta de dentro-->
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/txtNumCamasUrgenciasOcupadas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/camasUrgenciasOcupadas" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
 
         <Button
             android:id="@+id/btnSiguiente"

@@ -43,7 +43,8 @@
     <View
         android:id="@+id/recuadroLogin"
         style="@style/recuadro_login_registro"
-        android:layout_height="466dp"
+        android:layout_width="332dp"
+        android:layout_height="527dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,74 +64,97 @@
         app:layout_constraintStart_toStartOf="@id/recuadroLogin"
         app:layout_constraintTop_toTopOf="@+id/recuadroLogin">
 
-        <EditText
-            android:id="@+id/txtEmailRegistro"
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/campos_login_registro"
-            android:layout_marginTop="8dp"
-            android:hint="@string/txtEmail"
-            android:inputType="textEmailAddress" />
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/blanco"
+            android:theme="@style/inputss">
 
-        <EditText
-            android:id="@+id/txtNombre"
+            <!--El ID del elemento va en la etiqueta de dentro-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtEmailRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="@string/txtEmail"
+                android:textColorHint="@color/gris" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/campos_login_registro"
-            android:hint="@string/txtNombre"
-            android:inputType="text" />
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/blanco"
+            android:theme="@style/inputss">
 
-        <EditText
-            android:id="@+id/txtApellido"
+            <!--El ID del elemento va en la etiqueta de dentro-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="@string/txtNombre"
+                android:textColorHint="@color/gris" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/campos_login_registro"
-            android:hint="@string/txtApellidos"
-            android:inputType="text" />
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/blanco"
+            android:theme="@style/inputss">
 
-        <EditText
-            android:id="@+id/txtPwdReg"
+            <!--El ID del elemento va en la etiqueta de dentro-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtApellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="@string/txtApellidos"
+                android:textColorHint="@color/gris" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/campos_login_registro"
-            android:hint="@string/txtPwd"
-            android:inputType="textPassword" />
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/blanco"
+            android:theme="@style/inputss">
 
-        <EditText
-            android:id="@+id/txtConfirmPwd"
+            <!--El ID del elemento va en la etiqueta de dentro-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtPwdReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txtPwd"
+
+                android:inputType="textPassword"
+                android:textColorHint="@color/gris" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/campos_login_registro"
-            android:hint="@string/txtConfirmPwd"
-            android:inputType="textPassword" />
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/blanco"
+            android:theme="@style/inputss">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            <!--El ID del elemento va en la etiqueta de dentro-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtConfirmPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txtConfirmPwd"
 
-            <Spinner
-                android:id="@+id/spinnerRegistro"
-                style="@style/campos_login_registro"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:inputType="textPassword"
+                android:textColorHint="@color/gris" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/view"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:background="@drawable/recuadro_spinner"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0">
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <ImageView
-                    android:id="@+id/flechaAbajo"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:contentDescription="@string/flechaSpinner"
-                    android:src="@drawable/down_arrow"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <Spinner
+            android:id="@+id/spinnerRegistro"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/blanco"
+            android:layout_marginLeft="10dp"/>
+
 
         <Button
             android:id="@+id/btnRegistro"
