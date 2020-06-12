@@ -7,37 +7,44 @@
     android:background="@drawable/fondo_tarjeta">
 
     <LinearLayout
+        android:id="@+id/linearLayoutExterno"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/linearLayoutt">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/lblHospital"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:text="Puerta de Hierro"
-            android:textSize="20dp" />
+        <ImageView
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fondconfig" />
 
         <LinearLayout
+            android:id="@+id/linearLayoutInterno"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="0dp">
 
-            <ImageView
-                android:layout_width="72dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/fondconfig" />
+            <TextView
+                android:id="@+id/lblHospital"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="Gregorio Maricón"
+                android:textColor="@color/colorNombreTarjeta"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -45,12 +52,27 @@
                     android:id="@+id/lblUCI"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Camas UCI: 15"
+                    android:text="UCI: 25"
+                    android:textColor="@color/colorLabelTarjetas"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/lblUrgencias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Urgencias: 25"
+                    android:textColor="@color/colorLabelTarjetas"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0" />
@@ -59,9 +81,9 @@
                     android:id="@+id/lblPlanta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Camas Planta: 105"
+                    android:text="Planta: 25"
+                    android:textColor="@color/colorLabelTarjetas"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0"
@@ -70,26 +92,14 @@
                     app:layout_constraintVertical_bias="1" />
 
                 <TextView
-                    android:id="@+id/lblurgencias"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="Camas Urgencias: 15"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0" />
-
-                <TextView
                     android:id="@+id/lblDisponible"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Disponibles: 50"
+                    android:text="Disponibles: 25"
+                    android:textColor="@color/colorLabelTarjetas"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1"
@@ -97,8 +107,8 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </LinearLayout>
 

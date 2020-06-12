@@ -292,7 +292,10 @@ public class ConfigPlanta extends AppCompatActivity {
      */
     private boolean comprobar() {
         nombrePLanta = txtNombrePlanta.getText().toString().trim();
-
+        if (nombrePLanta.equals("")) {
+            showToast("Por favor rellene todos los campos");
+            return false;
+        }
         try {
             numCamasUCILibres = Integer.parseInt(txtNumCamasUCILibres.getText().toString().trim());
         } catch (NumberFormatException e) {
@@ -333,10 +336,6 @@ public class ConfigPlanta extends AppCompatActivity {
         } catch (NumberFormatException e) {
             e.printStackTrace();
             showToast("Por favor, rellene todos los campos\nO introduzca un número entero indicando el número de camas de urgencias ocupadas");
-            return false;
-        }
-        if (nombrePLanta.equals("")) {
-            showToast("Por favor rellene todos los campos");
             return false;
         }
         return true;

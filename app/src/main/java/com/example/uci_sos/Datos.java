@@ -54,20 +54,20 @@ public class Datos extends AppCompatActivity {
      *
      * @see MiHospital
      */
-    LinearLayout btnHosp;
+    private LinearLayout btnHosp;
     /**
      * Botón que lleva a la ventana de Mis Camas
      *
      * @see MisCamas
      */
-    LinearLayout btnCamas;
+    private LinearLayout btnCamas;
 
     /**
      * Botón que lleva a la ventana de Reservar
      *
      * @see Reservar
      */
-    LinearLayout btnReserva;
+    private LinearLayout btnReserva;
 
     /**
      * Nombre del hospital
@@ -83,7 +83,7 @@ public class Datos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_datos);
-        setTitle("Datos");
+        setTitle("Crear Hospital");
         cargarVista();
         cargarListeners();
     }
@@ -257,7 +257,7 @@ public class Datos extends AppCompatActivity {
      * @see Hospital
      * @see ConfigPlanta
      */
-    public void crearHospital() {
+    private void crearHospital() {
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         DatabaseReference hos = db.getReference(Referencias.HOSPITALES);
         hos.addValueEventListener(new ValueEventListener() {

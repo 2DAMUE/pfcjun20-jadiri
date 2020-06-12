@@ -48,7 +48,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.MyHolder> {
             lblHospital = v.findViewById(R.id.lblHospital);
 
             lblUCI = v.findViewById(R.id.lblUCI);
-            lblUrgencias = v.findViewById(R.id.lblurgencias);
+            lblUrgencias = v.findViewById(R.id.lblUrgencias);
             lblPlanta = v.findViewById(R.id.lblPlanta);
             lblDisponible = v.findViewById(R.id.lblDisponible);
 
@@ -99,9 +99,9 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.MyHolder> {
         holder.lblHospital.setText(h.getNombre());
         holder.lblHospital.setTypeface(holder.lblHospital.getTypeface(), Typeface.BOLD);
 
-        holder.lblUCI.setText("Camas UCI: " + String.valueOf(h.getCamasUciLibres()));
-        holder.lblPlanta.setText("Camas PLanta: " + String.valueOf(h.getCamasPlantaLibres()));
-        holder.lblUrgencias.setText("Camas Urgencias: " + String.valueOf(h.getCamasUrgenciasLibres()));
+        holder.lblUCI.setText("UCI: " + String.valueOf(h.getCamasUciLibres()));
+        holder.lblPlanta.setText("PLanta: " + String.valueOf(h.getCamasPlantaLibres()));
+        holder.lblUrgencias.setText("Urgencias: " + String.valueOf(h.getCamasUrgenciasLibres()));
 
         holder.lblDisponible.setText("Disponibles: " + String.valueOf(camasDisponibles));
         holder.lblDisponible.setTypeface(holder.lblDisponible.getTypeface(), Typeface.BOLD);

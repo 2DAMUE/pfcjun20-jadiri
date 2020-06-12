@@ -117,8 +117,17 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
 
     /**
      * Hospital en el que trabaja el usuario
+     *
+     * @see Hospital
      */
     private Hospital h;
+
+    /**
+     * Cama seleccionada por el usuario
+     *
+     * @see Camas
+     */
+    private Camas camaSeleccionada;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -335,12 +344,15 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                 switch (cama.getEstado()) {
                     case "libre":
                         img.setImageResource(R.drawable.cama_verde);
+                        img.setTag(R.drawable.cama_verde);
                         break;
                     case "ocupado":
                         img.setImageResource(R.drawable.cama_roja);
+                        img.setTag(R.drawable.cama_roja);
                         break;
                     case "noDisponible":
                         img.setImageResource(R.drawable.cama_amarilla);
+                        img.setTag(R.drawable.cama_amarilla);
                         break;
                 }
                 if (j != 6)
@@ -387,12 +399,15 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                 switch (cama.getEstado()) {
                     case "libre":
                         img.setImageResource(R.drawable.cama_verde);
+                        img.setTag(R.drawable.cama_verde);
                         break;
                     case "ocupado":
                         img.setImageResource(R.drawable.cama_roja);
+                        img.setTag(R.drawable.cama_roja);
                         break;
                     case "noDisponible":
                         img.setImageResource(R.drawable.cama_amarilla);
+                        img.setTag(R.drawable.cama_amarilla);
                         break;
                 }
                 if (j != 6)
@@ -440,12 +455,15 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                 switch (cama.getEstado()) {
                     case "libre":
                         img.setImageResource(R.drawable.cama_verde);
+                        img.setTag(R.drawable.cama_verde);
                         break;
                     case "ocupado":
                         img.setImageResource(R.drawable.cama_roja);
+                        img.setTag(R.drawable.cama_roja);
                         break;
                     case "noDisponible":
                         img.setImageResource(R.drawable.cama_amarilla);
+                        img.setTag(R.drawable.cama_amarilla);
                         break;
                 }
                 if (j != 6)
@@ -476,6 +494,7 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
      * @see DialogCama
      */
     private void cargarVentanaCama(Camas cama) {
+        this.camaSeleccionada = cama;
         new DialogCama(this, this, cama, h).show();
     }
 
@@ -521,5 +540,15 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
         inte.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         finish();
         startActivity(inte);
+    }
+
+    /**
+     * Devuelve la cama seleccionada por el usuario
+     *
+     * @return cama seleccionada
+     * @see Camas
+     */
+    public Camas getCamaSeleccionada() {
+        return this.camaSeleccionada;
     }
 }

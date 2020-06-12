@@ -19,14 +19,15 @@ import android.widget.Toast;
 import com.example.uci_sos.modelo.Adaptador;
 import com.example.uci_sos.modelo.entidad.Hospital;
 import com.example.uci_sos.modelo.entidad.Referencias;
+import com.example.uci_sos.modelo.entidad.Usuario;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -92,10 +93,6 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
         RecyclerView.LayoutManager lm = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(lm);
 
-        //Inicializo el TextView
-        /**
-         * TextView con la palabra Recomendados
-         */
         TextView lblRecomendados = findViewById(R.id.lblRecomendados);
         //Cambio la tipografía a negrita
         lblRecomendados.setTypeface(lblRecomendados.getTypeface(), Typeface.BOLD);
@@ -155,7 +152,53 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
         opacityPane = findViewById(R.id.opBuscar);
         pb = findViewById(R.id.pbBuscar);
 
-        filtrarHospital();
+        eliminarHospitalUsuario();
+    }
+
+    /**
+     * Elimina el hospital en el que trabaja el usuario de la lista de hospitales
+     * disponibles para derivar pacientes
+     *
+     * @see Hospital
+     */
+    private void eliminarHospitalUsuario() {
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        final FirebaseDatabase db = FirebaseDatabase.getInstance();
+        DatabaseReference userRef = db.getReference(Referencias.USERS);
+        userRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Log.d("CARGAR_USER_BUSCAR", "ÉXITO");
+                assert user != null;
+                final Usuario usuario = dataSnapshot.child(user.getUid()).getValue(Usuario.class);
+                DatabaseReference hospitalRef = db.getReference(Referencias.HOSPITALES);
+                hospitalRef.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        Log.d("CARGAR_HOSPITAL_BUSCAR", "ÉXITO");
+                        assert usuario != null;
+                        Hospital h = dataSnapshot.child(String.valueOf(usuario.getCodHospital())).getValue(Hospital.class);
+                        listaHospitales.remove(h.getCodHospital());
+                        Log.d("ELIMINADO", h.getNombre());
+                        filtrarHospital();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        Log.w("CARGAR_HOSPITAL_BUSCAR", databaseError.toString());
+                        showToast("Error al cargar los hospitales\nCompruebe su conexión a Internet e inténtelo de nuevo más tarde");
+                        finish();
+                    }
+                });
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w("CARGAR_USER_BUSCAR", databaseError.toString());
+                showToast("Error al cargar los hospitales\nCompruebe su conexión a Internet e inténtelo de nuevo más tarde");
+                finish();
+            }
+        });
     }
 
     /**
@@ -167,6 +210,8 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
             Hospital h = this.listaHospitales.get(i);
             if (h.getCamasPlantaLibres() + h.getCamasUrgenciasLibres() + h.getCamasUciLibres() == 0) {
                 this.adapter.remove(i);
+                this.listaHospitales.remove(i);
+                i--;
             }
         }
         this.recyclerView.setAdapter(this.adapter);
@@ -216,5 +261,16 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
         inte.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         finish();
         startActivity(inte);
+    }
+
+    /**
+     * Devuelve la lista de hospitales de la base de datos
+     *
+     * @return List de Hospital
+     * @see Hospital
+     * @see Buscar#listaHospitales
+     */
+    public List<Hospital> getListaHospitales() {
+        return this.listaHospitales;
     }
 }
