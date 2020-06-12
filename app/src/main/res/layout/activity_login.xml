@@ -41,11 +41,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <View
+        android:id="@+id/recuadroLogin"
+        style="@style/recuadro_login_registro"
+        android:layout_height="330dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="84dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoLogin"
+        app:layout_constraintVertical_bias="1.0" />
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:elevation="1dp"
         android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
@@ -55,11 +68,17 @@
         app:layout_constraintTop_toTopOf="@+id/recuadroLogin"
         app:layout_constraintVertical_bias="0.455">
 
-        <EditText
-            android:id="@+id/txtEmailLogin"
-            style="@style/campos_login_registro"
-            android:hint="@string/txtEmail"
-            android:inputType="textEmailAddress" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--El ID del elemento va en la etiqueta de dentro-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtEmailLogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/txtEmail" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <EditText
             android:id="@+id/txtPwdLogin"
@@ -80,21 +99,6 @@
             android:layout_marginTop="13dp"
             android:textColor="@android:color/white" />
     </LinearLayout>
-
-    <View
-        android:layout_marginTop="16dp"
-        android:id="@+id/recuadroLogin"
-        style="@style/recuadro_login_registro"
-        android:layout_height="330dp"
-        android:layout_marginBottom="84dp"
-        android:paddingTop="40dp"
-        android:paddingBottom="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoLogin"
-        app:layout_constraintVertical_bias="1.0"
-        android:elevation="0dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
