@@ -1,21 +1,11 @@
 package com.example.uci_sos;
 
 
-import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-
-import androidx.test.espresso.UiController;
-import androidx.test.espresso.ViewAction;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.rule.ActivityTestRule;
 
 import com.example.uci_sos.modelo.entidad.Camas;
 
-import org.hamcrest.Description;
-import org.hamcrest.Matcher;
-import org.hamcrest.TypeSafeMatcher;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -26,7 +16,6 @@ import static androidx.test.espresso.action.ViewActions.clearText;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static androidx.test.espresso.action.ViewActions.swipeDown;
-import static androidx.test.espresso.action.ViewActions.swipeUp;
 import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.assertion.ViewAssertions.doesNotExist;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
@@ -37,6 +26,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.isNotChecked;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withSpinnerText;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static com.example.uci_sos.MetodosPersonalizados.childOf;
+import static com.example.uci_sos.MetodosPersonalizados.swypeRefresh;
 
 @RunWith(AndroidJUnit4.class)
 public class MisCamasTest {
@@ -49,60 +40,6 @@ public class MisCamasTest {
     @Before
     public void setUp() {
         misCamas = misCamasRule.getActivity();
-    }
-
-    public static TypeSafeMatcher<View> hasImage(final int id) {
-        return new TypeSafeMatcher<View>() {
-            @Override
-            protected boolean matchesSafely(View item) {
-                ImageView img = (ImageView) item;
-                Integer resource = (Integer) img.getTag();
-                resource = resource == null ? 0 : resource;
-                Log.d("resource:", String.valueOf(resource));
-                return resource == id;
-            }
-
-            @Override
-            public void describeTo(Description description) {
-                description.appendText("hasImage");
-            }
-        };
-    }
-
-    public static Matcher<View> childOf(final Matcher<View> parentMatcher, final int index) {
-        return new TypeSafeMatcher<View>() {
-            @Override
-            protected boolean matchesSafely(View item) {
-                if (!(item.getParent() instanceof ViewGroup))
-                    return parentMatcher.matches(item.getParent());
-                ViewGroup parent = (ViewGroup) item.getParent();
-                return parentMatcher.matches(parent) && parent.getChildAt(index).equals(item);
-            }
-
-            @Override
-            public void describeTo(Description description) {
-                description.appendText("childOf");
-            }
-        };
-    }
-
-    public static ViewAction swypeRefresh(final ViewAction action, final Matcher<View> constraints) {
-        return new ViewAction() {
-            @Override
-            public Matcher<View> getConstraints() {
-                return constraints;
-            }
-
-            @Override
-            public String getDescription() {
-                return action.getDescription();
-            }
-
-            @Override
-            public void perform(UiController uiController, View view) {
-                action.perform(uiController, view);
-            }
-        };
     }
 
     private Camas getCama() {
