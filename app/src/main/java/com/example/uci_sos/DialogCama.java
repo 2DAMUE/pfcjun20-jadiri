@@ -232,7 +232,7 @@ public class DialogCama extends Dialog implements View.OnClickListener {
      * @see DialogCama#spPlanta
      */
     private void cargarSpinnerPlanta() {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(DialogCama.this.getContext(), R.layout.spinner_registro_item, h.getListaPlantas()) {
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(DialogCama.this.getContext(), R.layout.spinner_mis_camas, h.getListaPlantas()) {
             @Override
             public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
                 View v = super.getDropDownView(position, convertView, parent);
@@ -255,7 +255,7 @@ public class DialogCama extends Dialog implements View.OnClickListener {
      * @see DialogCama#spEstado
      */
     private void cargarSpinnerEstado() {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(DialogCama.this.getContext(), R.layout.spinner_registro_item,
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(DialogCama.this.getContext(), R.layout.spinner_mis_camas,
                 activity.getResources().getStringArray(R.array.estados)) {
             @Override
             public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

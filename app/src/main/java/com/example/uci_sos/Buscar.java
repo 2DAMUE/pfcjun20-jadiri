@@ -6,14 +6,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.uci_sos.modelo.Adaptador;
@@ -69,6 +67,7 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscar);
+        setTitle("Hospitales Disponibles");
         cargarVista();
     }
 
@@ -93,9 +92,9 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
         RecyclerView.LayoutManager lm = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(lm);
 
-        TextView lblRecomendados = findViewById(R.id.lblRecomendados);
-        //Cambio la tipografía a negrita
-        lblRecomendados.setTypeface(lblRecomendados.getTypeface(), Typeface.BOLD);
+//        TextView lblRecomendados = findViewById(R.id.lblRecomendados);
+//        //Cambio la tipografía a negrita
+//        lblRecomendados.setTypeface(lblRecomendados.getTypeface(), Typeface.BOLD);
     }
 
     /**
@@ -178,6 +177,7 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
                         Log.d("CARGAR_HOSPITAL_BUSCAR", "ÉXITO");
                         assert usuario != null;
                         Hospital h = dataSnapshot.child(String.valueOf(usuario.getCodHospital())).getValue(Hospital.class);
+                        assert h != null;
                         listaHospitales.remove(h.getCodHospital());
                         Log.d("ELIMINADO", h.getNombre());
                         filtrarHospital();

@@ -8,4 +8,6 @@
     <color name="colorNoDisponible">#4FA1FF</color>
     <color name="gris">#605F5F </color>
     <color name="blanco">#FEFCFC </color>
+    <color name="colorLabelTarjetas">#050FF9</color>
+    <color name="colorNombreTarjeta">#0A11B3</color>
 </resources>
