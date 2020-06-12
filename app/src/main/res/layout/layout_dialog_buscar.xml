@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/cuadro_dialog_mis_camas"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/segoeui"
+        android:gravity="center"
+        android:text="@string/seleccione_cama"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/btnDerivarPlanta"
+        style="@style/botones_dialog_buscar"
+        android:text="@string/camas_de_planta" />
+
+    <Button
+        android:id="@+id/btnDerivarUrgencias"
+        style="@style/botones_dialog_buscar"
+        android:text="@string/camas_de_urgencias" />
+
+    <Button
+        android:id="@+id/btnDerivarUCi"
+        style="@style/botones_dialog_buscar"
+        android:text="@string/camas_de_uci" />
+
+    <Button
+        android:id="@+id/btnCancelarBuscar"
+        style="@style/botonCancelar"
+        android:layout_marginTop="16dp"
+        android:text="@string/cancelar" />
+
+</LinearLayout>

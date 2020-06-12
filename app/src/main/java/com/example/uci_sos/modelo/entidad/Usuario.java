@@ -21,6 +21,13 @@ public class Usuario {
     private String apellido;
 
     /**
+     * Código del hospital en el que trabaja el usuario
+     *
+     * @see Hospital
+     */
+    private int codHospital;
+
+    /**
      * Constructor vacío de la clase Usuario
      */
     public Usuario() {
@@ -29,14 +36,17 @@ public class Usuario {
     /**
      * Constructor de la clase Usuario
      *
-     * @param nombre   nombre del usuario
-     * @param apellido apellido del usuario
+     * @param nombre      nombre del usuario
+     * @param apellido    apellido del usuario
+     * @param codHospital código del hospital en el que trabaja el usuario
      * @see Usuario#nombre
      * @see Usuario#apellido
+     * @see Usuario#codHospital
      */
-    public Usuario(String nombre, String apellido) {
+    public Usuario(String nombre, String apellido, int codHospital) {
         this.nombre = nombre;
         this.apellido = apellido;
+        this.codHospital = codHospital;
     }
 
     /**
@@ -77,5 +87,24 @@ public class Usuario {
      */
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    /**
+     * Devuelve el código del hospital en el que trabaja el usuario
+     *
+     * @return código del hospital en el que trabaja el usuario
+     * @see Usuario#codHospital
+     */
+    public int getCodHospital() {
+        return codHospital;
+    }
+
+    /**
+     * Almacena el código del hospital en el que trabaja el usuario
+     *
+     * @param codHospital código del hospital en el que trabaja el usuario
+     */
+    public void setCodHospital(int codHospital) {
+        this.codHospital = codHospital;
     }
 }

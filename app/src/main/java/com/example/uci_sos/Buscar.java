@@ -16,7 +16,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.uci_sos.modelo.Adaptdor;
+import com.example.uci_sos.modelo.Adaptador;
 import com.example.uci_sos.modelo.entidad.Hospital;
 import com.example.uci_sos.modelo.entidad.Referencias;
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,31 +27,35 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
  * Muestra la lista de hospitales registrados en la aplicación para poder derivar pacientes a ellos
  *
  * @see Hospital
- * @see Adaptdor
+ * @see Adaptador
  */
-public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom {
+public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom {
 
     /**
      * RecyclerView con los datos de los hospitales
      *
      * @see Hospital
-     * @see Adaptdor
+     * @see Adaptador
      */
     private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager lm;
-    private RecyclerView.Adapter adapter;
+    private Adaptador adapter;
 
     /**
-     * TextView con la palabra Recomendados
+     * OpacityPane que se muestra mientras se cargan los datos
      */
-    private TextView lblRecomendados;
+    private View opacityPane;
+
+    /**
+     * ProgressBar que se muestra mientras se cargan los datos
+     */
+    private ProgressBar pb;
 
     /**
      * Lista de hospitales regitrados en la base de datos
@@ -70,20 +74,7 @@ public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom 
     @Override
     public void click(int position) {
         Hospital h = listaHospitales.get(position);
-        showToast("Paciente derivado al hospital:\n" + h.getNombre());
-        toHospital();
-    }
-
-    /**
-     * Lleva a la venana de Mi Hospital eliminando el Stack de Activities anteriores
-     *
-     * @see MiHospital
-     */
-    private void toHospital() {
-        Intent intent = new Intent(this.getApplicationContext(), MiHospital.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        finish();
-        startActivity(intent);
+        new DialogBuscar(this, h).show();
     }
 
     /**
@@ -98,11 +89,14 @@ public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom 
         getHospitales();
 
         //Inicializo y hago un set del LayoutManager del RecyclerView
-        lm = new LinearLayoutManager(this);
+        RecyclerView.LayoutManager lm = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(lm);
 
         //Inicializo el TextView
-        lblRecomendados = findViewById(R.id.lblRecomendados);
+        /**
+         * TextView con la palabra Recomendados
+         */
+        TextView lblRecomendados = findViewById(R.id.lblRecomendados);
         //Cambio la tipografía a negrita
         lblRecomendados.setTypeface(lblRecomendados.getTypeface(), Typeface.BOLD);
     }
@@ -121,10 +115,9 @@ public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom 
         hospital.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                listaHospitales = new ArrayList<>();
-                Iterator<DataSnapshot> hospitales = dataSnapshot.getChildren().iterator();
-                while (hospitales.hasNext()) {
-                    listaHospitales.add(hospitales.next().getValue(Hospital.class));
+                listaHospitales = new LinkedList<>();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    listaHospitales.add(snapshot.getValue(Hospital.class));
                 }
                 Log.d("HOSPITALES_BUSCAR", "ÉXITO");
                 cargarAdapter(listaHospitales);
@@ -156,12 +149,27 @@ public class Buscar extends AppCompatActivity implements Adaptdor.OnClickCustom 
      * @see Hospital
      */
     private void cargarAdapter(List<Hospital> listaHospitales) {
-        adapter = new Adaptdor(listaHospitales, this);
+        adapter = new Adaptador(listaHospitales, this);
         recyclerView.setAdapter(adapter);
 
-        View opacityPane = findViewById(R.id.opBuscar);
-        ProgressBar pb = findViewById(R.id.pbBuscar);
+        opacityPane = findViewById(R.id.opBuscar);
+        pb = findViewById(R.id.pbBuscar);
 
+        filtrarHospital();
+    }
+
+    /**
+     * Elimina de la lista aquellos hospitales sin camas disponibles y quita
+     * la ProgressBar y el OpacityPane
+     */
+    private void filtrarHospital() {
+        for (int i = 0; i < this.listaHospitales.size(); i++) {
+            Hospital h = this.listaHospitales.get(i);
+            if (h.getCamasPlantaLibres() + h.getCamasUrgenciasLibres() + h.getCamasUciLibres() == 0) {
+                this.adapter.remove(i);
+            }
+        }
+        this.recyclerView.setAdapter(this.adapter);
         opacityPane.setVisibility(View.GONE);
         pb.setVisibility(View.GONE);
     }
