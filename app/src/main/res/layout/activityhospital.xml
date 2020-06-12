@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:gravity="center_horizontal"
+        android:gravity="center"
 
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,25 +33,21 @@
             style="@style/recuadro_miHospital"
             android:layout_width="110dp"
             android:layout_height="73dp"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/lbl_textoCamasUrgencia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/camas_urgencia"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:fontFamily="@font/segoeui"
+                android:text="@string/camas_urgencia" />
 
             <TextView
                 android:id="@+id/lbl_numCamasUrgencia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lbl_textoCamasUrgencia" />
+                android:fontFamily="@font/segoeui" />
 
         </LinearLayout>
 
@@ -61,23 +57,21 @@
             android:layout_height="73dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/lbl_textoCamasUcis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/camas_uci"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:fontFamily="@font/segoeui"
+                android:text="@string/camas_uci" />
 
             <TextView
                 android:id="@+id/lbl_numCamasUcis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp" />
+                android:fontFamily="@font/segoeui" />
 
 
         </LinearLayout>
@@ -86,25 +80,22 @@
             style="@style/recuadro_miHospital"
             android:layout_width="110dp"
             android:layout_height="73dp"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/lbl_textoCamasPlanta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/camas_de_planta"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:fontFamily="@font/segoeui"
+                android:text="@string/camas_de_planta" />
 
 
             <TextView
                 android:id="@+id/lbl_numCamasPlanta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toEndOf="@+id/lbl_numCamasUcis"
-                app:layout_constraintTop_toBottomOf="@+id/lbl_textoCamasPlanta" />
+                android:fontFamily="@font/segoeui" />
         </LinearLayout>
     </LinearLayout>
 
@@ -114,6 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/segoeui"
         android:gravity="center"
         android:text="@string/disponibilidad_general_de_hospitales"
         android:textSize="17sp"
@@ -147,6 +139,7 @@
                 android:id="@+id/lblibres"
                 android:layout_width="45dp"
                 android:layout_height="17dp"
+                android:fontFamily="@font/segoeui"
                 android:text="@string/libres" />
 
         </LinearLayout>
@@ -167,7 +160,8 @@
                 android:id="@+id/lbocupadas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ocupadas" />
+                android:fontFamily="@font/segoeui"
+                android:text="@string/ocupadas" />
 
         </LinearLayout>
 
@@ -186,6 +180,7 @@
                 android:id="@+id/lbdisponible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
                 android:text="@string/no_disponibles" />
 
         </LinearLayout>
@@ -259,6 +254,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoeui"
                     android:text="@string/hospital"
                     android:textSize="15sp" />
 
@@ -281,6 +277,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoeui"
                     android:text="@string/reserva"
                     android:textSize="15sp" />
 
@@ -301,6 +298,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoeui"
                     android:text="@string/misCamas"
                     android:textSize="15sp" />
 

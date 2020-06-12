@@ -3,4 +3,6 @@
     android:id="@+id/spinnerItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textColor="@color/blanco" />
+    android:fontFamily="@font/segoeui"
+    android:textColor="@color/blanco"
+    android:textSize="18sp" />

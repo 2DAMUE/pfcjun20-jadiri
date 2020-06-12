@@ -80,6 +80,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
                 android:text="@string/hospital"
                 android:textSize="15sp" />
 
@@ -102,6 +103,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
                 android:text="@string/reserva"
                 android:textSize="15sp" />
 
@@ -123,6 +125,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
                 android:text="@string/misCamas"
                 android:textSize="15sp" />
 
