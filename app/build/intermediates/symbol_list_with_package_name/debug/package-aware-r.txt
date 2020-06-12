@@ -762,6 +762,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color blanco
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -776,8 +777,6 @@ color cardview_shadow_end_color
 color cardview_shadow_start_color
 color checkbox_themeable_attribute_color
 color colorAccent
-color colorFondoMenuAbajo
-color colorIconosNoSeleccionados
 color colorLibres
 color colorNoDisponible
 color colorOcupadas
@@ -840,6 +839,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gris
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color ic_launcher_background
@@ -1420,7 +1420,6 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable healthblue
 drawable hospital_bed
-drawable hospital_clarito
 drawable hospital_icono_azul
 drawable hospital_icono_blanco
 drawable ic_calendar_black_24dp
@@ -1436,9 +1435,9 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable imputss
 drawable logo_uci_sos
 drawable logo_uem
-drawable miscamas_clarito
 drawable miscamas_icono_blanco
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
@@ -1463,7 +1462,6 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable patient
-drawable patient_clarito
 drawable patientblanco
 drawable patientbluepordentro
 drawable recuadro_login_registro
@@ -1471,10 +1469,10 @@ drawable recuadro_spinner
 drawable reserva_icono_azul
 drawable reserva_icono_blanco
 drawable selection_band_overlay
+drawable spinerazo
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
-drawable uemlogopng
 font segoeui
 font segoeuib
 font segoeuii
@@ -1646,7 +1644,6 @@ id filled
 id filter_chip
 id fitToContents
 id fixed
-id flechaAbajo
 id fondo
 id forever
 id ghost_view
@@ -1665,7 +1662,6 @@ id icon_only
 id ifRoom
 id image
 id imageView
-id imageView2
 id imageView3
 id info
 id invisible
@@ -2196,6 +2192,7 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string nameplan
 string no_disponibles
 string nombrePlanta
 string nombre_de_hospital
@@ -2894,12 +2891,12 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_Support_CoordinatorLayout
 style botonCancelar
-style botones_crearHospital
 style botones_dialog
 style botones_dialog_buscar
 style botones_login_registro
 style botones_reserva
 style campos_login_registro
+style campos_login_registro2
 style colorgrafico
 style colorgrafico2
 style colorgrafico3
@@ -2910,6 +2907,8 @@ style gradiente_login
 style gradiente_miscamas
 style gradiente_registro
 style gradiente_reserva
+style inputs
+style inputss
 style labelConfigCamas
 style linea_menu_abajo
 style opacity_pane

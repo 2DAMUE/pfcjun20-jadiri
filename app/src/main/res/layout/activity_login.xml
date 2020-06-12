@@ -69,22 +69,40 @@
         app:layout_constraintVertical_bias="0.455">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            style="@style/campos_login_registro"
+            android:textColorHint="@color/blanco"
+            android:theme="@style/inputss"
+            android:layout_height="wrap_content"
+            >
 
             <!--El ID del elemento va en la etiqueta de dentro-->
             <com.google.android.material.textfield.TextInputEditText
+
                 android:id="@+id/txtEmailLogin"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+
                 android:hint="@string/txtEmail" />
         </com.google.android.material.textfield.TextInputLayout>
-
-        <EditText
-            android:id="@+id/txtPwdLogin"
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/campos_login_registro"
-            android:hint="@string/txtPwd"
-            android:inputType="textPassword" />
+            android:textColorHint="@color/blanco"
+            android:layout_height="wrap_content"
+            android:theme="@style/inputss"
+            >
+
+            <!--El ID del elemento va en la etiqueta de dentro-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPwdLogin"
+                android:layout_width="match_parent"
+
+                android:inputType="textPassword"
+                android:textColorHint="@color/blanco"
+                android:hint="@string/txtPwd" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
 
         <Button
             android:id="@+id/btnLogin"
@@ -96,6 +114,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/registrarse"
+            android:layout_marginTop="18dp"
             android:textColor="@android:color/white" />
     </LinearLayout>
 

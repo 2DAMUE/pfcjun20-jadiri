@@ -34,6 +34,16 @@
         <item name="android:fontFamily">@font/segoeui</item>
         <item name="android:textSize">15dp</item>
     </style>
+    <style name="campos_login_registro2">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:background">@drawable/campos_login_registro</item>
+
+
+        <item name="android:fontFamily">@font/segoeui</item>
+        <item name="android:textSize">15dp</item>
+    </style>
 
     <style name="botones_login_registro">
         <item name="android:layout_width">250dp</item>
@@ -54,6 +64,21 @@
         <item name="android:background">#000000</item>
         <item name="android:alpha">0.04</item>
     </style>
+    <style name="inputs">
+        <item name="colorAccent">@color/gris</item>
+        <item name="colorControlNormal">@color/gris</item>
+        <item name="colorControlActivated">@color/gris</item>
+        <item name="android:textColorHint">@color/gris</item>
+
+    </style>
+    <style name="inputss">
+        <item name="colorAccent">@color/blanco</item>
+        <item name="colorControlNormal">@color/blanco</item>
+        <item name="colorControlActivated">@color/blanco</item>
+        <item name="android:textColorHint">@color/blanco</item>
+
+    </style>
+
     <style name="botones_crearHospital">
         <item name="android:layout_width">225dp</item>
         <item name="android:layout_height">45dp</item>

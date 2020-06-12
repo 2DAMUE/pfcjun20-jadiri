@@ -1,414 +1,406 @@
 [
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguibl.ttf.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguibl.ttf"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuii.ttf.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuii.ttf"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_datos.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_datos.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_animaciontexto.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\anim\\animaciontexto.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_down_arrow.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\down_arrow.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_mis_camas.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\spinner_mis_camas.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_animacionlogouem.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\anim\\animacionlogouem.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_imputss.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\imputss.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\menu\\menu.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bed.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\bed.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuisl.ttf.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuisl.ttf"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguisb.ttf.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguisb.ttf"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_config.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_config.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuib.ttf.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuib.ttf"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\menu\\menu.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguisbi.ttf.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguisbi.ttf"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_spinerazo.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\spinerazo.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hospital_icono_azul.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\hospital_icono_azul.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_latidos.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\anim\\latidos.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_uemlogopng.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable-v24\\uemlogopng.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_tarjeta.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_tarjeta.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_healthblue.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\healthblue.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cuadradoventanahospital.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\cuadradoventanahospital.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondconfig.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondconfig.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_miscamas_icono_blanco.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\miscamas_icono_blanco.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_datos.PNG.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_datos.PNG"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bed.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\bed.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_mis_camas.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_mis_camas.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_contagio.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_contagio.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_datos.PNG.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_datos.PNG"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_dialog_buscar.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\layout_dialog_buscar.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_mi_hospital.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_mi_hospital.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_registro_item.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\spinner_registro_item.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguibl.ttf.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguibl.ttf"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_reservar.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_reservar.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hospital_icono_blanco.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\hospital_icono_blanco.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bioriesgo.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\bioriesgo.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_registro.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_registro.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_registro.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_registro.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_recuadro_login_registro.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\recuadro_login_registro.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_animacionlogouem.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\anim\\animacionlogouem.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registro.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_registro.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_colorgrafico3.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\colorgrafico3.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hospital_bed.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\hospital_bed.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_patientbluepordentro.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\patientbluepordentro.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_mis_camas.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\spinner_mis_camas.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeui.ttf.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeui.ttf"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeui.ttf.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeui.ttf"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_latidos.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\anim\\latidos.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_uci_sos.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\logo_uci_sos.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuisl.ttf.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuisl.ttf"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_boton_cancelar.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\boton_cancelar.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_reservas.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_reservas.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_reserva_icono_azul.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\reserva_icono_azul.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_boton_disabled.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\boton_disabled.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_boton_cancelar.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\boton_cancelar.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_botones_reserva.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\botones_reserva.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cuadradoventanahospital.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\cuadradoventanahospital.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hospital_icono_azul.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\hospital_icono_azul.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_hospital_clarito.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable-v24\\hospital_clarito.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_uci_sos.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\logo_uci_sos.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_animacionlogo.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\anim\\animacionlogo.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguibli.ttf.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguibli.ttf"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_reserva_icono_blanco.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\reserva_icono_blanco.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_datos.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_datos.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registro.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_registro.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_tarjeta.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_tarjeta.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_colorgrafico3.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\colorgrafico3.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuib.ttf.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuib.ttf"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguisli.ttf.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguisli.ttf"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_animacionlogo.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\anim\\animacionlogo.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_reserva_icono_blanco.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\reserva_icono_blanco.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_reservas.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_reservas.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_healthblue.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\healthblue.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_registro_item.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\spinner_registro_item.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_contactblue.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\contactblue.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuil.ttf.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuil.ttf"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_botones_login_registro.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\botones_login_registro.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_config_planta.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_config_planta.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_patient.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\patient.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_patientblanco.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\patientblanco.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_colorgrafico1.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\colorgrafico1.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_dialog_mis_camas.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\layout_dialog_mis_camas.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_recuadro_login_registro.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\recuadro_login_registro.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_config_planta.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_config_planta.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_reserva_realizada.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_reserva_realizada.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuiz.ttf.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuiz.ttf"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_reserva_realizada.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_reserva_realizada.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondoreserva.PNG.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondoreserva.PNG"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_recuadro_spinner.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\recuadro_spinner.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguibli.ttf.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguibli.ttf"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hospital_bed.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\hospital_bed.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_colorgrafico2.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\colorgrafico2.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_adaptador.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_adaptador.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\anim_animaciontexto.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\anim\\animaciontexto.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_dialog_mis_camas.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\layout_dialog_mis_camas.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_boton_disabled.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\boton_disabled.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_down_arrow.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\down_arrow.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_uem.PNG.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\logo_uem.PNG"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_campos_login_registro.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\campos_login_registro.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cama_verde.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\cama_verde.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguisbi.ttf.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguisbi.ttf"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_patient_clarito.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\patient_clarito.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_login.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_login.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_splash.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_dialog_buscar.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\layout_dialog_buscar.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_colorgrafico2.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\colorgrafico2.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cama_amarilla.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\cama_amarilla.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondconfig.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondconfig.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activityhospital.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activityhospital.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguisli.ttf.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguisli.ttf"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cama_roja.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\cama_roja.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_patientbluepordentro.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\patientbluepordentro.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_recuadro_spinner.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\recuadro_spinner.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_uem.PNG.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\logo_uem.PNG"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cuadro_dialog_mis_camas.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\cuadro_dialog_mis_camas.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_miscamas_clarito.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\miscamas_clarito.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguili.ttf.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguili.ttf"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_mi_hospital.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_mi_hospital.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hospital_icono_blanco.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\hospital_icono_blanco.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_botones_login_registro.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\botones_login_registro.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_patientblanco.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\patientblanco.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_campos_login_registro.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\campos_login_registro.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuii.ttf.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuii.ttf"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_miscamas_icono_blanco.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\miscamas_icono_blanco.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_patient.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\patient.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cama_verde.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\cama_verde.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_splash.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cama_roja.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\cama_roja.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondoreserva.PNG.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondoreserva.PNG"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_buscar.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_buscar.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_login.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_login.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_mis_camas.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_mis_camas.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguisb.ttf.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguisb.ttf"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bioriesgo.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\bioriesgo.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuiz.ttf.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuiz.ttf"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_botones_reserva.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\botones_reserva.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_mis_camas.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_mis_camas.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_contactblue.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\contactblue.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_buscar.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_buscar.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_mis_camas.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_mis_camas.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cama_amarilla.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\cama_amarilla.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_colorgrafico1.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\colorgrafico1.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activityhospital.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activityhospital.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_adaptador.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_adaptador.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_reserva_icono_azul.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\reserva_icono_azul.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_contagio.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_contagio.xml"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_reservar.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\layout\\activity_reservar.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_seguili.ttf.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\seguili.ttf"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\font_segoeuil.ttf.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\font\\segoeuil.ttf"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondo_config.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\fondo_config.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
-    },
-    {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cuadro_dialog_mis_camas.xml.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\drawable\\cuadro_dialog_mis_camas.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "D:\\AndroidStudio\\DAM 2\\pfcjun20-jadiri\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\34621\\StudioProjects\\pfcjun20-jadiri\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
     }
 ]

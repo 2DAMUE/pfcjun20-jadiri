@@ -6,6 +6,6 @@
     <color name="colorLibres">#3282BE</color>
     <color name="colorOcupadas">#5C66F5</color>
     <color name="colorNoDisponible">#4FA1FF</color>
-    <color name="colorFondoMenuAbajo">#296EE7</color>
-    <color name="colorIconosNoSeleccionados">#598BE1</color>
+    <color name="gris">#605F5F </color>
+    <color name="blanco">#FEFCFC </color>
 </resources>
