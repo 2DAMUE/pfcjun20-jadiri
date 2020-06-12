@@ -260,4 +260,15 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
         finish();
         startActivity(inte);
     }
+
+    /**
+     * Devuelve la lista de hospitales de la base de datos
+     *
+     * @return List de Hospital
+     * @see Hospital
+     * @see Buscar#listaHospitales
+     */
+    public List<Hospital> getListaHospitales() {
+        return this.listaHospitales;
+    }
 }

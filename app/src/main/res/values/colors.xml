@@ -6,5 +6,6 @@
     <color name="colorLibres">#3282BE</color>
     <color name="colorOcupadas">#5C66F5</color>
     <color name="colorNoDisponible">#4FA1FF</color>
-    4FA1FF
+    <color name="colorLabelTarjetas">#050FF9</color>
+    <color name="colorNombreTarjeta">#0A11B3</color>
 </resources>

@@ -422,8 +422,10 @@ color bright_foreground_material_light
 color button_material_dark
 color button_material_light
 color colorAccent
+color colorLabelTarjetas
 color colorLibres
 color colorNoDisponible
+color colorNombreTarjeta
 color colorOcupadas
 color colorPrimary
 color colorPrimaryDark
@@ -898,6 +900,7 @@ id collapseActionView
 id colorgrafico1
 id colorgrafico2
 id colorgrafico3
+id constraintRecycler
 id content
 id contentPanel
 id custom
@@ -948,6 +951,7 @@ id lblRecomendados
 id lblRegistro
 id lblReserva
 id lblUCI
+id lblUrgencias
 id lbl_disponibilidadHospitales
 id lbl_numCamasPlanta
 id lbl_numCamasUcis
@@ -956,7 +960,6 @@ id lbl_textoCamasPlanta
 id lbl_textoCamasUcis
 id lbl_textoCamasUrgencia
 id lblibres
-id lblurgencias
 id lbocupadas
 id left
 id light
@@ -965,7 +968,8 @@ id line3
 id linearInfoLibre
 id linearLayout
 id linearLayout2
-id linearLayoutt
+id linearLayoutExterno
+id linearLayoutInterno
 id linearMenuAbajo
 id listMode
 id list_item

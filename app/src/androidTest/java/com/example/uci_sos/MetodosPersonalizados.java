@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.test.espresso.UiController;
 import androidx.test.espresso.ViewAction;
 
@@ -57,6 +58,10 @@ public class MetodosPersonalizados {
             protected boolean matchesSafely(View item) {
                 if (!(item.getParent() instanceof ViewGroup))
                     return parentMatcher.matches(item.getParent());
+                if (item instanceof RecyclerView) {
+                    RecyclerView recycler = (RecyclerView) item;
+                    return parentMatcher.matches(recycler.getChildAt(index));
+                }
                 ViewGroup parent = (ViewGroup) item.getParent();
                 return parentMatcher.matches(parent) && parent.getChildAt(index).equals(item);
             }
@@ -67,4 +72,6 @@ public class MetodosPersonalizados {
             }
         };
     }
+
+
 }
