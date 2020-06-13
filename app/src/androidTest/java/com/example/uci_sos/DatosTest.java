@@ -23,6 +23,12 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
+/**
+ * Test del activity Datos
+ *
+ * @author Ricardo Bordería Pi
+ * @see Datos
+ */
 @RunWith(AndroidJUnit4.class)
 public class DatosTest {
 
@@ -36,6 +42,11 @@ public class DatosTest {
         datos = datosRule.getActivity();
     }
 
+    /**
+     * Intenta crear un hospital sin rellenar el campo de Número de Plantas.
+     * Resultado esperado: Pide al usuario mediante un Toast que rellene todos los campos o
+     * que rellene adecuadamente el campo de Número de Plantas
+     */
     @Test
     public void sinPlantas() {
         onView(withId(R.id.txtNombreHospital)).perform(typeText("Hospital Test"), closeSoftKeyboard());
@@ -44,6 +55,13 @@ public class DatosTest {
                 .inRoot(withDecorView(not(is(datos.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Intenta crear un hospital introduciendo letras en el campo de Número de Plantas.
+     * Esta prueba verifica que el usuario o introduzca letras en el campo de Número de Planta aunque
+     * se despliegue el teclado de números enteros y positivos.
+     * Resultado esperado: Pide al usuario mediante un Toast que rellene todos los campos o
+     * que rellene adecuadamente el campo de Número de Plantas
+     */
     @Test
     public void plantaLetra() {
         onView(withId(R.id.txtNombreHospital)).perform(typeText("Hospital Test"), closeSoftKeyboard());
@@ -53,6 +71,10 @@ public class DatosTest {
                 .inRoot(withDecorView(not(is(datos.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Intenta crear un hospital sin darle nombre.
+     * Resultado esperado: Pide al usuario mediante un Toast que rellene todos los campos
+     */
     @Test
     public void sinHospital() {
         onView(withId(R.id.txtNumPlantas)).perform(typeText("2"), closeSoftKeyboard());
@@ -61,6 +83,10 @@ public class DatosTest {
                 .inRoot(withDecorView(not(is(datos.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Intenta crear un hospital con 0 plantas.
+     * Resultado esperado: Indica al usuario mediante un Toast que debe haber al menos 1 planta
+     */
     @Test
     public void ceroPlantas() {
         onView(withId(R.id.txtNombreHospital)).perform(typeText("Hospital Prueba"), closeSoftKeyboard());
@@ -70,6 +96,10 @@ public class DatosTest {
                 .inRoot(withDecorView(not(is(datos.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Muetra un Dialog antes de crear un Hospital.
+     * Resultado esperado: Muestra un AlertDialog pidiendo confirmación antes de crear un hospital
+     */
     @Test
     public void todoCorrecto() {
         onView(withId(R.id.txtNombreHospital)).perform(typeText("Hospital Prueba"), closeSoftKeyboard());
@@ -78,6 +108,10 @@ public class DatosTest {
         onView(withText("Continuar")).inRoot(isDialog()).check(matches(isDisplayed()));
     }
 
+    /**
+     * Crea un hospital después de recibir la confirmación del usuario
+     * Resultado esperado: crea el hospital después de que el usuario confirme la acción
+     */
     @Test
     public void crearHospital() {
         onView(withId(R.id.txtNombreHospital)).perform(typeText("Hospital Prueba"), closeSoftKeyboard());

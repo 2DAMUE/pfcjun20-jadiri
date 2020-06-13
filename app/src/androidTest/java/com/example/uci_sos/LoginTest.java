@@ -20,6 +20,12 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
+/**
+ * Test del activity Login
+ *
+ * @author Ricardo Bordería Pi
+ * @see Login
+ */
 @RunWith(AndroidJUnit4.class)
 public class LoginTest {
 
@@ -33,6 +39,10 @@ public class LoginTest {
         login = loginRule.getActivity();
     }
 
+    /**
+     * Intenta hacer login sin introducir E-mail.
+     * Resultado esperado: Pide al usuario que se rellenen todos los campos mediante un Toast
+     */
     @Test
     public void sinEmail() {
         onView(withId(R.id.txtPwdLogin)).perform(typeText("123456"), ViewActions.closeSoftKeyboard());
@@ -41,6 +51,10 @@ public class LoginTest {
                 .inRoot(withDecorView(not(is(login.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Intenta hacer login sin introducir contraseña.
+     * Resultado esperado: Pide al usuario que se rellenen todos los campos mediante un Toast
+     */
     @Test
     public void sinPWD() {
         onView(withId(R.id.txtEmailLogin)).perform(typeText("maildeprueba@mail.com"), ViewActions.closeSoftKeyboard());
@@ -49,6 +63,10 @@ public class LoginTest {
                 .inRoot(withDecorView(not(is(login.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Intenta hacer login sin rellenar ningún campo.
+     * Resultado esperado: Pide al usuario que se rellenen todos los campos mediante un Toast
+     */
     @Test
     public void sinCampos() {
         onView(withId(R.id.btnLogin)).perform(click());
@@ -56,6 +74,10 @@ public class LoginTest {
                 .inRoot(withDecorView(not(is(login.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Intenta hacer login con un E-mail no registrado.
+     * Resultado esperado: Avisa al usuario mediante un Toast de que ha introducido un E-mail o contraseña incorrectos
+     */
     @Test
     public void emailErroneo() {
         onView(withId(R.id.txtEmailLogin)).perform(typeText("maildepruebamail.com"), ViewActions.closeSoftKeyboard());
@@ -65,6 +87,10 @@ public class LoginTest {
                 .inRoot(withDecorView(not(is(login.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Intenta hacer login con una contraseña incorrecta.
+     * Resultado esperado: Avisa al usuario mediante un Toast de que ha introducido un E-mail o contraseña incorrectos
+     */
     @Test
     public void pwdErronea() {
         onView(withId(R.id.txtEmailLogin)).perform(typeText("maildeprueba@mail.com"), ViewActions.closeSoftKeyboard());
@@ -74,6 +100,10 @@ public class LoginTest {
                 .inRoot(withDecorView(not(is(login.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Intena hacer login con un E-mail y contraseña no registrados.
+     * Resultado esperado: Avisa al usuario mediante un Toast de que ha introducido un E-mail o contraseña incorrectos
+     */
     @Test
     public void emailYPwdIncorrecto() {
         onView(withId(R.id.txtEmailLogin)).perform(typeText("maildeprueba@maile.com"), ViewActions.closeSoftKeyboard());
@@ -83,6 +113,12 @@ public class LoginTest {
                 .inRoot(withDecorView(not(is(login.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Intenta hacer login con datos correctos.
+     * Resultado esperado: Abre la ventana de MiHospital
+     *
+     * @see MiHospital
+     */
     @Test
     public void loginCorrecto() {
         onView(withId(R.id.txtEmailLogin)).perform(typeText("maildeprueba@mail.com"), ViewActions.closeSoftKeyboard());
@@ -91,6 +127,12 @@ public class LoginTest {
         onView(withId(R.id.lbl_textoCamasUrgencia)).check(matches(withText(R.string.camas_urgencia)));
     }
 
+    /**
+     * Lleva al usuario a la ventana de Registro.
+     * Resultado esperado: Abre la ventana de Registro
+     *
+     * @see Registro
+     */
     @Test
     public void toRegistro() {
         onView(withId(R.id.lblRegistro)).perform(click());

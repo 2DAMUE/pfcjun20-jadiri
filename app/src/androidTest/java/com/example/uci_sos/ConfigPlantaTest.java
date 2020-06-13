@@ -26,6 +26,12 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
+/**
+ * Test del activity ConfigPlanta
+ *
+ * @author Ricardo Bordería Pi
+ * @see ConfigPlanta
+ */
 @RunWith(AndroidJUnit4.class)
 public class ConfigPlantaTest {
 
@@ -46,6 +52,9 @@ public class ConfigPlantaTest {
         configPlanta = configPlantaTest.getActivity();
     }
 
+    /**
+     * Llena todos los campos correctamente
+     */
     private void llenarCampos() {
         onView(withId(R.id.txtNombrePlanta)).perform(typeText("Planta 1"), closeSoftKeyboard());
         onView(withId(R.id.txtNumCamasUCILibres)).perform(typeText("2"), closeSoftKeyboard());
@@ -56,6 +65,11 @@ public class ConfigPlantaTest {
         onView(withId(R.id.txtNumCamasUrgenciasOcupadas)).perform(typeText("2"), closeSoftKeyboard());
     }
 
+    /**
+     * Verifica que no se introduzcan letras en el campo de Camas de UCI Libres y que no esté vacío.
+     * Resultado esperado: Pide al usuario mediante un Toast que rellene todos los campos
+     * o que rellene correctamente el campo
+     */
     @Test
     public void UCILibresMal() {
         llenarCampos();
@@ -70,6 +84,11 @@ public class ConfigPlantaTest {
                 .inRoot(withDecorView(not(is(configPlanta.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Verifica que no se introduzcan letras en el campo de Camas de UCI Ocupadas y que no esté vacío.
+     * Resultado esperado: Pide al usuario mediante un Toast que rellene todos los campos
+     * o que rellene correctamente el campo
+     */
     @Test
     public void UCIOcupadasMal() {
         llenarCampos();
@@ -84,6 +103,11 @@ public class ConfigPlantaTest {
                 .inRoot(withDecorView(not(is(configPlanta.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Verifica que no se introduzcan letras en el campo de Camas de Urgencias Libres y que no esté vacío.
+     * Resultado esperado: Pide al usuario mediante un Toast que rellene todos los campos
+     * o que rellene correctamente el campo
+     */
     @Test
     public void urgenciasLibresMal() {
         llenarCampos();
@@ -98,6 +122,11 @@ public class ConfigPlantaTest {
                 .inRoot(withDecorView(not(is(configPlanta.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Verifica que no se introduzcan letras en el campo de Camas de Urgencias Ocupadas y que no esté vacío.
+     * Resultado esperado: Pide al usuario mediante un Toast que rellene todos los campos
+     * o que rellene correctamente el campo
+     */
     @Test
     public void urgenciasOcupadasMal() {
         llenarCampos();
@@ -112,6 +141,11 @@ public class ConfigPlantaTest {
                 .inRoot(withDecorView(not(is(configPlanta.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Verifica que no se introduzcan letras en el campo de Camas de Planta Libres y que no esté vacío.
+     * Resultado esperado: Pide al usuario mediante un Toast que rellene todos los campos
+     * o que rellene correctamente el campo
+     */
     @Test
     public void plantaLibresMal() {
         llenarCampos();
@@ -126,6 +160,11 @@ public class ConfigPlantaTest {
                 .inRoot(withDecorView(not(is(configPlanta.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Verifica que no se introduzcan letras en el campo de Camas de Planta Ocupadas y que no esté vacío.
+     * Resultado esperado: Pide al usuario mediante un Toast que rellene todos los campos
+     * o que rellene correctamente el campo
+     */
     @Test
     public void plantaOcupadasMal() {
         llenarCampos();
@@ -140,6 +179,10 @@ public class ConfigPlantaTest {
                 .inRoot(withDecorView(not(is(configPlanta.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Verifica que no se puede crear una planta sin un nombre.
+     * Resultado esperado: Pide al usuario mediante un Toast que rellene todos los campos
+     */
     @Test
     public void sinNombre() {
         llenarCampos();
@@ -149,6 +192,10 @@ public class ConfigPlantaTest {
                 .inRoot(withDecorView(not(is(configPlanta.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Verifica que no se puede crear una planta con los campos vacíos.
+     * Resultado esperado: Pide al usuario mediante un Toast que rellene todos los campos
+     */
     @Test
     public void vacio() {
         onView(withId(R.id.btnSiguiente)).perform(click());
