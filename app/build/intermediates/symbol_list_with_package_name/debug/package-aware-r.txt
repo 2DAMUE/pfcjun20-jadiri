@@ -1770,6 +1770,8 @@ id pbRegistro
 id peekHeight
 id percent
 id pin
+id progressDialogBuscar
+id progressDialogMisCamas
 id progress_circular
 id progress_horizontal
 id radio
@@ -2117,6 +2119,7 @@ string common_signin_button_text_long
 string configurar_hospital
 string crear_hospital
 string default_web_client_id
+string derivando
 string derivar
 string disponibilidad_general_de_hospitales
 string error_icon_content_description
@@ -2910,6 +2913,8 @@ style gradiente_reserva
 style inputs
 style inputss
 style labelConfigCamas
+style labelProgressDialog
+style layoutProgressDialog
 style linea_menu_abajo
 style opacity_pane
 style recuadro_login_registro

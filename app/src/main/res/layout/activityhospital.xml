@@ -40,13 +40,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/segoeui"
-                android:text="@string/camas_urgencia" />
+                android:text="@string/camas_urgencia"
+                android:textColor="@android:color/black" />
 
             <TextView
                 android:id="@+id/lbl_numCamasUrgencia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/segoeui" />
+                android:fontFamily="@font/segoeui"
+                android:textColor="@android:color/black" />
 
         </LinearLayout>
 
@@ -64,13 +66,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/segoeui"
-                android:text="@string/camas_uci" />
+                android:text="@string/camas_uci"
+                android:textColor="@android:color/black" />
 
             <TextView
                 android:id="@+id/lbl_numCamasUcis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/segoeui" />
+                android:fontFamily="@font/segoeui"
+                android:textColor="@android:color/black" />
 
 
         </LinearLayout>
@@ -87,14 +91,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/segoeui"
-                android:text="@string/camas_de_planta" />
+                android:text="@string/camas_de_planta"
+                android:textColor="@android:color/black" />
 
 
             <TextView
                 android:id="@+id/lbl_numCamasPlanta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/segoeui" />
+                android:fontFamily="@font/segoeui"
+                android:textColor="@android:color/black" />
         </LinearLayout>
     </LinearLayout>
 
@@ -118,26 +124,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl_disponibilidadHospitales">
 
         <LinearLayout
-            android:layout_width="115dp"
+            android:layout_width="123dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <View
                 android:id="@+id/colorgrafico1"
                 style="@style/colorgrafico"
-                android:layout_width="17dp"
-                android:layout_height="17dp" />
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp" />
 
             <TextView
                 android:id="@+id/lblibres"
-                android:layout_width="45dp"
-                android:layout_height="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/segoeui"
                 android:text="@string/libres" />
 
@@ -145,15 +153,16 @@
 
 
         <LinearLayout
-            android:layout_width="115dp"
+            android:layout_width="123dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <View
                 android:id="@+id/colorgrafico2"
                 style="@style/colorgrafico2"
-                android:layout_width="17dp"
-                android:layout_height="19dp" />
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp" />
 
             <TextView
                 android:id="@+id/lbocupadas"
@@ -165,15 +174,16 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="115dp"
+            android:layout_width="123dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <View
                 android:id="@+id/colorgrafico3"
                 style="@style/colorgrafico3"
-                android:layout_width="17dp"
-                android:layout_height="17dp" />
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp" />
 
             <TextView
                 android:id="@+id/lbdisponible"
@@ -197,23 +207,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearInfoLibre" />
-
-    <View
-        android:id="@+id/opacityPaneMiHospital"
-        style="@style/opacity_pane"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ProgressBar
-        android:id="@+id/pbMiHospital"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearMenuAbajo"
@@ -304,5 +297,22 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <View
+        android:id="@+id/opacityPaneMiHospital"
+        style="@style/opacity_pane"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pbMiHospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,6 +34,7 @@
         <item name="android:fontFamily">@font/segoeui</item>
         <item name="android:textSize">15dp</item>
     </style>
+
     <style name="campos_login_registro2">
         <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">45dp</item>
@@ -64,6 +65,7 @@
         <item name="android:background">#000000</item>
         <item name="android:alpha">0.04</item>
     </style>
+
     <style name="inputs">
         <item name="colorAccent">@color/gris</item>
         <item name="colorControlNormal">@color/gris</item>
@@ -71,6 +73,7 @@
         <item name="android:textColorHint">@color/gris</item>
 
     </style>
+
     <style name="inputss">
         <item name="colorAccent">@color/blanco</item>
         <item name="colorControlNormal">@color/blanco</item>
@@ -87,6 +90,7 @@
         <item name="fontFamily">@font/segoeui</item>
         <item name="android:layout_marginTop">32dp</item>
     </style>
+
     <style name="botones_reserva">
         <item name="android:layout_width">300dp</item>
         <item name="android:layout_height">45dp</item>
@@ -194,5 +198,21 @@
     <style name="botones_dialog_buscar" parent="botones_dialog">
         <item name="android:layout_width">160dp</item>
         <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="labelProgressDialog">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="layoutProgressDialog">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:visibility">invisible</item>
     </style>
 </resources>

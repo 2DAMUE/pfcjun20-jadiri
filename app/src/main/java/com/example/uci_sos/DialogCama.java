@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -159,6 +160,11 @@ public class DialogCama extends Dialog implements View.OnClickListener {
      * @see Hospital
      */
     private void guardar() {
+        LinearLayout progressDialog = activity.findViewById(R.id.progressDialogMisCamas);
+        progressDialog.setVisibility(View.VISIBLE);
+        View opacityPane = activity.findViewById(R.id.opacityPaneMisCamas);
+        opacityPane.setVisibility(View.VISIBLE);
+        dismiss();
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         DatabaseReference hospitales = db.getReference(Referencias.HOSPITALES);
         hospitales.child(String.valueOf(h.getCodHospital())).setValue(h).addOnCompleteListener(activity, new OnCompleteListener<Void>() {
@@ -168,7 +174,6 @@ public class DialogCama extends Dialog implements View.OnClickListener {
                     Log.d("ACTUALIZAR_HOSPITAL", "ÉXITO");
                     showToast("Cambios guardados");
                     misCamas.cargarVista();
-                    dismiss();
                 } else {
                     Log.w("ACTUALIZAR_HOSPITAL", Objects.requireNonNull(task.getException()).toString());
                     showToast("Error al guardar los cambios\nCompruebe su conexión a Internet e inténtelo de nuevo más tarde");

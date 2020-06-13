@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -81,6 +82,9 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
      * Carga los elementos de la vista
      */
     private void cargarVista() {
+        opacityPane = findViewById(R.id.opBuscar);
+        pb = findViewById(R.id.pbBuscar);
+
         //Inicializo el RecyclerView
         recyclerView = findViewById(R.id.recyclerViewBuscar);
         //Indico que el número de hospitales puede variar
@@ -91,10 +95,6 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
         //Inicializo y hago un set del LayoutManager del RecyclerView
         RecyclerView.LayoutManager lm = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(lm);
-
-//        TextView lblRecomendados = findViewById(R.id.lblRecomendados);
-//        //Cambio la tipografía a negrita
-//        lblRecomendados.setTypeface(lblRecomendados.getTypeface(), Typeface.BOLD);
     }
 
     /**
@@ -106,22 +106,39 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
      * @see Hospital
      */
     private void getHospitales() {
-        FirebaseDatabase db = FirebaseDatabase.getInstance();
-        final DatabaseReference hospital = db.getReference(Referencias.HOSPITALES);
-        hospital.addValueEventListener(new ValueEventListener() {
+        final FirebaseDatabase db = FirebaseDatabase.getInstance();
+        DatabaseReference users = db.getReference(Referencias.USERS);
+        users.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                listaHospitales = new LinkedList<>();
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    listaHospitales.add(snapshot.getValue(Hospital.class));
-                }
-                Log.d("HOSPITALES_BUSCAR", "ÉXITO");
-                cargarAdapter(listaHospitales);
+                Log.d("USER_BUSCAR", "ÉXITO");
+                FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+                final Usuario user = dataSnapshot.child(currentUser.getUid()).getValue(Usuario.class);
+                DatabaseReference hospital = db.getReference(Referencias.HOSPITALES);
+                hospital.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        listaHospitales = new LinkedList<>();
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            Hospital h = snapshot.getValue(Hospital.class);
+                            if (h.getCamasDisponibles() > 0 && user.getCodHospital() != h.getCodHospital())
+                                listaHospitales.add(h);
+                        }
+                        Log.d("HOSPITALES_BUSCAR", "ÉXITO");
+                        cargarAdapter(listaHospitales);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        Log.w("HOSPITALES_BUSCAR", databaseError.toString());
+                        showToast("Error al cargar los hospitales.\nCompruebe su conexión a Interner e inténtelo de nuevo más tarde");
+                    }
+                });
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.w("HOSPITALES_BUSCAR", databaseError.toString());
+                Log.w("USER_BUSCAR", databaseError.toString());
                 showToast("Error al cargar los hospitales.\nCompruebe su conexión a Interner e inténtelo de nuevo más tarde");
             }
         });
@@ -148,71 +165,6 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
         adapter = new Adaptador(listaHospitales, this);
         recyclerView.setAdapter(adapter);
 
-        opacityPane = findViewById(R.id.opBuscar);
-        pb = findViewById(R.id.pbBuscar);
-
-        eliminarHospitalUsuario();
-    }
-
-    /**
-     * Elimina el hospital en el que trabaja el usuario de la lista de hospitales
-     * disponibles para derivar pacientes
-     *
-     * @see Hospital
-     */
-    private void eliminarHospitalUsuario() {
-        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        final FirebaseDatabase db = FirebaseDatabase.getInstance();
-        DatabaseReference userRef = db.getReference(Referencias.USERS);
-        userRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Log.d("CARGAR_USER_BUSCAR", "ÉXITO");
-                assert user != null;
-                final Usuario usuario = dataSnapshot.child(user.getUid()).getValue(Usuario.class);
-                DatabaseReference hospitalRef = db.getReference(Referencias.HOSPITALES);
-                hospitalRef.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        Log.d("CARGAR_HOSPITAL_BUSCAR", "ÉXITO");
-                        assert usuario != null;
-                        Hospital h = dataSnapshot.child(String.valueOf(usuario.getCodHospital())).getValue(Hospital.class);
-                        assert h != null;
-                        listaHospitales.remove(h.getCodHospital());
-                        Log.d("ELIMINADO", h.getNombre());
-                        filtrarHospital();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-                        Log.w("CARGAR_HOSPITAL_BUSCAR", databaseError.toString());
-                        showToast("Error al cargar los hospitales\nCompruebe su conexión a Internet e inténtelo de nuevo más tarde");
-                        finish();
-                    }
-                });
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.w("CARGAR_USER_BUSCAR", databaseError.toString());
-                showToast("Error al cargar los hospitales\nCompruebe su conexión a Internet e inténtelo de nuevo más tarde");
-                finish();
-            }
-        });
-    }
-
-    /**
-     * Elimina de la lista aquellos hospitales sin camas disponibles y quita
-     * la ProgressBar y el OpacityPane
-     */
-    private void filtrarHospital() {
-        for (int i = 0; i < this.listaHospitales.size(); i++) {
-            Hospital h = this.listaHospitales.get(i);
-            if (h.getCamasPlantaLibres() + h.getCamasUrgenciasLibres() + h.getCamasUciLibres() == 0) {
-                this.adapter.remove(i);
-            }
-        }
-        this.recyclerView.setAdapter(this.adapter);
         opacityPane.setVisibility(View.GONE);
         pb.setVisibility(View.GONE);
     }

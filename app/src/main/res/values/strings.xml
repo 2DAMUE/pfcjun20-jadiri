@@ -66,6 +66,7 @@
     <string name="camas_de_urgencias">Camas de Urgencias</string>
     <string name="camas_de_uci">Camas de UCI</string>
     <string name="ocupadas">Ocupadas</string>
+    <string name="derivando">Derivando...</string>
     <string-array name="estados">
         <item>Libre</item>
         <item>Ocupada</item>

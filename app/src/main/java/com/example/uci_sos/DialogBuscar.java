@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -161,6 +162,11 @@ public class DialogBuscar extends Dialog implements View.OnClickListener {
      * Guarda los cambios del hospital en la base de datos y cierra el dialog
      */
     private void guardarCambios() {
+        LinearLayout progressDialog = activity.findViewById(R.id.progressDialogBuscar);
+        progressDialog.setVisibility(View.VISIBLE);
+        View opacityPane = activity.findViewById(R.id.opBuscar);
+        opacityPane.setVisibility(View.VISIBLE);
+        dismiss();
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         final DatabaseReference hospitales = db.getReference(Referencias.HOSPITALES);
         hospitales.child(String.valueOf(hospital.getCodHospital())).setValue(hospital)
@@ -172,7 +178,6 @@ public class DialogBuscar extends Dialog implements View.OnClickListener {
                             Intent intent = new Intent(activity, MiHospital.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                             showToast("Paciente derivado al hospital:\n" + hospital.getNombre());
-                            dismiss();
                             activity.startActivity(intent);
                         } else {
                             Log.w("GUARDAR_DERIVACION", task.getException().toString());

@@ -386,4 +386,16 @@ public class Hospital implements Serializable {
         }
         return camasNoDisponibles;
     }
+
+    /**
+     * Devuelve la suma de las camas libres del hospital
+     *
+     * @return todas las camas libres del hospital
+     * @see Hospital#getCamasPlantaLibres()
+     * @see Hospital#getCamasUciLibres()
+     * @see Hospital#getCamasUrgenciasLibres()
+     */
+    public int getCamasDisponibles() {
+        return getCamasPlantaLibres() + getCamasUciLibres() + getCamasUrgenciasLibres();
+    }
 }

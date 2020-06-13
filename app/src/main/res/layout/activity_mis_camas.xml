@@ -112,23 +112,6 @@
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-    <View
-        android:id="@+id/opacityPaneMisCamas"
-        style="@style/opacity_pane"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ProgressBar
-        android:id="@+id/pbMisCamas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
         android:id="@+id/menu_abajo_mis_camas"
         android:layout_width="match_parent"
@@ -221,25 +204,39 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!--<androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarMisCamas"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:theme="@style/AppTheme.NoActionBar"
+    <View
+        android:id="@+id/opacityPaneMisCamas"
+        style="@style/opacity_pane"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:titleTextColor="@android:color/white"
-        app:subtitleTextColor="@android:color/white">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Spinner
-            android:id="@+id/spMisCamas"
+    <ProgressBar
+        android:id="@+id/pbMisCamas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/progressDialogMisCamas"
+        style="@style/layoutProgressDialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-    </androidx.appcompat.widget.Toolbar>-->
+
+        <TextView
+            style="@style/labelProgressDialog"
+            android:text="Guardando..." />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

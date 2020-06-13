@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.uci_sos.R;
 import com.example.uci_sos.modelo.entidad.Hospital;
+import com.example.uci_sos.Buscar;
 
 import java.util.List;
 
@@ -119,16 +120,10 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.MyHolder> {
     }
 
     /**
-     * Elimina un hospital del RecyclerView
+     * Interfaz personalizada para añadir un listener al RecyclerView de la ventana Buscar
      *
-     * @param position índice del hospital
+     * @see Buscar
      */
-    public void remove(int position) {
-        this.hospitales.remove(position);
-        notifyItemRemoved(position);
-        notifyItemRangeChanged(position, this.hospitales.size());
-    }
-
     public interface OnClickCustom {
         void click(int position);
     }

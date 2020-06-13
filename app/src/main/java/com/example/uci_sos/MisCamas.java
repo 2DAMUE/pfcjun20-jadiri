@@ -221,14 +221,14 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
     private void getHospital() {
         final FirebaseDatabase db = FirebaseDatabase.getInstance();
         DatabaseReference userReference = db.getReference(Referencias.USERS);
-        userReference.addValueEventListener(new ValueEventListener() {
+        userReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
                 assert currentUser != null;
                 final Usuario usuario = dataSnapshot.child(currentUser.getUid()).getValue(Usuario.class);
                 DatabaseReference hospitales = db.getReference(Referencias.HOSPITALES);
-                hospitales.addValueEventListener(new ValueEventListener() {
+                hospitales.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         assert usuario != null;
