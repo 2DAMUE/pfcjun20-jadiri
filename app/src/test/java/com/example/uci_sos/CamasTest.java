@@ -9,8 +9,20 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * Test de la clase Camas
+ *
+ * @author Ricardo Bordería Pi
+ * @see Camas
+ */
 public class CamasTest {
 
+    /**
+     * Test de los getter y setter del atributo estado
+     *
+     * @see Camas#setEstado(String)
+     * @see Camas#getEstado()
+     */
     @Test
     public void estado() {
         String input = "libre";
@@ -23,6 +35,12 @@ public class CamasTest {
         assertEquals("libre", output);
     }
 
+    /**
+     * Test de los getter y setter del atributo id
+     *
+     * @see Camas#setId(int)
+     * @see Camas#getId()
+     */
     @Test
     public void id() {
         int input = 0;
@@ -35,6 +53,12 @@ public class CamasTest {
         assertEquals(0, output);
     }
 
+    /**
+     * Test de los getter y setter del atributo planta
+     *
+     * @see Camas#setPlanta(String)
+     * @see Camas#getPlanta()
+     */
     @Test
     public void planta() {
         String input = "Planta 2";
@@ -47,6 +71,12 @@ public class CamasTest {
         assertEquals("Planta 2", output);
     }
 
+    /**
+     * Test de los getter y setter del atributo contagio
+     *
+     * @see Camas#setContagio(boolean)
+     * @see Camas#isContagio()
+     */
     @Test
     public void contagio() {
         boolean output;

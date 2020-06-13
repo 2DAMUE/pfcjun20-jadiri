@@ -72,6 +72,14 @@ public class Buscar extends AppCompatActivity implements Adaptador.OnClickCustom
         cargarVista();
     }
 
+    /**
+     * Recoge el hospital del elemento del RecyclerView y despliega el Dialog para derivar
+     *
+     * @param position posición del elemento del RecyclerView
+     * @see Hospital
+     * @see DialogBuscar
+     * @see Buscar#listaHospitales
+     */
     @Override
     public void click(int position) {
         Hospital h = listaHospitales.get(position);

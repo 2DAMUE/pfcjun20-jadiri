@@ -12,8 +12,20 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Test de la clase Hospital
+ *
+ * @author Ricardo Bordería Pi
+ * @see Hospital
+ */
 public class HospitalTest {
 
+    /**
+     * Test del setter y getter del atributo listaCamasUCI
+     *
+     * @see Hospital#setListaCamasUCI(List)
+     * @see Hospital#getListaCamasUCI()
+     */
     @Test
     public void listaCamasUCI() {
         List<UCI> input = new ArrayList<>();
@@ -27,6 +39,12 @@ public class HospitalTest {
         assertEquals(input, output);
     }
 
+    /**
+     * Test del setter y getter del atributo listaCamasUrgencias
+     *
+     * @see Hospital#setListaCamasUrgencias(List)
+     * @see Hospital#getListaCamasUrgencias()
+     */
     @Test
     public void listaCamasUrgencias() {
         List<Urgencias> input = new ArrayList<>();
@@ -41,6 +59,12 @@ public class HospitalTest {
         assertEquals(input, output);
     }
 
+    /**
+     * Test del setter y getter del atributo listaCamasPlanta
+     *
+     * @see Hospital#setListaCamasPlanta(List)
+     * @see Hospital#getListaCamasPlanta()
+     */
     @Test
     public void listaCamasPlanta() {
         List<Planta> input = new ArrayList<>();
@@ -56,6 +80,12 @@ public class HospitalTest {
         assertEquals(input, output);
     }
 
+    /**
+     * Test del setter y getter del atributo nombre
+     *
+     * @see Hospital#setNombre(String)
+     * @see Hospital#getNombre()
+     */
     @Test
     public void nombre() {
         String input = "Gregorio Marañón";
@@ -68,6 +98,12 @@ public class HospitalTest {
         assertEquals(input, output);
     }
 
+    /**
+     * Test del setter y getter del atributo codHospital
+     *
+     * @see Hospital#setCodHospital(int)
+     * @see Hospital#getCodHospital()
+     */
     @Test
     public void id() {
         int input = 6;
@@ -80,6 +116,12 @@ public class HospitalTest {
         assertEquals(input, output);
     }
 
+    /**
+     * Test del setter y getter del atributo listaPlantas
+     *
+     * @see Hospital#setListaPlantas(List)
+     * @see Hospital#getListaPlantas()
+     */
     @Test
     public void listaPlantas() {
         List<String> input = new ArrayList<>();
@@ -96,6 +138,11 @@ public class HospitalTest {
         assertEquals(input, output);
     }
 
+    /**
+     * Test del método addUCI
+     *
+     * @see Hospital#addCamaUCI(UCI)
+     */
     @Test
     public void addUCI() {
         UCI input = new UCI();
@@ -108,6 +155,11 @@ public class HospitalTest {
         assertEquals(input, output);
     }
 
+    /**
+     * Test del método addUrgencias
+     *
+     * @see Hospital#addCamaUrgencias(Urgencias)
+     */
     @Test
     public void addUrgencias() {
         Urgencias input = new Urgencias();
@@ -120,6 +172,11 @@ public class HospitalTest {
         assertEquals(input, output);
     }
 
+    /**
+     * Test del método addPlanta
+     *
+     * @see Hospital#addCamaPlanta(Planta)
+     */
     @Test
     public void addCamaPLanta() {
         Planta input = new Planta();
@@ -132,6 +189,11 @@ public class HospitalTest {
         assertEquals(input, output);
     }
 
+    /**
+     * Test del método addPlanta()
+     *
+     * @see Hospital#addPlanta(String)
+     */
     @Test
     public void addPlanta() {
         String input = "Planta 1";

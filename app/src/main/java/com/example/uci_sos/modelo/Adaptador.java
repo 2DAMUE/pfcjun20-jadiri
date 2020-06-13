@@ -125,6 +125,11 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.MyHolder> {
      * @see Buscar
      */
     public interface OnClickCustom {
+        /**
+         * Método a implementar que se ejecuta al hacer click en un elemento del RecyclerView
+         *
+         * @param position posición del elemento del RecyclerView
+         */
         void click(int position);
     }
 }
