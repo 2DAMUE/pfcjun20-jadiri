@@ -13,6 +13,12 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
+/**
+ * Test del activiti Splash
+ *
+ * @author Ricardo Bordería Pi
+ * @see Splash
+ */
 @RunWith(AndroidJUnit4.class)
 public class SplashTest {
 
@@ -31,6 +37,10 @@ public class SplashTest {
         splash = null;
     }
 
+    /**
+     * Verifica que el logo de UCI SOS está desplegado.
+     * Resultado esperado: Depliega el logo de UCI SOS
+     */
     @Test
     public void logoUCISOS() {
         ImageView logo = splash.findViewById(R.id.logoLogin);
@@ -38,6 +48,10 @@ public class SplashTest {
         assertNotNull(logo);
     }
 
+    /**
+     * Verifica que el logo de la UEM está desplegado.
+     * Resultado esperado: Depliega el logo de la UEM
+     */
     @Test
     public void logoUem() {
         ImageView logoUem = splash.findViewById(R.id.europea);

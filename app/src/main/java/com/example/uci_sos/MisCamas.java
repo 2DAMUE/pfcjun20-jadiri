@@ -364,6 +364,8 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                         cargarVentanaCama(cama);
                     }
                 });
+                if (cama.isContagio())
+                    img.setBackground(getResources().getDrawable(R.drawable.fondo_contagio));
                 lhor.addView(img);
                 index++;
             }
@@ -419,6 +421,8 @@ public class MisCamas extends AppCompatActivity implements View.OnClickListener 
                         cargarVentanaCama(cama);
                     }
                 });
+                if (cama.isContagio())
+                    img.setBackground(getResources().getDrawable(R.drawable.fondo_contagio));
                 lhor.addView(img);
                 index++;
             }

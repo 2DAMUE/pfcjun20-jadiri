@@ -215,4 +215,11 @@
         <item name="android:orientation">horizontal</item>
         <item name="android:visibility">invisible</item>
     </style>
+
+    <style name="campos_config_planta" parent="campos_login_registro">
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/blanco</item>
+        <item name="android:theme">@style/inputss</item>
+    </style>
 </resources>

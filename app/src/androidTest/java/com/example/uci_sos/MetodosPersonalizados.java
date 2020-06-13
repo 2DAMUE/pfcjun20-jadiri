@@ -13,8 +13,20 @@ import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 
+/**
+ * Métodos personalizados para los test con Espresso
+ *
+ * @author Ricardo Bordería Pi
+ */
 public class MetodosPersonalizados {
 
+    /**
+     * Método para probar la funcionalidad del SwipeRefreshLayout
+     *
+     * @param action      acción a realizar (swipeDown() en este caso)
+     * @param constraints distancia a deslizar
+     * @return nuevo ViewAction con la acción de deslizar hacia abajo
+     */
     public static ViewAction swypeRefresh(final ViewAction action, final Matcher<View> constraints) {
         return new ViewAction() {
             @Override
@@ -34,24 +46,13 @@ public class MetodosPersonalizados {
         };
     }
 
-    public static TypeSafeMatcher<View> hasImage(final int id) {
-        return new TypeSafeMatcher<View>() {
-            @Override
-            protected boolean matchesSafely(View item) {
-                ImageView img = (ImageView) item;
-                Integer resource = (Integer) img.getTag();
-                resource = resource == null ? 0 : resource;
-                Log.d("resource:", String.valueOf(resource));
-                return resource == id;
-            }
-
-            @Override
-            public void describeTo(Description description) {
-                description.appendText("hasImage");
-            }
-        };
-    }
-
+    /**
+     * Devuelve el hijo del padre en el ínice indicado
+     *
+     * @param parentMatcher elemento padre
+     * @param index         índice del elemento a seleccionar
+     * @return elemento hijo en la posición indicada
+     */
     public static Matcher<View> childOf(final Matcher<View> parentMatcher, final int index) {
         return new TypeSafeMatcher<View>() {
             @Override

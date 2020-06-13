@@ -2085,7 +2085,9 @@ string camasUci
 string camasUrgenciasLibres
 string camasUrgenciasOcupadas
 string camas_de_planta
+string camas_de_planta_libres
 string camas_de_uci
+string camas_de_uci_ocupadas
 string camas_de_urgencias
 string camas_planta
 string camas_uci
@@ -2898,6 +2900,7 @@ style botones_dialog
 style botones_dialog_buscar
 style botones_login_registro
 style botones_reserva
+style campos_config_planta
 style campos_login_registro
 style campos_login_registro2
 style colorgrafico

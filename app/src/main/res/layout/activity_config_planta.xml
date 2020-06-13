@@ -29,7 +29,7 @@
     <View
         android:id="@+id/recuadroConfigPlantas"
         style="@style/recuadro_login_registro"
-        android:layout_height="510dp"
+        android:layout_height="450dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,13 +45,9 @@
         app:layout_constraintEnd_toEndOf="@+id/recuadroConfigPlantas"
         app:layout_constraintStart_toStartOf="@+id/recuadroConfigPlantas"
         app:layout_constraintTop_toTopOf="@+id/recuadroConfigPlantas"
-        app:layout_constraintVertical_bias="1">
+        app:layout_constraintVertical_bias="0.5">
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/campos_login_registro"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/blanco"
-            android:theme="@style/inputss">
+        <com.google.android.material.textfield.TextInputLayout style="@style/campos_config_planta">
 
             <!--El ID del elemento va en la etiqueta de dentro-->
             <com.google.android.material.textfield.TextInputEditText
@@ -63,11 +59,7 @@
                 android:hint="@string/nameplan" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/campos_login_registro"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/blanco"
-            android:theme="@style/inputss">
+        <com.google.android.material.textfield.TextInputLayout style="@style/campos_config_planta">
 
             <!--El ID del elemento va en la etiqueta de dentro-->
             <com.google.android.material.textfield.TextInputEditText
@@ -79,11 +71,7 @@
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/campos_login_registro"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/blanco"
-            android:theme="@style/inputss">
+        <com.google.android.material.textfield.TextInputLayout style="@style/campos_config_planta">
 
             <!--El ID del elemento va en la etiqueta de dentro-->
             <com.google.android.material.textfield.TextInputEditText
@@ -91,15 +79,11 @@
                 android:id="@+id/txtNumCamasUCIOcupadas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Camas de UCI Ocupadas"
+                android:hint="@string/camas_de_uci_ocupadas"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/campos_login_registro"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/blanco"
-            android:theme="@style/inputss">
+        <com.google.android.material.textfield.TextInputLayout style="@style/campos_config_planta">
 
             <!--El ID del elemento va en la etiqueta de dentro-->
             <com.google.android.material.textfield.TextInputEditText
@@ -107,15 +91,11 @@
                 android:id="@+id/txtNumCamasPlantaLibres"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Camas de Planta Libres"
+                android:hint="@string/camas_de_planta_libres"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/campos_login_registro"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/blanco"
-            android:theme="@style/inputss">
+        <com.google.android.material.textfield.TextInputLayout style="@style/campos_config_planta">
 
             <!--El ID del elemento va en la etiqueta de dentro-->
             <com.google.android.material.textfield.TextInputEditText
@@ -127,11 +107,7 @@
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/campos_login_registro"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/blanco"
-            android:theme="@style/inputss">
+        <com.google.android.material.textfield.TextInputLayout style="@style/campos_config_planta">
 
             <!--El ID del elemento va en la etiqueta de dentro-->
             <com.google.android.material.textfield.TextInputEditText
@@ -143,12 +119,7 @@
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/campos_login_registro"
-
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/blanco"
-            android:theme="@style/inputss">
+        <com.google.android.material.textfield.TextInputLayout style="@style/campos_config_planta">
 
             <!--El ID del elemento va en la etiqueta de dentro-->
             <com.google.android.material.textfield.TextInputEditText

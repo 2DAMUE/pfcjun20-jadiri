@@ -25,6 +25,14 @@ import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
+import com.example.uci_sos.modelo.entidad.Hospital;
+
+/**
+ * Test del activity Registro
+ *
+ * @author Ricardo Bordería Pi
+ * @see Registro
+ */
 @RunWith(AndroidJUnit4.class)
 public class RegistroTest {
 
@@ -43,6 +51,10 @@ public class RegistroTest {
         registro = null;
     }
 
+    /**
+     * Inenta registrarse sin rellenar ningún campo.
+     * Resultado esperado: Pide al usuario mediante un Toast que rellene todos los campos
+     */
     @Test
     public void sinCampos() {
         onView(withId(R.id.btnRegistro)).perform(click());
@@ -50,6 +62,12 @@ public class RegistroTest {
                 .inRoot(withDecorView(not(is(registro.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Intenta registrarse sin seleccionar el hospita en el que trabaja.
+     * Resultado esperado: Pide al usuario mediiante un Toast que seleccione un hospital
+     *
+     * @see Hospital
+     */
     @Test
     public void sinHospital() {
         onView(withId(R.id.txtEmailRegistro)).perform(typeText("maildeprueba@mail.com"), closeSoftKeyboard());
@@ -62,6 +80,10 @@ public class RegistroTest {
                 .inRoot(withDecorView(not(is(registro.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Intenta registrarse con un E-mail sin arroba.
+     * Resultado esperado: Indica al usuario mediante un Toast que ha introducido un E-mail mal formado
+     */
     @Test
     public void emailSinArroba() {
         onView(withId(R.id.txtEmailRegistro)).perform(typeText("maildepruebamail.com"), closeSoftKeyboard());
@@ -76,6 +98,10 @@ public class RegistroTest {
                 .inRoot(withDecorView(not(is(registro.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Intenta registrarse con un E-mail sin puntos.
+     * Resultado esperado: Indica al usuario mediante un Toast que ha introducido un E-mail mal formado
+     */
     @Test
     public void emailSinPunto() {
         onView(withId(R.id.txtEmailRegistro)).perform(typeText("maildeprueba@mailcom"), closeSoftKeyboard());
@@ -90,6 +116,10 @@ public class RegistroTest {
                 .inRoot(withDecorView(not(is(registro.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Intenta registrarse con contraseñas que no coinciden.
+     * Resultado esperado: Indica al usuario que las contraseñas no coinciden
+     */
     @Test
     public void pwdDistintas() {
         onView(withId(R.id.txtEmailRegistro)).perform(typeText("maildeprueba@mail.com"), closeSoftKeyboard());
@@ -104,6 +134,10 @@ public class RegistroTest {
                 .inRoot(withDecorView(not(is(registro.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Intenta registrarse con contraseñas con menos de 6 caracteres.
+     * Resultado esperado: Indica al usuario mediante un Toast que las contraseñas son demasiado cortas
+     */
     @Test
     public void pwdCorta() {
         onView(withId(R.id.txtEmailRegistro)).perform(typeText("maildeprueba@mail.com"), closeSoftKeyboard());
@@ -118,6 +152,10 @@ public class RegistroTest {
                 .inRoot(withDecorView(not(is(registro.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
+    /**
+     * Verifica que el programa detecta antes que las contraseñas son demasiado cortas y después que son distintas.
+     * Resultado esperado: Indica al usuario que la contraseña debe tener al menos 6 caracteres
+     */
     @Test
     public void pwdCortaAntesDeDistinta() {
         onView(withId(R.id.txtEmailRegistro)).perform(typeText("maildeprueba@mail.com"), closeSoftKeyboard());
