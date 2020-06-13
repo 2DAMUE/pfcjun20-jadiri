@@ -76,12 +76,11 @@
 
             <!--El ID del elemento va en la etiqueta de dentro-->
             <com.google.android.material.textfield.TextInputEditText
-
                 android:id="@+id/txtEmailLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:hint="@string/txtEmail" />
+                android:hint="@string/txtEmail"
+                android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
