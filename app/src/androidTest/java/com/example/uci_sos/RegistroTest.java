@@ -153,7 +153,8 @@ public class RegistroTest {
     }
 
     /**
-     * Verifica que el programa detecta antes que las contraseñas son demasiado cortas y después que son distintas
+     * Verifica que el programa detecta antes que las contraseñas son demasiado cortas y después que son distintas.
+     * Resultado esperado: Indica al usuario que la contraseña debe tener al menos 6 caracteres
      */
     @Test
     public void pwdCortaAntesDeDistinta() {

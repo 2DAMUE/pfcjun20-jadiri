@@ -46,7 +46,7 @@ public class ReservarTest {
     @Test
     public void toMisCamas() {
         onView(withId(R.id.btnMisCamasReserva)).perform(click());
-        onView(withId(R.id.rootUrgencias)).check(matches(isDisplayed()));
+        onView(withId(R.id.rootPlanta)).check(matches(isDisplayed()));
     }
 
     /**
