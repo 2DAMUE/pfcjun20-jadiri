@@ -4,7 +4,7 @@
     <string name="firebase_database_url" translatable="false">https://uci-sos.firebaseio.com</string>
     <string name="gcm_defaultSenderId" translatable="false">61585641192</string>
     <string name="google_api_key" translatable="false">AIzaSyBhyBaAg4huif1H6bbjdwMjDPYBwWuUKFI</string>
-    <string name="google_app_id" translatable="false">1:61585641192:android:3c27630380d2a2df53035d</string>
+    <string name="google_app_id" translatable="false">1:61585641192:android:a7491d8e23bcb21353035d</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBhyBaAg4huif1H6bbjdwMjDPYBwWuUKFI</string>
     <string name="google_storage_bucket" translatable="false">uci-sos.appspot.com</string>
     <string name="project_id" translatable="false">uci-sos</string>

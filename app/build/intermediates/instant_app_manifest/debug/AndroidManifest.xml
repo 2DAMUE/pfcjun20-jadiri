@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.uci_sos"
+    package="com.uem.uci_sos"
     android:targetSandboxVersion="2"
     android:versionCode="1"
     android:versionName="1.0" >
@@ -29,33 +29,33 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.uci_sos.Buscar"
-            android:parentActivityName="com.example.uci_sos.Reservar"
+            android:name="com.uem.uci_sos.Buscar"
+            android:parentActivityName="com.uem.uci_sos.Reservar"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.example.uci_sos.Datos"
+            android:name="com.uem.uci_sos.Datos"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.uci_sos.ReservaRealizada"
+            android:name="com.uem.uci_sos.ReservaRealizada"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.uci_sos.Registro"
+            android:name="com.uem.uci_sos.Registro"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.uci_sos.ConfigPlanta"
+            android:name="com.uem.uci_sos.ConfigPlanta"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.uci_sos.Login"
+            android:name="com.uem.uci_sos.Login"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.uci_sos.Reservar"
+            android:name="com.uem.uci_sos.Reservar"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.uci_sos.MisCamas"
+            android:name="com.uem.uci_sos.MisCamas"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.uci_sos.Splash"
+            android:name="com.uem.uci_sos.Splash"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -64,7 +64,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.uci_sos.MiHospital"
+            android:name="com.uem.uci_sos.MiHospital"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
@@ -127,7 +127,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.example.uci_sos.firebaseinitprovider"
+            android:authorities="com.uem.uci_sos.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
 

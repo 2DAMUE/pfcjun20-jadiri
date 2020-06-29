@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.uci_sos",
+  "applicationId": "com.uem.uci_sos",
   "variantName": "release",
   "elements": [
     {

@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.example.uci_sos"
+3    package="com.uem.uci_sos"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -51,59 +51,59 @@
 29-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:13:9-40
 30        <activity
 30-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:15:9-20:20
-31            android:name="com.example.uci_sos.Buscar"
-31-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:16:13-35
-32            android:parentActivityName="com.example.uci_sos.Reservar"
-32-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:17:13-51
+31            android:name="com.uem.uci_sos.Buscar"
+31-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:16:13-50
+32            android:parentActivityName="com.uem.uci_sos.Reservar"
+32-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:17:13-66
 33            android:screenOrientation="portrait" >
 33-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:18:13-49
 34        </activity>
 35        <activity
 35-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:21:9-23:51
-36            android:name="com.example.uci_sos.Datos"
-36-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:22:13-34
+36            android:name="com.uem.uci_sos.Datos"
+36-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:22:13-49
 37            android:screenOrientation="portrait" />
 37-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:23:13-49
 38        <activity
 38-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:25:9-27:52
-39            android:name="com.example.uci_sos.ReservaRealizada"
-39-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:26:13-45
+39            android:name="com.uem.uci_sos.ReservaRealizada"
+39-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:26:13-60
 40            android:screenOrientation="portrait" />
 40-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:27:13-49
 41        <activity
 41-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:28:9-30:52
-42            android:name="com.example.uci_sos.Registro"
-42-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:29:13-37
+42            android:name="com.uem.uci_sos.Registro"
+42-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:29:13-52
 43            android:screenOrientation="portrait" />
 43-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:30:13-49
 44        <activity
 44-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:32:9-34:52
-45            android:name="com.example.uci_sos.ConfigPlanta"
-45-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:33:13-41
+45            android:name="com.uem.uci_sos.ConfigPlanta"
+45-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:33:13-56
 46            android:screenOrientation="portrait" />
 46-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:34:13-49
 47        <activity
 47-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:36:9-38:52
-48            android:name="com.example.uci_sos.Login"
-48-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:37:13-34
+48            android:name="com.uem.uci_sos.Login"
+48-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:37:13-49
 49            android:screenOrientation="portrait" />
 49-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:38:13-49
 50        <activity
 50-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:40:9-42:52
-51            android:name="com.example.uci_sos.Reservar"
-51-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:41:13-37
+51            android:name="com.uem.uci_sos.Reservar"
+51-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:41:13-52
 52            android:screenOrientation="portrait" />
 52-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:42:13-49
 53        <activity
 53-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:43:9-45:52
-54            android:name="com.example.uci_sos.MisCamas"
-54-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:44:13-37
+54            android:name="com.uem.uci_sos.MisCamas"
+54-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:44:13-52
 55            android:screenOrientation="portrait" />
 55-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:45:13-49
 56        <activity
 56-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:46:9-54:20
-57            android:name="com.example.uci_sos.Splash"
-57-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:47:13-35
+57            android:name="com.uem.uci_sos.Splash"
+57-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:47:13-50
 58            android:screenOrientation="portrait" >
 58-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:48:13-49
 59            <intent-filter>
@@ -119,8 +119,8 @@
 64        </activity>
 65        <activity
 65-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:57:9-59:52
-66            android:name="com.example.uci_sos.MiHospital"
-66-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:58:13-39
+66            android:name="com.uem.uci_sos.MiHospital"
+66-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:58:13-54
 67            android:screenOrientation="portrait" />
 67-->D:\AndroidStudio\DAM 2\pfcjun20-jadiri\app\src\main\AndroidManifest.xml:59:13-49
 68        <activity
@@ -236,7 +236,7 @@
 127-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ricardo Bordería Pi\.gradle\caches\transforms-2\files-2.1\9f50104a3ed305ca2fc55bd80a29800d\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
 128            android:name="com.google.firebase.provider.FirebaseInitProvider"
 128-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ricardo Bordería Pi\.gradle\caches\transforms-2\files-2.1\9f50104a3ed305ca2fc55bd80a29800d\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
-129            android:authorities="com.example.uci_sos.firebaseinitprovider"
+129            android:authorities="com.uem.uci_sos.firebaseinitprovider"
 129-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ricardo Bordería Pi\.gradle\caches\transforms-2\files-2.1\9f50104a3ed305ca2fc55bd80a29800d\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
 130            android:exported="false"
 130-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ricardo Bordería Pi\.gradle\caches\transforms-2\files-2.1\9f50104a3ed305ca2fc55bd80a29800d\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
